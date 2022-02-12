@@ -1,5 +1,6 @@
 body{
     height: 100%;
+    margin: 0;
 }
 
 #test{
@@ -74,8 +75,8 @@ h1{
 img[class=logo]{
     position: absolute;
     width: 30%;
-    margin-top: 60%;
-    margin-left : 5%;
+    margin-top: 0%;
+    margin-left : 0%;
 }
 
 #form-group {
@@ -160,4 +161,79 @@ p2{
     text-align: center;
     
     margin-left:52%;
+}
+
+@media screen and (max-width: 1000px){
+
+
+    img[class=logo]{
+        position: absolute;
+        width: 20%;
+        margin-top: 0%;
+        margin-left : 5%;
+    }
+
+    #ecran{
+        position: absolute;
+        
+        width : 100%;
+        height: 100%;
+        margin-left: 0%;
+    
+    
+    }
+
+    #test{
+
+        position: fixed;
+        width : 100%;
+        height: 100%;
+        background: url(background.jpg);
+        background-size: auto;
+        background-repeat: no-repeat;
+    
+    }
+
+    #container{
+        position : relative;
+        width:500px;
+        height: 500px;
+        margin:0 auto;
+        margin-top:40%;
+        font-family: "Quicksand";  
+    }
+
+    h1{
+        color : white;
+        position: relative;
+        font-size: 2.5em;
+        margin-top: -11%;
+       
+    }
+    
+    .forme1{
+        width: 200px;
+        height: 20px;
+    
+        margin-top: -10%;
+        margin-left: 7%;
+    }
+
+    h2{
+        color : white;
+    }
+}
+
+
+@media screen and (max-width: 500px){
+
+    #container{
+        position : relative;
+        width:500px;
+        height: 500px;
+        margin:0 auto;
+        margin-top:50%;
+        font-family: "Quicksand";  
+    }
+
 }
