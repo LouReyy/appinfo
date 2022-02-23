@@ -1,4 +1,5 @@
 /*La barre de menu*/
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -24,14 +25,16 @@
   .nav__links a,
   .overlay__content a {  /* style des barres du menu */
     font-family: "Quicksand", sans-serif;
-    font-weight: 500;
+    font-weight: 10;
+    font-size: 18px;
     color: black;
     text-decoration: none;
   }
 
-  .cta{ /*style du bouton connexion*/
+  .cta{ /*style du texte dans le bouton connexion*/
     font-family: "Quicksand", sans-serif;
-    font-weight: 500;
+    font-weight: 10;
+    font-size: 18px;
     color:white;
     text-decoration: none;
   }
@@ -42,7 +45,7 @@
   }
   
   .nav__links li { /*faire des espaces entre chaque groupe de mot*/
-    padding: 0px 20px;
+    padding: 0px 50px;
   }
   
  .nav__links li a { /* chgmt de couleur quand curseur sur le mot qui dure 0.2s et commence apres 0s */
@@ -66,4 +69,73 @@
   }
 
   /*Le centre*/
-  
+
+  h1 {
+    text-align: center;
+    font-family: "Quicksand", sans-serif;
+    font-size: 50px;
+    font-weight: 10;
+  }
+h1 hr{
+    border-top: 3px solid #00ccff;
+    margin-left: auto;
+    margin-right: auto;
+    width:30%;
+}
+
+.boxdetextedroite{
+    margin: 6% 8% 10% 46%;
+    padding: 3% 2%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 5px #dbdbdb;
+}
+h2{
+    text-align: center;
+    font-family: "Quicksand", sans-serif;
+    font-size: 40px;
+    font-weight: 10;
+}
+
+h2 img{
+  height: 10%;
+  width: 10%;
+}
+
+p{
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+  font-size: 18px;
+  font-weight: 10;
+}
+
+.boxdetextegauche{
+  margin: 6% 46% 10% 8%;
+  padding: 3% 2%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 5px #dbdbdb;
+}
+img{ /*taille image*/
+  width: 500px;
+  height: 500px;
+}
+.imgeolienne{ /*image ex de l'eolienne jsp quelles proprietes mettre pour alligner avec le cadre de texte...*/  
+  float:left;
+  margin-left: 15%;
+}
+
+.imgchantier{ /*idem */
+  float:right;
+  margin-right: 12%;
+}
+
+/* Partie: Nos services */
+.alignertableau{
+  align-items: flex-start;
+}
+.boxdetexte{
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 5px #dbdbdb;
+}
