@@ -10,9 +10,7 @@
             <title>Connexion</title>
         </head>
 
-        <body>  
-
-            
+        <body>    
           
             <div id = test>
                 <img class = "logo"src="logo.png"></img>
@@ -85,7 +83,7 @@
             
                 <p class="text-center"><a href="inscription.php">Inscription</a></p>
 
-                <p2 class="text-center"><a href="edit.php">Mots de passe oublié</a></p2>
+                <p2 class="text-center"><a href="edit.php">Mot de passe oublié</a></p2>
              
         
             </div>

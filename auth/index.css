@@ -147,6 +147,12 @@ p{
     text-align: center;
 }
 
+p:hover ,p2:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
 p2{
     position: absolute;
     background-color: #00ccff;
@@ -162,6 +168,8 @@ p2{
     
     margin-left:52%;
 }
+
+
 
 @media screen and (max-width: 1000px){
 

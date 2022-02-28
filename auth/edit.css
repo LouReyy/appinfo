@@ -1,0 +1,46 @@
+body{
+    margin:0;
+    padding: 0;
+    background-color:rgb(240, 240, 240);
+}
+
+.menu{
+    position: fixed;
+    width: 100%;
+    height: 12%;
+    background-color:white;
+    text-decoration: none;
+    font-family: 'Quicksand';
+    font-size: 2em;
+}
+
+.logo{
+    position: relative;
+    width: 6%;
+}
+
+.accueil{
+    position: relative;
+    margin-left: 10%;
+    color : black;
+    
+}
+
+.votre-chantier{
+    position: relative;
+    margin-left: 4%;
+    color : black;
+   
+}
+
+.forum{
+    position: relative;
+    margin-left: 4%;
+    color : black;
+}
+
+.contact{
+    position: relative;
+    margin-left: 4%;
+    color : black;
+}
