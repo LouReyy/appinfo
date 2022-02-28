@@ -10,10 +10,11 @@
             <title>Connexion</title>
         </head>
 
-        <body>    
+        <body>   
+
           
             <div id = test>
-                <img class = "logo"src="logog"></img>
+                <img class = "logo"src="logo_infinite.png"></img>
             </div>
 
             <div id = ecran>
