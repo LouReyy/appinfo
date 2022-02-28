@@ -13,7 +13,7 @@
         <body>    
           
             <div id = test>
-                <img class = "logo"src="logo_infinite.png"></img>
+                <img class = "logo"src="logog"></img>
             </div>
 
             <div id = ecran>
