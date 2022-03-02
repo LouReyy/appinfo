@@ -22,12 +22,12 @@
                         <li><a href="/appinfo/contact/Page_onglets.html">Contactez-nous</a></li>
                     </ul>
                 </nav>
-             <a class="cta" href="/appinfo/auth/connexion.php">Connexion</a>
+             <a class="cta" href="/appinfo/auth/index.php">Connexion</a>
             </header>
 
           
             <div id = test>
-                <img class = "logo"src="/appinfo/auth/logo_infinite.png"></img>
+                
             </div>
 
             <div id = ecran>
