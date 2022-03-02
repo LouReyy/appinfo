@@ -14,7 +14,7 @@
 
           
             <div id = test>
-                <img class = "logo"src="logo_infinite.png"></img>
+                <img class = "logo"src="/appinfo/auth/logo_infinite.png"></img>
             </div>
 
             <div id = ecran>
