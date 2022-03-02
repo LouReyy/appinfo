@@ -4,7 +4,6 @@ body{
 }
 
 header{
-    position: relative;
     height: 100px;
     width: 100%;
     display: flex;
@@ -12,10 +11,9 @@ header{
     align-items: center;
     padding: 20px 2%;
     background-color: #fbfbfb;
-  }
+}
 
-  
-  header img{  /*taille image logo dans la barre du haut*/  
+header img{  /*taille image logo dans la barre du haut*/  
     width: 120px;
     height: 120px;
     margin-right: auto;
@@ -70,8 +68,7 @@ header{
   .cta:hover { /*couleur du cadre quand curseur dessus*/
     background-color: #8aceff;
   }
-
-
+  
 
 
 #test{

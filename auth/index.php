@@ -12,18 +12,18 @@
 
         <body>   
 
-        <header>
-        <img src="/appinfo/auth/logo_infinite.png" alt="logo">
-            <nav>
-                <ul class="nav__links">
-                    <li><a href="/appinfo/homepage/homepage.html">Accueil</a></li>
-                    <li><a href="#">Votre chantier</a></li>
-                    <li><a href="#">Forum</a></li>
-                    <li><a href="/appinfo/contact/Page_onglets.html">Contactez-nous</a></li>
-                </ul>
-            </nav>
-            <a class="cta" href="/appinfo/auth/connexion.php">Connexion</a>
-        </header>
+            <header>
+                <img src="/appinfo/auth/logo_infinite.png" alt="logo">
+                <nav>
+                    <ul class="nav__links">
+                        <li><a href="/appinfo/homepage/homepage.html">Accueil</a></li>
+                        <li><a href="#">Votre chantier</a></li>
+                        <li><a href="#">Forum</a></li>
+                        <li><a href="/appinfo/contact/Page_onglets.html">Contactez-nous</a></li>
+                    </ul>
+                </nav>
+             <a class="cta" href="/appinfo/auth/connexion.php">Connexion</a>
+            </header>
 
           
             <div id = test>
@@ -103,6 +103,6 @@
             </div>
         
         
-        </div>
-     </body>
+            </div>
+        </body>
 </html>
