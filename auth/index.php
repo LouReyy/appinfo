@@ -13,7 +13,7 @@
         <body>   
 
             <header>
-                <img src="/appinfo/auth/logo_infinite.png" alt="logo">
+                <img src="/appinfo/auth/logo_infinite2.png" alt="logo">
                 <nav>
                     <ul class="nav__links">
                         <li><a href="/appinfo/homepage/homepage.html">Accueil</a></li>
@@ -26,9 +26,7 @@
             </header>
 
           
-            <div id = test>
-                
-            </div>
+            <div id = test></div>
 
             <div id = ecran>
 
