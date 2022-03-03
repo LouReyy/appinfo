@@ -4,39 +4,30 @@ body {
     background: #4e4e50;
   }
   
-  .centre {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+
   .btn {
-    position: relative;
+    position: absolute;
+    width: 500px;
+    height: 100px;
     color: white;
     display: block;
     font-size: 100px;
-    font-family: 'lato';
-    text-decoration: none;
-    margin: 30px 0;
-    border: 2px solid #45a29e;
-    padding: 80px 60px;
-    text-transform: uppercase;
-      overflow: hidden;
-    transition: 1s all ease;
+    border: 1px solid ;
+
   }
   
   .btn::before{
-    background: #45a29e;
-    content: "";
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    z-index: -1; /* pour qu'il se mette en dessous du titre  test après */
-    transition: all 0.6s ease;
-    width: 120%;
-    height: 0%;
-    transform: translate(-50%, -50%) rotate(25deg);
+    background: green;
+    content: "BEFORE";
+    position: absolute;
+  }
+
+  .btn::after{
+    position: absolute;
+    background: red;
+    content: "AFTER";
+    position: absolute;
   }
   
   .btn:hover::before {
