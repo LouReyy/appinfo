@@ -109,7 +109,7 @@
 
 p3{
     position: absolute;
-    margin-left: 25%;
+    margin-left: 30%;
     background-color: #00ccff;
     color: white;
     padding: 14px 20px;
