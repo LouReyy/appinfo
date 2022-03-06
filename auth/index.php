@@ -12,6 +12,8 @@
 
         <body>   
 
+        <div id = "container1">
+
             <header>
                 <img src="/appinfo/auth/logo_infinite.png" alt="logo">
                 <nav>
@@ -22,12 +24,12 @@
                         <li><a href="/appinfo/contact/Page_onglets.html">Contactez-nous</a></li>
                     </ul>
                 </nav>
-             <a class="cta" href="/appinfo/auth/connexion.php">Connexion</a>
+             <a class="cta" href="/appinfo/auth/index.php">Connexion</a>
             </header>
 
           
             <div id = test>
-                <img class = "logo"src="/appinfo/auth/logo_infinite.png"></img>
+                
             </div>
 
             <div id = ecran>
@@ -95,14 +97,15 @@
                 
 
             
-                <p class="text-center"><a href="inscription.php">Inscription</a></p>
+                <a id = "button1" href="inscription.php">Inscription</a>
 
-                <p2 class="text-center"><a href="edit.php">Mot de passe oublié</a></p2>
+                <a  id = "button2" href="edit.php">Mot de passe oublié</a>
              
         
             </div>
         
         
+            </div>
             </div>
         </body>
 </html>

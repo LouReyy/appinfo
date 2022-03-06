@@ -3,69 +3,88 @@ body{
     margin: 0;
 }
 
+
+#container1{
+    display: flex;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+
+
 header{
+    position: relative;
     height: 100px;
+    width: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     padding: 20px 2%;
     background-color: #fbfbfb;
-}
-
-header img{  /*taille image logo dans la barre du haut*/  
-    width: 120px;
-    height: 120px;
-    margin-right: auto;
-}
-
-.nav__links a,.overlay__content a {  /* style des barres du menu */
-    position: relative;
-    font-family: "Quicksand", sans-serif;
-    font-weight: 10;
-    font-size: 20px;
-    color: black;
-    text-decoration: none;
-    text-align: center;
-    margin-left: auto;
-}
-
-.cta{ /*style du texte dans le bouton connexion*/
-    font-family: "Quicksand", sans-serif;
-    font-weight: 10;
-    font-size: 18px;
-    color:white;
-    text-decoration: none;
-}
+    z-index: 1;
+    }
   
-.nav__links {  /*mettre en liste horizontal*/
-    list-style: none;
-    display: flex;
-}
+    
+    header img{  /*taille image logo dans la barre du haut*/  
+      width: 110px;
+      height: 110px;
+      margin-right: auto;
+      padding: 10px;
+    }
   
-  .nav__links li { /*faire des espaces entre chaque groupe de mot*/
-    padding: 0px 50px;
-  }
+    .nav__links a,
+    .overlay__content a {  /* style des barres du menu */
+      position: relative;
+      font-family: "Quicksand", sans-serif;
+      font-weight: 10;
+      font-size: 20px;
+      color: black;
+      text-decoration: none;
+      text-align: center;
+      margin-left: auto;
+    }
   
-.nav__links li a { /* chgmt de couleur quand curseur sur le mot qui dure 0.2s et commence apres 0s */
-    transition: color 0.2s ease 0s;
-}
-  
-.nav__links li a:hover { /* couleur du texte quand il curseur dessus*/
-    color: #00ccff;
-}
-  
-.cta { /*style cadre de connexion*/
-    margin-left: 20px;
-    padding: 9px 25px;
-    background-color: #00ccff;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 20px;
-}
-  
-.cta:hover { /*couleur du cadre quand curseur dessus*/
-  background-color: #8aceff;
-}
+    .cta{ /*style du texte dans le bouton connexion*/
+      font-family: "Quicksand", sans-serif;
+      font-weight: 10;
+      font-size: 18px;
+      color:white;
+      text-decoration: none;
+    }
+    
+    .nav__links {  /*mettre en liste horizontal*/
+      list-style: none;
+      display: flex;
+    }
+    
+    .nav__links li { /*faire des espaces entre chaque groupe de mot*/
+      padding: 0px 50px;
+    }
+    
+   .nav__links li a { /* chgmt de couleur quand curseur sur le mot qui dure 0.2s et commence apres 0s */
+      transition: color 0.2s ease 0s;
+    }
+    
+    .nav__links li a:hover { /* couleur du texte quand il curseur dessus*/
+      color: #00ccff;
+    }
+    
+    .cta { /*style cadre de connexion*/
+      margin-left: 20px;
+      padding: 9px 25px;
+      background-color: #00ccff;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 20px;
+    }
+    
+    .cta:hover { /*couleur du cadre quand curseur dessus*/
+      background-color: #8aceff;
+    }
 
 
 
@@ -82,7 +101,6 @@ header img{  /*taille image logo dans la barre du haut*/
 
 #ecran{
     position: absolute;
-    
     width : 50%;
     height: 100%;
     margin-left: 50%;
@@ -97,8 +115,9 @@ header img{  /*taille image logo dans la barre du haut*/
     width:500px;
     height: 500px;
     margin:0 auto;
-    margin-top:30%;
+    margin-top:40%;
     font-family: "Quicksand";  
+    
 }
 
 .alert{
@@ -115,14 +134,15 @@ header img{  /*taille image logo dans la barre du haut*/
 h1{
     position: relative;
     font-size: 4em;
-    margin-top: -18%;
+    margin-top: -10%;
+    padding: 40px;
    
 }
 
 .forme1{
     width: 300px;
     height: 30px;
-
+    position: relative;
     margin-top: -10%;
     margin-left: 7%;
 }
@@ -199,7 +219,7 @@ button[type=submit]:hover {
     border: 1px solid black;
 }
 
-p{
+#button1{
     position: absolute;
     background-color: #00ccff;
     color: white;
@@ -207,19 +227,23 @@ p{
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 40%;
+    width: 48%;
     border-radius: 15px;
     font-family: "Quicksand";  
-    text-align: center;
+    text-align: center; 
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    
 }
 
-p:hover ,p2:hover{
+#button1:hover ,#button2:hover{
     background-color: white;
     color: black;
     border: 1px solid black;
 }
 
-p2{
+#button2 {
     position: absolute;
     background-color: #00ccff;
     color: white;
@@ -227,13 +251,19 @@ p2{
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 40%;
+    width: 48%;
     border-radius: 15px;
     font-family: "Quicksand";  
     text-align: center;
-    
     margin-left:52%;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
 }
+
+
+
+
 
 
 
@@ -307,6 +337,70 @@ p2{
         height: 500px;
         margin:0 auto;
         margin-top:50%;
+        font-family: "Quicksand";  
+    }
+
+    body{
+        background-color: #f5f5f5;
+    }
+
+    #test{
+
+        position: absolute;
+        width : 50%;
+        height: 100%;
+       background: #f5f5f5;
+        background-size: cover;
+    
+    }
+
+    
+    h1{
+        color : black;
+        position: relative;
+        font-size: 2.5em;
+        margin-top: -11%;
+        ;
+       text-align: center;
+    }
+    
+    .forme1{
+        width: 200px;
+        height: 20px;
+        display: block;
+    
+        margin-top: -10%;
+        margin-left: 7%;
+        margin: auto;
+        padding-left: 50px;
+    }
+
+    h2{
+        color : black;
+    }
+
+
+    input[type=text], input[type=email] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        border-radius: 0px;
+        font-family: "Quicksand";  
+        
+    }
+    
+    
+    input[type=text], input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        border-radius: 0px;
         font-family: "Quicksand";  
     }
 
