@@ -103,11 +103,27 @@
                     <button type="submit" class="btn btn-primary btn-block">Inscription</button>
                 </div>   
 
-                <p3 class="text-center"><a href="connexion.php">Connexion</a></p3>
+                <a id = "button1" href="connexion.php">Connexion</a>
 
                 <style>
 
-p3{
+#container{
+    margin-top: 30%;
+}
+
+
+
+
+    h1{
+    color : black;
+    position: relative;
+    font-size: 2.5em;
+    text-align: center;
+    padding-bottom: 10%;
+    }
+
+#button1{
+    font-size: 18px;
     position: absolute;
     margin-left: 30%;
     background-color: #00ccff;
@@ -122,7 +138,7 @@ p3{
     
 }
 
-p3:hover {
+#button1:hover {
     background-color: white;
     color: black;
     border: 1px solid black;

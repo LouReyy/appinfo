@@ -37,9 +37,9 @@
                 <div id="container">
 
                 <div class="login-form">
-                <?php 
-                   if(isset($_GET['login_err']))
-                   {
+                    <?php 
+                     if(isset($_GET['login_err']))
+                    {
                        $err = htmlspecialchars($_GET['login_err']);
    
                        switch($err)
@@ -70,13 +70,13 @@
                        }
                    }
                    ?> 
-   
-                </div>
                 
 
-                <img class = "forme1"src="forme1.png"></img>
+                <img id = "forme1"src="forme1.png"></img>
 
                 <h1 class="text-center">Bienvenue</h1>
+
+                </div>
 
     
             
