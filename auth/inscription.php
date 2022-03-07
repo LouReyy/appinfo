@@ -11,17 +11,29 @@
             <title>Inscription</title>
         </head>
         <body>
+        
+        <div id = "container1">
 
 
-     <div id = test>
-         <img class = "logo"src="logo.png"></img>
-     </div>
+        <header>
+                <img src="/appinfo/auth/logo_infinite.png" alt="logo">
+                <nav>
+                    <ul class="nav__links">
+                        <li><a href="/appinfo/homepage/homepage.html">Accueil</a></li>
+                        <li><a href="#">Votre chantier</a></li>
+                        <li><a href="#">Forum</a></li>
+                        <li><a href="/appinfo/contact/Page_onglets.html">Contactez-nous</a></li>
+                    </ul>
+                </nav>
+             <a class="cta" href="/appinfo/auth/index.php">Connexion</a>
+        </header>
+
+
+     <div id = test></div>
 
     <div id = ecran>
 
          <div id="container">
-
-
              <div class="login-form">
             <?php 
                 if(isset($_GET['reg_err']))
@@ -103,11 +115,34 @@
                     <button type="submit" class="btn btn-primary btn-block">Inscription</button>
                 </div>   
 
-                <p3 class="text-center"><a href="connexion.php">Connexion</a></p3>
+                <a id = "button1" href="connexion.php">Connexion</a>
 
                 <style>
 
-p3{
+#container{
+    margin-top: 30%;
+}
+
+    
+    .forme1{
+        width: 60%;
+        height: 6%;
+        display: block;
+        margin-top: 5%;
+        margin-left: 8%;
+        
+    }
+
+
+    h1{
+    color : black;
+    position: relative;
+    font-size: 4em;
+    padding-bottom: 10%;
+    }
+
+#button1{
+    font-size: 18px;
     position: absolute;
     margin-left: 30%;
     background-color: #00ccff;
@@ -122,7 +157,7 @@ p3{
     
 }
 
-p3:hover {
+#button1:hover {
     background-color: white;
     color: black;
     border: 1px solid black;
@@ -135,6 +170,8 @@ p3:hover {
 
             </form>
         </div>
+
+    </div>
       
         </body>
 </html>

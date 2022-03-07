@@ -2,19 +2,15 @@
 
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-  
-header{
-  position: relative;
-  height: 100px;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 20px 2%;
-  background-color: #fbfbfb;
+  }
+
+  header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 2%;
+    background-color: #fbfbfb;
   }
 
   
@@ -55,8 +51,8 @@ header{
     padding: 0px 50px;
   }
   
- .nav__links li a { /* chgmt de couleur quand curseur sur le mot qui dure 0.2s et commence apres 0s */
-    transition: color 0.2s ease 0s;
+ .nav__links li a { /* chgmt de couleur quand curseur sur le mot qui dure 0.5s et commence apres 0.1s */
+    transition: color 0.5s ease 0.1s;
   }
   
   .nav__links li a:hover { /* couleur du texte quand il curseur dessus*/
@@ -76,17 +72,15 @@ header{
     background-color: #8aceff;
   }
 
-
   /*Le centre*/
 
 h1 {
-  position: relative;
-  text-align: center;
-  font-family: "Quicksand", sans-serif;
-  font-size: 50px;
-  font-weight: 10;
-}
-
+    position: relative;
+    text-align: center;
+    font-family: "Quicksand", sans-serif;
+    font-size: 50px;
+    font-weight: 10;
+  }
 h1 hr{
   border-top: 3px solid #00ccff;
   margin-left: auto;
@@ -94,14 +88,13 @@ h1 hr{
   width:20%;
 }
 
-
-#container{
+#containerpartie1{
   position:relative;
   display: grid;
   height: auto;
   margin-right: 10%;
   margin-left: 10%;
-  grid-column-gap: 50px;
+  grid-column-gap: 15px;
   grid-row-gap: 50px;
   grid-template-rows: auto auto auto auto;
 
@@ -116,13 +109,14 @@ h1 hr{
   background-color: white;
   border-radius: 10px;
   box-shadow: 5px 5px 5px 5px #dbdbdb;
+  grid-column-gap: 5px;
 }
+
 h2{
-  
-  text-align: center;
-  font-family: "Quicksand", sans-serif;
-  font-size: 40px;
-  font-weight: 10;
+    text-align: center;
+    font-family: "Quicksand", sans-serif;
+    font-size: 40px;
+    font-weight: 10;
 }
 
 h2 img{
@@ -139,17 +133,22 @@ p{
 }
 
 img{
- 
   width: 500px;
   height: 500px;
 }
-.imgeolienne{ /*image ex de l'eolienne jsp quelles proprietes mettre pour alligner avec le cadre de texte...*/  
+.imgeolienne{  
   grid-column: 1;
   grid-row: 1;/*taille image*/
-  margin-left: 25%;
+  margin-left: 40%;
   z-index: 1;
 }
 
+p2{
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+  font-size: 18px;
+  font-weight: 10;
+}
 
 .boxdetextegauche{
   margin: auto;
@@ -162,29 +161,130 @@ img{
   padding-right: 20%;
 }
 
-p2{
-  text-align: center;
-  font-family: "Quicksand", sans-serif;
-  font-size: 18px;
-  font-weight: 10;
-}
-
 .imgchantier{ /*idem */
   grid-column: 2;
   grid-row: 2;
   margin-right: 50%;
   z-index: 1;
-  margin-left: -25%;
+  margin-left: -20%;
 }
-
 
 
 /* Partie: Nos services */
-.alignertableau{
-  align-items: flex-start;
+#containerpartie2 {
+  display: grid;
+  justify-content: space-between;
+  text-align: center;
+  margin:2%;
 }
-.boxdetexte{
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 5px 5px 5px 5px #dbdbdb;
+
+.chantier{
+  grid-column: 1;
+  grid-row: 1;
+  border: 1px solid black;
+  border-radius: 60px;
+}
+.chantier img{
+  border-radius: 60px 60px 0 0;
+  height: 65%;
+  width: 100%;
+}
+.stats{
+  grid-column: 2;
+  grid-row: 1;
+  border: 1px solid black;
+  border-radius: 60px;
+}
+.stats img{
+  border-radius: 60px 60px 0 0;
+  height: 65%;
+  width: 100%;
+}
+
+.forum{
+  grid-column: 3;
+  grid-row: 1;
+  border: 1px solid black;
+  border-radius: 60px;
+}
+.forum img{
+  border-radius: 60px 60px 0 0;
+  height: 65%;
+  width: 100%;
+}
+
+p3{
+  text-align: center;
+}
+
+
+
+
+
+@media only screen and (max-width: 700px){
+
+  h1 {
+    margin-left: 35%;
+    margin-right: auto;
+  }
+  h1 hr{
+    margin-left: auto;
+    margin-right: auto;
+    width:55%;
+  } 
+
+  #containerpartie1{
+    grid-row-gap: 30px;
+  }
+
+  img{
+    width: 300px;
+    height: 300px;
+  }
+  
+  .imgeolienne{  
+    grid-column: 1;
+    grid-row: 1;
+    margin: 10% 15% 2%;
+  }
+
+  
+  .boxdetextedroite{
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  p{
+    padding:2px;
+  }
+
+  .imgchantier{ 
+    grid-column: 1;
+    grid-row: 3;
+    margin: 10% 15% 2%;
+  }
+
+  .boxdetextegauche{
+    grid-column: 1;
+    grid-row: 4;
+  }
+
+  p2{
+    padding:2px;
+  }
+
+  .chantier{
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .stats{
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .forum{
+    grid-column: 1;
+    grid-row: 3;
+  }
 }
