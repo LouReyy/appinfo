@@ -10,74 +10,6 @@ html {
 body {
     background: grey;
 }
-header{
-    position: relative;
-    height: 100px;
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 20px 2%;
-    background-color: #fbfbfb;
-    }
-  
-    
-    header img{  /*taille image logo dans la barre du haut*/  
-      width: 120px;
-      height: 120px;
-      margin-right: auto;
-      margin-top: 10px;
-    }
-  
-    .nav__links a,
-    .overlay__content a {  /* style des barres du menu */
-      position: relative;
-      font-family: "Quicksand", sans-serif;
-      font-weight: 10;
-      font-size: 20px;
-      color: black;
-      text-decoration: none;
-      text-align: center;
-      margin-left: auto;
-    }
-  
-    .cta{ /*style du texte dans le bouton connexion*/
-      font-family: "Quicksand", sans-serif;
-      font-weight: 10;
-      font-size: 18px;
-      color:white;
-      text-decoration: none;
-    }
-    
-    .nav__links {  /*mettre en liste horizontal*/
-      list-style: none;
-      display: flex;
-    }
-    
-    .nav__links li { /*faire des espaces entre chaque groupe de mot*/
-      padding: 0px 50px;
-    }
-    
-   .nav__links li a { /* chgmt de couleur quand curseur sur le mot qui dure 0.2s et commence apres 0s */
-      transition: color 0.2s ease 0s;
-    }
-    
-    .nav__links li a:hover { /* couleur du texte quand il curseur dessus*/
-      color: #00ccff;
-    }
-    
-    .cta { /*style cadre de connexion*/
-      margin-left: 20px;
-      padding: 9px 25px;
-      background-color: #00ccff;
-      border-radius: 10px;
-      cursor: pointer;
-      font-size: 20px;
-    }
-    
-    .cta:hover { /*couleur du cadre quand curseur dessus*/
-      background-color: #8aceff;
-    }
 
 
 
@@ -118,7 +50,7 @@ header{
     padding: 20px;
 }
 
-/* Anim */Test
+/* Anim */
 
 .active {
     text-decoration : cyan underline ;
@@ -142,7 +74,7 @@ form{  /**Sélectionne tout ce qui est dans form**/
     top : 65%;
     left : 50%;
     transform: translate(-50%,-50%); /**Pour placer le curseur au centre du corps du formulaire**/
-    color: rgb(138, 134, 134);
+    color: grey;
     background-color: whitesmoke;
     padding: 20px; 
     /**padding sert à avoir un espace de 20 pixels entre le corps 
@@ -152,11 +84,15 @@ form{  /**Sélectionne tout ce qui est dans form**/
 
 form h1{ /**Sélectionne h1 qui est dans form **/
     font-size: 30px;
+    transform: translate(-50%,-50%);
+    margin-left: 50%;
 }
 form .trait{
-    weight : 100%;
-    height : 1px;
-    background-color: rgb(88, 168, 221);
+    transform: translate(-50%,-50%);
+    margin-left: 48%;
+    width : 48%;
+    height : 2px;
+    background-color: #00ccff;
 }
 
 form .formulaire{
@@ -175,7 +111,7 @@ form .formulaire .gauche .case input{ /**On sélectionne les cases de gauche**/
     padding: 10px 5px 10px 30px; /**espace entre zone d'input et la case**/ 
     border: 1px solid rgb(138, 134, 134);
     border-radius: 5px;
-    outline-color: rgb(88, 168, 221);
+    outline-color: grey;
 
 }
 form .formulaire .droite .case textarea{ /**On sémectionne la case de droite réservée à la question**/
@@ -183,12 +119,13 @@ form .formulaire .droite .case textarea{ /**On sémectionne la case de droite r�
     padding: 5px 2px 2px 30px;
     border: 1px solid rgb(138, 134, 134);
     border-radius: 5px;
-    outline-color: rgb(88, 168, 221);
+    outline-color: grey;
 }
 
 form .formulaire .gauche .case i{ /**Sélectionne les images à gauche**/
     position: absolute; /**position par rapport à la classe mère**/
-    padding: 34px 2px 10px 5px; 
+    padding: 34px 2px 10px 5px;
+    color: #00ccff; 
 
 }
 form .formulaire .droite{
@@ -198,8 +135,9 @@ form .formulaire .droite .case i{
     position: absolute;
     margin-top: 29px;
     margin-left: 4px;
+    color: #00ccff;
 
 }
 button{
-    background-color: rgb(88, 168, 221);
+    background-color: #00ccff;
 }
