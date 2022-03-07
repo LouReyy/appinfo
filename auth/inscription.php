@@ -11,17 +11,29 @@
             <title>Inscription</title>
         </head>
         <body>
+        
+        <div id = "container1">
 
 
-     <div id = test>
-         <img class = "logo"src="logo.png"></img>
-     </div>
+        <header>
+                <img src="/appinfo/auth/logo_infinite.png" alt="logo">
+                <nav>
+                    <ul class="nav__links">
+                        <li><a href="/appinfo/homepage/homepage.html">Accueil</a></li>
+                        <li><a href="#">Votre chantier</a></li>
+                        <li><a href="#">Forum</a></li>
+                        <li><a href="/appinfo/contact/Page_onglets.html">Contactez-nous</a></li>
+                    </ul>
+                </nav>
+             <a class="cta" href="/appinfo/auth/index.php">Connexion</a>
+        </header>
+
+
+     <div id = test></div>
 
     <div id = ecran>
 
          <div id="container">
-
-
              <div class="login-form">
             <?php 
                 if(isset($_GET['reg_err']))
@@ -111,14 +123,21 @@
     margin-top: 30%;
 }
 
-
+    
+    .forme1{
+        width: 60%;
+        height: 6%;
+        display: block;
+        margin-top: 5%;
+        margin-left: 8%;
+        
+    }
 
 
     h1{
     color : black;
     position: relative;
-    font-size: 2.5em;
-    text-align: center;
+    font-size: 4em;
     padding-bottom: 10%;
     }
 
@@ -151,6 +170,8 @@
 
             </form>
         </div>
+
+    </div>
       
         </body>
 </html>
