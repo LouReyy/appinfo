@@ -5,14 +5,12 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <meta name="author" content="NoS1gnal"/>
 
-            <link rel="stylesheet" href="/appinfo/auth/index.css" media="screen" type="text/css" />
+            <link rel="stylesheet" href="index.css" media="screen" type="text/css" />
             
             <title>Connexion</title>
         </head>
 
         <body>   
-
-        <div id = "container1">
 
             <header>
                 <img src="/appinfo/auth/logo_infinite.png" alt="logo">
@@ -24,12 +22,12 @@
                         <li><a href="/appinfo/contact/Page_onglets.html">Contactez-nous</a></li>
                     </ul>
                 </nav>
-             <a class="cta" href="/appinfo/auth/index.php">Connexion</a>
+             <a class="cta" href="/appinfo/auth/connexion.php">Connexion</a>
             </header>
 
           
             <div id = test>
-                
+                <img class = "logo"src="/appinfo/auth/logo_infinite.png"></img>
             </div>
 
             <div id = ecran>
@@ -37,9 +35,9 @@
                 <div id="container">
 
                 <div class="login-form">
-                    <?php 
-                     if(isset($_GET['login_err']))
-                    {
+                <?php 
+                   if(isset($_GET['login_err']))
+                   {
                        $err = htmlspecialchars($_GET['login_err']);
    
                        switch($err)
@@ -70,13 +68,13 @@
                        }
                    }
                    ?> 
+   
+                </div>
                 
 
-                <img id = "forme1"src="forme1.png"></img>
+                <img class = "forme1"src="forme1.png"></img>
 
                 <h1 class="text-center">Bienvenue</h1>
-
-                </div>
 
     
             
@@ -97,15 +95,14 @@
                 
 
             
-                <a id = "button1" href="inscription.php">Inscription</a>
+                <p class="text-center"><a href="inscription.php">Inscription</a></p>
 
-                <a  id = "button2" href="edit.php">Mot de passe oublié</a>
+                <p2 class="text-center"><a href="edit.php">Mot de passe oublié</a></p2>
              
         
             </div>
         
         
-            </div>
             </div>
         </body>
 </html>
