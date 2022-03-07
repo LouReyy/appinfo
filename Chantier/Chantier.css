@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    position: relative;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 2%;
+    background-color: #fbfbfb;
+    }
+  
+    
+header img{  /*taille image logo dans la barre du haut*/  
+    width: 110px;
+    height: 110px;
+    margin-right: auto;
+    margin-top: 10px;
+    padding: 10px;
+}
+  
+.nav__links a,
+.overlay__content a {  /* style des barres du menu */
+    position: relative;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 10;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    margin-left: auto;
+}
+  
+.cta{ /*style du texte dans le bouton connexion*/
+    font-family: "Quicksand", sans-serif;
+    font-weight: 10;
+    font-size: 18px;
+    color:white;
+    text-decoration: none;
+}
+    
+.nav__links {  /*mettre en liste horizontal*/
+    list-style: none;
+    display: flex;
+}
+    
+.nav__links li { /*faire des espaces entre chaque groupe de mot*/
+    padding: 0px 50px;
+}
+    
+.nav__links li a { /* chgmt de couleur quand curseur sur le mot qui dure 0.2s et commence apres 0s */
+    transition: color 0.2s ease 0s;
+}
+    
+.nav__links li a:hover { /* couleur du texte quand il curseur dessus*/
+    color: #00ccff;
+}
+    
+.cta { /*style cadre de connexion*/
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: #00ccff;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+    
+.cta:hover { /*couleur du cadre quand curseur dessus*/
+    background-color: #8aceff;
+}
+
+body {
+    background: grey;
+}
+    
+    
+    
+.noms_onglets{ /**Tous les noms d"onglets dans la bande cette classe est la mère de la classe onglets**/
+    background: whitesmoke;
+    width: 20%;
+    height: 650px;
+        
+}
+.onglets { /**Chaque onglet particulier sauf le premier**/
+    /**Point de sauvegarde**/
+    margin-left: 10px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+    
+    
+.contenu {
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    background-color: pink;
+    opacity: 0;
+    height: 30%;
+}
+.contenu h3 {
+    padding: 20px;
+}
+.contenu hr {
+    width: 20%;
+    height: 2px;
+    margin-left: 20px;
+    background: #000;
+    border: none;
+}
+.contenu p {
+    padding: 20px;
+}
+    
+.active {
+    color: #00ccff;
+    transition: all 0.2s ease;
+}
+    
+.activeContenu {
+    animation: fade 0.3s forwards;
+}
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.ongletInactif{
+    margin-top: 50px;
+}
