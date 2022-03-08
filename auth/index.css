@@ -270,6 +270,13 @@ button[type=submit]:hover {
 
 @media screen and (max-width: 1000px){
 
+    .nav__links
+     {  /* style des barres du menu */
+        background: no-repeat url "home.png")
+    
+
+
+
 
     img[class=logo]{
         position: absolute;
