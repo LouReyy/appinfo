@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Chantier.css" media="screen" type="text/css" />
+</head>
+<body>
+    <header>
+        <img src="/appinfo/auth/logo_infinite.png" alt="logo">
+           <nav>
+               <ul class="nav__links">
+                   <li><a href="/appinfo/homepage/homepage.html">Accueil</a></li>
+                   <li><a href="#">Votre chantier</a></li>
+                   <li><a href="#">Forum</a></li>
+                   <li><a href="/appinfo/contact/Page_onglets.html">Contactez-nous</a></li>
+               </ul>
+           </nav>
+           <a class="cta" href="/appinfo/auth/index.php">Connexion</a>
+    </header>
+    <div class="container">
+
+        <div class="noms_onglets">
+            <div class="onglets active" data-anim="1">
+                <h1>Fréquence cardiaque</h1>
+            </div> 
+            <!--La syntaxe "data-" permet de rajouter un attribut qui sera utilisé ensuite avec javascript-->
+            <div class="onglets" data-anim="2">
+                <div class="ongletInactif">
+                    <h1>Niveau de bruit</h1>
+                </div>   
+            </div> <!--idem-->
+            <div class="onglets" data-anim="3">
+                <div class="ongletInactif">
+                    <h1>Température</h1>
+                </div> 
+            </div> <!--idem-->
+        </div>
+
+        <div class="contenu activeContenu" data-anim="1">
+            <!--Classe représentant le contenu de l'onglet 1 (il a donc le même attribut que son titre)-->
+            <h3>Voici l'onglet. 1</h3>
+            <hr>
+            <p>Graphique de la fréquence cardiaque</p>
+        </div>
+    
+        <div class="contenu" data-anim="2">
+            <!--Classe représentant le contenu de l'onglet 2 (il a donc le même attribut que son titre)-->
+            <h3>Voici l'onglet. 2</h3>
+            <hr>
+            <p>Niveau de bruit en dB</p>
+        </div>
+    
+        <div class="contenu" data-anim="3">
+            <!--Classe représentant le contenu de l'onglet 3 (il a donc le même attribut que son titre)-->
+            <h3>Voici l'onglet. 3</h3>
+            <hr>
+            <p>On affiche la température et son évolution</p>
+        </div>
+    </div>
+    <script src="Chantier.js"></script>
+</body>
+</html>
