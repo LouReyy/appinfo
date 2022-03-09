@@ -137,13 +137,23 @@ body {
     margin-top: 80px;
     height: 100px;
     width: 250px;
+    background-color: green;
     border: solid grey 3px;
     border-radius: 10px;
-    
-
-}
-.noms_onglets h1{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.Actif{
+    height: 100px;
+    width: 250px;
+    background-color: blue;
+    border: solid grey 3px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Actif h1{
+    margin-left: 50px;
 }
