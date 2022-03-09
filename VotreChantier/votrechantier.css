@@ -1,0 +1,113 @@
+h1{
+    text-align: center;
+    font-size: 3vw;
+}
+
+.image1{
+    width: 40vw;
+    border-radius: 50%;
+}
+
+.image2{
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    height: auto;
+    vertical-align: baseline;
+}
+.DivGrid{
+    display: grid;
+    width: 80vw;
+    margin-left: 7vw;
+    margin-right: 7vw;
+    gap: 3vw;
+    margin-bottom: 24px;
+}
+
+.un{
+    width: 40vw;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.deux {
+    width: 40vw;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    padding: 30px;
+    box-shadow: 0px 0px 30px rgb(167, 161, 161) ;
+    grid-column: 2;
+    grid-row: 1;
+    vertical-align: baseline;
+}
+
+.Grid1{
+    display: grid;
+    grid-template-columns: 10% 90%;
+
+}
+
+.Deux_2{
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 2vw;
+    margin: 0;
+    display : flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.center{
+    margin-top: 10%;
+    vertical-align: baseline;
+    text-align: center;
+    font-size: 1.4vw;
+    height: 50%;
+}
+
+.Grid2{
+    width: 100vw;
+    display: grid;
+    grid-template-columns: Auto auto Auto;
+    display: flex;
+    justify-content: center;
+}
+.Un_3{
+
+    grid-column: 1;
+    height: 20vw;
+    width: 40vw;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    padding: 30px;
+    box-shadow: 0px 0px 30px rgb(212, 205, 205) ;
+    vertical-align: baseline;
+    
+}
+
+.Deux_3{
+    grid-column: 2;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    height: 80%;
+    width: 3px;
+    background-color: rgb(0, 204, 255) ;
+  
+   
+
+}
+.Trois_3{
+
+    grid-column: 3;
+    height: 20vw;
+    width: 40vw;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    padding: 30px;
+    box-shadow: 0px 0px 30px rgb(212, 205, 205) ;
+    vertical-align: baseline;
+    
+    
+}
