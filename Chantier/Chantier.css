@@ -84,14 +84,14 @@ body {
     background: whitesmoke;
     width: 20%;
     height: 650px;
+
         
 }
 .onglets { /**Chaque onglet particulier sauf le premier**/
     /**Point de sauvegarde**/
     margin-left: 10px;
-    justify-content: center;
-    align-items: center;
     cursor: pointer;
+    
 }
     
     
@@ -133,6 +133,17 @@ body {
         opacity: 1;
     }
 }
-.ongletInactif{
-    margin-top: 50px;
+.ongletInactif{/** Espace entre les onglets**/
+    margin-top: 80px;
+    height: 100px;
+    width: 250px;
+    border: solid grey 3px;
+    border-radius: 10px;
+    
+
+}
+.noms_onglets h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
