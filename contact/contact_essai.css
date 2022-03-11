@@ -75,7 +75,7 @@ header {
 form{  /**Sélectionne tout ce qui est dans form**/
     /**Positionne le formulaire au centre **/
     position :absolute;
-    top : 65%;
+    top : 60%;
     left : 50%;
     transform: translate(-50%,-50%); /**Pour placer le curseur au centre du corps du formulaire**/
     color: grey;
