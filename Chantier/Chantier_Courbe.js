@@ -31,14 +31,14 @@ var seriesData = dataSet.mapAs({ x: 0, value: 1 });
 var chart = anychart.line();
 // configure the chart title text settings
 //Le titre du graphique
-chart.title('Acceptance in the US over the last 2 decades');
+chart.title('Graphique fréquence cardiaque');
 // set the y axis title
-chart.yAxis().title('% of people who accept ');
+chart.yAxis().title('Bpm ');
 // create a line series with the mapped data
 //Relier les points
 var lineChart = chart.line(seriesData);
 // set the container id for the line chart
-chart.container('container');
+chart.container('graph1');
 // draw the line chart
 chart.draw();
 
@@ -73,9 +73,9 @@ var seriesData = dataSet.mapAs({ x: 0, value: 1 });
 var chart = anychart.line();
 // configure the chart title text settings
 //Le titre du graphique
-chart.title('Test 2eme courbe');
+chart.title('Niveau de bruit');
 // set the y axis title
-chart.yAxis().title('% of people who accept ');
+chart.yAxis().title('dB ');
 // create a line series with the mapped data
 //Relier les points
 var lineChart = chart.line(seriesData);

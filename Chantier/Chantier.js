@@ -28,10 +28,5 @@ onglets.forEach(onglet => {
             contenu[j].classList.remove('activeContenu');
         }
     }
-    
-    
-
-
-
   })
 })
