@@ -16,7 +16,9 @@
 
 
         <header>
-                <img src="/appinfo/auth/logo_infinite.png" alt="logo">
+        <div id ="logoimg">
+            <a  href="/appinfo/homepage/homepage.html"><img src="/appinfo/auth/logo_infinite.png" alt="logo"></a>
+        </div>  
                 <nav>
                     <ul class="nav__links">
                         <li><a href="/appinfo/homepage/homepage.html">Accueil</a></li>
@@ -34,8 +36,8 @@
     <div id = ecran>
 
          <div id="container">
-             <div class="login-form">
-            <?php 
+            <div class="login-form">
+                <?php 
                 if(isset($_GET['reg_err']))
                 {
                     $err = htmlspecialchars($_GET['reg_err']);
@@ -117,19 +119,35 @@
 
                 <a id = "button1" href="connexion.php">Connexion</a>
 
-                <style>
+            </div> 
 
-#container{
-    margin-top: 30%;
-}
+
+         </div> 
+
+         </div>
+
+            
+
+
+
+    <style>
+
+               
+
+
+
+    #container{
+        margin-top: 20%;
+        width: 700px;
+        height: 250px;
+    }
 
     
     .forme1{
-        width: 60%;
+        width: 45%;
         height: 6%;
         display: block;
-        margin-top: 5%;
-        margin-left: 8%;
+        margin-left: 4%;
         
     }
 
@@ -138,40 +156,18 @@
     color : black;
     position: relative;
     font-size: 4em;
-    padding-bottom: 10%;
+    padding-bottom: 5%;
+    margin-top: -10%;
     }
 
-#button1{
-    font-size: 18px;
-    position: absolute;
-    margin-left: 30%;
-    background-color: #00ccff;
-    color: white;
-    padding: 14px 20px;
-    border: none;
-    cursor: pointer;
-    width: 40%;
-    border-radius: 15px;
-    font-family: "Quicksand";  
-    text-align: center;
-    
-}
+    .form-group{
+        font-size: 15px;
+        padding: 5px;
+    }
 
-#button1:hover {
-    background-color: white;
-    color: black;
-    border: 1px solid black;
-}
+    #button1{
+        width: 100%;
+    }
+    </style>
 
-
-
-
-                </style>
-
-            </form>
-        </div>
-
-    </div>
-      
-        </body>
 </html>

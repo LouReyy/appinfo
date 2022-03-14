@@ -21,6 +21,8 @@
                     $delete->execute(array($token));
 
                     echo "Le mot de passe a bien été modifie";
+                    header('Location: /appinfo/auth/index.php');
+
                 }else{
                     echo "Les mots de passes ne sont pas identiques";
                 }

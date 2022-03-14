@@ -15,11 +15,13 @@
         <div id = "container1">
 
             <header>
-                <img src="/appinfo/auth/logo_infinite.png" alt="logo">
+                <div id ="logoimg">
+                    <a  href="/appinfo/homepage/homepage.html"><img src="/appinfo/auth/logo_infinite.png" alt="logo"></a>
+                </div>
                 <nav>
                     <ul class="nav__links">
                         <li><a href="/appinfo/homepage/homepage.html">Accueil</a></li>
-                        <li><a href="#">Votre chantier</a></li>
+                        <li><a href="/appinfo/VotreChantier/VotreChantier.html">Votre chantier</a></li>
                         <li><a href="#">Forum</a></li>
                         <li><a href="/appinfo/contact/Page_onglets.html">Contactez-nous</a></li>
                     </ul>
@@ -108,4 +110,6 @@
             </div>
             </div>
         </body>
+
+        <script src= index.js></script>
 </html>
