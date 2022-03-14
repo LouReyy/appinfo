@@ -3,6 +3,13 @@ body{
 
 }
 #container{
+    margin-left: 200px;
     height: 30%;
     width: 45%;
+}
+#graph2{
+    margin-left: 200px;
+    height: 30%;
+    width: 45%;
+
 }
