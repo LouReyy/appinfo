@@ -12,12 +12,16 @@
 
         <body>   
 
+        <div id = "container1">
+
             <header>
-                <img src="/appinfo/auth/logo_infinite2.png" alt="logo">
+                <div id ="logoimg">
+                    <a  href="/appinfo/homepage/homepage.html"><img src="/appinfo/auth/logo_infinite.png" alt="logo"></a>
+                </div>
                 <nav>
                     <ul class="nav__links">
                         <li><a href="/appinfo/homepage/homepage.html">Accueil</a></li>
-                        <li><a href="#">Votre chantier</a></li>
+                        <li><a href="/appinfo/VotreChantier/VotreChantier.html">Votre chantier</a></li>
                         <li><a href="#">Forum</a></li>
                         <li><a href="/appinfo/contact/Page_onglets.html">Contactez-nous</a></li>
                     </ul>
@@ -26,16 +30,18 @@
             </header>
 
           
-            <div id = test></div>
+            <div id = test>
+                
+            </div>
 
             <div id = ecran>
 
                 <div id="container">
 
                 <div class="login-form">
-                <?php 
-                   if(isset($_GET['login_err']))
-                   {
+                    <?php 
+                     if(isset($_GET['login_err']))
+                    {
                        $err = htmlspecialchars($_GET['login_err']);
    
                        switch($err)
@@ -66,13 +72,13 @@
                        }
                    }
                    ?> 
-   
-                </div>
                 
 
-                <img class = "forme1"src="forme1.png"></img>
+                <img id = "forme1"src="forme1.png"></img>
 
                 <h1 class="text-center">Bienvenue</h1>
+
+                </div>
 
     
             
@@ -93,14 +99,17 @@
                 
 
             
-                <p class="text-center"><a href="inscription.php">Inscription</a></p>
+                <a id = "button1" href="inscription.php">Inscription</a>
 
-                <p2 class="text-center"><a href="edit.php">Mot de passe oublié</a></p2>
+                <a  id = "button2" href="edit.php">Mot de passe oublié</a>
              
         
             </div>
         
         
             </div>
+            </div>
         </body>
+
+        <script src= index.js></script>
 </html>
