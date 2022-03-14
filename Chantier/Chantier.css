@@ -81,17 +81,18 @@ body {
     
     
 .noms_onglets{ /**Tous les noms d"onglets dans la bande cette classe est la mère de la classe onglets**/
+    position: absolute;
     background: whitesmoke;
     width: 20%;
     height: 650px;
+
         
 }
 .onglets { /**Chaque onglet particulier sauf le premier**/
     /**Point de sauvegarde**/
     margin-left: 10px;
-    justify-content: center;
-    align-items: center;
     cursor: pointer;
+    
 }
     
     
@@ -120,6 +121,7 @@ body {
 .active {
     color: #00ccff;
     transition: all 0.2s ease;
+
 }
     
 .activeContenu {
@@ -133,6 +135,26 @@ body {
         opacity: 1;
     }
 }
-.ongletInactif{
+.ongletInactif{/** Espace entre les onglets**/
+    margin-top: 80px;
+    height: 100px;
+    width: 250px;
+    border: solid grey 3px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Actif{
     margin-top: 50px;
+    height: 100px;
+    width: 250px;
+    border: solid grey 3px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Actif h1{
+    margin-left: 50px;
 }
