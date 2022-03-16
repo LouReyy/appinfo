@@ -8,65 +8,84 @@
     <title>Document</title>
 </head>
 <body>
+    
 
-    <header>
-        <img src="/appinfo/auth/logo_infinite.png" alt="logo">
-        <nav>
+
+
+        <header>
+        <div id ="logoimg">
+            <a  href="/appinfo/homepage/homepage.html"><img src="/appinfo/auth/logo_infinite.png" alt="logo"></a>
+        </div>              <nav id = test >
             <ul class="nav__links">
                 <li><a href="/appinfo/homepage/homepage.html">Accueil</a></li>
                 <li><a href="#">Votre chantier</a></li>
                 <li><a href="#">Forum</a></li>
                 <li><a href="/appinfo/contact/Page_onglets.html">Contactez-nous</a></li>
             </ul>
-        </nav>
-     <a class="cta" href="/appinfo/auth/index.php">Connexion</a>
-    </header>
+            </nav>
+            <a class="cta" href="/appinfo/auth/index.php">Connexion</a>
+         </header>
 
-    <div id ="container">
-        <img id = "forme1"src="forme1.png"></img>
-        <h1>Mot de passe oublié</h1>
-        <p> Pas de panique ! Renseignez votre email ci-dessous et nous vous enverons par email les informations pour vous creer un nouveau mot de passe.</p>
+        <div id ="container">
 
-        <div class="form-group">
-            <form action="/appinfo/auth/forgot.php" method="POST">
-                <input type="email" name="email" class="form-control" placeholder="Adresse Email" required="required" autocomplete="off">
-        
-                <button type="submit" href="edit2.php" class="btn btn-primary btn-block">Reinitialiser mon mot de passe </button>
-            </form>
+            <div class="login-form">
+                <img id = "forme1"src="forme1.png"></img>
+                <h1>Mot de passe oublié</h1>
+            </div>
+
+            <p> Pas de panique ! Renseignez votre email ci-dessous et nous vous enverons par email les informations pour vous creer un nouveau mot de passe.</p>
+
+            <div class="form-group">
+                <form action="/appinfo/auth/forgot.php" method="POST">
+                    <input type="email" name="email" class="form-control" placeholder="Adresse Email" required="required" autocomplete="off">
+                    <button type="submit" href="edit2.php" class="btn btn-primary btn-block">Reinitialiser mon mot de passe </button>
+                 </form>
+            </div>
+
         </div>
 
     </div>
     
     <style>
         #container{
-            text-align: center;
+            justify-content: center;
+            align-items: center;
             position: absolute;
             display: flex;
-            align-items: flex-start;
-            margin-top: 1%;
-            width: 50%;
-            height: 100%;
-            margin-left: 35%;
+            margin-top: 6%;
+            width: 80%;
+            height: 60%;
+            margin-left: 10%;
             flex-direction: column;
         }
 
-        h1{
-            text-align: center;
-            margin-top: -8%;
-            font-size: 45px;
+        .login-form {
+            position: relative;
+            width: 500px;
+            margin:auto;
+            font-family: "Quicksand";
         }
 
+        h1{
+
+        position: relative;
+        font-size: 3em;
+        margin-top:-65px;
+
+    }
+
         #forme1{
-            margin-top: 5%;
-            width: 52%; 
-            height: 3%;
+            position: relative;
+            width: 450px;
+            height: 20px;
+            margin-top: -500px;
+            margin-left: 7%;
         }
 
         p{
-            position: relative;
-            font-size: 30px;
+
+            font-size: 40px;
             text-align: center;
-            margin-left: -40%;
             padding: 8%;
 
         }
@@ -81,19 +100,20 @@
         }
 
         input[type=text], input[type=email] {
-            font-size: 20px;
+            font-size: 40px;
             width: 100%;
             height: 100%;
             border-radius: 60px;
         }
 
         button[type=submit] {
-            width: 40%; 
+            width: 50%; 
             height : 8%;
             margin-top: 2%;
             border-radius: 60px ;
-            font-size: 18px;
+            font-size: 25px;
         }
+    
 
 
     </style>

@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="/appinfo/auth/index.css" media="screen" type="text/css" />
   </head>
   <body>
+      <div id = container1>
   <header>
         <img src="/appinfo/auth/logo_infinite.png" alt="logo">
         <nav>
@@ -40,10 +41,12 @@
 
 
 
-        <div class="container">
+        <div id="container">
 
+            <div class="login-form">
                 <img id = "forme1"src="forme1.png"></img>
                   <h1>Réinitialiser mon mot de passe</h1>
+            </div>
                   <p> Renseignez vos nouvelles informations</p>
                     <div class="form-group">
                         <form action="password_change_post.php" method="POST">
@@ -58,77 +61,79 @@
               </div>
           </div>
       </div>
-  </body>
+      <style>
 
-  <style>
-
-    .container{
-      text-align: center;
-      position: absolute;
-      display: flex;
-      align-items: flex-start;
-      margin-top: 1%;
-      width: 60%;
-      height: 100%;
-      margin-left: 20%;
-      margin-right: 20%;
-      flex-direction: column;
-      font-family: Quicksand;
-    }
-     h1{
-        text-align: center;
-        display: block;
-        margin-top: -6.5%;
-        font-size: 45px;
-        padding-left: 20%;
+        #container{
+            align-items: center;
+            position: absolute;
+            display: flex;
+            margin-top:10%;
+            width: 80%;
+            height: 75%;
+            margin-left: 10%;
+            flex-direction: column;
         }
 
-        
+        .login-form {
+            padding-bottom: 4%;
+            position: relative;
+            margin-top:0;
+            width: 800px;
+            font-family: "Quicksand";
+        }
+
+        h1{
+
+        position: relative;
+        font-size: 3em;
+        margin-top:-75px;
+
+    }   
+
         #forme1{
-          text-align: center;
-          margin-top: 5%;
-          width: 70%; 
-          height: 3%;
-          margin-left: 18%;
+            position: relative;
+            width: 700px;
+            height: 30px;
+            margin-top: -6  00px;
+            margin-left: 7%;
         }
 
         p{
-            font-size: 30px;
+            position: relative;
+            font-size: 40px;
             text-align: center;
-            padding-left: 25%;
-            padding-top: 5%;
-            padding-bottom: 5%;
+            margin: 0;
 
         }
 
-        #form-group {
+        .form-group {
+            display: flex;
+            margin-top:5%;
+            width:60%;
+            margin-left: 10%;
 
-            position: absolute;
-            width:70%;
-            border: 1px solid #f1f1f1;
-            background: #fff;
-            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
         }
 
         input[type=text], input[type=password] {
-            font-size: 20px;
-            width: 140%;
-            height: 100%;
+            flex-wrap: nowrap;
+            font-size: 30px;
+            width: 150%;
+            height:40%;
             border-radius: 60px;
-            text-align: center;
-            margin-left: 60%;
         }
 
         button[type=submit] {
             width: 80%; 
-            height : 8%;
-            margin-top: 5%;
+            height : 40%;
+            margin-top: 2%;
             border-radius: 60px ;
-            font-size: 18px;
-            margin-left: 60%;
-
-
+            font-size: 25px;
         }
-    
-  </style>
+
+
+    </style>
+
+</div>
+  </body>
+
 </html>

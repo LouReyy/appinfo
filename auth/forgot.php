@@ -1,4 +1,6 @@
 <?php 
+
+
     require_once __DIR__.'/config.php';
 
     if(!empty($_POST['email'])){
@@ -17,14 +19,13 @@
             $insert->execute(array($token_user, $token));
 
             $link = 'http://localhost/appinfo/auth/recover.php?u='.base64_encode($token_user).'&token='.base64_encode($token);
-            echo "$link";
             $headers = 'Content-type: text/html; charset=utf-8'."\r\n";
             $to_email = $email;
             $subject = "Test envoi mail";
             $body = '<a href="'.$link.'">Réinitialise ton email en cliquant ici !</a>';
  
             if (mail($to_email, $subject, $body, $headers)) {
-                echo "Email successfully sent to $to_email...";
+                echo "l'email a bien été envoyé à $to_email...";
             } else {
                 echo "Email sending failed...";
             }
