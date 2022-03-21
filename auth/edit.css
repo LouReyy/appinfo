@@ -186,6 +186,49 @@ header{
           
         }
 
+
+        button1 {
+          position: absolute;
+          background-color: #00ccff;
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          cursor: pointer;
+          width: 48%;
+          border-radius: 25px;
+          font-family: "Quicksand";  
+          text-align: center;
+          display: inline-block;
+          text-decoration: none;
+          color: white;
+          font-size: 30px;
+      }
+
+      button2 {
+        position: absolute;
+        background-color: #00ccff;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 48%;
+        border-radius: 25px;
+        font-family: "Quicksand";  
+        text-align: center;
+        display: inline-block;
+        text-decoration: none;
+        color: white;
+        font-size: 30px;
+    }
+
+      button1:hover ,button2:hover{
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+    }
+
         a{
           text-decoration: none;
         }
