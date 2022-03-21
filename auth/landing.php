@@ -70,7 +70,9 @@
 
                     <h1>Confirmation mot de passe : <input type="password" name="" class="form-control" value= "" required="required"></h1>
 
-                    <button href="deconnexion.php" class="btn btn-danger btn-lg">Déconnexion</button> 
+                    <button1 href="modif.php" class="btn btn-danger btn-lg">Modifier</button1> 
+
+                    <button2 href="deconnexion.php" class="btn btn-danger btn-lg">Déconnexion</button2> 
 
 
             </div>
