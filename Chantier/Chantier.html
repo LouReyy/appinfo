@@ -12,17 +12,17 @@
 <body>
     <header>
         <img src="/appinfo/auth/logo_infinite.png" alt="logo">
-           <nav>
-               <ul class="nav__links">
-                   <li><a href="/appinfo/homepage/homepage.html">Accueil</a></li>
-                   <li><a href="#">Votre chantier</a></li>
-                   <li><a href="#">Forum</a></li>
-                   <li><a href="/appinfo/contact/Page_onglets.html">Contactez-nous</a></li>
-               </ul>
-           </nav>
+        <nav>
+            <ul class="nav__links">
+                <li><a href="/appinfo/homepage/homepage.html">Accueil</a></li>
+                <li><a href="/appinfo/Chantier/Chantier.html">Votre chantier</a></li>
+                <li><a href="#">Forum</a></li>
+                <li><a href="/appinfo/contact/contact_essai.html">Contactez-nous</a></li>
+            </ul>
+        </nav>
            <a class="cta" href="/appinfo/auth/index.php">Connexion</a>
     </header>
-    <div class="container">
+    <div class="container"> 
 
         <div class="noms_onglets">
             <div class="onglets active" data-anim="1">
@@ -48,28 +48,29 @@
             <h3>Voici l'onglet. 1</h3>
             <hr>
             <p>Graphique de la fréquence cardiaque</p>
+            
             <div id="graph1">
-                <script src="Chantier_Courbe.js"></script>
+                    <script src="Chantier_Courbe.js"></script>
             </div>
         </div>
-    <!--
         <div class="contenu" data-anim="2">
-            Classe représentant le contenu de l'onglet 2 (il a donc le même attribut que son titre)
+            <!--Classe représentant le contenu de l'onglet 2 (il a donc le même attribut que son titre)-->
             <h3>Voici l'onglet. 2</h3>
             <hr>
             <p>Niveau de bruit en dB</p>
             <div id="graph2">
-                <script src="Chantier_Courbe.js"></script>
-            </div>
+                <script src="data2.js"></script>
+            </div>  
         </div> 
-    -->
-    
+
         <div class="contenu" data-anim="3">
             <!--Classe représentant le contenu de l'onglet 3 (il a donc le même attribut que son titre)-->
             <h3>Voici l'onglet. 3</h3>
             <hr>
             <p>On affiche la température et son évolution</p>
-        </div>
+            <div id="graph3">
+                <script src="data3.js"></script>
+            </div>   
     </div>
     <script src="Chantier.js"></script>
 </body>

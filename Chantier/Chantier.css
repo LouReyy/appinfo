@@ -1,3 +1,7 @@
+body{
+    margin:0;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -76,6 +80,7 @@ header img{  /*taille image logo dans la barre du haut*/
 
 body {
     background: grey;
+    height: 100%;
 }
     
     
@@ -84,7 +89,8 @@ body {
     position: absolute;
     background: whitesmoke;
     width: 20%;
-    height: 650px;
+    height : 86%;
+    max-height: 100%;
 
         
 }
@@ -99,11 +105,12 @@ body {
 .contenu {
     position: absolute;
     top: 20%;
-    left: 45%;
-    background-color: pink;
+    left: 35%;
+    background-color: whitesmoke;
     opacity: 0;
     height: 500px;
     width: 800px;
+    border-radius: 10px;
 }
 .contenu h3 {
     padding: 20px;
@@ -159,3 +166,19 @@ body {
 .Actif h1{
     margin-left: 50px;
 }
+#graph1{
+    height: 280px;
+    width: 750px;
+    margin-left: 20px;
+}
+#graph2{
+    height: 280px;
+    width: 750px;
+    margin-left: 20px;
+}
+#graph3{
+    height: 280px;
+    width: 750px;
+    margin-left: 20px;
+}
+
