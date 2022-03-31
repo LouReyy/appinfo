@@ -95,6 +95,7 @@ body{
 body{
   margin:0;
   padding: 0;
+  background-color: #f0f0f0;
 }
 
 
@@ -103,7 +104,7 @@ h1 {
     text-align: center;
     font-family: "Quicksand", sans-serif;
     font-size: 50px;
-    font-weight: 10;
+    font-weight: 20;
   }
 h1 hr{
   border-top: 3px solid #00ccff;
@@ -113,27 +114,26 @@ h1 hr{
 }
 
 #containerpartie1{
-  position:relative;
+  margin-top: 2%;
   display: grid;
   height: auto;
-  margin:0;
-  padding: 0;
   grid-column-gap: 15px;
   grid-row-gap: 50px;
   grid-template-rows: auto auto auto auto;
-  background-color: #f0f0f0;
+  
 }
 
 .boxdetextedroite{
-  margin: auto;
+  margin-right: 50%;
   grid-column: 2;
   grid-row: 1;
-  margin-left: -5%;
   padding: 5% 2%;
   background-color: white;
   border-radius: 10px;
   box-shadow: 5px 5px 5px 5px #dbdbdb;
   grid-column-gap: 5px;
+  width : 90%;
+  transform :translate(-15%);
 }
 
 h2{
@@ -156,16 +156,21 @@ p{
   font-weight: 10;
 }
 
-img{
-  width: 500px;
-  height: 500px;
-}
+
 .imgeolienne{  
   grid-column: 1;
   grid-row: 1;/*taille image*/
-  margin-left: 40%;
+  margin-left: 30%;
   z-index: 1;
 }
+
+.img1{
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  
+  
+}
+
+
 
 p2{
   text-align: center;

@@ -38,7 +38,6 @@
                                 'pseudo' => $pseudo,
                                 'email' => $email,
                                 'password' => $password,
-                                'ip' => $ip,
                                 'token' => bin2hex(openssl_random_pseudo_bytes(64))
                             ));
                             // On redirige avec le message de succès
