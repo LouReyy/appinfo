@@ -1,9 +1,4 @@
-/*La barre de menu*/
-body{
-  margin : 0;
-  height: 100%;
-  
-}
+/*La barre de menu_____________________________*/
 * {
     box-sizing: border-box;
     margin:0;
@@ -37,7 +32,7 @@ body{
 
   #test{
     flex:5
-}
+  }
 
   .nav__links a,
   .overlay__content a {  /* style des barres du menu */
@@ -90,7 +85,7 @@ body{
     background-color: #8aceff;
   }
 
-  /*Le centre*/
+  /*Le centre________________________________*/
 
 body{
   margin:0;
@@ -98,7 +93,7 @@ body{
   background-color: #f0f0f0;
 }
 
-
+/*Bienvenue/Mes services __________________________*/
 h1 {
     position: relative;
     text-align: center;
@@ -112,7 +107,7 @@ h1 hr{
   margin-right: auto;
   width:20%;
 }
-
+/*PARTIE AVEC IMAGES EOL+CHAN et texte________________*/
 #containerpartie1{
   margin-top: 2%;
   display: grid;
@@ -158,7 +153,7 @@ p{
 
 
 .imgeolienne{  
-  grid-column: 1;
+  grid-column: 2/4;
   grid-row: 1;/*taille image*/
   margin-left: 30%;
   z-index: 1;
