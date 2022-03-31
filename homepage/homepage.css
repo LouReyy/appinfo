@@ -96,6 +96,7 @@ h1 hr{
 
 
 #container{
+  padding-top: 5vh;
   display: grid;
   height: auto;
   margin-right: 5%;
@@ -107,9 +108,10 @@ h1 hr{
 }
 
 .boxdetextedroite{
-    grid-column-start: 1;
-    grid-row-end: 1;
-    margin: 6% 8% 10% 46%;
+
+    grid-column: 2;
+    grid-row: 1;
+    width: 80vh;
     padding: 3% 2%;
     background-color: white;
     border-radius: 10px;
@@ -137,7 +139,9 @@ p{
 }
 
 .boxdetextegauche{
-  margin: 6% 46% 10% 8%;
+  grid-column: 1;
+  grid-row: 2;
+  width: 80vh;
   padding: 3% 2%;
   background-color: white;
   border-radius: 10px;
@@ -150,13 +154,21 @@ img{
   height: 500px;
 }
 .imgeolienne{ /*image ex de l'eolienne jsp quelles proprietes mettre pour alligner avec le cadre de texte...*/  
-  float:left;
-  margin-left: 15%;
+  grid-column: 1;
+  grid-row: 1;
+  position: relative;
+  content: center;
+}
+
+.Image1{
+  position: relative;
+
 }
 
 .imgchantier{ /*idem */
+  grid-column: 2;
+  grid-row: 2;
   float:right;
-  margin-right: 12%;
 }
 
 /* Partie: Nos services */
