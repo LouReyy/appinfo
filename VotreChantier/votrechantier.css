@@ -3,6 +3,12 @@ h1{
     font-size: 3vw;
 }
 
+h2{
+    text-align: center;
+    font-size: 2.3vw;
+    height: 20%;
+}
+
 .image1{
     width: 40vw;
     border-radius: 50%;
@@ -15,6 +21,7 @@ h1{
     height: auto;
     vertical-align: baseline;
 }
+
 .DivGrid{
     display: grid;
     grid-template-columns: 40vw 4vw 40vw;
@@ -24,7 +31,6 @@ h1{
     margin-bottom: 24px;
 
 }
-
 
 .deux {
     grid-column: 3;
@@ -61,7 +67,7 @@ h1{
     height: 50%;
 }
 
-.Grid2{
+.Grid_chantier{
     display: grid;
     grid-template-columns: 40vw 4vw 40vw;
     margin-left: 8vw;
@@ -111,3 +117,57 @@ h1{
     background-color: aqua;
 }
 
+.Grid_last{
+    margin-top: 5vw;
+    display: grid ;
+    grid-template-columns: 26vw 26vw 26vw ;
+    gap: 3vw;
+    margin-left: 8vw;
+    margin-right: 8vw;
+}
+
+.container{
+    width: 100%;
+    height: auto;
+    padding-left: 3%;
+    padding-right: 100px;
+}
+
+.Premier_element{
+    width: 26vw;
+    height: auto;
+    columns: 1;
+    border-radius: 30px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 30px rgb(167, 161, 161) ;
+
+
+}
+
+.Image_bottom{
+    width: 26vw;
+    height: 50%;
+    object-fit: cover;
+    border-top-right-radius:30px;
+    border-top-left-radius:30px;
+    
+}
+
+.Deuxieme_element{
+    width: 26vw;
+    height: auto;
+    columns: 2;
+    border-radius: 30px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 30px rgb(167, 161, 161) ;
+}
+
+.Troisème_element{
+    width: 26vw;
+    height: auto;
+    columns: 3;
+    border-radius: 30px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 30px rgb(167, 161, 161) ;
+
+}
