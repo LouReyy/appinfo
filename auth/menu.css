@@ -1,0 +1,59 @@
+
+
+.galerie{
+	float:left;
+}
+
+.galerie img{
+	width:30%;
+	height:auto;
+}
+
+.galerie img:hover{
+	border:2px solid grey;
+}
+
+/*TRANSPORT*/
+
+.formulaire fieldset{
+	border:1px solid red;
+	padding:2%;
+	width:40%;
+	margin-left:3%;
+}
+legend{
+	color:red;
+}
+
+.formulaire input,select,textarea{
+	border-radius:8px;
+	border:1px solid red;
+	width:80%;
+}
+
+button{
+	text-decoration: none;
+	border:1px solid red;
+	box-shadow:6px 2px 1px purple;
+	width:20%;
+    height : 10%;
+	float:left;
+	margin-right:1%;
+	margin-left:4%;
+	background-color:white;
+	border-radius:20px;
+	text-align:center;
+}
+
+/*PLAN*/
+.plan{
+	line-height:30px;
+}
+
+/*TELEPHONE*/
+
+@media only screen and (max-width: 800px){
+	.galerie{
+	float:none;
+}
+}
