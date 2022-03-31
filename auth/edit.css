@@ -7,6 +7,8 @@ body{
 #container1{
     display: flex;
     flex-direction: column;
+    
+
 }
 
 * {
@@ -97,11 +99,6 @@ header{
     background-color: #8aceff;
   }
 
-
-    
-
-
-
     #title{
       margin-top: 2%;
       align-items: center;
@@ -110,6 +107,7 @@ header{
       width : 30%;
       height : 20%;
       flex-direction: column;
+      font-family: "Quicksand", sans-serif;
     }
 
         titre1{
@@ -159,8 +157,12 @@ header{
           padding-bottom: 5%;
         }
 
+        p{
+          font-family: "Quicksand", sans-serif;
+        }
+
         input[type=text], input[type=email],input[type=pseudo],input[type=password] {
-          font-size: 30px;
+          font-size: 25px;
           width: 40%;
           padding: 12px 20px;
           margin: 8px 0;
@@ -170,6 +172,24 @@ header{
           border-radius: 25px;
           font-family: "Quicksand";  
           
+      }
+
+      button{
+        background-color: #00ccff;
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          cursor: pointer;
+          width: 48%;
+          border-radius: 25px;
+          font-family: "Quicksand";  
+          text-align: center;
+          display: inline-block;
+          text-decoration: none;
+          color: white;
+          font-size: 30px;
+
       }
 
       
