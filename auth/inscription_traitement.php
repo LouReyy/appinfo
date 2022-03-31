@@ -30,7 +30,6 @@
                             $password = password_hash($password, PASSWORD_BCRYPT, $cost);
                             
                             
-                            $ip = $_SERVER['REMOTE_ADDR']; 
 
                             
                             $insert = $bdd->prepare('INSERT INTO utilisateurs(pseudo, email, password, token) VALUES(:pseudo, :email, :password, :ip, :token)');
