@@ -49,10 +49,6 @@
              <img class = "forme1"src="forme1.png"></img>
             </div>
 
-
-
- 
-
         <div id="container">
 
         
@@ -77,8 +73,10 @@
 
             </div>
             <div id = pp> 
+            <img class = "avatar"src="pp.jpg"></img>
 
-                
+            
+            <input type="file" id="avatar" value ="salut"  accept="image/png , image/jpeg">
             </div>
             
         </div> 
