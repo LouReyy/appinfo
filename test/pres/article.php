@@ -1,24 +1,17 @@
+<?php
+var_dump($_GET);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="test.css" media="screen" type="text/css">
-    <title>Présentation CSS</title>
+    <title>Article</title>
 </head>
 <body>
-
-<div class = centre>
-
-    <a href="#" class="btn">click</a>
-
-    
-
-</div>    
-
-  
-    
-    
+    Article...
 </body>
 </html>
