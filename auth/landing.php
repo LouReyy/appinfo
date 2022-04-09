@@ -37,7 +37,7 @@
                     <ul class="nav__links">
                         <li><a href="/appinfo/homepage/homepage.html">Accueil</a></li>
                         <li><a href="#">Votre chantier</a></li>
-                        <li><a href="#">Forum</a></li>
+                        <li><a href="/appinfo/forum/forum.html">Forum</a></li>
                         <li><a href="/appinfo/contact/Page_onglets.html">Contactez-nous</a></li>
                     </ul>
                 </nav>
