@@ -23,7 +23,15 @@
     </nav>
      <a class="cta" href="/appinfo/auth/index.php">Connexion</a>
     </header>
+
+
     <div id = test>
+
+        <input type="content" name="content" class="content_msg" placeholder="Content" required="required" autocomplete="off">
+
+        <button href="envoi_message.php">Envoyer</button>
+
+
                 
     </div>
 
