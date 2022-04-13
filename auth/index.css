@@ -67,6 +67,7 @@ header{
       font-size: 18px;
       color:white;
       text-decoration: none;
+      text-align: center;
     }
     
     .nav__links {  /*mettre en liste horizontal*/

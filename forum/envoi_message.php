@@ -10,19 +10,22 @@ session_start();
 
     
 
-    $check = $bdd->prepare('SELECT pseudo, email, password FROM utilisateurs WHERE email = ?');
+    $req = $bdd->prepare('SELECT * FROM utilisateurs WHERE token = ?');
+    $req->execute(array($_SESSION['user']));
+    $data = $req->fetch();
 
-        $check->execute(array($_SESSION['user']));
-        $data = $check->fetch();
-        $row = $check->rowCount();
 
     $content = htmlspecialchars($_POST['content']);
+    $topic = htmlspecialchars($_POST['topic']);
+    $pseudo_user = $data['pseudo'];
 
-    echo $content . $data ;
+
+    echo  $topic . $content  ;
    
-    $insert = $bdd->prepare('INSERT INTO message(content) VALUES(:content)');
-    $insert->execute(array(
-    'content' => $content,));
+    $insert = $bdd->prepare('INSERT INTO message(topic,content,pseudo_user) VALUES(:topic, :content  , :pseudo_user)');
+    $insert->execute(array('topic' =>$topic , 'content' => $content, 'pseudo_user' => $pseudo_user ));
+
+    
 
 
 

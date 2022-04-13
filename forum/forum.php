@@ -1,6 +1,7 @@
 <?php
 
 session_start(); 
+require_once 'config.php'; 
 
 if(isset($_SESSION['user'])){
         $editprofil ="landing.php";
@@ -12,8 +13,24 @@ if(isset($_SESSION['user'])){
 
     }
 
-    echo "/appinfo/auth/$editprofil";
-    echo $_SESSION['user'];
+    $req = $bdd->prepare('SELECT * FROM utilisateurs WHERE token = ?');
+    $req->execute(array($_SESSION['user']));
+    $data = $req->fetch();
+
+
+    $pseudo_user = $data['pseudo'];
+
+    $req2= $bdd->prepare('SELECT * FROM message WHERE pseudo_user = ?');
+    $req2->execute(array($pseudo_user));
+    $data2 = $req2->fetch();
+
+    echo $data2['content'];
+    echo $data2['topic'];
+
+
+
+
+
 ?>
 
 
@@ -46,13 +63,21 @@ if(isset($_SESSION['user'])){
 
     <div id = test>
 
-        <form action="envoi_message.php" method="post">
+      
 
-            <input type="content" name="content" class="content_msg" placeholder="Content" required="required" autocomplete="off">
+        <div id = "messages">
 
-            <button type = submit >Envoyer</button>
+            <form action="envoi_message.php" method="post">
 
-        </form>
+            <input type="topic" name="topic" class="topic_msg" placeholder="Topic" required="required" autocomplete="off"> </input>
+
+                <textarea type="content" name="content" class="content_msg" placeholder="Content" required="required" autocomplete="off"> </textarea>
+
+                <button type = submit >Envoyer</button>
+
+            </form>
+
+        </div>
 
 
                 

@@ -100,7 +100,27 @@ header{
 
 
     #test{
+      position: absolute;
+      border: solid 1px black;
       margin-top: 10%;
-      display: flex;
-      width: 60%;
+      width: 80%;
+      height : 80%;
+      margin-left: 2%;
+  }
+
+
+  #messages{
+    position: relative;
+    border: solid 1px red;
+    margin-top: 5%;
+    width: 40%;
+    height : 40%;
+  }
+
+  textarea {
+    margin-top: 5%;
+    font-family: "Quicksand";
+    width : 80%;
+    height : 50%;
+    
   }

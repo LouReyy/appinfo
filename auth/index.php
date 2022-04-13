@@ -11,9 +11,6 @@ if(isset($_SESSION['user'])){
         $title = "Connexion";
 
     }
-
-    echo "/appinfo/auth/$editprofil";
-    echo $_SESSION['user'];
 ?>
 
 
@@ -35,12 +32,12 @@ if(isset($_SESSION['user'])){
 
             <header>
                 <div id ="logoimg">
-                    <a  href="/appinfo/homepage/homepage.html"><img src="/appinfo/auth/logo_infinite.png" alt="logo"></a>
+                    <a  href="/appinfo/homepage/homepage.php"><img src="/appinfo/auth/logo_infinite.png" alt="logo"></a>
                 </div>
                 <nav>
                 <ul class="nav__links">
-                    <li><a href="/appinfo/homepage/homepage.html">Accueil</a></li>
-                    <li><a href="/appinfo/Chantier/Chantier.html">Votre chantier</a></li>
+                    <li><a href="/appinfo/homepage/homepage.php">Accueil</a></li>
+                    <li><a href="/appinfo/Chantier/Chantier.php">Votre chantier</a></li>
                     <li><a href="/appinfo/forum/forum.php">Forum</a></li>
                     <li><a href="/appinfo/contact/contact_essai.html">Contactez-nous</a></li>
                 </ul>
