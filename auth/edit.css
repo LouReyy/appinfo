@@ -206,22 +206,41 @@ header{
         }
 
         .avatar{
-          width: 120%;
-          height: 80%;
+          width: 600px;
+          height: 500px;
           background-size: cover;
           border-radius: 60%;
           border: solid 2px black;
           box-shadow: 0 0 80px 0 rgba(0, 0, 0, 0.2), 0 15px 15px 0 rgba(0, 0, 0, 0.24);
           display: block;
-          margin-top: 10%;
+          margin-top: 8%;
     
         }
 
         input[type=file] {
           margin-top: 5%;
           font-family: "Quicksand";
+          
         }
 
+        button {
+          
+          margin-top: 5%;
+          background-color: #00ccff;
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          cursor: pointer;
+          width: 52%;
+          border-radius: 25px;
+          font-family: "Quicksand";  
+          text-align: center;
+          display: inline-block;
+          text-decoration: none;
+          color: white;
+          font-size: 30px;
+      }
 
         button1 {
           
@@ -260,7 +279,7 @@ header{
         font-size: 30px;
     }
 
-      button1:hover ,button2:hover{
+      button:hover, button1:hover ,button2:hover{
         background-color: white;
         color: black;
         border: 1px solid black;
