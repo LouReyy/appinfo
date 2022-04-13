@@ -1,26 +1,31 @@
 <?php
 
-echo "test" ; 
 
 session_start(); 
     require_once 'config.php'; 
+    if(!isset($_SESSION['user'])){
+        header('Location:index.php');
+        die();
+    }
 
-    $content = htmlspecialchars($_POST['content']);
-   
+    
 
+    $check = $bdd->prepare('SELECT pseudo, email, password FROM utilisateurs WHERE email = ?');
 
-    $check = $bdd->prepare('SELECT id_message, topic, content,pseudo_user, date_mesage, type FROM message WHERE content = ?');
-        $check->execute(array($content));
+        $check->execute(array($_SESSION['user']));
         $data = $check->fetch();
         $row = $check->rowCount();
 
+    $content = htmlspecialchars($_POST['content']);
 
-        $insert = $bdd->prepare('INSERT INTO message(id_message, topic, content,pseudo_user, date_mesage) VALUES(:topic, :content, )');
-                            $insert->execute(array(
-                                'content' => $content,
-                                'topic' => $topic,
-                                'pseudo_user' => $pseudo_user,
-                            ));
+    echo $content . $data ;
+   
+    $insert = $bdd->prepare('INSERT INTO message(content) VALUES(:content)');
+    $insert->execute(array(
+    'content' => $content,));
+
+
+
 
 
 

@@ -6,6 +6,7 @@ body{
 
 #container1{
     display: flex;
+    flex-direction: column;
 }
 
 * {
@@ -44,9 +45,7 @@ header{
 
     }
 
-    #test{
-        flex:5
-    }
+ 
   
     .nav__links a,
     .overlay__content a {  /* style des barres du menu */
@@ -98,3 +97,10 @@ header{
     .cta:hover { /*couleur du cadre quand curseur dessus*/
       background-color: #8aceff;
     }
+
+
+    #test{
+      margin-top: 10%;
+      display: flex;
+      width: 60%;
+  }
