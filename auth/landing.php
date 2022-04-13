@@ -10,7 +10,22 @@
     $req = $bdd->prepare('SELECT * FROM utilisateurs WHERE token = ?');
     $req->execute(array($_SESSION['user']));
     $data = $req->fetch();
-   
+
+    
+   echo  "./profil_picture/" . hash('sha256',  $data['email'] ). ".jpg";
+    if(file_exists( "./profil_picture/" . hash('sha256',  $data['email']). ".jpg")){
+
+        $file_name = "./profil_picture/" . hash('sha256',  $data['email'] );
+
+    }
+
+    else{
+        $file_name = "./pp";
+
+    }
+
+
+    echo $file_name;
 ?>
 <!doctype html>
 <html lang="en">
@@ -72,11 +87,22 @@
 
 
             </div>
-            <div id = pp> 
-            <img class = "avatar"src="pp.jpg"></img>
+
+            <div id = pp>
+
+
+            <img class = "avatar"src="./<?php echo $file_name; ?>.jpg"></img>
+
+            <form class = "form-img" method="POST" action = "modify_profilpic.php" enctype="multipart/form-data" >
 
             
-            <input type="file" id="avatar" value ="salut"  accept="image/png , image/jpeg">
+            <input type="file" name = "picture" id="avatar" value ="salut"  accept="image/png , image/jpeg">
+
+            <button type="submit" class="btn btn-primary btn-block">Modifier la photo</button>
+
+            </form>
+
+
             </div>
             
         </div> 

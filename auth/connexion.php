@@ -24,8 +24,7 @@ echo "test";
                 if(password_verify($password, $data['password']))
                 {
                     $_SESSION['user'] = $data['token'];
-                    header('Location: landing.php');
-                    die();
+                    header('Location: landing.php');die();
                 }else{ header('Location: index.php?login_err=password'); die(); }
             }else{ header('Location: index.php?login_err=email'); die(); }
         }else{ header('Location: index.php?login_err=already'); die(); }
