@@ -122,7 +122,7 @@
 
                 </form>
 
-                    <button2 href="deconnexion.php" class="btn btn-danger btn-lg">Déconnexion</button2> 
+                <a class="button" href="deconnexion.php" >Déconnexion</a> 
 
 
             </div>
@@ -135,7 +135,7 @@
             <form class = "form-img" method="POST" action = "modify_profilpic.php" enctype="multipart/form-data" >
 
             <label class="file">
-                <input type="file" name = "picture" id="avatar" value ="salut"  accept="image/png , image/jpeg">
+                <input type="file" name = "picture" id="avatar" value ="salut"  accept="image/jpg">
                 <span class="file-custom"></span>
             </label>    
 

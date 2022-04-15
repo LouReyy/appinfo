@@ -21,8 +21,7 @@ if(isset($_SESSION['user'])){
 
     $req2= $bdd->prepare('SELECT * FROM message WHERE pseudo_user = ?');
     $req2->execute(array($pseudo_user));
-    $data2 = $req2->fetch();
-
+    $data2 = $req2->fetchAll();
     $file = "../auth/profil_picture/" . hash('sha256',  $data['email']). ".jpg" ; 
 
 
@@ -92,31 +91,90 @@ if(isset($_SESSION['user'])){
 
     <div id = divdroite>
 
-    
-        <button >New</button>
-        <button >Tendances</button>
-        <button >Les Topics </button>
+    <div id = "lestopics">
+        <ul class="navbar">
+         <li>
+             <a href="#">Les Topics</a>
+
+
+       
+         
+
+         <ul>
+        
+         <?php
+        foreach($data2 as $row){?>
+        <li><a href="#"> <?php echo $row['topic']  ?></a></li>
+
+        <?php } ?>
+
+        </ul>
+
+        </li>
+
+
+         <li>
+            <a href="#">Mes messages</a>
+        
+
+        </li>
+
+        <li>
+            <a href="#">Recents</a>
+        
+
+        </li>
+
+        </ul>
+
+        
 
         <input id="searchbar"  type="text" name="search" placeholder="Recherche">
 
-        <div id = messages>
-
-            <topic> <?php echo $data2['topic']; ?> </topic>
-
-            <msg> <?php echo $data2['content']; ?> </msg>
-
-            <img class = "pp" src="<?php echo $file_name; ?>.jpg"> </img>
-
-            <date> <?php  echo $data2['date_message']; ?> </date>
-
-
-        </div>
-
-
-
-
-
     </div>
+
+    <div id = droite>
+
+
+        
+
+        <?php
+            foreach($data2 as $row){
+
+        ?>
+                <div id = messages>
+
+                    <div class = photo>
+                        <img class = "pp" src="<?php echo $file_name; ?>.jpg"> </img>
+                     </div>
+
+                 <div class = content>
+
+                    <topic> <?php echo $row['topic']; ?> </topic>
+                    <br>
+                    <msg> <?php echo $row['content']; ?> </msg>
+
+                 </div>
+        
+                <div class = info>
+        
+                    <date> <?php  echo $row['date_message']; ?> </date>
+                    <br>
+                    <pseudo> <?php  echo $row['pseudo_user']; ?> </pseudo>
+
+                </div>
+        
+    
+                 </div>
+        <?php
+
+            }
+        ?>
+
+
+</div>
+
+</div>
 
 </div>
 

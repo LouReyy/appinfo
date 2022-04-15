@@ -174,23 +174,23 @@ header{
           
       }
 
-      button{
+      .button {
+        
         background-color: #00ccff;
-          color: white;
-          padding: 14px 20px;
-          margin: 8px 0;
-          border: none;
-          cursor: pointer;
-          width: 48%;
-          border-radius: 25px;
-          font-family: "Quicksand";  
-          text-align: center;
-          display: inline-block;
-          text-decoration: none;
-          color: white;
-          font-size: 30px;
-
-      }
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 52%;
+        border-radius: 25px;
+        font-family: "Quicksand";  
+        text-align: center;
+        display: inline-block;
+        text-decoration: none;
+        color: white;
+        font-size: 30px;
+    }
 
       
      
@@ -280,7 +280,7 @@ header{
         font-size: 30px;
     }
 
-      button:hover, button1:hover ,button2:hover{
+     .button:hover, button:hover, button1:hover ,button2:hover{
         background-color: white;
         color: black;
         border: 1px solid black;
