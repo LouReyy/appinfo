@@ -15,7 +15,7 @@ echo "test";
         $data = $check->fetch();
         $row = $check->rowCount();
         
-        
+        $parent = dirname($_SERVER['REQUEST_URI']);
 
         if($row > 0)
         {
@@ -24,8 +24,7 @@ echo "test";
                 if(password_verify($password, $data['password']))
                 {
                     $_SESSION['user'] = $data['token'];
-                    header('Location: landing.php');
-                    die();
+                    header('Location: /appinfo/forum/forum.php');die();
                 }else{ header('Location: index.php?login_err=password'); die(); }
             }else{ header('Location: index.php?login_err=email'); die(); }
         }else{ header('Location: index.php?login_err=already'); die(); }

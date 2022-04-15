@@ -67,6 +67,7 @@ header{
       font-size: 18px;
       color:white;
       text-decoration: none;
+      text-align: center;
     }
     
     .nav__links {  /*mettre en liste horizontal*/
@@ -117,16 +118,14 @@ header{
     width : 50%;
     height: 100%;
     margin-left: 50%;
-
-
 }
 
 
 
 #container{
     position : relative;
-    width:700px;
-    height: 500px;
+    width:70%;
+    height: 55%;
     margin:0 auto;
     margin-top:40%;
     font-family: "Quicksand";  
@@ -135,7 +134,7 @@ header{
 
 .alert{
     position: absolute;
-    margin-top: 70%;
+    margin-top: 90%;
     width: 500px;
     height: 30px;
     color : red;
@@ -187,7 +186,7 @@ h2{
 
 
 input[type=text], input[type=email] {
-    font-size: 30px;
+    font-size: 20px;
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -201,7 +200,7 @@ input[type=text], input[type=email] {
 
 
 input[type=text], input[type=password] {
-    font-size: 30px;
+    font-size: 20px;
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -214,7 +213,7 @@ input[type=text], input[type=password] {
 
 
 button[type=submit] {
-    font-size: 30px;
+    font-size: 20px;
     background-color: #00ccff;
     color: white;
     padding: 14px 20px;
@@ -247,7 +246,7 @@ button[type=submit]:hover {
     display: inline-block;
     text-decoration: none;
     color: white;
-    font-size: 30px;
+    font-size: 20px;
     
 }
 
@@ -273,7 +272,7 @@ button[type=submit]:hover {
     display: inline-block;
     text-decoration: none;
     color: white;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 

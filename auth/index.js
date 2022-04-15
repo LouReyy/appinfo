@@ -1,12 +1,17 @@
-/*
 
+/*
     const logo = document.querySelector("#ecran");
     const bg = document.querySelector("#container1");
+
+    var myImage = new Image(1000, 2000);
+    myImage.src = 'home.png';
+    
 
 
 
     bg.addEventListener('click',()=>{
     document.body.style.backgroundColor = "red";
+    console.log(myImage)
 })
 
 

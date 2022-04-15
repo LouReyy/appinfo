@@ -30,15 +30,13 @@
                             $password = password_hash($password, PASSWORD_BCRYPT, $cost);
                             
                             
-                            $ip = $_SERVER['REMOTE_ADDR']; 
 
                             
-                            $insert = $bdd->prepare('INSERT INTO utilisateurs(pseudo, email, password, ip, token) VALUES(:pseudo, :email, :password, :ip, :token)');
+                            $insert = $bdd->prepare('INSERT INTO utilisateurs(pseudo, email, password, token) VALUES(:pseudo, :email, :password, :token)');
                             $insert->execute(array(
                                 'pseudo' => $pseudo,
                                 'email' => $email,
                                 'password' => $password,
-                                'ip' => $ip,
                                 'token' => bin2hex(openssl_random_pseudo_bytes(64))
                             ));
                             // On redirige avec le message de succès

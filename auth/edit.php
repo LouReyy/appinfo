@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/appinfo/auth/index.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="/appinfo/auth/edit.css" media="screen" type="text/css" />
     <title>Document</title>
 </head>
 <body>
@@ -19,7 +19,7 @@
             <ul class="nav__links">
                 <li><a href="/appinfo/homepage/homepage.html">Accueil</a></li>
                 <li><a href="#">Votre chantier</a></li>
-                <li><a href="#">Forum</a></li>
+                <li><a href="/appinfo/forum/forum.html">Forum</a></li>
                 <li><a href="/appinfo/contact/Page_onglets.html">Contactez-nous</a></li>
             </ul>
             </nav>
