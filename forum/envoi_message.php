@@ -25,6 +25,10 @@ session_start();
     $insert = $bdd->prepare('INSERT INTO message(topic,content,pseudo_user) VALUES(:topic, :content  , :pseudo_user)');
     $insert->execute(array('topic' =>$topic , 'content' => $content, 'pseudo_user' => $pseudo_user ));
 
+    header('Location:forum.php');die();
+
+
+
     
 
 

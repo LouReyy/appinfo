@@ -17,20 +17,23 @@ if(isset($_SESSION['user'])){
     $req->execute(array($_SESSION['user']));
     $data = $req->fetch();
 
-
     $pseudo_user = $data['pseudo'];
 
     $req2= $bdd->prepare('SELECT * FROM message WHERE pseudo_user = ?');
     $req2->execute(array($pseudo_user));
     $data2 = $req2->fetch();
 
-    echo $data2['content'];
-    echo $data2['topic'];
+    $file = "../auth/profil_picture/" . hash('sha256',  $data['email']). ".jpg" ; 
 
 
+    if(file_exists($file)){
 
+        $file_name = "/appinfo/auth/profil_picture/" . hash('sha256',  $data['email'] );
+    }
+    else{
+        $file_name = "/appinfo/auth/pp";
 
-
+    }
 ?>
 
 
@@ -61,11 +64,15 @@ if(isset($_SESSION['user'])){
     </header>
 
 
-    <div id = test>
+    <div id = divgauche>
 
-      
+        
 
-        <div id = "messages">
+        <img id = "forme1"src="/appinfo/auth/forme1.png"></img>
+        <h1>Nouveau Topic</h1>
+
+
+        <div id = "newmessages">
 
             <form action="envoi_message.php" method="post">
 
@@ -81,6 +88,34 @@ if(isset($_SESSION['user'])){
 
 
                 
+    </div>
+
+    <div id = divdroite>
+
+    
+        <button >New</button>
+        <button >Tendances</button>
+        <button >Les Topics </button>
+
+        <input id="searchbar"  type="text" name="search" placeholder="Recherche">
+
+        <div id = messages>
+
+            <topic> <?php echo $data2['topic']; ?> </topic>
+
+            <msg> <?php echo $data2['content']; ?> </msg>
+
+            <img class = "pp" src="<?php echo $file_name; ?>.jpg"> </img>
+
+            <date> <?php  echo $data2['date_message']; ?> </date>
+
+
+        </div>
+
+
+
+
+
     </div>
 
 </div>
