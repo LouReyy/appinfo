@@ -102,7 +102,6 @@ header{
 
     #divgauche{
       position: absolute;
-      border: solid 1px black;
       margin-top: 8%;
       width: 30%;
       height : 80%;
@@ -173,11 +172,17 @@ header{
     font-family: "Quicksand";  
 }
 
+.line{
+  position: relative;
+  margin-left: 100%;
+  margin-top:-80%;
+  height: 100%;
+}
+
 #divdroite{
   display: flex;
   flex-direction: column;
   position: absolute;
-  border: solid 1px black;
   margin-top: 8%;
   width: 65%;
   height : 80%;
@@ -287,6 +292,24 @@ button{
 
 }
 
+button4{
+
+  font-size: 20px;
+    background-color: #00ccff;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    border-radius: 25px;
+    font-family: "Quicksand";  
+    font-weight: bold;
+    text-align: center;
+   
+
+}
+
 #messages{
   position: relative;
   width : 90%;
@@ -354,3 +377,30 @@ pseudo{
 
 }
 
+.contenu {
+  position: absolute;
+  opacity: 0;
+
+}
+
+.contenu h1 {
+  padding: 20px;
+}
+
+.active {
+  color: #00ccff;
+  transition: all 0.2s ease;
+
+}
+
+.activeContenu {
+  animation: fade 0.3s forwards;
+}
+@keyframes fade {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}

@@ -85,6 +85,14 @@ if(isset($_SESSION['user'])){
                                </div>
                            <?php
                            break;
+
+                           case 'notconnected':
+                            ?>
+                                <div class="alert">
+                                    <strong>Erreur</strong> Vous devez être connecté pour poster un message
+                                </div>
+                                <?php 
+                                break;
                        }
                    }
                    ?> 
@@ -129,3 +137,10 @@ if(isset($_SESSION['user'])){
 
         <script src= index.js></script>
 </html>
+
+
+
+
+
+http://localhost/appinfo/auth/index.php?reg_err=notconnected
+http://localhost/appinfo/auth/index.php?login_err=already

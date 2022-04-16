@@ -4,35 +4,15 @@ session_start();
 require_once 'config.php'; 
 
 if(isset($_SESSION['user'])){
+
         $editprofil ="landing.php";
         $title = "Profil";
-    }
-    else{
-        $editprofil ="index.php";
-        $title = "Connexion";
 
-    }
-
-    $req = $bdd->prepare('SELECT * FROM utilisateurs WHERE token = ?');
-    $req->execute(array($_SESSION['user']));
-    $data = $req->fetch();
-
-    $pseudo_user = $data['pseudo'];
-
-    $req2= $bdd->prepare('SELECT * FROM message WHERE pseudo_user = ?');
-    $req2->execute(array($pseudo_user));
-    $data2 = $req2->fetchAll();
-    $file = "../auth/profil_picture/" . hash('sha256',  $data['email']). ".jpg" ; 
-
-
-    if(file_exists($file)){
-
-        $file_name = "/appinfo/auth/profil_picture/" . hash('sha256',  $data['email'] );
-    }
-    else{
-        $file_name = "/appinfo/auth/pp";
-
-    }
+}
+else{
+    $title = "Connexion";
+}
+ 
 ?>
 
 
@@ -85,6 +65,37 @@ if(isset($_SESSION['user'])){
 
         </div>
 
+        <img class = "line" src ="line4.png">
+
+        <div class="msg-form">
+                <?php 
+                if(isset($_GET['reg_err']))
+                {
+                    $err = htmlspecialchars($_GET['reg_err']);
+
+                    switch($err)
+                    {
+                        case 'success':
+                        ?>
+                            <div class="alert alert-success">
+                                <strong>Succès</strong> Message envoyé !
+                            </div>
+                        <?php
+                        break;
+
+                        case 'notconnected':
+                        ?>
+                            <div class="alert alert-danger">
+                                <strong>Erreur</strong> Vous devez être connecté pour poster un message
+                            </div>
+                            <?php 
+                            break;
+
+                    }
+                }
+                ?>
+            </div>
+
 
                 
     </div>
@@ -94,15 +105,20 @@ if(isset($_SESSION['user'])){
     <div id = "lestopics">
         <ul class="navbar">
          <li>
-             <a href="#">Les Topics</a>
-
-
-       
-         
+             <a class = "onglets active" href="#" data-anim="1">Les Topics</a>
 
          <ul>
         
          <?php
+
+             $req2= $bdd->prepare('SELECT topic FROM message');
+             $req2->execute();
+             $data2 = $req2->fetchAll();
+
+
+
+             
+
         foreach($data2 as $row){?>
         <li><a href="#"> <?php echo $row['topic']  ?></a></li>
 
@@ -114,46 +130,239 @@ if(isset($_SESSION['user'])){
 
 
          <li>
-            <a href="#">Mes messages</a>
+            <a class = "onglets" href="#" data-anim="2">Mes messages</a>
         
 
         </li>
 
         <li>
-            <a href="#">Recents</a>
+            <a class = "onglets" href="#" data-anim="3">Recents</a>
         
 
         </li>
 
         </ul>
 
+        <form method ="GET">
+        <input id="searchbar"  type="text" name="search" placeholder="Recherche...">
         
+        </form>
 
-        <input id="searchbar"  type="text" name="search" placeholder="Recherche">
+
 
     </div>
 
+
     <div id = droite>
 
-
-        
+        <div class="contenu activeContenu" data-anim="1">
 
         <?php
-            foreach($data2 as $row){
 
+        $editprofil ="index.php";
+        $title = "Connexion";
+
+
+
+        if(isset($_GET['search']) AND !empty($_GET['search'])){
+
+            $search = htmlspecialchars($_GET['search']);
+            $topic = $search;
+    
+        }
+        else{
+            $topic = "Bienvenue";
+        }
+
+        $req2= $bdd->prepare('SELECT * FROM message WHERE topic = ?');
+        $req2->execute(array($topic));
+        $data2 = $req2->fetchAll();
+
+        
+        foreach($data2 as $row){
+
+        $pseudo = $row['pseudo_user'];
+  
+        $req= $bdd->prepare('SELECT * FROM utilisateurs WHERE pseudo = ?');
+        $req->execute(array($pseudo));
+        $data = $req->fetchAll();
+
+        foreach($data as $row2){
+
+            $file_name = "../auth/profil_picture/". hash('sha256',  $row2['email'] );
+            }
+
+          //  if(file_exists($file)){
+
+           //     $file_name = "../auth/profil_picture/" . hash('sha256',  $row2['email'] );
+        
+         //   }
+        
+         //   else{
+         //       $file_name = "../auth/pp";
+        
+         //   }
+
+
+
+            ?>
+            <div id = messages>
+
+                <div class = photo>
+                    <img class = "pp" src="<?php echo $file_name; ?>.jpg"> </img>
+                </div>
+
+             <div class = content>
+
+                <topic> <?php echo $row['topic']; ?> </topic>
+                <br>
+                <msg> <?php echo $row['content']; ?> </msg>
+
+             </div>
+    
+            <div class = info>
+    
+                <date> <?php  echo $row['date_message']; ?> </date>
+                <br>
+                <pseudo> <?php  echo $row['pseudo_user']; ?> </pseudo>
+
+            </div>
+    
+
+             </div>
+            <?php
+
+        }
+    
         ?>
-                <div id = messages>
 
+
+            
+        </div>
+
+
+        <div class="contenu" data-anim="2">
+
+        <?php
+
+        if(isset($_SESSION['user'])){
+
+        $req = $bdd->prepare('SELECT * FROM utilisateurs WHERE token = ?');
+        $req->execute(array($_SESSION['user']));
+        $data = $req->fetch();
+
+        $pseudo_user = $data['pseudo'];
+
+        $req2= $bdd->prepare('SELECT * FROM message WHERE pseudo_user = ?');
+        $req2->execute(array($pseudo_user));
+        $data2 = $req2->fetchAll();
+        $file = "../auth/profil_picture/" . hash('sha256',  $data['email']). ".jpg" ; 
+
+        if(file_exists($file)){
+
+        $file_name = "/appinfo/auth/profil_picture/" . hash('sha256',  $data['email'] );
+        }
+        else{
+        $file_name = "/appinfo/auth/pp";
+
+        }
+
+        foreach($data2 as $row){
+
+        $pseudo = $row['pseudo_user'];
+  
+        $req= $bdd->prepare('SELECT * FROM utilisateurs WHERE pseudo = ?');
+        $req->execute(array($pseudo));
+        $data = $req->fetchAll();
+
+        foreach($data as $row2){
+            $file_name = "/appinfo/auth/profil_picture/" . hash('sha256',  $row2['email'] );
+    
+            }
+
+            ?>
+            <div id = messages>
+
+                <div class = photo>
+                    <img class = "pp" src="<?php echo $file_name; ?>.jpg"> </img>
+                </div>
+
+             <div class = content>
+
+                <topic> <?php echo $row['topic']; ?> </topic>
+                <br>
+                <msg> <?php echo $row['content']; ?> </msg>
+
+             </div>
+    
+            <div class = info>
+    
+                <date> <?php  echo $row['date_message']; ?> </date>
+                <br>
+                <pseudo> <?php  echo $row['pseudo_user']; ?> </pseudo>
+
+            </div>
+    
+
+             </div>
+            <?php
+
+        }
+    }
+
+        else{
+
+             echo "Connectez vous pour voir vos messages"
+
+             ?>
+
+             <a class="cta" href= "../auth/">Connexion</a>
+
+        <?php
+
+        }
+    
+        ?>
+
+        </div>
+
+        <div class="contenu" data-anim="3">
+
+        <?php
+
+        $topic = "Bienvenue";
+
+        $req2= $bdd->prepare('SELECT * FROM message ORDER BY date_message DESC ');
+        $req2->execute();
+        $data2 = $req2->fetchAll();
+
+
+        foreach($data2 as $row){
+
+            $pseudo = $row['pseudo_user'];
+      
+            $req= $bdd->prepare('SELECT * FROM utilisateurs WHERE pseudo = ?');
+            $req->execute(array($pseudo));
+            $data = $req->fetchAll();
+    
+            foreach($data as $row2){
+                $file_name = "/appinfo/auth/profil_picture/" . hash('sha256',  $row2['email'] );
+        
+                }
+    
+                ?>
+                <div id = messages>
+    
                     <div class = photo>
                         <img class = "pp" src="<?php echo $file_name; ?>.jpg"> </img>
-                     </div>
-
+                    </div>
+    
                  <div class = content>
-
+    
                     <topic> <?php echo $row['topic']; ?> </topic>
                     <br>
                     <msg> <?php echo $row['content']; ?> </msg>
-
+    
                  </div>
         
                 <div class = info>
@@ -161,18 +370,29 @@ if(isset($_SESSION['user'])){
                     <date> <?php  echo $row['date_message']; ?> </date>
                     <br>
                     <pseudo> <?php  echo $row['pseudo_user']; ?> </pseudo>
-
+    
                 </div>
         
     
                  </div>
-        <?php
-
+                <?php
+    
             }
-        ?>
+        
+            ?>
+
+        
 
 
-</div>
+
+
+
+        </div>
+
+
+
+
+    </div>
 
 </div>
 
@@ -180,4 +400,7 @@ if(isset($_SESSION['user'])){
 
    
 </body>
+
+<script src= forum.js></script>
+
 </html>
