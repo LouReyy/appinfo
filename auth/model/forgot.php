@@ -18,7 +18,7 @@
             $insert = $bdd->prepare('INSERT INTO mdp_recover(token_user, token) VALUES(?,?)');
             $insert->execute(array($token_user, $token));
 
-            $link = 'http://localhost/appinfo/auth/recover.php?u='.base64_encode($token_user).'&token='.base64_encode($token);
+            $link = 'http://localhost/appinfo/auth/views/recover.php?u='.base64_encode($token_user).'&token='.base64_encode($token);
             $headers = 'Content-type: text/html; charset=utf-8'."\r\n";
             $to_email = $email;
             $subject = "Test envoi mail";

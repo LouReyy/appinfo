@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    require_once 'config.php'; 
+    require_once './model/config.php'; 
 
 
     if(!isset($_SESSION['user'])){
@@ -105,7 +105,7 @@
         
             <div class="text-center">
 
-                <form class = "form-profil" method="POST" action = "modify_profil.php" >
+                <form class = "form-profil" method="POST" action = "./model/modify_profil.php" >
 
                     <h1 class="p-5">Bonjour <?php echo $data['pseudo']; ?> !</h1>
 
@@ -132,7 +132,7 @@
 
             <img class = "avatar"src="./<?php echo $file_name; ?>.jpg"></img>
 
-            <form class = "form-img" method="POST" action = "modify_profilpic.php" enctype="multipart/form-data" >
+            <form class = "form-img" method="POST" action = "./model/modify_profilpic.php" enctype="multipart/form-data" >
 
             <label class="file">
                 <input type="file" name = "picture" id="avatar" value ="salut"  accept="image/jpg">

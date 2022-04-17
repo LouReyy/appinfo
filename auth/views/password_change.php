@@ -1,5 +1,5 @@
 <?php 
-    require_once __DIR__.'/config.php';
+    require_once("../model/config.php");
     if(!empty($_GET['u'])){
         $token = htmlspecialchars(base64_decode($_GET['u']));
         $check = $bdd->prepare('SELECT * FROM mdp_recover WHERE token_user = ?');
@@ -44,12 +44,12 @@
         <div id="container">
 
             <div class="login-form">
-                <img id = "forme1"src="forme1.png"></img>
+                <img id = "forme1"src="../forme1.png"></img>
                   <h1>Réinitialiser mon mot de passe</h1>
             </div>
                   <p> Renseignez vos nouvelles informations</p>
                     <div class="form-group">
-                        <form action="password_change_post.php" method="POST">
+                        <form action="../model/password_change_post.php" method="POST">
                             <input type="hidden" name="token" value="<?php echo base64_decode(htmlspecialchars($_GET['u'])); ?>"  />
                             <input type="password" name="password" class="form-control" placeholder="Mot de passe" required />
                             <br />

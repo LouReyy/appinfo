@@ -1,5 +1,5 @@
 <?php 
-    require_once __DIR__.'/config.php';
+    require_once("../model/config.php");
 
     if(!empty($_GET['u']) && !empty($_GET['token']) ){
         $u = htmlspecialchars(base64_decode($_GET['u']));
