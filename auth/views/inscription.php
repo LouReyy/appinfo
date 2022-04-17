@@ -5,7 +5,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <meta name="author" content="NoS1gnal"/>
 
-            <link rel="stylesheet" href="index.css" media="screen" type="text/css" />
+            <link rel="stylesheet" href="../index.css" media="screen" type="text/css" />
 
     
             <title>Inscription</title>
@@ -94,7 +94,7 @@
                 ?>
             </div>
 
-            <img class = "forme1"src="forme1.png"></img>
+            <img class = "forme1"src="../forme1.png"></img>
 
                 <h1 class="text-center">Inscription</h1>
 
@@ -117,7 +117,7 @@
                     <button type="submit" class="btn btn-primary btn-block">Inscription</button>
                 </div>   
 
-                <a id = "button1" href="connexion.php">Connexion</a>
+                <a id = "button1" href="../index.php">Connexion</a>
 
             </div> 
 

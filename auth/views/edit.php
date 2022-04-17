@@ -29,16 +29,16 @@
         <div id ="container">
 
             <div class="login-form">
-                <img id = "forme1"src="forme1.png"></img>
+                <img id = "forme1"src="../forme1.png"></img>
                 <h1>Mot de passe oublié</h1>
             </div>
 
             <p> Pas de panique ! Renseignez votre email ci-dessous et nous vous enverons par email les informations pour vous creer un nouveau mot de passe.</p>
 
             <div class="form-group">
-                <form action="/appinfo/auth/forgot.php" method="POST">
+                <form action="../model/forgot.php" method="POST">
                     <input type="email" name="email" class="form-control" placeholder="Adresse Email" required="required" autocomplete="off">
-                    <button type="submit" href="edit2.php" class="btn btn-primary btn-block">Reinitialiser mon mot de passe </button>
+                    <button type="submit" class="btn btn-primary btn-block">Reinitialiser mon mot de passe </button>
                  </form>
             </div>
 
