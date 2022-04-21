@@ -105,7 +105,7 @@ else{
     <div id = "lestopics">
         <ul class="navbar">
          <li>
-             <a class = "onglets active" href="#" data-anim="1">Les Topics</a>
+             <a class = "onglets active" href="./forum.php" data-anim="1">Les Topics</a>
 
          <ul>
         
@@ -115,12 +115,13 @@ else{
              $req2->execute();
              $data2 = $req2->fetchAll();
 
-
-
              
-
         foreach($data2 as $row){?>
-        <li><a href="#"> <?php echo $row['topic']  ?></a></li>
+        <li><a href="./test.php?param=<?php echo $row['topic']?>" ><?php echo $row['topic']  ?></a></li>
+
+        
+
+
 
         <?php } ?>
 
@@ -159,6 +160,11 @@ else{
 
         <?php
 
+
+
+
+
+
         $editprofil ="index.php";
         $title = "Connexion";
 
@@ -168,11 +174,17 @@ else{
 
             $search = htmlspecialchars($_GET['search']);
             $topic = $search;
-    
+            
+        }elseif (isset($_GET['param'])){
+            $topic = htmlspecialchars($_GET['param']);
         }
         else{
             $topic = "Bienvenue";
         }
+
+        
+       
+
 
         $req2= $bdd->prepare('SELECT * FROM message WHERE topic = ?');
         $req2->execute(array($topic));
