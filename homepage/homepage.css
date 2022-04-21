@@ -1,9 +1,11 @@
 /*La barre de menu_____________________________*/
 * {
-    box-sizing: border-box;
-    margin:0;
-    padding: 0;
-  }
+  box-sizing: border-box;
+  margin:0;
+  padding: 0;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 20;
+}
 
   header {
     width: 100%;
@@ -12,7 +14,7 @@
     justify-content: flex-end;
     align-items: center;
     padding: 20px 2%;
-    background-color: #fbfbfb;
+    background-color: white;
   }
 
   #logoimg{
@@ -87,110 +89,79 @@
 
   /*Le centre________________________________*/
 
-body{
-  margin:0;
-  padding: 0;
-  background-color: #f0f0f0;
-}
+  main{
+	  background-color:#fbfbfb;
+  }
 
 /*Bienvenue/Mes services __________________________*/
 h1 {
-    position: relative;
-    text-align: center;
-    font-family: "Quicksand", sans-serif;
-    font-size: 50px;
-    font-weight: 20;
-  }
+  position: relative;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 20;
+  padding:2%;
+}
 h1 hr{
-  border-top: 3px solid #00ccff;
-  margin-left: auto;
-  margin-right: auto;
-  width:20%;
+border-top: 7px solid #00ccff;
+margin-left: auto;
+margin-right: auto;
+width:20%;
+border-radius:90px;
+border-bottom:none;
+transition: width 1s ease 0.1s;
+}
+
+h1 hr:hover{
+  margin-left:38%;
+  width:25%;
+}
+h2{
+	font-size: 40px;
+	margin-bottom:3%;
+	font-weight: 20;
 }
 /*PARTIE AVEC IMAGES EOL+CHAN et texte________________*/
-#containerpartie1{
-  margin-top: 2%;
-  display: grid;
-  height: auto;
-  grid-column-gap: 15px;
-  grid-row-gap: 50px;
-  grid-template-rows: auto auto auto auto;
-  
+#container{
+	display:flex;
+	flex-direction:row;
+	flex-wrap: wrap;
+	flex-flow: row wrap;
+	justify-content:center;
+	align-items:center;
+	gap:5px; 
+	
 }
 
-.boxdetextedroite{
-  margin-right: 50%;
-  grid-column: 2;
-  grid-row: 1;
-  padding: 5% 2%;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 5px 5px 5px 5px #dbdbdb;
-  grid-column-gap: 5px;
-  width : 90%;
-  transform :translate(-15%);
+#enfantimage{
+	width: 25%;
+	box-sizing: border-box;
+}
+#enfanttexte{
+	width: 40%;
+	box-sizing: border-box;
 }
 
-h2{
-    text-align: center;
-    font-family: "Quicksand", sans-serif;
-    font-size: 40px;
-    font-weight: 10;
+#enfantimage img{
+	width:100%;
+	height:auto;
 }
 
-h2 img{
-  height: 10%;
-  width: 10%;
+.boxdetexte{
+	border-radius: 10px;
+	box-shadow: 5px 5px 5px 5px #dbdbdb;
+	background:white;
+	padding:3%;
+	text-align:center;
 }
 
-p{
-  padding-left: 20%;
-  text-align: center;
-  font-family: "Quicksand", sans-serif;
-  font-size: 18px;
-  font-weight: 10;
+.boxdetexte img{
+	width:10%;
+	height:auto;
 }
 
-
-.imgeolienne{  
-  grid-column: 2/4;
-  grid-row: 1;/*taille image*/
-  margin-left: 30%;
-  z-index: 1;
-}
 
 .img1{
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-  
-  
-}
-
-
-
-p2{
-  text-align: center;
-  font-family: "Quicksand", sans-serif;
-  font-size: 18px;
-  font-weight: 10;
-}
-
-.boxdetextegauche{
-  margin: auto;
-  grid-column: 1;
-  grid-row: 2;
-  padding: 5% 2%;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 5px 5px 5px 5px #dbdbdb;
-  padding-right: 20%;
-}
-
-.imgchantier{ /*idem */
-  grid-column: 2;
-  grid-row: 2;
-  margin-right: 50%;
-  z-index: 1;
-  margin-left: -20%;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24); 
 }
 
 
@@ -347,40 +318,14 @@ ul{
     width:55%;
   } 
 
-  #containerpartie1{
-    grid-row-gap: 30px;
-  }
-
   img{
     width: 300px;
     height: 300px;
   }
-  
-  .imgeolienne{  
-    grid-column: 1;
-    grid-row: 1;
-    margin: 10% 15% 2%;
-  }
 
-  
-  .boxdetextedroite{
-    grid-column: 1;
-    grid-row: 2;
-  }
 
   p{
     padding:2px;
-  }
-
-  .imgchantier{ 
-    grid-column: 1;
-    grid-row: 3;
-    margin: 10% 15% 2%;
-  }
-
-  .boxdetextegauche{
-    grid-column: 1;
-    grid-row: 4;
   }
 
   p2{
