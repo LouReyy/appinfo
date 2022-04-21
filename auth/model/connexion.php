@@ -10,7 +10,7 @@ echo "test";
         
         $email = strtolower($email); 
         
-        $check = $bdd->prepare('SELECT pseudo, email, password, token FROM utilisateurs WHERE email = ?');
+        $check = $bdd->prepare('SELECT pseudo, email, password, token,type FROM utilisateurs WHERE email = ?');
         $check->execute(array($email));
         $data = $check->fetch();
         $row = $check->rowCount();
@@ -24,6 +24,8 @@ echo "test";
                 if(password_verify($password, $data['password']))
                 {
                     $_SESSION['user'] = $data['token'];
+                    $_SESSION['type'] = $data['type'];
+
                     header('Location: /appinfo/forum/forum.php');die();
                 }else{ header('Location: ../index.php?login_err=password'); die(); }
             }else{ header('Location: ../index.php?login_err=email'); die(); }

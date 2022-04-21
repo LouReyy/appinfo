@@ -1,15 +1,31 @@
-const fleche = document.querySelectorAll(".fleche");
-const content = document.querySelector(".content");
-const topic = document.querySelector(".topic");
-const quest = document.getElementById("question");
+const none = document.getElementById("none");
+const droite = document.getElementById("droite");
+
+none.style.visibility = 'hidden';
+
+console.log(none.style.visibility);
+
+if (none.style.visibility == 'hidden')
+    {
+        droite.style.marginLeft = '15%';
+        droite.style.marginTop = '12%';
+
+    }
 
 
-fleche.forEach(fleche => {
+
+
+
+
+
+for(var i=1;i<10;i++){
+const quest = document.getElementById("question" +i);
+const content = document.getElementById("content" +i);
+const topic = document.getElementById("topic" +i);
+const fleche = document.getElementById("fleche" +i);
 
 
     fleche.addEventListener('click',()=>{
-
-
 
 
 
@@ -27,10 +43,13 @@ fleche.forEach(fleche => {
         content.style.height= '0';
         topic.style.boxShadow = '5px 5px 5px lightblue';
         topic.style.backgroundColor = '#F5F5F5';
+        quest.style.boxShadow = 'none';   
     }
 
 
 })
-})
 
 
+
+
+}

@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
     <html lang="en">
         <head>
@@ -17,13 +20,14 @@
 
         <header>
         <div id ="logoimg">
-            <a  href="/appinfo/homepage/homepage.html"><img src="/appinfo/auth/logo_infinite.png" alt="logo"></a>
+            <a  href="/appinfo/homepage/homepage.php"><img src="/appinfo/auth/logo_infinite.png" alt="logo"></a>
         </div>  
                 <nav>
                     <ul class="nav__links">
                         <li><a href="/appinfo/homepage/homepage.html">Accueil</a></li>
                         <li><a href="/appinfo/Chantier/Chantier.html">Votre chantier</a></li>
                         <li><a href="/appinfo/forum/forum.html">Forum</a></li>
+                        <li><a href="/appinfo/faq/faq.php">FAQ</a></li>
                         <li><a href="/appinfo/contact/Page_onglets.html">Contactez-nous</a></li>
                     </ul>
                 </nav>
@@ -82,6 +86,15 @@
                                 <strong>Erreur</strong> pseudo trop long
                             </div>
                         <?php 
+                        break;
+                        case 'select_type':
+                            ?>
+                                <div class="alert alert-danger">
+                                    <strong>Erreur</strong> Vous n'avez pas choisi de type
+                                </div>
+                            <?php 
+                        break;
+
                         case 'already':
                         ?>
                             <div class="alert alert-danger">
@@ -99,7 +112,7 @@
                 <h1 class="text-center">Inscription</h1>
 
 
-            <form action="inscription_traitement.php" method="post">
+            <form action="../model/inscription_traitement.php" method="post">
                 <h2 class="text-center">Inscription</h2>       
                 <div class="form-group">
                     <input type="text" name="pseudo" class="form-control" placeholder="Pseudo" required="required" autocomplete="off">
@@ -113,6 +126,20 @@
                 <div class="form-group">
                     <input type="password" name="password_retype" class="form-control" placeholder="Re-tapez le mot de passe" required="required" autocomplete="off">
                 </div>
+
+                <label for="pet-select">Choix du role:</label>
+
+                <select name="type" id="type-select">
+                <option value="">Choisissez une option</option>
+                <option value="Utilisateur">Utilisateur</option>
+                <option value="Gestionnaire">Gestionnaire</option>
+                <option value="Administrateur">Administrateur</option>
+    
+                </select>
+
+
+
+
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary btn-block">Inscription</button>
                 </div>   
@@ -137,7 +164,7 @@
 
 
     #container{
-        margin-top: 20%;
+        margin-top: 12%;
         width: 700px;
         height: 250px;
     }

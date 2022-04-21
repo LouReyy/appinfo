@@ -3,15 +3,33 @@
 session_start(); 
 require_once '../auth/model/config.php'; 
 
+
+
+
 if(isset($_SESSION['user'])){
 
         $editprofil ="landing.php";
         $title = "Profil";
 
 }
+
+
 else{
+    $editprofil ="index.php";
     $title = "Connexion";
 }
+
+if(isset($_SESSION['type']) == "Administrateur"){
+    $div = "newquestion";
+
+}
+
+
+else{
+   
+    $div = "none";
+}
+
  
 ?>
 
@@ -36,18 +54,21 @@ else{
             <li><a href="/appinfo/homepage/homepage.php">Accueil</a></li>
             <li><a href="/appinfo/Chantier/Chantier.html">Votre chantier</a></li>
             <li><a href="/appinfo/forum/forum.php">Forum</a></li>
+            <li><a href="/appinfo/faq/faq.php">FAQ</a></li>
             <li><a href="/appinfo/contact/contact_essai.html">Contactez-nous</a></li>
         </ul>
     </nav>
      <a class="cta" href= "/appinfo/auth/<?php  echo $editprofil?> "> <?php echo $title ?></a>
     </header>
 
-    <div id = containergauche>
+    <div id = containercentre>
         <img id = "forme1"src="/appinfo/auth/forme1.png"></img>
-        <h1>Foire Aux Questions</h1>
+        <h1>Foire Aux Questions (FAQ) </h1>
+    </div>
 
 
-        <div id = "newquestion">
+        <div id = "<?php echo $div ?>">
+        
 
              <form action="envoi_question.php" method="post">
 
@@ -90,7 +111,7 @@ else{
                 ?>
             </div>
 
-    </div>
+   
 
         <div id = "droite">
 
@@ -102,6 +123,8 @@ else{
 
 
         <?php
+
+        
 
 
 if(isset($_GET['search']) AND !empty($_GET['search'])){
@@ -121,22 +144,26 @@ if(isset($_GET['search']) AND !empty($_GET['search'])){
 
 
 
-$i = 1;
+$i = 0;
 foreach($data2 as $row){
+
+$i++;
 
 
 ?>
 
-<div id = ""question" . $i++ ."test" >
+<div id = 'question<?php echo $i ?>' class = question>
 
 
-             <div class = topic>
+
+
+             <div id = 'topic<?php echo $i ?>' class = topic>
 
                 <topic> <?php echo $row['topic']; ?> </topic>
-                <img class = fleche src ="fleche.png">
+                <img id = 'fleche<?php echo $i ?>' src ="fleche.png" class = fleche>
              </div>
 
-             <div class = content>
+             <div id = 'content<?php echo $i ?>' class = content>
                 <qst> <?php echo $row['content']; ?> </qst>
                 <br>
                 <date> <?php echo $row['date_question']; ?> </date>

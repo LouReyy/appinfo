@@ -9,6 +9,7 @@
                     <li><a href="/appinfo/homepage/homepage.php">Accueil</a></li>
                     <li><a href="/appinfo/Chantier/Chantier.php">Votre chantier</a></li>
                     <li><a href="/appinfo/forum/forum.php">Forum</a></li>
+                    <li><a href="/appinfo/faq/faq.php">FAQ</a></li>
                     <li><a href="/appinfo/contact/contact_essai.html">Contactez-nous</a></li>
                 </ul>
             </nav>
