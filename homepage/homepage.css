@@ -81,6 +81,7 @@
     border-radius: 10px;
     cursor: pointer;
     font-size: 20px;
+    text-align: center;
   }
   
   .cta:hover { /*couleur du cadre quand curseur dessus*/
@@ -167,6 +168,7 @@ h2{
 
 /* Partie: Nos services */
 #containerpartie2 {
+  font-family: "Quicksand";
   display: grid;
   justify-content: space-between;
   text-align: center;
@@ -177,41 +179,41 @@ h2{
 .chantier{
   grid-column: 1;
   grid-row: 1;
-  border: 1px solid black;
   border-radius: 60px;
   box-shadow: 3px 3px 2px 2px #dbdbdb;
   margin-right: 7%;
+  width:400px
 }
 .chantier img{
   border-radius: 60px 60px 0 0;
-  height: 65%;
+  height: 50%;
   width: 100%;
 }
 .stats{
   grid-column: 2;
   grid-row: 1;
-  border: 1px solid black;
   border-radius: 60px;
   box-shadow: 3px 3px 2px 2px #dbdbdb;
   margin-right: 7%;
+  width:400px
 }
 .stats img{
   border-radius: 60px 60px 0 0;
-  height: 65%;
+  height: 50%;
   width: 100%;
 }
 
 .forum{
   grid-column: 3;
   grid-row: 1;
-  border: 1px solid black;
   border-radius: 60px;
   box-shadow: 3px 3px 2px 2px #dbdbdb;
   margin-right: 7%;
+  width:400px
 }
 .forum img{
   border-radius: 60px 60px 0 0;
-  height: 65%;
+  height: 50%;
   width: 100%;
 }
 
@@ -220,12 +222,15 @@ p3{
   margin: 2%;
 }
 
+
+
 /*Footer*/
 
 .container{
 
   max-width: 2000px;
   margin:20px;
+  font-family: "Quicksand";
 
 }
 .row{

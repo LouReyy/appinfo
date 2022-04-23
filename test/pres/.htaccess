@@ -1,0 +1,5 @@
+RewriteEngine On 
+
+RewriteRule ^salut$ index.php
+
+RewriteRule ^capteur/([0-9]+)$ capteur.php?id=$1
