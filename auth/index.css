@@ -140,17 +140,25 @@ header{
     width:500px;
     height: 100px;;
     font-family: "Quicksand";
+    margin-top: -20%;
+    margin-left:10%;
     
 }
 
 .alert{
     position: relative;
-    width: 500px;
+    width: 800px;
     height: 30px;
     color : red;
     font-family: "Quicksand";
-    font-size: 1.3em;
+    font-size: 2.3em;
 
+}
+
+#container-title{
+    position: relative;
+    margin-top: 4%;
+    margin-left:25% ;
 }
 
 h1{
@@ -177,13 +185,12 @@ h2{
 }
 
 #form-group {
-    position: absolute;
-    margin-top: -20%;
+    position: relative;
+    margin-top: 5%;
     width:100%;
     padding: 30px;
-    border: 1px solid #f1f1f1;
     background: #fff;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+   
 }
 
 
@@ -260,7 +267,7 @@ button[type=submit]:hover {
 }
 
 #button1{
-    position: absolute;
+    position: relative;
     background-color: #00ccff;
     color: white;
     padding: 14px 20px;
@@ -285,7 +292,7 @@ button[type=submit]:hover {
 }
 
 #button2 {
-    position: absolute;
+    position: relative;
     background-color: #00ccff;
     color: white;
     padding: 14px 20px;
@@ -296,7 +303,7 @@ button[type=submit]:hover {
     border-radius: 25px;
     font-family: "Quicksand";  
     text-align: center;
-    margin-left:52%;
+    margin-left:2%;
     display: inline-block;
     text-decoration: none;
     color: white;

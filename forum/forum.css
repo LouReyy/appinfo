@@ -191,10 +191,35 @@ header{
   margin-left: 33%;
 }
 
+#container-title{
+  position: relative;
+  margin-top: 2%;
+  margin-left:39% ;
+}
+
+h2{
+
+  position: relative;
+  font-size: 3em;
+  margin-top: -8%;
+  font-weight: bold;
+ 
+}
+
+#forme2{
+  position: relative;
+  width: 150px;
+  height: 15px;
+  margin-top: -10px;
+  margin-left: 2%;
+  
+}
+
 #lestopics{
   position: relative;
   width: 100%;
   flex:1;
+  margin-top: 2%;
 }
 
 .navbar {

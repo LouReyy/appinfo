@@ -28,21 +28,31 @@ else{
 </head>
 <body>
 <div id = "container1">
-    <header>
-        <div id ="logoimg">
-            <a  href="/appinfo/homepage/homepage.php"><img src="/appinfo/auth/logo_infinite.png" alt="logo"></a>
-        </div>
-        <nav>
-        <ul class="nav__links">
-            <li><a href="/appinfo/homepage/homepage.php">Accueil</a></li>
-            <li><a href="/appinfo/Chantier/Chantier.html">Votre chantier</a></li>
-            <li><a href="/appinfo/forum/forum.php">Forum</a></li>
-            <li><a href="/appinfo/faq/faq.php">FAQ</a></li>
-            <li><a href="/appinfo/contact/contact_essai.html">Contactez-nous</a></li>
-        </ul>
-    </nav>
-     <a class="cta" href= "/appinfo/auth/<?php  echo $editprofil?> "> <?php echo $title ?></a>
-    </header>
+<header>
+            <div id ="logoimg">
+            <a  href="/appinfo/homepage/homepage.php"><img src="../auth/logo_infinite.png" alt="logo"></a>
+        </div>  
+            <nav>
+                <ul class="nav__links">
+                    <li><a href="/appinfo/homepage/homepage.php">Accueil</a></li>
+                    <li><a href="/appinfo/Chantier/Chantier.php">Votre chantier</a></li>
+                    <li><a href="/appinfo/forum/forum.php">Forum</a></li>
+                    <li><a href="/appinfo/faq/faq.php">FAQ</a></li>
+                    <li><a href="/appinfo/contact/contact_essai.html">Contactez-nous</a></li>
+                </ul>
+            </nav>
+            <a class="cta" href= "/appinfo/auth/<?php  echo $editprofil?> "> <?php echo $title ?></a>
+
+            <?php
+           
+
+           if(isset($_SESSION['type']) && ($_SESSION['type']) == "Administrateur"){
+            
+            ?>
+            <a class="cta" href= "/appinfo/admin/admin.php">Admin</a>
+
+            <?php }?>
+        </header>
 
 
     <div id = divgauche>
@@ -103,6 +113,15 @@ else{
     </div>
 
     <div id = divdroite>
+
+        <div id = container-title>
+                
+
+            <img id = "forme2"src="/appinfo/auth/forme1.png"></img>
+
+            <h2 class="text-center">Forum</h2>
+
+        </div>
 
     <div id = "lestopics">
         <ul class="navbar">
@@ -195,27 +214,26 @@ else{
         
         foreach($data2 as $row){
 
-        $pseudo = $row['pseudo_user'];
+
   
-        $req= $bdd->prepare('SELECT * FROM utilisateurs WHERE pseudo = ?');
-        $req->execute(array($pseudo));
+        $req= $bdd->prepare('SELECT * FROM utilisateurs');
+        $req->execute();
         $data = $req->fetchAll();
 
         foreach($data as $row2){
 
-            $file_name = "../auth/profil_picture/". hash('sha256',  $row2['email'] );
+            if(file_exists( "../auth/profil_picture/" . hash('sha256',  $row2['email']). ".jpg")){
+
+                $file_name = "../auth/profil_picture/" . hash('sha256',  $row2['email'] );
+
+                
+        
             }
-
-          //  if(file_exists($file)){
-
-           //     $file_name = "../auth/profil_picture/" . hash('sha256',  $row2['email'] );
         
-         //   }
+            else{
+                $file_name = "../auth/pp";
         
-         //   else{
-         //       $file_name = "../auth/pp";
-        
-         //   }
+            }
 
 
 
@@ -247,6 +265,7 @@ else{
             <?php
 
         }
+    }
     
         ?>
 

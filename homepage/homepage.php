@@ -27,9 +27,9 @@ if(isset($_SESSION['user'])){
     <title>Tech4Health</title>
 </head>
 <body>
-        <header>
+<header>
             <div id ="logoimg">
-            <a  href="/appinfo/homepage/homepage.php"><img src="infinite.png" alt="logo"></a>
+            <a  href="/appinfo/homepage/homepage.php"><img src="../auth/logo_infinite.png" alt="logo"></a>
         </div>  
             <nav>
                 <ul class="nav__links">
@@ -41,6 +41,16 @@ if(isset($_SESSION['user'])){
                 </ul>
             </nav>
             <a class="cta" href= "/appinfo/auth/<?php  echo $editprofil?> "> <?php echo $title ?></a>
+
+            <?php
+           
+
+           if(isset($_SESSION['type']) && ($_SESSION['type']) == "Administrateur"){
+            
+            ?>
+            <a class="cta" href= "/appinfo/admin/admin.php">Admin</a>
+
+            <?php }?>
         </header>
 
         

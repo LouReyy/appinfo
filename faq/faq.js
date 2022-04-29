@@ -1,5 +1,9 @@
+
+
 const none = document.getElementById("none");
 const droite = document.getElementById("droite");
+
+if(none){
 
 none.style.visibility = 'hidden';
 
@@ -12,17 +16,16 @@ if (none.style.visibility == 'hidden')
 
     }
 
-
-
-
-
-
+}
 
 for(var i=1;i<10;i++){
 const quest = document.getElementById("question" +i);
 const content = document.getElementById("content" +i);
 const topic = document.getElementById("topic" +i);
 const fleche = document.getElementById("fleche" +i);
+
+
+
 
 
     fleche.addEventListener('click',()=>{
@@ -36,6 +39,7 @@ const fleche = document.getElementById("fleche" +i);
         topic.style.boxShadow = 'none';
         topic.style.backgroundColor = '#00ccff';
         quest.style.boxShadow = '5px 5px 5px lightblue';   
+        fleche.style.transform = 'rotate(180deg)';
     }
     else                                     
     {
@@ -44,6 +48,7 @@ const fleche = document.getElementById("fleche" +i);
         topic.style.boxShadow = '5px 5px 5px lightblue';
         topic.style.backgroundColor = '#F5F5F5';
         quest.style.boxShadow = 'none';   
+        fleche.style.transform = 'rotate(0deg)';
     }
 
 
