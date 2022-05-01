@@ -15,63 +15,73 @@
             <ul class="nav__links">
                 <li><a href="/appinfo/homepage/homepage.html">Accueil</a></li>
                 <li><a href="/appinfo/Chantier/Chantier.html">Votre chantier</a></li>
-                <li><a href="#">Forum</a></li>
+                <li><a href="/appinfo/forum/forum.html">Forum</a></li>
                 <li><a href="/appinfo/contact/contact_essai.html">Contactez-nous</a></li>
             </ul>
         </nav>
         <a class="cta" href="/appinfo/auth/index.php">Connexion</a>
     </header>
-    <form >
-        <h1>Contactez-nous</h1>
-        <div class="trait"></div>
-        <div class="formulaire">
-            <div class="gauche">
-                <div class="case">
-                    <label>Nom</label>
-                    <input type="input">
-                    <i class="fa-solid fa-user"></i>
-                </div>
-
-                <div class="case">
-                    <label>Prénom</label>
-                    <input type="input">
-                    <i class="fa-solid fa-user"></i>
-                </div>
-
-                <div class="case">
-                    <label>Mail</label>
-                    <input type="input">
-                    <i class="fa-solid fa-envelope"></i>
-                </div>
-
-                <div class="case">
-                    <label>Téléphone</label>
-                    <input type="input">
-                    <i class="fa-solid fa-mobile"></i>
-                </div>
-                <div class="choix">
-                    <label>Quel est votre poste ?</label><br>
-                    <input type="radio"><label>Utilisateur</label><br>
-                    <input type="radio"><label>Gestionaire</label><br>
-                    <input type="radio"><label>Administrateur</label><br>
-                    <input type="radio"><label>Visiteur</label>
-
-
-                </div>
-            </div>
-
-            <div class="droite"> <!--Zone de texte pour la question-->
-                <div class="case">
-                    <label >Message</label>
-                    <textarea type= "zoneText" name="question" id="" cols="30" rows="10"></textarea>
-                    <i class="fa-solid fa-circle-question"></i>
-                
-                </div>
-
-            </div>
+    <div class="container">
+        <div class="boite">
+            <h2>Notre équipe</h2>
+            <div class="ligne"></div>
         </div>
-        <a class = "button" href="/appinfo/contact/envoi.php" >Envoyer</a> <!--Le boutton ne fait pas parti du div<formulaire> -->
-    </form>
+        <div class="boite">
+            <form action="contact.php" method="post">
+                <h1>Contactez-nous</h1>
+                <div class="trait"></div>
+                <div class="formulaire">
+                    <div class="gauche">
+                        <div class="case">
+                            <label>Nom</label>
+                            <input type="text" name="nom" >
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+        
+                        <div class="case">
+                            <label>Prénom</label>
+                            <input type="text" name="prénom">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+        
+                        <div class="case">
+                            <label>Mail</label>
+                            <input type="text" name="mail">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+        
+                        <div class="case">
+                            <label>Téléphone</label>
+                            <input type="tel" name="téléphone">
+                            <i class="fa-solid fa-mobile"></i>
+                        </div>
+                        <!--<div class="choix">
+                            <label>Quel est votre poste ?</label><br>
+                            <input type="radio"><label>Utilisateur</label><br>
+                            <input type="radio"><label>Gestionaire</label><br>
+                            <input type="radio"><label>Administrateur</label><br>
+                            <input type="radio"><label>Visiteur</label>
+        
+        
+                        </div>-->
+                    </div>
+        
+                    <div class="droite"> <!--Zone de texte pour la question-->
+                        <div class="case">
+                            <label >Message</label>
+                            <textarea type= "zoneText" name="question" id="" cols="30" rows="10"></textarea>
+                            <i class="fa-solid fa-circle-question"></i>
+                        
+                        </div>
+                    </div>
+                </div>
+                <div class="envoyer">
+                    <input type="submit"> <!--Le boutton ne fait pas parti du div<formulaire> -->
+                </div>
+            </form>
+        </div>
+    </div>
+    
 
 
     

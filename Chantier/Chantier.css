@@ -103,7 +103,7 @@ body {
     
     
 .contenu {
-    position: absolute;
+    position: relative;
     top: 20%;
     left: 35%;
     background-color: whitesmoke;
@@ -112,6 +112,8 @@ body {
     width: 800px;
     border-radius: 10px;
 }
+
+
 .contenu h3 {
     padding: 20px;
 }

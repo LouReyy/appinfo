@@ -1,9 +1,4 @@
-/*La barre de menu*/
-body{
-  margin : 0;
-  height: 100%;
-  
-}
+/*La barre de menu_____________________________*/
 * {
     box-sizing: border-box;
     margin:0;
@@ -37,7 +32,7 @@ body{
 
   #test{
     flex:5
-}
+  }
 
   .nav__links a,
   .overlay__content a {  /* style des barres du menu */
@@ -84,13 +79,14 @@ body{
     border-radius: 10px;
     cursor: pointer;
     font-size: 20px;
+    text-align: center;
   }
   
   .cta:hover { /*couleur du cadre quand curseur dessus*/
     background-color: #8aceff;
   }
 
-  /*Le centre*/
+  /*Le centre________________________________*/
 
 body{
   margin:0;
@@ -98,7 +94,7 @@ body{
   background-color: #f0f0f0;
 }
 
-
+/*Bienvenue/Mes services __________________________*/
 h1 {
     position: relative;
     text-align: center;
@@ -112,7 +108,7 @@ h1 hr{
   margin-right: auto;
   width:20%;
 }
-
+/*PARTIE AVEC IMAGES EOL+CHAN et texte________________*/
 #containerpartie1{
   margin-top: 2%;
   display: grid;
@@ -158,8 +154,9 @@ p{
 .imgeolienne{  
   grid-column: 1;
   grid-row: 1;/*taille image*/
-  margin-left: 30%;
   z-index: 1;
+  margin-left: 30%;
+
 }
 
 .img1{
@@ -171,34 +168,37 @@ p{
 
 
 p2{
+  padding-right: 20%;
   text-align: center;
   font-family: "Quicksand", sans-serif;
   font-size: 18px;
   font-weight: 10;
+  
 }
 
 .boxdetextegauche{
-  margin: auto;
   grid-column: 1;
   grid-row: 2;
   padding: 5% 2%;
   background-color: white;
-  border-radius: 10px;
+  border-radius: 30px;
   box-shadow: 5px 5px 5px 5px #dbdbdb;
-  padding-right: 20%;
+  grid-column-gap: 5px;
+  transform :translate(35%);
+  
 }
 
 .imgchantier{ /*idem */
   grid-column: 2;
   grid-row: 2;
-  margin-right: 50%;
+  margin-left: 10%;
   z-index: 1;
-  margin-left: -20%;
 }
 
 
 /* Partie: Nos services */
 #containerpartie2 {
+  font-family: "Quicksand";
   display: grid;
   justify-content: space-between;
   text-align: center;
@@ -209,41 +209,41 @@ p2{
 .chantier{
   grid-column: 1;
   grid-row: 1;
-  border: 1px solid black;
   border-radius: 60px;
   box-shadow: 3px 3px 2px 2px #dbdbdb;
   margin-right: 7%;
+  width:400px
 }
 .chantier img{
   border-radius: 60px 60px 0 0;
-  height: 65%;
+  height: 50%;
   width: 100%;
 }
 .stats{
   grid-column: 2;
   grid-row: 1;
-  border: 1px solid black;
   border-radius: 60px;
   box-shadow: 3px 3px 2px 2px #dbdbdb;
   margin-right: 7%;
+  width:400px
 }
 .stats img{
   border-radius: 60px 60px 0 0;
-  height: 65%;
+  height: 50%;
   width: 100%;
 }
 
 .forum{
   grid-column: 3;
   grid-row: 1;
-  border: 1px solid black;
   border-radius: 60px;
   box-shadow: 3px 3px 2px 2px #dbdbdb;
   margin-right: 7%;
+  width:400px
 }
 .forum img{
   border-radius: 60px 60px 0 0;
-  height: 65%;
+  height: 50%;
   width: 100%;
 }
 
@@ -252,12 +252,15 @@ p3{
   margin: 2%;
 }
 
+
+
 /*Footer*/
 
 .container{
 
   max-width: 2000px;
   margin:20px;
+  font-family: "Quicksand";
 
 }
 .row{

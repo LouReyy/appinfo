@@ -1,0 +1,42 @@
+.images{
+    margin-left: 10px;
+    display: flex;
+}
+.images img{
+    width: 490px;
+    height: 420px;
+     border: solid black 0.5px;
+}
+img a:hover{
+    border: solid grey 2px;
+}
+ .lien span{
+     color: purple;
+ }
+ form{
+    height: 350px;
+    width: 300px;
+    color: red;
+    position :absolute;
+    top : 50%;
+    left : 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    border: solid red 2px;
+    border-radius: 5px;
+ }
+ .corpsFormulaire{
+     margin-left: 10px;
+
+ }
+  input{
+      width: 220px;
+  }
+  select{
+      width: 220px;
+  }
+  textarea{
+      width: 220px;
+  }
+

@@ -1,0 +1,49 @@
+.boites{
+    height: 650px;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    background-color: grey;
+    color: white;
+}
+.boites a {
+    display: block;
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.boites a:hover {
+    background-color: lightgray;
+    color: #252929;
+}
+.corps{
+    position :absolute;
+    top : 15%;
+    left : 40%;
+    transform: translate(-50%,-50%);
+    
+}
+
+.reseau{
+    position :absolute;
+    top: 100px;
+    left : 75%;
+    transform: translate(-50%,-50%);
+
+}
+ img{
+     height: 50px;
+     width: 50px;
+ }
+ .texte{
+    position :absolute;
+    top : 18%;
+    left : 47%;
+    transform: translate(-50%,-50%);
+    
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}

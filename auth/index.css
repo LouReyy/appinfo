@@ -67,6 +67,7 @@ header{
       font-size: 18px;
       color:white;
       text-decoration: none;
+      text-align: center;
     }
     
     .nav__links {  /*mettre en liste horizontal*/
@@ -101,6 +102,7 @@ header{
 
 
 
+
 #test{
 
     position: absolute;
@@ -126,28 +128,37 @@ header{
     width:70%;
     height: 55%;
     margin:0 auto;
-    margin-top:40%;
+    margin-top:30%;
     font-family: "Quicksand";  
     
 }
 
+
+
+.login-form{
+    position: relative;
+    width:500px;
+    height: 100px;;
+    font-family: "Quicksand";
+    margin-top: -20%;
+    margin-left:10%;
+    
+}
+
 .alert{
-    position: absolute;
-    margin-top: 70%;
-    width: 500px;
+    position: relative;
+    width: 800px;
     height: 30px;
     color : red;
     font-family: "Quicksand";
-    font-size: 1.3em;
+    font-size: 2.3em;
 
 }
 
-.login-form{
-    position: absolute;
-    width:500px;
-    margin-top:-20%;
-    font-family: "Quicksand";
-    
+#container-title{
+    position: relative;
+    margin-top: 4%;
+    margin-left:25% ;
 }
 
 h1{
@@ -174,13 +185,12 @@ h2{
 }
 
 #form-group {
-    position: absolute;
-    margin-top: -20%;
+    position: relative;
+    margin-top: 5%;
     width:100%;
     padding: 30px;
-    border: 1px solid #f1f1f1;
     background: #fff;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+   
 }
 
 
@@ -211,6 +221,32 @@ input[type=text], input[type=password] {
 }
 
 
+label {
+    font-family: "Quicksand";  
+    font-size: 20px;
+    padding-right: 10px;
+}
+
+select {
+    font-family: "Quicksand";  
+    font-size: 20px;
+    padding: 2px 5px;
+    border-radius: 20px;
+}
+
+footer {
+    font-size: .8rem;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+}
+
+.output {
+    position: relative;
+}
+
+
+
 button[type=submit] {
     font-size: 20px;
     background-color: #00ccff;
@@ -231,7 +267,7 @@ button[type=submit]:hover {
 }
 
 #button1{
-    position: absolute;
+    position: relative;
     background-color: #00ccff;
     color: white;
     padding: 14px 20px;
@@ -256,7 +292,7 @@ button[type=submit]:hover {
 }
 
 #button2 {
-    position: absolute;
+    position: relative;
     background-color: #00ccff;
     color: white;
     padding: 14px 20px;
@@ -267,7 +303,7 @@ button[type=submit]:hover {
     border-radius: 25px;
     font-family: "Quicksand";  
     text-align: center;
-    margin-left:52%;
+    margin-left:2%;
     display: inline-block;
     text-decoration: none;
     color: white;
