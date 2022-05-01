@@ -397,6 +397,31 @@ a.button3{
   margin-right: 2%;
 }
 
+table{
+  position: relative;
+  margin-top: 2%;
+  margin-left: 25%;
+  background-color: #F5F5F5;
+  box-shadow: 5px 5px 5px lightblue;
+  font-family: "Quicksand";
+  font-size: 20px;
+  width: 50%;
+  height:40%;
+  text-align: center;
+}
+
+table,
+td {
+    border: 1px solid #333;
+}
+
+thead,
+tfoot {
+  background-color: #F5F5F5;
+    color: black;
+}
+
+
 
 
 

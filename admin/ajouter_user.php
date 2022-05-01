@@ -16,6 +16,12 @@ else{
     $editprofil ="index.php";
     $title = "Connexion";
 }
+
+
+    $file_name = "../auth/pp";
+        
+        
+
 ?>
 
 <!DOCTYPE html>
@@ -29,8 +35,8 @@ else{
 </head>
 <body>
 
-<header>
-            <div id ="logoimg">
+    <header>
+        <div id ="logoimg">
             <a  href="/appinfo/homepage/homepage.php"><img src="../auth/logo_infinite.png" alt="logo"></a>
         </div>  
             <nav>
@@ -53,7 +59,7 @@ else{
             <a class="cta" href= "/appinfo/admin/admin.php">Admin</a>
 
             <?php }?>
-        </header>
+    </header>
 
 
         <div id ="container">
@@ -74,52 +80,76 @@ else{
 
             
 
-                <form action="../auth/model/inscription_traitement.php" method="post">      
-                    <div class="form-group">
-                        <input type="text" name="pseudo" class="form-control" placeholder="Pseudo" required="required" autocomplete="off">
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" class="form-control" placeholder="Email" required="required" autocomplete="off">
-                    </div>
-                    <div class="form-group">
-                      <input type="password" name="password" class="form-control" placeholder="Mot de passe" required="required" autocomplete="off">
-                    </div>
-                    <div class="form-group">
-                       <input type="password" name="password_retype" class="form-control" placeholder="Re-tapez le mot de passe" required="required" autocomplete="off">
-                    </div>
+            <form action="../auth/model/inscription_traitement.php" method="post">      
+                <div class="form-group">
+                    <input type="text" name="pseudo" class="form-control" placeholder="Pseudo" required="required" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" class="form-control" placeholder="Email" required="required" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password" class="form-control" placeholder="Mot de passe" required="required" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password_retype" class="form-control" placeholder="Re-tapez le mot de passe" required="required" autocomplete="off">
+                </div>
 
-                    <label for="pet-select">Choix du role:</label>
+                <label for="pet-select">Choix du role:</label>
 
-                    <select name="type" id="type-select">
-                        <option value="">Choisissez une option</option>
-                        <option value="Utilisateur">Utilisateur</option>
-                        <option value="Gestionnaire">Gestionnaire</option>
-                        <option value="Administrateur">Administrateur</option>
+                <select name="type" id="type-select">
+                    <option value="">Choisissez une option</option>
+                    <option value="Utilisateur">Utilisateur</option>
+                    <option value="Gestionnaire">Gestionnaire</option>
+                    <option value="Administrateur">Administrateur</option>
     
-                    </select>
+                </select>
 
 
 
 
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-primary btn-block">Ajouter un utilisateur</button>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block">Ajouter un utilisateur</button>
                         
                         
-                    </div>   
+                </div>   
                     
 
-                </form>
+            </form>
 
                
 
-            </div> 
-           
+        </div>
 
-           
+        <img class = line src = ../admin/line4.png>
 
+        <div id = pp>
+
+            <img class = "avatar"src="./<?php echo $file_name; ?>.jpg"></img>
+
+            <form class = "form-img" method="POST" action = "../auth/model/modify_profilpic.php" enctype="multipart/form-data" >
+
+                <label class="file">
+                    <input type="file" name = "picture" id="avatar"   accept="image/jpg">
+                    <span class="file-custom"></span>
+                </label>    
+
+                <button type="submit" class="btn btn-primary btn-block">Modifier la photo</button>
+
+            </form>
 
 
         </div>
+
+
+
+
+           
+
+           
+
+
+
+        
 
 
     

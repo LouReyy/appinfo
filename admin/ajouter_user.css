@@ -134,8 +134,8 @@ header{
     position: absolute;
     width : 50%;
     height : 75%;
-    margin-top : 2%;
-    margin-left:25%;
+    margin-top : 5%;
+    margin-left:2%;
 
 }
 
@@ -190,6 +190,7 @@ label {
 }
 
 select {
+  margin-top: 2%;
     font-family: "Quicksand";  
     font-size: 20px;
     padding: 2px 5px;
@@ -228,3 +229,110 @@ button[type=submit]:hover, a.button2:hover {
     color: black;
     border: 1px solid black;
 }
+
+
+.line{
+  position: absolute;
+  width: 2px;
+  height:60%;
+  margin-left: 50%;
+  margin-top: 5%;
+}
+
+
+#pp{
+          
+  position: absolute;
+  margin-left: 65%;
+  text-align: center;
+  margin-top: 2%;
+
+  
+  
+}
+
+.avatar{
+  width: 450px;
+  height: 450px;
+  background-size: cover;
+  border-radius: 500px;
+  border: solid 2px black;
+  box-shadow: 0 0 80px 0 rgba(0, 0, 0, 0.2), 0 15px 15px 0 rgba(0, 0, 0, 0.24);
+  display: block;
+  margin-top: 8%;
+
+}
+
+input[type=file] {
+  margin-top: 5%;
+  font-family: "Quicksand";
+  
+  
+}
+
+button {
+  
+  margin-top: 5%;
+  background-color: #00ccff;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 52%;
+  border-radius: 25px;
+  font-family: "Quicksand";  
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+}
+
+button1 {
+  
+  margin-top: 5%;
+  background-color: #00ccff;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 52%;
+  border-radius: 25px;
+  font-family: "Quicksand";  
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+}
+
+button2 {
+
+background-color: #00ccff;
+color: white;
+padding: 14px 20px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+width: 52%;
+border-radius: 25px;
+font-family: "Quicksand";  
+text-align: center;
+display: inline-block;
+text-decoration: none;
+color: white;
+font-size: 30px;
+}
+
+.button:hover, button:hover, button1:hover ,button2:hover{
+background-color: white;
+color: black;
+border: 1px solid black;
+}
+
+a{
+  text-decoration: none;
+}
+

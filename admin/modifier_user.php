@@ -33,6 +33,18 @@ $password = htmlspecialchars($data['password']);
 $password_retype = htmlspecialchars($data['password']);
 $type = htmlspecialchars($data['type']);
 
+if(file_exists( "../auth/profil_picture/" . hash('sha256',  $data['email']). ".jpg")){
+
+    $file_name = "../auth/profil_picture/" . hash('sha256',  $data['email'] );
+
+}
+
+else{
+    $file_name = "../auth/pp";
+
+}
+
+
 
 
 ?>
@@ -44,7 +56,7 @@ $type = htmlspecialchars($data['type']);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/appinfo/admin/ajouter_user.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="/appinfo/admin/modifier_user.css" media="screen" type="text/css" />
     <title>Document</title>
 </head>
 <body>
@@ -76,7 +88,7 @@ $type = htmlspecialchars($data['type']);
         </header>
 
 
-        <div id ="container">
+    <div id ="container">
 
         
 
@@ -96,52 +108,73 @@ $type = htmlspecialchars($data['type']);
 
             
 
-                <form action="modifier.php" method="post">      
-                    <div class="form-group">
-                        <input type="text" name="pseudo" class="form-control" placeholder="Pseudo" value= "<?php echo $data['pseudo']; ?>"  required="required" autocomplete="off">
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" class="form-control" placeholder="Email" value= "<?php echo $data['email']; ?>"  required="required" autocomplete="off">
-                    </div>
+            <form action="modifier.php" method="post">      
+                <div class="form-group">
+                    <input type="text" name="pseudo" class="form-control" placeholder="Pseudo" value= "<?php echo $data['pseudo']; ?>"  required="required" autocomplete="off">
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" class="form-control" placeholder="Email" value= "<?php echo $data['email']; ?>"  required="required" autocomplete="off">
+                </div>
                     <div class="form-group">
                       <input type="password" name="password" class="form-control" placeholder="Nouveau Mot de passe" required="required" autocomplete="off">
-                    </div>
-                    <div class="form-group">
-                       <input type="password" name="password_retype" class="form-control" placeholder="Re-tapez le mot de passe" required="required" autocomplete="off">
-                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password_retype" class="form-control" placeholder="Re-tapez le mot de passe" required="required" autocomplete="off">
+                </div>
 
-                    <label for="pet-select">Choix du role:</label>
+                <label for="pet-select">Choix du role:</label>
 
-                    <select name="type" id="type-select">
-                        <option value=""><?php echo $data['type']; ?> </option>
-                        <option value="Utilisateur">Utilisateur</option>
-                        <option value="Gestionnaire">Gestionnaire</option>
-                        <option value="Administrateur">Administrateur</option>
+                <select name="type" id="type-select">
+                    <option value=""><?php echo $data['type']; ?> </option>
+                    <option value="Utilisateur">Utilisateur</option>
+                    <option value="Gestionnaire">Gestionnaire</option>
+                    <option value="Administrateur">Administrateur</option>
     
-                    </select>
+                 </select>
 
 
 
 
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-primary btn-block">Modifier</button>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block">Modifier</button>
                         
                         
-                    </div>   
+                </div>   
                     
 
-                </form>
+            </form>
 
                
 
-            </div> 
-           
+        </div> 
 
-           
+        <img class = line src = ../admin/line4.png>
 
+        <div id = pp>
+
+            <img class = "avatar"src="./<?php echo $file_name; ?>.jpg"></img>
+
+            <form class = "form-img" method="POST" action = "../auth/model/modify_profilpic.php" enctype="multipart/form-data" >
+
+                <label class="file">
+                    <input type="file" name = "picture" id="avatar"   accept="image/jpg">
+                    <span class="file-custom"></span>
+                </label>    
+
+                <button type="submit" class="btn btn-primary btn-block">Modifier la photo</button>
+
+            </form>
 
 
         </div>
+
+           
+
+           
+
+
+
+    </div>
 
 
     

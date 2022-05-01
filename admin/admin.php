@@ -225,10 +225,59 @@ else{
 
                 </div>
 
+                <?php
+
+                if(isset($_GET['search']) AND !empty($_GET['search'])){
+
+                    ?>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2">Tableau de l'utilisateur : <?php echo $row['pseudo'] ?> </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Pseudo </td> 
+                            <td><?php echo $row['pseudo'] ?></td> 
+                        </tr>
+                        <tr>
+                            <td>Email </td>
+                            <td><?php echo $row['email']?></td>
+                        </tr>
+                        <tr>
+                            <td>Password crypté </td>
+                            <td><?php echo $row['password'] ?></td>
+                        </tr>
+                        <tr>
+                            <td>Token </td>
+                            <td><?php echo $row['token'] ?></td>
+
+                        </tr>
+                        <tr>
+                            <td>date d'inscription  </td>
+                            <td><?php echo $row['date_inscription'] ?></td>
+                        </tr>
+                        <tr>
+                            <td>Fonction </td>
+                            <td> <?php echo $row['type'] ?></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+
+
+
+             
+
 
 
 
                 <?php
+
+                }
 
                 }
 
