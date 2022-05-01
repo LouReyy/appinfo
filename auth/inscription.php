@@ -11,19 +11,33 @@
             <title>Inscription</title>
         </head>
         <body>
+        
+        <div id = "container1">
 
 
-     <div id = test>
-         <img class = "logo"src="logo.png"></img>
-     </div>
+        <header>
+        <div id ="logoimg">
+            <a  href="/appinfo/homepage/homepage.html"><img src="/appinfo/auth/logo_infinite.png" alt="logo"></a>
+        </div>  
+                <nav>
+                    <ul class="nav__links">
+                        <li><a href="/appinfo/homepage/homepage.html">Accueil</a></li>
+                        <li><a href="#">Votre chantier</a></li>
+                        <li><a href="#">Forum</a></li>
+                        <li><a href="/appinfo/contact/Page_onglets.html">Contactez-nous</a></li>
+                    </ul>
+                </nav>
+             <a class="cta" href="/appinfo/auth/index.php">Connexion</a>
+        </header>
+
+
+     <div id = test></div>
 
     <div id = ecran>
 
          <div id="container">
-
-
-             <div class="login-form">
-            <?php 
+            <div class="login-form">
+                <?php 
                 if(isset($_GET['reg_err']))
                 {
                     $err = htmlspecialchars($_GET['reg_err']);
@@ -103,38 +117,57 @@
                     <button type="submit" class="btn btn-primary btn-block">Inscription</button>
                 </div>   
 
-                <p3 class="text-center"><a href="connexion.php">Connexion</a></p3>
+                <a id = "button1" href="connexion.php">Connexion</a>
 
-                <style>
+            </div> 
 
-p3{
-    position: absolute;
-    margin-left: 25%;
-    background-color: #00ccff;
-    color: white;
-    padding: 14px 20px;
-    border: none;
-    cursor: pointer;
-    width: 40%;
-    border-radius: 15px;
-    font-family: "Quicksand";  
-    text-align: center;
+
+         </div> 
+
+         </div>
+
+            
+
+
+
+    <style>
+
+               
+
+
+
+    #container{
+        margin-top: 20%;
+        width: 700px;
+        height: 250px;
+    }
+
     
-}
-
-p3:hover {
-    background-color: white;
-    color: black;
-    border: 1px solid black;
-}
-
-
+    .forme1{
+        width: 45%;
+        height: 6%;
+        display: block;
+        margin-left: 4%;
+        
+    }
 
 
-                </style>
+    h1{
+    color : black;
+    position: relative;
+    font-size: 4em;
+    padding-bottom: 5%;
+    margin-top: -10%;
+    }
 
-            </form>
-        </div>
-      
-        </body>
+    .form-group{
+        font-size: 15px;
+        padding: 5px;
+    }
+
+    #button1{
+        width: 100%;
+    }
+    </style>
+
 </html>

@@ -24,7 +24,7 @@
                 if(strlen($email) <= 100){ 
                     if(filter_var($email, FILTER_VALIDATE_EMAIL)){ 
                         if($password === $password_retype){ 
-
+                            
                             
                             $cost = ['cost' => 12];
                             $password = password_hash($password, PASSWORD_BCRYPT, $cost);
@@ -38,7 +38,6 @@
                                 'pseudo' => $pseudo,
                                 'email' => $email,
                                 'password' => $password,
-                                'ip' => $ip,
                                 'token' => bin2hex(openssl_random_pseudo_bytes(64))
                             ));
                             // On redirige avec le message de succès
