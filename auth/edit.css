@@ -193,6 +193,7 @@ header{
     }
     
     select {
+      
       margin-top: 2%;
         font-family: "Quicksand";  
         font-size: 20px;
@@ -380,4 +381,131 @@ header{
         
        
     
-    
+        @media screen and (max-width: 1000px){
+
+          #pp{
+            position: absolute;
+            margin-left: 40%;
+            margin-top: 25%;
+            
+          }
+
+          .avatar{
+            width:200px;
+            height:200px;
+          }
+
+
+          button[type=submit]{
+            position: relative;
+   
+   
+         
+        }
+
+          .line{
+            width:50%;
+            height: 2px;
+            margin-top: 65%;
+            margin-left: 25%;
+
+          }
+
+          #title{
+            width:90%;
+            margin-left: 5%;
+          }
+
+          #gauche{
+            position: relative;
+            margin-top: 45%;
+            margin-left: 5%;
+            width: 90%;
+          }
+
+        
+
+        }
+
+        @media screen and (max-width: 500px){
+
+          #pp{
+            position: absolute;
+            margin-left: 32%;
+            margin-top: 40%;
+            
+          }
+
+          .avatar{
+            width:150px;
+            height:150px;
+          }
+
+
+           button[type=submit]{
+
+            position: relative;
+            font-size: 10px;
+            margin-left: -10%;
+            width: 50%;
+   
+  
+          }
+
+          label{
+            font-size: 10px;
+            
+          }
+
+          input[type=file]{
+            font-size: 10px;
+            margin-left: -54%;
+
+          }
+
+
+
+          .line{
+            width:50%;
+            height: 2px;
+            margin-top: 100%;
+            margin-left: 25%;
+
+          }
+
+          #title{
+            width:90%;
+            margin-left: 5%;
+            font-size: 10px;
+          }
+
+          #gauche{
+            font-size: 15px;
+            position: relative;
+            margin-top: 65%;
+            margin-left: 2%;
+            width: 100%;
+          }
+
+          input[type=text], input[type=email] {
+            font-size: 15px;
+          }
+
+          input[type=text], input[type=password] {
+            font-size: 15px;
+          }
+
+          select{
+            font-size: 10px;
+
+          }
+
+          .button{
+            font-size: 10px;
+            width: 50%;
+
+          }
+
+        
+
+        }

@@ -120,7 +120,7 @@
 
 
             <div class="button1">
-                <button type="submit" class="btn btn-primary btn-block">Modifier</button>
+                <button type="submit" class="btn_gauche">Modifier</button>
 
                 <a class="button" href="./model/deconnexion.php" >Déconnexion</a> 
 

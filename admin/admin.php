@@ -237,7 +237,11 @@ else{
                             <th colspan="2">Tableau de l'utilisateur : <?php echo $row['pseudo'] ?> </th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody> 
+                        <tr>
+                            <td>ID</td> 
+                            <td><?php echo $row['id'] ?></td> 
+                        </tr>
                         <tr>
                             <td>Pseudo </td> 
                             <td><?php echo $row['pseudo'] ?></td> 
