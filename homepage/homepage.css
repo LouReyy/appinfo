@@ -1,17 +1,27 @@
-/*La barre de menu*/
-
+/*La barre de menu_____________________________*/
 * {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+  margin:0;
+  padding: 0;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 20;
+}
 
   header {
     width: 100%;
+    height: 100px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     padding: 20px 2%;
-    background-color: #fbfbfb;
+    background-color: white;
   }
+
+  #logoimg{
+    display: flex;
+    justify-content: flex-start;
+    flex:3
+}
 
   
   header img{  /*taille image logo dans la barre du haut*/  
@@ -20,6 +30,10 @@
     margin-right: auto;
     margin-top: 10px;
     padding: 10px;
+  }
+
+  #test{
+    flex:5
   }
 
   .nav__links a,
@@ -34,7 +48,8 @@
     margin-left: auto;
   }
 
-  .cta{ /*style du texte dans le bouton connexion*/
+  .cta{
+    flex:0.3; /*style du texte dans le bouton connexion*/
     font-family: "Quicksand", sans-serif;
     font-weight: 10;
     font-size: 18px;
@@ -66,157 +81,232 @@
     border-radius: 10px;
     cursor: pointer;
     font-size: 20px;
+    text-align: center;
   }
   
   .cta:hover { /*couleur du cadre quand curseur dessus*/
     background-color: #8aceff;
   }
 
-  /*Le centre*/
+  /*Le centre________________________________*/
 
-h1 {
-    position: relative;
-    text-align: center;
-    font-family: "Quicksand", sans-serif;
-    font-size: 50px;
-    font-weight: 10;
+  main{
+	  background-color:#fbfbfb;
   }
+
+/*Bienvenue/Mes services __________________________*/
+h1 {
+  position: relative;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 20;
+  padding:2%;
+}
 h1 hr{
-  border-top: 3px solid #00ccff;
-  margin-left: auto;
-  margin-right: auto;
-  width:20%;
+border-top: 7px solid #00ccff;
+margin-left: auto;
+margin-right: auto;
+width:20%;
+border-radius:90px;
+border-bottom:none;
+transition: width 1s ease 0.1s;
 }
 
-#containerpartie1{
-  position:relative;
-  display: grid;
-  height: auto;
-  margin-right: 10%;
-  margin-left: 10%;
-  grid-column-gap: 15px;
-  grid-row-gap: 50px;
-  grid-template-rows: auto auto auto auto;
-
+h1 hr:hover{
+  margin-left:38%;
+  width:25%;
 }
-
-.boxdetextedroite{
-  margin: auto;
-  grid-column: 2;
-  grid-row: 1;
-  margin-left: -5%;
-  padding: 5% 2%;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 5px 5px 5px 5px #dbdbdb;
-  grid-column-gap: 5px;
-}
-
 h2{
-    text-align: center;
-    font-family: "Quicksand", sans-serif;
-    font-size: 40px;
-    font-weight: 10;
+	font-size: 40px;
+	margin-bottom:3%;
+	font-weight: 20;
+}
+/*PARTIE AVEC IMAGES EOL+CHAN et texte________________*/
+#container{
+	display:flex;
+	flex-direction:row;
+	flex-wrap: wrap;
+	flex-flow: row wrap;
+	justify-content:center;
+	align-items:center;
+	gap:5px; 
+	
 }
 
-h2 img{
-  height: 10%;
-  width: 10%;
+#enfantimage{
+	width: 25%;
+	box-sizing: border-box;
+}
+#enfanttexte{
+	width: 40%;
+	box-sizing: border-box;
 }
 
-p{
-  padding-left: 20%;
-  text-align: center;
-  font-family: "Quicksand", sans-serif;
-  font-size: 18px;
-  font-weight: 10;
+#enfantimage img{
+	width:100%;
+	height:auto;
 }
 
-img{
-  width: 500px;
-  height: 500px;
-}
-.imgeolienne{  
-  grid-column: 1;
-  grid-row: 1;/*taille image*/
-  margin-left: 40%;
-  z-index: 1;
+.boxdetexte{
+	border-radius: 10px;
+	box-shadow: 5px 5px 5px 5px #dbdbdb;
+	background:white;
+	padding:3%;
+	text-align:center;
 }
 
-p2{
-  text-align: center;
-  font-family: "Quicksand", sans-serif;
-  font-size: 18px;
-  font-weight: 10;
+.boxdetexte img{
+	width:10%;
+	height:auto;
 }
 
-.boxdetextegauche{
-  margin: auto;
-  grid-column: 1;
-  grid-row: 2;
-  padding: 5% 2%;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 5px 5px 5px 5px #dbdbdb;
-  padding-right: 20%;
-}
 
-.imgchantier{ /*idem */
-  grid-column: 2;
-  grid-row: 2;
-  margin-right: 50%;
-  z-index: 1;
-  margin-left: -20%;
+.img1{
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24); 
 }
 
 
 /* Partie: Nos services */
 #containerpartie2 {
+  font-family: "Quicksand";
   display: grid;
   justify-content: space-between;
   text-align: center;
-  margin:2%;
+  justify-content: space-around;
+  padding:2%;
 }
 
 .chantier{
   grid-column: 1;
   grid-row: 1;
-  border: 1px solid black;
   border-radius: 60px;
+  box-shadow: 3px 3px 2px 2px #dbdbdb;
+  margin-right: 7%;
+  width:400px
 }
 .chantier img{
   border-radius: 60px 60px 0 0;
-  height: 65%;
+  height: 50%;
   width: 100%;
 }
 .stats{
   grid-column: 2;
   grid-row: 1;
-  border: 1px solid black;
   border-radius: 60px;
+  box-shadow: 3px 3px 2px 2px #dbdbdb;
+  margin-right: 7%;
+  width:400px
 }
 .stats img{
   border-radius: 60px 60px 0 0;
-  height: 65%;
+  height: 50%;
   width: 100%;
 }
 
 .forum{
   grid-column: 3;
   grid-row: 1;
-  border: 1px solid black;
   border-radius: 60px;
+  box-shadow: 3px 3px 2px 2px #dbdbdb;
+  margin-right: 7%;
+  width:400px
 }
 .forum img{
   border-radius: 60px 60px 0 0;
-  height: 65%;
+  height: 50%;
   width: 100%;
 }
 
 p3{
   text-align: center;
+  margin: 2%;
 }
 
+
+
+/*Footer*/
+
+.container{
+
+  max-width: 2000px;
+  margin:20px;
+  font-family: "Quicksand";
+
+}
+.row{
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+}
+ul{
+  list-style:none;
+}
+
+.footer{
+  background-color: rgb(0, 217, 255);
+  padding: 75px 0;
+
+}
+.footer-col{
+  width: 25%;
+  padding:0 5%;
+
+}
+.footer-col h4{
+  font-size:18px;
+  color:aliceblue;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position:relative;
+  
+}
+.footer-col h4::before{
+  content: '';
+  position:absolute;
+  left:0;
+  bottom: -10px;
+  background-color:blue;
+  height: 2px;
+  box-sizing:border-box;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child){
+  margin-bottom: 10px;
+}
+.footer-col ul li a{
+  font-size: 16px;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 300;
+  color:aliceblue;
+  display:block;
+  transition: all 0,3s ease;
+}
+.footer-col ul li a:hover{
+  color:rgba(22, 61, 190, 0.747);
+  padding-left: 7px;
+
+}
+.footer-col .logo{
+  width: 190px;
+  height: 190px;
+}
+.footer-col .social-links a{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(22, 61, 190, 0.747);
+  margin-right: 0 10px 10px 0;
+  text-align:center;
+  line-height:40px;
+  border-radius: 50px;
+  color: rgb(255, 249, 249);
+}
+.footer-col .social-links a:hover{
+  color:rgba(22, 61, 190, 0.747);
+  background-color: aliceblue;
+}
 
 
 
@@ -233,40 +323,14 @@ p3{
     width:55%;
   } 
 
-  #containerpartie1{
-    grid-row-gap: 30px;
-  }
-
   img{
     width: 300px;
     height: 300px;
   }
-  
-  .imgeolienne{  
-    grid-column: 1;
-    grid-row: 1;
-    margin: 10% 15% 2%;
-  }
 
-  
-  .boxdetextedroite{
-    grid-column: 1;
-    grid-row: 2;
-  }
 
   p{
     padding:2px;
-  }
-
-  .imgchantier{ 
-    grid-column: 1;
-    grid-row: 3;
-    margin: 10% 15% 2%;
-  }
-
-  .boxdetextegauche{
-    grid-column: 1;
-    grid-row: 4;
   }
 
   p2{
@@ -276,15 +340,18 @@ p3{
   .chantier{
     grid-column: 1;
     grid-row: 1;
+    margin-bottom: 6%;
   }
 
   .stats{
     grid-column: 1;
     grid-row: 2;
+    margin-bottom: 6%;
   }
 
   .forum{
     grid-column: 1;
     grid-row: 3;
+    margin-bottom: 6%;
   }
 }

@@ -2,7 +2,15 @@ body{
     background-color: pink;
 
 }
-#container{
+#graph1{
+    margin-left: 200px;
     height: 30%;
     width: 45%;
 }
+#graph2{
+    margin-left: 200px;
+    height: 30%;
+    width: 45%;
+
+}
+/** On va mettre le script qui appelle les graphes dans contenu du fichier Chantier.html **/
