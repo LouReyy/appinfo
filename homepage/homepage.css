@@ -219,6 +219,7 @@ h2{
 
 p3{
   text-align: center;
+  font-size: 1vw;
   margin: 2%;
 }
 
@@ -331,7 +332,7 @@ ul{
 
   p{
     padding:2px;
-    font-size: 1vw;
+
   }
 
   p2{
