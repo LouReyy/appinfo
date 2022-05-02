@@ -94,7 +94,7 @@ if(isset($_SESSION['user'])){
         <div class="chantier">
             <img src="grues.jpg" alt="">
             <h2>Votre chantier</h2>
-            <p3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed quam ut metus faucibus convallis nec sed tellus.</p3>
+            <p3>Accéder à cette section pour découvrir les informations sur votre chantier : Localisation, les dates & la nature du chantier</p3>
         </div>
 
 
