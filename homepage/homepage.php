@@ -108,7 +108,7 @@ if(isset($_SESSION['user'])){
         <div class="forum">
             <img src="forum.jpg" alt="">
             <h2>Forum</h2>
-            <p3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed quam ut metus faucibus convallis nec sed tellus.</p3>
+            <p3>Sur cette page, vous trouverez un ensemble de questions-réponses pour différents sujets. Posez égaleemtns vos questions en rapport avec votre chantier pour bénificier de l'aide la communauté  </p3>
         </div>
     </div>
     </main> 
