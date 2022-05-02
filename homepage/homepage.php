@@ -101,7 +101,7 @@ if(isset($_SESSION['user'])){
         <div class="stats">
             <img src="stats2.jpg" alt="">
             <h2>Statistiques</h2>
-            <p3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed quam ut metus faucibus convallis nec sed tellus.</p3>
+            <p3>Accéder à cette page afin de constater les statistiqes de votre chantier, l'environnement de travail des ouvriers est notre priorité, vous trouverez fonc différents graphiques avec notamment les valeurs de temperatures et d'humidité.</p3>
         </div>
     
 
