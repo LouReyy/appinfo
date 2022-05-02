@@ -195,15 +195,13 @@ else{
             
         }elseif (isset($_GET['param'])){
             $topic = htmlspecialchars($_GET['param']);
+            
         }
         else{
             $topic = "Bienvenue";
         }
 
-        
        
-
-
         $req2= $bdd->prepare('SELECT * FROM message WHERE topic = ?');
         $req2->execute(array($topic));
         $data2 = $req2->fetchAll();
@@ -225,6 +223,8 @@ else{
                 }
                 else{
                 $file_name = "../auth/pp";
+                }
+
                 }
 
 
@@ -266,7 +266,7 @@ else{
                 <?php
 
             }
-        }
+        
     
         ?>
 
