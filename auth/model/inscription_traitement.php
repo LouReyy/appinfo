@@ -11,11 +11,23 @@
         $password_retype = htmlspecialchars($_POST['password_retype']);
         $type = htmlspecialchars($_POST['type']);
 
-        echo $type;
-        echo strlen($type);
+        $check0 = $bdd->prepare('SELECT pseudo, email, password FROM users_banned');
+        $check0->execute();
+        $data0 = $check0->fetchAll();
+
+        var_dump($data0);
+
+        foreach($data0 as $row0){
+
+            echo $row0['pseudo'];
+
+        if ($row0['pseudo'] == $pseudo || $row0['email'] == $email ){
+
+            header('Location: ../views/inscription.php?reg_err=banned'); die();}
+
+        }
 
 
-        
         $check = $bdd->prepare('SELECT pseudo, email, password FROM utilisateurs WHERE email = ?');
         $check->execute(array($email));
         $data = $check->fetch();
@@ -57,3 +69,4 @@
         }else{ header('Location: ../views/inscription.php?reg_err=already'); die();}
     
     }
+

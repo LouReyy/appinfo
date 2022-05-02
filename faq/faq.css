@@ -208,6 +208,26 @@ header{
  input[type=text]:focus {
    width: 40%;
  }
+
+ .msg-form{
+  position: relative;
+  width:500px;
+  height: auto;;
+  font-family: "Quicksand";
+  margin-top: 0;
+  margin-left:5%;
+  
+}
+
+.alert{
+  position: relative;
+  width: 800px;
+  height: 30px;
+  color : red;
+  font-family: "Quicksand";
+  font-size: 1.5em;
+
+}
  
 
 .question{
@@ -231,6 +251,7 @@ header{
     box-shadow: 5px 5px 5px lightblue;
     height: 50px;
     text-transform: uppercase;
+    display: flex;
     
     
   }
@@ -243,21 +264,60 @@ header{
     font-size: 20px;
     
     
+    
   }
+
+  a.button2:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+  }
+
+  a.button2{
+    margin-top: 0.7%;
+    margin-left : 3%;
+    margin-right : 3%;
+    position: relative;
+    background-color: #c71f09;
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    cursor: pointer;
+    width: 10%;
+    height:70%;
+    border-radius: 25px;
+    font-family: "Quicksand";  
+    text-align: center; 
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    flex:1;
+}
+
+a.button2invisible{
+  visibility: hidden;
+}
 
   .fleche{
 
-      width : 20px;
-      height: 20px;
+      width : 30px;
+      height: 30px;
       float: right;
       margin-right:2% ;
       margin-top: 1%;
+      flex:0.5;
 
   }
 
+  .fleche:hover{
+    background-color: lightblue;
+  }
+
   
-  topic{
-    padding:20px;
+  topic{  
+    flex:20;
+    padding:10px;
     font-weight: lighter;
     font-size: 25px;
   }
@@ -275,4 +335,7 @@ header{
     padding: 20px;
   
   }
+
+  
+
   

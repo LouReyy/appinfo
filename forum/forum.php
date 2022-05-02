@@ -27,49 +27,56 @@ else{
     <title>Forum</title>
 </head>
 <body>
-<div id = "container1">
-    <header>
-        <div id ="logoimg">
-            <a  href="/appinfo/homepage/homepage.php"><img src="/appinfo/auth/logo_infinite.png" alt="logo"></a>
-        </div>
-        <nav>
-        <ul class="nav__links">
-            <li><a href="/appinfo/homepage/homepage.php">Accueil</a></li>
-            <li><a href="/appinfo/Chantier/Chantier.html">Votre chantier</a></li>
-            <li><a href="/appinfo/forum/forum.php">Forum</a></li>
-            <li><a href="/appinfo/faq/faq.php">FAQ</a></li>
-            <li><a href="/appinfo/contact/contact_essai.html">Contactez-nous</a></li>
-        </ul>
-    </nav>
-     <a class="cta" href= "/appinfo/auth/<?php  echo $editprofil?> "> <?php echo $title ?></a>
-    </header>
+    <div id = "container1">
+        <header>
+            <div id ="logoimg">
+            <a  href="/appinfo/homepage/homepage.php"><img src="../auth/logo_infinite.png" alt="logo"></a>
+            </div>  
+            <nav>
+                <ul class="nav__links">
+                    <li><a href="/appinfo/homepage/homepage.php">Accueil</a></li>
+                    <li><a href="/appinfo/Chantier/Chantier.php">Votre chantier</a></li>
+                    <li><a href="/appinfo/forum/forum.php">Forum</a></li>
+                    <li><a href="/appinfo/faq/faq.php">FAQ</a></li>
+                    <li><a href="/appinfo/contact/contact_essai.html">Contactez-nous</a></li>
+                </ul>
+            </nav>
+            <a class="cta" href= "/appinfo/auth/<?php  echo $editprofil?> "> <?php echo $title ?></a>
+
+            <?php
+           
+
+           if(isset($_SESSION['type']) && ($_SESSION['type']) == "Administrateur"){
+            
+            ?>
+            <a class="cta" href= "/appinfo/admin/admin.php">Admin</a>
+
+            <?php }?>
+        </header>
 
 
-    <div id = divgauche>
-
-        
-
-        <img id = "forme1"src="/appinfo/auth/forme1.png"></img>
-        <h1>Nouveau Topic</h1>
+        <div id = divgauche>
+            <img id = "forme1"src="/appinfo/auth/forme1.png"></img>
+            <h1>Nouveau Topic</h1>
 
 
-        <div id = "newmessages">
+            <div id = "newmessages">
 
-            <form action="envoi_message.php" method="post">
+                <form action="envoi_message.php" method="post">
 
-            <input type="topic" name="topic" class="topic_msg" placeholder="Topic" required="required" autocomplete="off"> </input>
+                    <input type="topic" name="topic" class="topic_msg" placeholder="Topic" required="required" autocomplete="off"> </input>
 
-                <textarea type="content" name="content" class="content_msg" placeholder="Content" required="required" autocomplete="off"> </textarea>
+                    <textarea type="content" name="content" class="content_msg" placeholder="Content" required="required" autocomplete="off"> </textarea>
 
-                <button type = submit >Envoyer</button>
+                    <button type = submit >Envoyer</button>
 
-            </form>
+                </form>
 
-        </div>
+            </div>
 
-        <img class = "line" src ="line4.png">
+            <img class = "line" src ="line4.png">
 
-        <div class="msg-form">
+            <div class="msg-form">
                 <?php 
                 if(isset($_GET['reg_err']))
                 {
@@ -92,6 +99,12 @@ else{
                             </div>
                             <?php 
                             break;
+                            case 'supp':
+                                ?>
+                                    <div class="alert alert-supp">
+                                        <strong>Succès</strong> Le message a bien été supprimé
+                                    </div>
+                                <?php
 
                     }
                 }
@@ -100,72 +113,75 @@ else{
 
 
                 
-    </div>
+        </div>
 
-    <div id = divdroite>
+        <div id = divdroite>
 
-    <div id = "lestopics">
-        <ul class="navbar">
-         <li>
-             <a class = "onglets active" href="./forum.php" data-anim="1">Les Topics</a>
+            <div id = container-title>
+                
+                <img id = "forme2"src="/appinfo/auth/forme1.png"></img>
+                <h2 class="text-center">Forum</h2>
 
-         <ul>
+            </div>
+
+            <div id = "lestopics">
+                <ul class="navbar">
+                    <li>
+                    <a class = "onglets active" href="./forum.php" data-anim="1">Les Topics</a>
+
+                <ul>
         
-         <?php
+                <?php
 
-             $req2= $bdd->prepare('SELECT topic FROM message');
-             $req2->execute();
-             $data2 = $req2->fetchAll();
+                $req2= $bdd->prepare('SELECT topic FROM message');
+                $req2->execute();
+                $data2 = $req2->fetchAll();
 
              
-        foreach($data2 as $row){?>
-        <li><a href="./test.php?param=<?php echo $row['topic']?>" ><?php echo $row['topic']  ?></a></li>
+                foreach($data2 as $row){?>
+                <li><a href="./test.php?param=<?php echo $row['topic']?>" ><?php echo $row['topic']  ?></a></li>
 
         
+            
+
+
+                <?php } ?>
+
+                </ul>
+
+                </li>
 
 
 
-        <?php } ?>
-
-        </ul>
-
-        </li>
-
-
-         <li>
-            <a class = "onglets" href="#" data-anim="2">Mes messages</a>
+                <li>
+                    <a class = "onglets" href="#" data-anim="2">Mes messages</a>
         
 
-        </li>
+                </li>
 
-        <li>
-            <a class = "onglets" href="#" data-anim="3">Recents</a>
+                <li>
+                    <a class = "onglets" href="#" data-anim="3">Recents</a>
         
 
-        </li>
+                </li>
 
-        </ul>
+            </ul>
 
-        <form method ="GET">
-        <input id="searchbar"  type="text" name="search" placeholder="Recherche...">
+            <form method ="GET">
+                <input id="searchbar"  type="text" name="search" placeholder="Recherche...">
         
-        </form>
+            </form>
 
 
 
-    </div>
+        </div>
 
 
     <div id = droite>
 
-        <div class="contenu activeContenu" data-anim="1">
+    <div class="contenu activeContenu" data-anim="1">
 
         <?php
-
-
-
-
-
 
         $editprofil ="index.php";
         $title = "Connexion";
@@ -195,67 +211,71 @@ else{
         
         foreach($data2 as $row){
 
-        $pseudo = $row['pseudo_user'];
+
   
-        $req= $bdd->prepare('SELECT * FROM utilisateurs WHERE pseudo = ?');
-        $req->execute(array($pseudo));
-        $data = $req->fetchAll();
+            $req= $bdd->prepare('SELECT * FROM utilisateurs');
+            $req->execute();
+            $data = $req->fetchAll();
 
-        foreach($data as $row2){
+            foreach($data as $row2){
 
-            $file_name = "../auth/profil_picture/". hash('sha256',  $row2['email'] );
-            }
+                if(file_exists( "../auth/profil_picture/" . hash('sha256',  $row2['email']). ".jpg")){
 
-          //  if(file_exists($file)){
-
-           //     $file_name = "../auth/profil_picture/" . hash('sha256',  $row2['email'] );
-        
-         //   }
-        
-         //   else{
-         //       $file_name = "../auth/pp";
-        
-         //   }
+                $file_name = "../auth/profil_picture/" . hash('sha256',  $row2['email'] );
+                }
+                else{
+                $file_name = "../auth/pp";
+                }
 
 
 
-            ?>
-            <div id = messages>
+                if(isset($_SESSION['type']) && ($_SESSION['type']) == "Administrateur"){
+                $button = "button2";
+                }
+                 else{
+                $button = "button2invisible";
+                }
+                ?>
 
-                <div class = photo>
-                    <img class = "pp" src="<?php echo $file_name; ?>.jpg"> </img>
+
+                <div id = messages>
+
+                    <div class = photo>
+                     <img class = "pp" src="<?php echo $file_name; ?>.jpg"> </img>
+                    </div>
+
+                    <div class = content>
+
+                        <topic> <?php echo $row['topic']; ?> </topic>
+                        <br>
+                        <msg> <?php echo $row['content']; ?> </msg>
+
+                    </div>
+            
+                    <div class = info>
+
+                        <pseudo> <?php  echo $row['pseudo_user']; ?> </pseudo>
+                        <br>
+                        <date> <?php  echo $row['date_message']; ?> </date>
+
+                        <a  class="<?php echo $button ?>"  href="./supprimer_msg.php?id=<?php echo $row['id_message']?>">Supprimer</a> 
+
+                    </div>
+    
                 </div>
+                <?php
 
-             <div class = content>
-
-                <topic> <?php echo $row['topic']; ?> </topic>
-                <br>
-                <msg> <?php echo $row['content']; ?> </msg>
-
-             </div>
-    
-            <div class = info>
-    
-                <date> <?php  echo $row['date_message']; ?> </date>
-                <br>
-                <pseudo> <?php  echo $row['pseudo_user']; ?> </pseudo>
-
-            </div>
-    
-
-             </div>
-            <?php
-
+            }
         }
     
         ?>
 
 
             
-        </div>
+    </div>
 
 
-        <div class="contenu" data-anim="2">
+    <div class="contenu" data-anim="2">
 
         <?php
 
@@ -270,28 +290,36 @@ else{
         $req2= $bdd->prepare('SELECT * FROM message WHERE pseudo_user = ?');
         $req2->execute(array($pseudo_user));
         $data2 = $req2->fetchAll();
-        $file = "../auth/profil_picture/" . hash('sha256',  $data['email']). ".jpg" ; 
 
-        if(file_exists($file)){
-
-        $file_name = "/appinfo/auth/profil_picture/" . hash('sha256',  $data['email'] );
-        }
-        else{
-        $file_name = "/appinfo/auth/pp";
-
-        }
+    
+            
 
         foreach($data2 as $row){
 
-        $pseudo = $row['pseudo_user'];
+            $pseudo = $row['pseudo_user'];
   
-        $req= $bdd->prepare('SELECT * FROM utilisateurs WHERE pseudo = ?');
-        $req->execute(array($pseudo));
-        $data = $req->fetchAll();
+            $req= $bdd->prepare('SELECT * FROM utilisateurs WHERE pseudo = ?');
+            $req->execute(array($pseudo));
+            $data = $req->fetchAll();
 
-        foreach($data as $row2){
-            $file_name = "/appinfo/auth/profil_picture/" . hash('sha256',  $row2['email'] );
+            foreach($data as $row2){
+                if(file_exists( "../auth/profil_picture/" . hash('sha256',  $row2['email']). ".jpg")){
+
+                    $file_name = "../auth/profil_picture/" . hash('sha256',  $row2['email'] );
+                    }
+                    else{
+                    $file_name = "../auth/pp";
+                    }
     
+            }
+
+            if(isset($_SESSION['type']) && ($_SESSION['type']) == "Administrateur"){
+
+            $button = "button2";
+
+            }
+            else{
+            $button = "button2invisible";
             }
 
             ?>
@@ -301,28 +329,29 @@ else{
                     <img class = "pp" src="<?php echo $file_name; ?>.jpg"> </img>
                 </div>
 
-             <div class = content>
+                <div class = content>
 
-                <topic> <?php echo $row['topic']; ?> </topic>
-                <br>
-                <msg> <?php echo $row['content']; ?> </msg>
+                    <topic> <?php echo $row['topic']; ?> </topic>
+                    <br>
+                    <msg> <?php echo $row['content']; ?> </msg>
 
-             </div>
-    
-            <div class = info>
-    
-                <date> <?php  echo $row['date_message']; ?> </date>
-                <br>
-                <pseudo> <?php  echo $row['pseudo_user']; ?> </pseudo>
+                </div>
+
+                <div class = info>
+
+                    <pseudo> <?php  echo $row['pseudo_user']; ?> </pseudo>
+                    <br>
+                    <date> <?php  echo $row['date_message']; ?> </date>
+
+                    <a class="<?php echo $button ?>"  href="./supprimer_msg.php?id=<?php echo $row['id_message']?>">Supprimer</a> 
+
+                </div>
 
             </div>
-    
-
-             </div>
             <?php
 
         }
-    }
+        }
 
         else{
 
@@ -338,57 +367,75 @@ else{
     
         ?>
 
-        </div>
+    </div>
 
         <div class="contenu" data-anim="3">
 
-        <?php
+            <?php
 
-        $topic = "Bienvenue";
+            $topic = "Bienvenue";
 
-        $req2= $bdd->prepare('SELECT * FROM message ORDER BY date_message DESC ');
-        $req2->execute();
-        $data2 = $req2->fetchAll();
+            $req2= $bdd->prepare('SELECT * FROM message ORDER BY date_message DESC ');
+            $req2->execute();
+            $data2 = $req2->fetchAll();
 
 
-        foreach($data2 as $row){
+            foreach($data2 as $row){
 
-            $pseudo = $row['pseudo_user'];
+                $pseudo = $row['pseudo_user'];
       
-            $req= $bdd->prepare('SELECT * FROM utilisateurs WHERE pseudo = ?');
-            $req->execute(array($pseudo));
-            $data = $req->fetchAll();
+                $req= $bdd->prepare('SELECT * FROM utilisateurs WHERE pseudo = ?');
+                $req->execute(array($pseudo));
+                $data = $req->fetchAll();
     
-            foreach($data as $row2){
-                $file_name = "/appinfo/auth/profil_picture/" . hash('sha256',  $row2['email'] );
+                foreach($data as $row2){
+                    if(file_exists( "../auth/profil_picture/" . hash('sha256',  $row2['email']). ".jpg")){
+
+                        $file_name = "../auth/profil_picture/" . hash('sha256',  $row2['email'] );
+                        }
+                        else{
+                        $file_name = "../auth/pp";
+                        }
         
                 }
+
+                if(isset($_SESSION['type']) && ($_SESSION['type']) == "Administrateur"){
+
+                    $button = "button2";
+    
+                }
+                else{
+                    $button = "button2invisible";
+    
+                }
+                
     
                 ?>
                 <div id = messages>
-    
+
                     <div class = photo>
                         <img class = "pp" src="<?php echo $file_name; ?>.jpg"> </img>
                     </div>
-    
-                 <div class = content>
-    
-                    <topic> <?php echo $row['topic']; ?> </topic>
-                    <br>
-                    <msg> <?php echo $row['content']; ?> </msg>
-    
-                 </div>
-        
-                <div class = info>
-        
-                    <date> <?php  echo $row['date_message']; ?> </date>
-                    <br>
-                    <pseudo> <?php  echo $row['pseudo_user']; ?> </pseudo>
-    
+
+                    <div class = content>
+
+                        <topic> <?php echo $row['topic']; ?> </topic>
+                        <br>
+                        <msg> <?php echo $row['content']; ?> </msg>
+
+                    </div>
+
+                    <div class = info>
+
+                        <pseudo> <?php  echo $row['pseudo_user']; ?> </pseudo>
+                        <br>
+                        <date> <?php  echo $row['date_message']; ?> </date>
+
+                         <a class="<?php echo $button?>"  href="./supprimer_msg.php?id=<?php echo $row['id_message']?>">Supprimer</a> 
+
+                    </div>
+
                 </div>
-        
-    
-                 </div>
                 <?php
     
             }

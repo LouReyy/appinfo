@@ -127,43 +127,39 @@ header{
             margin-left: 10%;
             
         }
+
+
+
+        #gauche{
+          position: absolute;
+          width : 50%;
+          height : 75%;
+          margin-top : 12%;
+          margin-left:2%;
+      
+      }
+
+      t{
+        font-family: "Quicksand";
+        font-weight: bold;
+        margin-left: 2%;
+      }
+      
     
-        #container{
-          display: flex;
-          font-size: 15px;
-          width: 80%;
-          height : 90%;
-          margin-left: 10%;
-          padding: 2%;
+      
+      .form-group {
+          position: relative;
+          margin-top: 3%;
+          width:50%;
+          background: #fff;
+          margin-left: 25%;
          
-
-        }
-    
-        .text-center{
-          flex: 3;
-          flex-direction: column ;
-          border : solid black 1px;
-          font-family: "Quicksand";
-
-        }
-    
-        h1{
-          font-family: "Quicksand";
-          font-size: 30px;
-          margin: auto;
-        }
-
-        h1.p-5{
-          padding-bottom: 5%;
-        }
-
-        p{
-          font-family: "Quicksand", sans-serif;
-        }
-
-        input[type=text], input[type=email],input[type=pseudo],input[type=password] {
-          font-size: 25px;
-          width: 40%;
+      }
+      
+      
+      input[type=text], input[type=email] {
+          font-size: 20px;
+          width: 100%;
           padding: 12px 20px;
           margin: 8px 0;
           display: inline-block;
@@ -173,44 +169,135 @@ header{
           font-family: "Quicksand";  
           
       }
+      
+      
+      input[type=text], input[type=password] {
+          font-size: 20px;
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          box-sizing: border-box;
+          border-radius: 25px;
+          font-family: "Quicksand";  
+      }
+
+
+      label {
+        
+        
+        font-family: "Quicksand";  
+        font-size: 20px;
+        padding-right: 10px;
+    }
+    
+    select {
+      
+      margin-top: 2%;
+        font-family: "Quicksand";  
+        font-size: 20px;
+        padding: 2px 5px;
+        border-radius: 20px;
+    }
+    
+    footer {
+        font-size: .8rem;
+        position: absolute;
+        bottom: 30px;
+     
+    }
+    
+    .output {
+        position: relative;
+    }
+
+    .button1{
+      margin-top: 2%;
+      margin-left: 25%;
+      display: flex;
+      flex-direction: row;
+  }
+
+
+    button[type=submit]{
+      background-color: #00ccff;
+      color: white;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      border-radius: 25px;
+      font-family: "Quicksand";  
+      text-align: center;
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+      font-size: 20px;
+      width: 30%;
+  }
+
 
       .button {
-        
         background-color: #00ccff;
         color: white;
         padding: 14px 20px;
-        margin: 8px 0;
+        margin: 8px;
         border: none;
         cursor: pointer;
-        width: 52%;
         border-radius: 25px;
         font-family: "Quicksand";  
         text-align: center;
         display: inline-block;
         text-decoration: none;
         color: white;
-        font-size: 30px;
+        font-size: 20px;
+        width: 30%;
     }
 
+    .msg-form{
+      position: relative;
+      width:500px;
+      height: auto;;
+      font-family: "Quicksand";
+      margin-left:25%;
       
-     
+    }
     
+    .alert{
+      position: relative;
+      width: 800px;
+      height: 30px;
+      color : red;
+      font-family: "Quicksand";
+      font-size: 1.5em;
+    
+    }
+
+    .line{
+      position: absolute;
+      width: 2px;
+      height:60%;
+      margin-left: 50%;
+      margin-top: 15%;
+    }
+
     
         #pp{
           
-          flex :1;
-          margin-left: 10%;
+          position: absolute;
+          margin-left: 60%;
           text-align: center;
+          margin-top: 12%;
       
           
           
         }
 
         .avatar{
-          width: 600px;
+          width: 500px;
           height: 500px;
           background-size: cover;
-          border-radius: 60%;
+          border-radius: 500px;
           border: solid 2px black;
           box-shadow: 0 0 80px 0 rgba(0, 0, 0, 0.2), 0 15px 15px 0 rgba(0, 0, 0, 0.24);
           display: block;
@@ -221,6 +308,7 @@ header{
         input[type=file] {
           margin-top: 5%;
           font-family: "Quicksand";
+          
           
         }
 
@@ -293,4 +381,131 @@ header{
         
        
     
-    
+        @media screen and (max-width: 1000px){
+
+          #pp{
+            position: absolute;
+            margin-left: 40%;
+            margin-top: 25%;
+            
+          }
+
+          .avatar{
+            width:200px;
+            height:200px;
+          }
+
+
+          button[type=submit]{
+            position: relative;
+   
+   
+         
+        }
+
+          .line{
+            width:50%;
+            height: 2px;
+            margin-top: 65%;
+            margin-left: 25%;
+
+          }
+
+          #title{
+            width:90%;
+            margin-left: 5%;
+          }
+
+          #gauche{
+            position: relative;
+            margin-top: 45%;
+            margin-left: 5%;
+            width: 90%;
+          }
+
+        
+
+        }
+
+        @media screen and (max-width: 500px){
+
+          #pp{
+            position: absolute;
+            margin-left: 32%;
+            margin-top: 40%;
+            
+          }
+
+          .avatar{
+            width:150px;
+            height:150px;
+          }
+
+
+           button[type=submit]{
+
+            position: relative;
+            font-size: 10px;
+            margin-left: -10%;
+            width: 50%;
+   
+  
+          }
+
+          label{
+            font-size: 10px;
+            
+          }
+
+          input[type=file]{
+            font-size: 10px;
+            margin-left: -54%;
+
+          }
+
+
+
+          .line{
+            width:50%;
+            height: 2px;
+            margin-top: 100%;
+            margin-left: 25%;
+
+          }
+
+          #title{
+            width:90%;
+            margin-left: 5%;
+            font-size: 10px;
+          }
+
+          #gauche{
+            font-size: 15px;
+            position: relative;
+            margin-top: 65%;
+            margin-left: 2%;
+            width: 100%;
+          }
+
+          input[type=text], input[type=email] {
+            font-size: 15px;
+          }
+
+          input[type=text], input[type=password] {
+            font-size: 15px;
+          }
+
+          select{
+            font-size: 10px;
+
+          }
+
+          .button{
+            font-size: 10px;
+            width: 50%;
+
+          }
+
+        
+
+        }

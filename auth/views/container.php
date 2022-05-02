@@ -1,10 +1,11 @@
+
 <div id = "container1">
 
-            <header>
-                <div id ="logoimg">
-                    <a  href="/appinfo/homepage/homepage.php"><img src="/appinfo/auth/logo_infinite.png" alt="logo"></a>
-                </div>
-                <nav>
+<header>
+            <div id ="logoimg">
+            <a  href="/appinfo/homepage/homepage.php"><img src="../auth/logo_infinite.png" alt="logo"></a>
+        </div>  
+            <nav>
                 <ul class="nav__links">
                     <li><a href="/appinfo/homepage/homepage.php">Accueil</a></li>
                     <li><a href="/appinfo/Chantier/Chantier.php">Votre chantier</a></li>
@@ -14,7 +15,17 @@
                 </ul>
             </nav>
             <a class="cta" href= "/appinfo/auth/<?php  echo $editprofil?> "> <?php echo $title ?></a>
-            </header>
+
+            <?php
+           
+
+           if(isset($_SESSION['type']) && ($_SESSION['type']) == "Administrateur"){
+            
+            ?>
+            <a class="cta" href= "/appinfo/admin/admin.php">Admin</a>
+
+            <?php }?>
+        </header>
 
           
             <div id = test>
@@ -67,13 +78,19 @@
                        }
                    }
                    ?> 
-                
-
-                <img id = "forme1"src="forme1.png"></img>
-
-                <h1 class="text-center">Bienvenue</h1>
 
                 </div>
+                   
+                <div id = container-title>
+                
+
+                    <img id = "forme1"src="forme1.png"></img>
+
+                    <h1 class="text-center">Bienvenue</h1>
+
+                </div>
+
+                <div id = form-group>
 
     
             
@@ -91,12 +108,16 @@
                     </div>   
                 </form>
 
-                
-
-            
                 <a id = "button1" href="views/inscription.php">Inscription</a>
 
                 <a  id = "button2" href="views/edit.php">Mot de passe oublié</a>
+
+                </div>
+
+                
+
+            
+               
              
         
             </div>
