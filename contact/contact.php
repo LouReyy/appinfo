@@ -14,7 +14,7 @@ if (count($_POST)!=0){
     $question=$_POST["question"];
     $objet="Question";
     $message="Question de $nom $prenom <br>mail : $mail<br>téléphone : $telephone<br>$question";
-    $reception="tech4health@gmail.com";
+    $reception="tech4healthg9c@gmail.com";
     if (mail($reception, $objet, $message, $headers)) {
         echo "l'email a bien été envoyé à $reception...";
     } else {

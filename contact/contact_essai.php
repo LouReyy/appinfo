@@ -111,7 +111,7 @@ if(isset($_SESSION['user'])){
                     </div>
                 </div>
                 <div class="envoyer">
-                    <input type="submit"> <!--Le boutton ne fait pas parti du div<formulaire> -->
+                    <button type="submit">Envoyer <!--Le boutton ne fait pas parti du div<formulaire> -->
                 </div>
             </form>
         </div>

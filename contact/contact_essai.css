@@ -87,6 +87,8 @@ header{
     background-color: #8aceff;
   }
 .boite{
+  font-family: "Quicksand";
+
   display: flex;
   flex-direction: column;
 
@@ -117,16 +119,18 @@ form{  /**Sélectionne tout ce qui est dans form**/
     /**padding sert à avoir un espace de 20 pixels entre le corps 
     (ici form) et le background **/
     border-radius: 10px;  /**pour arrondir les bords de 10 pixels **/
+    font-family: "Quicksand";
 }
 
 form h1{ /**Sélectionne h1 qui est dans form **/
     font-size: 30px;
     transform: translate(-50%,-50%);
-    margin-left: 50%;
+    margin-left: 55%;
+    width: 60%;
 }
 form .trait{
   position: absolute;
-    margin-left: 18%;
+    margin-left: 23%;
     width : 48%;
     height : 2px;
     background-color: #00ccff;
@@ -136,6 +140,8 @@ form .formulaire{
     display:flex;
     flex-wrap: wrap;
     margin-bottom: 30px; /**On espace le div<formulaire> de 30 px p/t au bas du formulaire (form) **/
+    font-family: "Quicksand";
+
 }
 form .formulaire .case{ /**toutes les classes case de formulaire**/
     position: relative;
@@ -149,6 +155,8 @@ form .formulaire .gauche .case input{ /**On sélectionne les cases de gauche**/
     border: 1px solid rgb(138, 134, 134);
     border-radius: 5px;
     outline-color: grey;
+    font-family: "Quicksand";
+
 
 }
 form .formulaire .droite .case textarea{ /**On sémectionne la case de droite réservée à la question**/
@@ -157,6 +165,8 @@ form .formulaire .droite .case textarea{ /**On sémectionne la case de droite r�
     border: 1px solid rgb(138, 134, 134);
     border-radius: 5px;
     outline-color: grey;
+    font-family: "Quicksand";
+
 }
 
 form .formulaire .gauche .case i{ /**Sélectionne les images à gauche**/
@@ -176,6 +186,29 @@ form .formulaire .droite .case i{
 
 }
 .envoyer{
-  margin-left: 50%;
+  margin-left: 30%;
   color: #00ccff;
+}
+
+button[type=submit]{
+  background-color: #00ccff;
+  color: white;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+  font-family: "Quicksand";  
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  width: 50%;
+}
+
+button[type=submit]:hover{
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+
 }
