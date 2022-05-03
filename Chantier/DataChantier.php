@@ -2,7 +2,6 @@
 $conn=mysqli_connect('localhost','root','','appinfo');
 if (!$conn){
     echo 'Connection error: ' . mysqli_connect_error();
-
 }
 //La connexion fonctionne
 $req_temp='SELECT Time,Valeur FROM `capteur_table` WHERE id_utilisateur=1 AND type="temp";';
