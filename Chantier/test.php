@@ -1,4 +1,3 @@
-
 <?php
 $conn=mysqli_connect('localhost','root','','appinfo');
 if (!$conn){
@@ -20,41 +19,20 @@ function getTable($table,$type){  //fonction pour créer un tableau qu'on va uti
 
 $tempTable=getTable($values_temp,'temperature');//table température
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Graph</title>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
-      var table=<?php echo json_encode($tempTable);?>;
-      console.log(table);
-
-
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable(table);
-
-        var options = {
-          title: 'Graphique',
-          curveType: 'function',
-          legend: { position: 'bottom' }
-        };
-
-        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
-
-        chart.draw(data, options);
-      }
-    </script>
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.anychart.com/releases/8.10.0/js/anychart-base.min.js"></script>
 </head>
 <body>
-    <div id="curve_chart" style="width: 900px; height: 500px"></div>
-
+    <div class="graph">
+    <script src="data2.js"></script>
+    </div>
     
 </body>
 </html>
