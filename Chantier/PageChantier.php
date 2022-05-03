@@ -101,8 +101,8 @@ if(isset($_SESSION['user'])){
                         labels: hor,
                         datasets: [{
                             label: 'Fréquence cardique en bpm',
-                            backgroundColor: 'rgb(255, 99, 132)',
-                            borderColor: 'rgb(255, 99, 132)',
+                            backgroundColor: 'rgb(0,204,255)',
+                            borderColor: 'rgb(0,204,255)',
                             data: Ycard,
                         }]
                     };
@@ -144,8 +144,8 @@ if(isset($_SESSION['user'])){
                             labels: horSon,
                             datasets: [{
                                 label: 'Intensité sonore en dB',
-                                backgroundColor: 'rgb(255, 99, 132)',
-                                borderColor: 'rgb(255, 99, 132)',
+                                backgroundColor: 'rgb(0,204,255)',
+                                borderColor: 'rgb(0,204,255)',
                                 data: Yson,
                             }]
                         };
@@ -188,8 +188,8 @@ if(isset($_SESSION['user'])){
                             labels: labels,
                             datasets: [{
                                 label: 'Température',
-                                backgroundColor: 'rgb(255, 99, 132)',
-                                borderColor: 'rgb(255, 99, 132)',
+                                backgroundColor: 'rgb(0,204,255)',
+                                borderColor: 'rgb(0,204,255)',
                                 data: Ytemp,
                             }]
                         };
