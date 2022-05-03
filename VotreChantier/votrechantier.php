@@ -1,3 +1,27 @@
+<?php
+
+session_start(); 
+require_once '../auth/model/config.php'; 
+
+if(isset($_SESSION['user'])){
+
+        $editprofil ="landing.php";
+        $title = "Profil";
+
+}
+else{
+    $editprofil ="index.php";
+    $title = "Connexion";
+}
+if(isset($_SESSION['type']) && ($_SESSION['type']) == "Administrateur"){
+    $chantier = "Chantier/Chantier.php";
+}
+else{
+    $chantier = "VotreChantier/votrechantier.php";
+}
+ 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +29,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="votrechantier.css">
-    <link rel="stylesheet" href="/appinfo/auth/index.css" media="screen" type="text/css" />
     <title>Document</title>
 </head>
 <body>
@@ -16,7 +39,7 @@
             <nav>
                 <ul class="nav__links">
                     <li><a href="/appinfo/homepage/homepage.php">Accueil</a></li>
-                    <li><a href="/appinfo/Chantier/Chantier.php">Votre chantier</a></li>
+                    <li><a href="/appinfo/<?php echo $chantier ?>" >Votre chantier</a></li>
                     <li><a href="/appinfo/forum/forum.php">Forum</a></li>
                     <li><a href="/appinfo/faq/faq.php">FAQ</a></li>
                     <li><a href="/appinfo/contact/contact_essai.php">Contactez-nous</a></li>
