@@ -17,10 +17,23 @@ function getTable($table,$type){  //fonction pour créer un tableau qu'on va uti
     }
     return $newTable;
 }
+function getX($table){
+    $newTable= array();
+    for ($i=1;$i<count($table);$i++){
+        $newTable[$i]=$table[$i]['Time'];
+    }
+    return $newTable;
+}
+function getY($table){
+    $newTable= array();
+    for ($i=1;$i<count($table);$i++){
+        $newTable[$i]=floatval($table[$i]['Valeur']);
+    }
+    return $newTable;
+}
 
-$tempTable=getTable($values_temp,'temperature');//table température
+$tempTable=getTable($values_temp,'temperature'); $Xtemp=getX($values_temp); $Ytemp=getY($values_temp);
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -53,8 +66,7 @@ $tempTable=getTable($values_temp,'temperature');//table température
     </script>
 </head>
 <body>
-    <div id="curve_chart" style="width: 900px; height: 500px"></div>
-
-    
+    <canvas id="graph1"></canvas>
+    <div id="curve_chart" style="width: 900px; height: 500px"></div> 
 </body>
 </html>
