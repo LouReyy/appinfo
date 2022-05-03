@@ -1,7 +1,7 @@
 <?php 
 
 
-    require_once __DIR__.'/config.php';
+    require_once "config.php";
 
     if(!empty($_POST['email'])){
         $email = htmlspecialchars($_POST['email']);

@@ -5,6 +5,10 @@
 <?php
 require_once __DIR__.'/config.php';
 
+var_dump($_POST);
+
+echo count($_POST);
+
 if (count($_POST)!=0){
     $headers = 'Content-type: text/html; charset=utf-8'."\r\n";
     $nom=$_POST["nom"];
