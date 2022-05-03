@@ -112,6 +112,7 @@ if(isset($_SESSION['user'])){
                         data: data,
                         options: {
                             scales: {
+                                tension: 1,
                                 y: {
                                     beginAtZero: true
                                 }
@@ -154,6 +155,7 @@ if(isset($_SESSION['user'])){
                             type: 'line',
                             data: dataSon,/////////
                             options: {
+                                tension: 0.4,
                                 scales: {
                                     y: {
                                         beginAtZero: true
@@ -196,8 +198,9 @@ if(isset($_SESSION['user'])){
 
                         const config1 = {
                             type: 'line',
-                            data: dataTemp,/////////
+                            data: dataTemp,
                             options: {
+                                tension: 0.4,
                                 scales: {
                                     y: {
                                         beginAtZero: true
