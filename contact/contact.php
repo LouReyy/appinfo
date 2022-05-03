@@ -1,4 +1,7 @@
-<?php include("contact_essai.html")?>
+
+
+
+<?php include("contact_essai.php")?>
 <?php
 require_once __DIR__.'/config.php';
 
@@ -11,7 +14,7 @@ if (count($_POST)!=0){
     $question=$_POST["question"];
     $objet="Question";
     $message="Question de $nom $prenom <br>mail : $mail<br>téléphone : $telephone<br>$question";
-    $reception="rkrishan77012@gmail.com";
+    $reception="tech4health@gmail.com";
     if (mail($reception, $objet, $message, $headers)) {
         echo "l'email a bien été envoyé à $reception...";
     } else {

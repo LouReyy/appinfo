@@ -1,0 +1,179 @@
+body{
+    height: 100%;
+    margin: 0;
+}
+
+
+#container1{
+    display: flex;
+    flex-direction: column;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+header{
+    position: relative;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 2%;
+    background-color: #fbfbfb;
+    z-index: 1;
+    }
+
+#logoimg{
+    display: flex;
+    justify-content: flex-start;
+    flex:3
+}
+  
+    
+    header img{  /*taille image logo dans la barre du haut*/  
+      width: 110px;
+      height: 110px;
+      margin-left: 0;
+      padding: 10px;
+      align-self:baseline;
+    
+
+    }
+
+ 
+  
+    .nav__links a,
+    .overlay__content a {  /* style des barres du menu */
+      position: relative;
+      font-family: "Quicksand", sans-serif;
+      font-weight: 10;
+      font-size: 20px;
+      color: black;
+      text-decoration: none;
+      text-align: center;
+      margin-left: auto;
+    }
+  
+    .cta{ 
+        flex:0.3;/*style du texte dans le bouton connexion*/
+      font-family: "Quicksand", sans-serif;
+      font-weight: 10;
+      font-size: 18px;
+      color:white;
+      text-decoration: none;
+    }
+    
+    .nav__links {  /*mettre en liste horizontal*/
+      list-style: none;
+      display: flex;
+    }
+    
+    .nav__links li { /*faire des espaces entre chaque groupe de mot*/
+      padding: 0px 50px;
+    }
+    
+   .nav__links li a { /* chgmt de couleur quand curseur sur le mot qui dure 0.2s et commence apres 0s */
+      transition: color 0.2s ease 0s;
+    }
+    
+    .nav__links li a:hover { /* couleur du texte quand il curseur dessus*/
+      color: #00ccff;
+    }
+    
+    .cta { /*style cadre de connexion*/
+      margin-left: 20px;
+      padding: 9px 25px;
+      background-color: #00ccff;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 20px;
+      text-align: center;
+    }
+    
+    .cta:hover { /*couleur du cadre quand curseur dessus*/
+      background-color: #8aceff;
+    }
+
+    #containercentre{
+        position: relative;
+        margin-top: 2%;
+        width: 30%;
+        height : 80%;
+        margin-left: 35%;
+        font-family: "Quicksand";
+    }
+  
+    h1{
+      position: relative;
+      text-align: center;
+      margin-top: -9%;
+    }
+  
+    #forme1{
+      position: relative;
+      width: 400px;
+      height: 15px;
+      margin-top: 7%;
+      margin-left: 22%;
+      text-align: center;   
+  }
+
+  #container1{
+    font-family: "Quicksand";
+      display: grid;
+      margin-top: 5%;
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5px;
+  grid-auto-rows: minmax(100px, auto);
+  }
+
+  #boitier{
+    grid-column: 1 / 2;
+    grid-row: 1;
+      width: 100%;
+      height: 100%;
+
+  }
+
+  .boitier{
+      margin-top: -10%;
+      width: 90%;
+      height: 100%;
+  }
+
+  #info_boitier{
+    font-size: 25px;
+    font-weight: bold;
+
+    grid-column: 2 / 2;
+    grid-row: 1;
+      width: 100%;
+      height: 80%;
+  }
+
+  text1{
+    font-size: 30px;
+  }
+
+  .content_infos{
+    position: relative;
+    width: 80%;
+    height: 80%;
+	border-radius: 10px;
+	box-shadow: 5px 5px 5px 5px #dbdbdb;
+	background:white;
+	padding:3%;
+	text-align:center;
+}
+
+#bracelet{
+    grid-column: 1 / 2;
+    grid-row: 2;
+    margin-left: 20%;
+
+}

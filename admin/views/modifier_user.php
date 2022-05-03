@@ -1,28 +1,4 @@
-<?php
-
-
-session_start(); 
-require_once '../auth/model/config.php'; 
-
-
-
-if(isset($_SESSION['user'])){
-
-    $editprofil ="landing.php";
-    $title = "Profil";
-}
-
-else{
-    $editprofil ="index.php";
-    $title = "Connexion";
-}
-
-
-    $file_name = "../auth/pp";
-        
-        
-
-?>
+<?php include("../model/setup_modif.php"); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -30,14 +6,14 @@ else{
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/appinfo/admin/ajouter_user.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="/appinfo/admin/css/modifier_user.css" media="screen" type="text/css" />
     <title>Document</title>
 </head>
 <body>
 
-    <header>
-        <div id ="logoimg">
-            <a  href="/appinfo/homepage/homepage.php"><img src="../auth/logo_infinite.png" alt="logo"></a>
+<header>
+            <div id ="logoimg">
+            <a  href="/appinfo/homepage/homepage.php"><img src="/appinfo/auth/logo_infinite.png" alt="logo"></a>
         </div>  
             <nav>
                 <ul class="nav__links">
@@ -59,10 +35,12 @@ else{
             <a class="cta" href= "/appinfo/admin/admin.php">Admin</a>
 
             <?php }?>
-    </header>
+        </header>
 
 
-        <div id ="container">
+    <div id ="container">
+
+        
 
 
         <div id = container-title>
@@ -70,7 +48,7 @@ else{
 
             <img id = "forme1"src="/appinfo/auth/forme1.png"></img>
 
-            <h1 class="text-center">Ajouter un Utilisateur</h1>
+            <h1 class="text-center">Modifier un Utilisateur</h1>
 
         </div>
 
@@ -80,15 +58,15 @@ else{
 
             
 
-            <form action="../auth/model/inscription_traitement.php" method="post">      
+            <form action="../model/modifier.php" method="post">      
                 <div class="form-group">
-                    <input type="text" name="pseudo" class="form-control" placeholder="Pseudo" required="required" autocomplete="off">
+                    <input type="text" name="pseudo" class="form-control" placeholder="Pseudo" value= "<?php echo $data['pseudo']; ?>"  required="required" autocomplete="off">
                 </div>
                 <div class="form-group">
-                    <input type="email" name="email" class="form-control" placeholder="Email" required="required" autocomplete="off">
+                    <input type="email" name="email" class="form-control" placeholder="Email" value= "<?php echo $data['email']; ?>"  required="required" autocomplete="off">
                 </div>
-                <div class="form-group">
-                    <input type="password" name="password" class="form-control" placeholder="Mot de passe" required="required" autocomplete="off">
+                    <div class="form-group">
+                      <input type="password" name="password" class="form-control" placeholder="Nouveau Mot de passe" required="required" autocomplete="off">
                 </div>
                 <div class="form-group">
                     <input type="password" name="password_retype" class="form-control" placeholder="Re-tapez le mot de passe" required="required" autocomplete="off">
@@ -97,18 +75,18 @@ else{
                 <label for="pet-select">Choix du role:</label>
 
                 <select name="type" id="type-select">
-                    <option value="">Choisissez une option</option>
+                    <option value=""><?php echo $data['type']; ?> </option>
                     <option value="Utilisateur">Utilisateur</option>
                     <option value="Gestionnaire">Gestionnaire</option>
                     <option value="Administrateur">Administrateur</option>
     
-                </select>
+                 </select>
 
 
 
 
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-block">Ajouter un utilisateur</button>
+                    <button type="submit" class="btn btn-primary btn-block">Modifier</button>
                         
                         
                 </div>   
@@ -118,15 +96,15 @@ else{
 
                
 
-        </div>
+        </div> 
 
-        <img class = line src = ../admin/line4.png>
+        <img class = line src = ../img/line4.png>
 
         <div id = pp>
 
-            <img class = "avatar"src="./<?php echo $file_name; ?>.jpg"></img>
+            <img class = "avatar"src="<?php echo $file_name; ?>.jpg"></img>
 
-            <form class = "form-img" method="POST" action = "../auth/model/modify_profilpic.php" enctype="multipart/form-data" >
+            <form class = "form-img" method="POST" action = "/appinfo/auth/model/modify_profilpic.php" enctype="multipart/form-data" >
 
                 <label class="file">
                     <input type="file" name = "picture" id="avatar"   accept="image/jpg">
@@ -140,16 +118,13 @@ else{
 
         </div>
 
-
-
-
            
 
            
 
 
 
-        
+    </div>
 
 
     
