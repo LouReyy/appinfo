@@ -21,8 +21,7 @@ else{
 
 if(isset($_SESSION['type']) && ($_SESSION['type']) == "Administrateur"){
     $div = "newquestion";
-    $chantier = "Chantier/Chantier.php";
-
+    $chantier = "Chantier/PageChantier.php";
 
 }
 

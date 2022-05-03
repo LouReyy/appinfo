@@ -14,8 +14,7 @@ else{
     $title = "Connexion";
 }
 if(isset($_SESSION['type']) && ($_SESSION['type']) == "Administrateur"){
-    $chantier = "Chantier/Chantier.php";
-}
+    $chantier = "Chantier/PageChantier.php";}
 else{
     $chantier = "VotreChantier/votrechantier.php";
 }
