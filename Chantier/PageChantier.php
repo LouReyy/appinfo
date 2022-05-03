@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
+    <title>PageChantier</title>
     <link rel="stylesheet" href="Chantier.css" media="screen" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
     </head>
@@ -62,20 +62,20 @@
             <p>Graphique de la fréquence cardiaque</p>
             
             <div id="graph1">
-                <canvas id="temp"></canvas>
+                <canvas id="card"></canvas>
                 <script>
-                    var table= <?php echo json_encode($tempTable);?>; 
-                    var Xtemp= <?php echo json_encode($Xtemp);?>;
-                    var Ytemp= <?php echo json_encode($Ytemp);?>; 
-                    const labels =Xtemp;
+                    var table= <?php echo json_encode($cardTable);?>; 
+                    var Xcard= <?php echo json_encode($Xcard);?>;
+                    var Ycard= <?php echo json_encode($Ycard);?>; 
+                    const hor =Xcard;
 
                     const data = {
-                        labels: labels,
+                        labels: hor,
                         datasets: [{
-                            label: 'Température',
+                            label: 'Fréquence cardique en bpm',
                             backgroundColor: 'rgb(255, 99, 132)',
                             borderColor: 'rgb(255, 99, 132)',
-                            data: Ytemp,
+                            data: Ycard,
                         }]
                     };
 
@@ -93,7 +93,7 @@
                 </script>
                 <script>
                     const myChart = new Chart(
-                    document.getElementById('temp'),
+                    document.getElementById('card'),
                     config
                     );
                 </script>
@@ -105,7 +105,41 @@
             <hr>
             <p>Niveau de bruit en dB</p>
             <div id="graph2">
-                <div id="curve_chart"></div>
+            <canvas id="son"></canvas>
+                    <script>
+                        var sonTable= <?php echo json_encode($sonTable);?>; 
+                        var Xson= <?php echo json_encode($Xson);?>;
+                        var Yson= <?php echo json_encode($Yson);?>; 
+                        const horSon =Xson;
+
+                        const dataSon = {
+                            labels: horSon,
+                            datasets: [{
+                                label: 'Intensité sonore en dB',
+                                backgroundColor: 'rgb(255, 99, 132)',
+                                borderColor: 'rgb(255, 99, 132)',
+                                data: Yson,
+                            }]
+                        };
+
+                        const config2 = {
+                            type: 'line',
+                            data: dataSon,/////////
+                            options: {
+                                scales: {
+                                    y: {
+                                        beginAtZero: true
+                                    }
+                                }
+                            }
+                        };
+                    </script>
+                    <script>
+                        const myChart2 = new Chart(
+                        document.getElementById('son'),
+                        config2
+                        );
+                    </script>
             </div>  
         </div> 
 
@@ -115,7 +149,41 @@
             <hr>
             <p>On affiche la température et son évolution</p>
             <div id="graph3">
-                <div id="curve_chart"></div>
+                <canvas id="temp"></canvas>
+                    <script>
+                        var tempTable= <?php echo json_encode($tempTable);?>; 
+                        var Xtemp= <?php echo json_encode($Xtemp);?>;
+                        var Ytemp= <?php echo json_encode($Ytemp);?>; 
+                        const labels =Xtemp;
+
+                        const dataTemp = {
+                            labels: labels,
+                            datasets: [{
+                                label: 'Température',
+                                backgroundColor: 'rgb(255, 99, 132)',
+                                borderColor: 'rgb(255, 99, 132)',
+                                data: Ytemp,
+                            }]
+                        };
+
+                        const config1 = {
+                            type: 'line',
+                            data: dataTemp,/////////
+                            options: {
+                                scales: {
+                                    y: {
+                                        beginAtZero: true
+                                    }
+                                }
+                            }
+                        };
+                    </script>
+                    <script>
+                        const myChart1 = new Chart(
+                        document.getElementById('temp'),
+                        config1
+                        );
+                    </script>
             </div>   
     </div>
     <script src="Chantier.js"></script>
