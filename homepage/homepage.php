@@ -47,6 +47,9 @@ if(isset($_SESSION['user'])){
 
                 </ul>
             </nav>
+            <div id="logomemo">
+                <a href="/appinfo/memory/memory.php"><img src="../memory/memoryim.png" alt="memory"></a>
+            </div>
             <a class="cta" href= "/appinfo/auth/<?php  echo $editprofil?> "> <?php echo $title ?></a>
 
             <?php
