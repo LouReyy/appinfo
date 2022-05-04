@@ -40,6 +40,9 @@ if(isset($_SESSION['user'])){
                     <li><a href="/appinfo/contact/contact_essai.html">Contactez-nous</a></li>
                 </ul>
             </nav>
+            <div id="logomemo">
+                <a href="/appinfo/memory/memory.php"><img src="../memory/memoryim.png" alt="memory"></a>
+            </div>
             <a class="cta" href= "/appinfo/auth/<?php  echo $editprofil?> "> <?php echo $title ?></a>
 
             <?php
