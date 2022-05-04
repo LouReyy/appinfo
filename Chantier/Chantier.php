@@ -30,6 +30,7 @@ if(isset($_SESSION['user'])){
     <link rel="stylesheet" href="Chantier.css" media="screen" type="text/css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.anychart.com/releases/8.10.0/js/anychart-base.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
 </head>
 <body>
 <header>
@@ -47,6 +48,9 @@ if(isset($_SESSION['user'])){
 
                 </ul>
             </nav>
+            <div id="logomemo">
+                <a href="/appinfo/memory/memory.php"><img src="../memory/memoryim.png" alt="memory"></a>
+            </div>
             <a class="cta" href= "/appinfo/auth/<?php  echo $editprofil?> "> <?php echo $title ?></a>
 
             <?php
@@ -112,4 +116,44 @@ if(isset($_SESSION['user'])){
     </div>
     <script src="Chantier.js"></script>
 </body>
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class=" footer-col">
+                <img src="../auth/logo_infinite.png" class="logo">
+                </div>
+            <div class=" footer-col">
+                <h4>NAVIGATION</h4>
+                <ul>
+                    <li><a href= "/appinfo/homepage/homepage.php">Accueil</a></li>
+                    <li><a href= "/appinfo/<?php echo $chantier ?>">Votre chantier</a></li>
+                    <li><a href= "/appinfo/forum/forum.php">Forum</a></li>
+                    <li><a href= "/appinfo/faq/faq.php">FAQ</a></li>
+                    <li><a href= "/appinfo/contact/contact_essai.php">Contactez-nous</a></li>
+                    <li><a href= "/appinfo/notre_solution/notre_solution.php">Notre solution</a></li>
+                </ul>
+            </div>
+            <div class=" footer-col">
+                <h4>PLUS D'INFOS</h4>
+                <ul>
+                    <li><a href= "/appinfo/auth/views/inscription.php">Inscription</a></li>
+                    <li><a href= "/appinfo/auth/model/connexion.php">Connexion</a></li>
+                    <li><a href= "/appinfo/cgu/cgu.php">Mentions Légales</a></li>
+                </ul>
+            </div>
+            <div class=" footer-col">
+                <h4>SUIVEZ-NOUS</h4>
+                <div class="social-links">
+                    <a href= "#"><i class="fab fa-facebook-f"></i></a>
+                    <a href= "#"><i class="fab fa-twitter"></i></a>
+                    <a href= "#"><i class="fab fa-instagram"></i></a>
+                    <a href= "#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+</footer>
 </html>
