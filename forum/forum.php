@@ -129,339 +129,377 @@ else{
                     <li>
                     <a class = "onglets active" href="./forum.php" data-anim="1">Les Topics</a>
 
-                <ul>
+                    <ul>
         
-                <?php
+                        <?php
 
-                $req2= $bdd->prepare('SELECT topic FROM message');
-                $req2->execute();
-                $data2 = $req2->fetchAll();
+                        $req2= $bdd->prepare('SELECT topic FROM message');
+                        $req2->execute();
+                        $data2 = $req2->fetchAll();
 
-             
-                foreach($data2 as $row){?>
-                <li><a href="./test.php?param=<?php echo $row['topic']?>" ><?php echo $row['topic']  ?></a></li>
+                    
+                        foreach($data2 as $row){?>
+                        <li><a href="./test.php?param=<?php echo $row['topic']?>" ><?php echo $row['topic']  ?></a></li>
 
-        
+                
             
 
 
-                <?php } ?>
+                        <?php } ?>
+
+                    </ul>
+
+                    </li>
+
+
+
+                    <li>
+                        <a class = "onglets" href="#" data-anim="2">Mes messages</a>
+            
+
+                    </li>
+
+                    <li>
+                        <a class = "onglets" href="#" data-anim="3">Recents</a>
+            
+
+                    </li>
 
                 </ul>
 
-                </li>
-
-
-
-                <li>
-                    <a class = "onglets" href="#" data-anim="2">Mes messages</a>
+                <form method ="GET">
+                 <input id="searchbar"  type="text" name="search" placeholder="Recherche...">
         
+                </form>
 
-                </li>
 
-                <li>
-                    <a class = "onglets" href="#" data-anim="3">Recents</a>
-        
-
-                </li>
-
-            </ul>
-
-            <form method ="GET">
-                <input id="searchbar"  type="text" name="search" placeholder="Recherche...">
-        
-            </form>
-
-
-
-        </div>
-
-
-    <div id = droite>
-
-    <div class="contenu activeContenu" data-anim="1">
-
-        <?php
-
-        $editprofil ="index.php";
-        $title = "Connexion";
-
-
-
-        if(isset($_GET['search']) AND !empty($_GET['search'])){
-
-            $search = htmlspecialchars($_GET['search']);
-            $topic = $search;
-            
-        }elseif (isset($_GET['param'])){
-            $topic = htmlspecialchars($_GET['param']);
-        }
-        else{
-            $topic = "Bienvenue";
-        }
-
-        
-       
-
-
-        $req2= $bdd->prepare('SELECT * FROM message WHERE topic = ?');
-        $req2->execute(array($topic));
-        $data2 = $req2->fetchAll();
-
-        
-        foreach($data2 as $row){
-
-
-  
-            $req= $bdd->prepare('SELECT * FROM utilisateurs');
-            $req->execute();
-            $data = $req->fetchAll();
-
-            foreach($data as $row2){
-
-                if(file_exists( "../auth/profil_picture/" . hash('sha256',  $row2['email']). ".jpg")){
-
-                $file_name = "../auth/profil_picture/" . hash('sha256',  $row2['email'] );
-                }
-                else{
-                $file_name = "../auth/pp";
-                }
-
-
-
-                if(isset($_SESSION['type']) && ($_SESSION['type']) == "Administrateur"){
-                $button = "button2";
-                }
-                 else{
-                $button = "button2invisible";
-                }
-                ?>
-
-
-                <div id = messages>
-
-                    <div class = photo>
-                     <img class = "pp" src="<?php echo $file_name; ?>.jpg"> </img>
-                    </div>
-
-                    <div class = content>
-
-                        <topic> <?php echo $row['topic']; ?> </topic>
-                        <br>
-                        <msg> <?php echo $row['content']; ?> </msg>
-
-                    </div>
-            
-                    <div class = info>
-
-                        <pseudo> <?php  echo $row['pseudo_user']; ?> </pseudo>
-                        <br>
-                        <date> <?php  echo $row['date_message']; ?> </date>
-
-                        <a  class="<?php echo $button ?>"  href="./supprimer_msg.php?id=<?php echo $row['id_message']?>">Supprimer</a> 
-
-                    </div>
-    
-                </div>
-                <?php
-
-            }
-        }
-    
-        ?>
-
-
-            
-    </div>
-
-
-    <div class="contenu" data-anim="2">
-
-        <?php
-
-        if(isset($_SESSION['user'])){
-
-        $req = $bdd->prepare('SELECT * FROM utilisateurs WHERE token = ?');
-        $req->execute(array($_SESSION['user']));
-        $data = $req->fetch();
-
-        $pseudo_user = $data['pseudo'];
-
-        $req2= $bdd->prepare('SELECT * FROM message WHERE pseudo_user = ?');
-        $req2->execute(array($pseudo_user));
-        $data2 = $req2->fetchAll();
-
-    
-            
-
-        foreach($data2 as $row){
-
-            $pseudo = $row['pseudo_user'];
-  
-            $req= $bdd->prepare('SELECT * FROM utilisateurs WHERE pseudo = ?');
-            $req->execute(array($pseudo));
-            $data = $req->fetchAll();
-
-            foreach($data as $row2){
-                if(file_exists( "../auth/profil_picture/" . hash('sha256',  $row2['email']). ".jpg")){
-
-                    $file_name = "../auth/profil_picture/" . hash('sha256',  $row2['email'] );
-                    }
-                    else{
-                    $file_name = "../auth/pp";
-                    }
-    
-            }
-
-            if(isset($_SESSION['type']) && ($_SESSION['type']) == "Administrateur"){
-
-            $button = "button2";
-
-            }
-            else{
-            $button = "button2invisible";
-            }
-
-            ?>
-            <div id = messages>
-
-                <div class = photo>
-                    <img class = "pp" src="<?php echo $file_name; ?>.jpg"> </img>
-                </div>
-
-                <div class = content>
-
-                    <topic> <?php echo $row['topic']; ?> </topic>
-                    <br>
-                    <msg> <?php echo $row['content']; ?> </msg>
-
-                </div>
-
-                <div class = info>
-
-                    <pseudo> <?php  echo $row['pseudo_user']; ?> </pseudo>
-                    <br>
-                    <date> <?php  echo $row['date_message']; ?> </date>
-
-                    <a class="<?php echo $button ?>"  href="./supprimer_msg.php?id=<?php echo $row['id_message']?>">Supprimer</a> 
-
-                </div>
 
             </div>
-            <?php
-
-        }
-        }
-
-        else{
-
-             echo "Connectez vous pour voir vos messages"
-
-             ?>
-
-             <a class="cta" href= "../auth/">Connexion</a>
-
-        <?php
-
-        }
-    
-        ?>
-
-    </div>
-
-        <div class="contenu" data-anim="3">
-
-            <?php
-
-            $topic = "Bienvenue";
-
-            $req2= $bdd->prepare('SELECT * FROM message ORDER BY date_message DESC ');
-            $req2->execute();
-            $data2 = $req2->fetchAll();
 
 
-            foreach($data2 as $row){
+            <div id = droite>
 
-                $pseudo = $row['pseudo_user'];
-      
-                $req= $bdd->prepare('SELECT * FROM utilisateurs WHERE pseudo = ?');
-                $req->execute(array($pseudo));
-                $data = $req->fetchAll();
-    
-                foreach($data as $row2){
-                    if(file_exists( "../auth/profil_picture/" . hash('sha256',  $row2['email']). ".jpg")){
+                <div class="contenu activeContenu" data-anim="1">
 
-                        $file_name = "../auth/profil_picture/" . hash('sha256',  $row2['email'] );
-                        }
-                        else{
-                        $file_name = "../auth/pp";
-                        }
-        
-                }
+                    <?php
 
-                if(isset($_SESSION['type']) && ($_SESSION['type']) == "Administrateur"){
+                    $editprofil ="index.php";
+                    $title = "Connexion";
 
-                    $button = "button2";
-    
-                }
-                else{
-                    $button = "button2invisible";
-    
-                }
+
+
+                    if(isset($_GET['search']) AND !empty($_GET['search'])){
+
+                        $search = htmlspecialchars($_GET['search']);
+                        $topic = $search;
+                        
+                    }elseif (isset($_GET['param'])){
+                        $topic = htmlspecialchars($_GET['param']);
+                    }
+                    else{
+                        $topic = "Bienvenue";
+                    }
+
+                    
                 
-    
-                ?>
-                <div id = messages>
 
-                    <div class = photo>
-                        <img class = "pp" src="<?php echo $file_name; ?>.jpg"> </img>
-                    </div>
 
-                    <div class = content>
+                    $req2= $bdd->prepare('SELECT * FROM message WHERE topic = ?');
+                    $req2->execute(array($topic));
+                    $data2 = $req2->fetchAll();
 
-                        <topic> <?php echo $row['topic']; ?> </topic>
-                        <br>
-                        <msg> <?php echo $row['content']; ?> </msg>
+                    
+                    foreach($data2 as $row){
 
-                    </div>
 
-                    <div class = info>
+            
+                        $req= $bdd->prepare('SELECT * FROM utilisateurs');
+                        $req->execute();
+                        $data = $req->fetchAll();
 
-                        <pseudo> <?php  echo $row['pseudo_user']; ?> </pseudo>
-                        <br>
-                        <date> <?php  echo $row['date_message']; ?> </date>
+                        foreach($data as $row2){
 
-                         <a class="<?php echo $button?>"  href="./supprimer_msg.php?id=<?php echo $row['id_message']?>">Supprimer</a> 
+                            if(file_exists( "../auth/profil_picture/" . hash('sha256',  $row2['email']). ".jpg")){
 
-                    </div>
+                            $file_name = "../auth/profil_picture/" . hash('sha256',  $row2['email'] );
+                            }
+                            else{
+                            $file_name = "../auth/pp";
+                            }
 
+
+
+                            if(isset($_SESSION['type']) && ($_SESSION['type']) == "Administrateur"){
+                            $button = "button2";
+                            }
+                            else{
+                            $button = "button2invisible";
+                            }
+                            ?>
+
+
+                            <div id = messages>
+
+                                <div class = photo>
+                                <img class = "pp" src="<?php echo $file_name; ?>.jpg"> </img>
+                                </div>
+
+                                <div class = content>
+
+                                    <topic> <?php echo $row['topic']; ?> </topic>
+                                    <br>
+                                    <msg> <?php echo $row['content']; ?> </msg>
+
+                                </div>
+                        
+                                <div class = info>
+
+                                    <pseudo> <?php  echo $row['pseudo_user']; ?> </pseudo>
+                                    <br>
+                                    <date> <?php  echo $row['date_message']; ?> </date>
+
+                                    <a  class="<?php echo $button ?>"  href="./supprimer_msg.php?id=<?php echo $row['id_message']?>">Supprimer</a> 
+
+                                </div>
+                
+                            </div>
+                            <?php
+
+                        }
+                    }
+                
+                    ?>
+
+
+                        
                 </div>
-                <?php
-    
-            }
-        
-            ?>
-
-        
 
 
+                    <div class="contenu" data-anim="2">
+
+                        <?php
+
+                        if(isset($_SESSION['user'])){
+
+                        $req = $bdd->prepare('SELECT * FROM utilisateurs WHERE token = ?');
+                        $req->execute(array($_SESSION['user']));
+                        $data = $req->fetch();
+
+                        $pseudo_user = $data['pseudo'];
+
+                        $req2= $bdd->prepare('SELECT * FROM message WHERE pseudo_user = ?');
+                        $req2->execute(array($pseudo_user));
+                        $data2 = $req2->fetchAll();
+
+                    
+                            
+
+                        foreach($data2 as $row){
+
+                            $pseudo = $row['pseudo_user'];
+                
+                            $req= $bdd->prepare('SELECT * FROM utilisateurs WHERE pseudo = ?');
+                            $req->execute(array($pseudo));
+                            $data = $req->fetchAll();
+
+                            foreach($data as $row2){
+                                if(file_exists( "../auth/profil_picture/" . hash('sha256',  $row2['email']). ".jpg")){
+
+                                    $file_name = "../auth/profil_picture/" . hash('sha256',  $row2['email'] );
+                                    }
+                                    else{
+                                    $file_name = "../auth/pp";
+                                    }
+                    
+                            }
+
+                            if(isset($_SESSION['type']) && ($_SESSION['type']) == "Administrateur"){
+
+                            $button = "button2";
+
+                            }
+                            else{
+                            $button = "button2invisible";
+                            }
+
+                            ?>
+                            <div id = messages>
+
+                                <div class = photo>
+                                    <img class = "pp" src="<?php echo $file_name; ?>.jpg"> </img>
+                                </div>
+
+                                <div class = content>
+
+                                    <topic> <?php echo $row['topic']; ?> </topic>
+                                    <br>
+                                    <msg> <?php echo $row['content']; ?> </msg>
+
+                                </div>
+
+                                <div class = info>
+
+                                    <pseudo> <?php  echo $row['pseudo_user']; ?> </pseudo>
+                                    <br>
+                                    <date> <?php  echo $row['date_message']; ?> </date>
+
+                                    <a class="<?php echo $button ?>"  href="./supprimer_msg.php?id=<?php echo $row['id_message']?>">Supprimer</a> 
+
+                                </div>
+
+                            </div>
+                            <?php
+
+                        }
+                        }
+
+                        else{
+
+                            echo "Connectez vous pour voir vos messages"
+
+                            ?>
+
+                            <a class="cta" href= "../auth/">Connexion</a>
+
+                        <?php
+
+                        }
+                    
+                        ?>
+
+                    </div>
+
+                    <div class="contenu" data-anim="3">
+
+                        <?php
+
+                        $topic = "Bienvenue";
+
+                        $req2= $bdd->prepare('SELECT * FROM message ORDER BY date_message DESC ');
+                        $req2->execute();
+                        $data2 = $req2->fetchAll();
+
+
+                        foreach($data2 as $row){
+
+                            $pseudo = $row['pseudo_user'];
+                
+                            $req= $bdd->prepare('SELECT * FROM utilisateurs WHERE pseudo = ?');
+                            $req->execute(array($pseudo));
+                            $data = $req->fetchAll();
+                
+                            foreach($data as $row2){
+                                if(file_exists( "../auth/profil_picture/" . hash('sha256',  $row2['email']). ".jpg")){
+
+                                    $file_name = "../auth/profil_picture/" . hash('sha256',  $row2['email'] );
+                                    }
+                                    else{
+                                    $file_name = "../auth/pp";
+                                    }
+                    
+                            }
+
+                            if(isset($_SESSION['type']) && ($_SESSION['type']) == "Administrateur"){
+
+                                $button = "button2";
+                
+                            }
+                            else{
+                                $button = "button2invisible";
+                
+                            }
+                            
+                
+                            ?>
+                            <div id = messages>
+
+                                <div class = photo>
+                                    <img class = "pp" src="<?php echo $file_name; ?>.jpg"> </img>
+                                </div>
+
+                                <div class = content>
+
+                                    <topic> <?php echo $row['topic']; ?> </topic>
+                                    <br>
+                                    <msg> <?php echo $row['content']; ?> </msg>
+
+                                </div>
+
+                                <div class = info>
+
+                                    <pseudo> <?php  echo $row['pseudo_user']; ?> </pseudo>
+                                    <br>
+                                    <date> <?php  echo $row['date_message']; ?> </date>
+
+                                    <a class="<?php echo $button?>"  href="./supprimer_msg.php?id=<?php echo $row['id_message']?>">Supprimer</a> 
+
+                                </div>
+
+                            </div>
+                            <?php
+                
+                        }
+                    
+                        ?>
+
+                    
 
 
 
+
+
+                    </div>
+
+
+
+
+            </div>
         </div>
-
-
-
-
-    </div>
-
-</div>
-
-</div>
-
    
+    </div>
 </body>
+   
+
 
 <script src= forum.js></script>
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class=" footer-col">
+                <img src="infinite.png" class="logo">
+                </div>
+            <div class=" footer-col">
+                <h4>NAVIGATION</h4>
+                <ul>
+                    <li><a href= "/appinfo/homepage/homepage.php">Accueil</a></li>
+                    <li><a href= "/appinfo/Chantier/Chantier.php">Votre chantier</a></li>
+                    <li><a href= "/appinfo/forum/forum.php">Forum</a></li>
+                    <li><a href= "/appinfo/contact/contact_essai.htl">Contactez-nous</a></li>
+                </ul>
+            </div>
+            <div class=" footer-col">
+                <h4>PLUS D'INFOS</h4>
+                <ul>
+                    <li><a href= "/appinfo/auth/views/inscription.php">Inscription</a></li>
+                    <li><a href= "/appinfo/auth/model/connexion.php">Connexion</a></li>
+                    <li><a href= "/appinfo/cgu/cgu.php">Mentions Légales</a></li>
+                    <li><a href= "/appinfo/faq/faq.php">FAQ</a></li>
+                </ul>
+            </div>
+            <div class=" footer-col">
+                <h4>SUIVEZ-NOUS</h4>
+                <div class="social-links">
+                    <a href= "#"><i class="fab fa-facebook-f"></i></a>
+                    <a href= "#"><i class="fab fa-twitter"></i></a>
+                    <a href= "#"><i class="fab fa-instagram"></i></a>
+                    <a href= "#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+</footer>
+
 
 </html>

@@ -40,6 +40,7 @@ else{
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="faq.css" media="screen" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
     <title>FAQ</title>
 </head>
 <body>
@@ -222,6 +223,45 @@ $i++;
     
 </body>
 
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class=" footer-col">
+                <img src="infinite.png" class="logo">
+                </div>
+            <div class=" footer-col">
+                <h4>NAVIGATION</h4>
+                <ul>
+                    <li><a href= "/appinfo/homepage/homepage.php">Accueil</a></li>
+                    <li><a href= "/appinfo/Chantier/Chantier.php">Votre chantier</a></li>
+                    <li><a href= "/appinfo/forum/forum.php">Forum</a></li>
+                    <li><a href= "/appinfo/contact/contact_essai.html">Contactez-nous</a></li>
+                </ul>
+            </div>
+            <div class=" footer-col">
+                <h4>PLUS D'INFOS</h4>
+                <ul>
+                    <li><a href= "/appinfo/auth/views/inscription.php">Inscription</a></li>
+                    <li><a href= "/appinfo/auth/model/connexion.php">Connexion</a></li>
+                    <li><a href= "/appinfo/cgu/cgu.php">Mentions Légales</a></li>
+                    <li><a href= "/appinfo/faq/faq.php">FAQ</a></li>
+                </ul>
+            </div>
+            <div class=" footer-col">
+                <h4>SUIVEZ-NOUS</h4>
+                <div class="social-links">
+                    <a href= "#"><i class="fab fa-facebook-f"></i></a>
+                    <a href= "#"><i class="fab fa-twitter"></i></a>
+                    <a href= "#"><i class="fab fa-instagram"></i></a>
+                    <a href= "#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+</footer>
 
 <script src= faq.js></script>
 
