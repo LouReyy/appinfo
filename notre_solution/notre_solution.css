@@ -132,48 +132,35 @@ header{
   grid-auto-rows: minmax(100px, auto);
   }
 
-  #boitier{
-    grid-column: 1 / 2;
-    grid-row: 1;
-      width: 100%;
-      height: 100%;
-
+  #container{
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+    justify-content:center;
+    align-items:center;
+    gap:5px; 
+    
   }
-
-  .boitier{
-      margin-top: -10%;
-      width: 90%;
-      height: 100%;
+  
+  #enfantimage{
+    width: 25%;
+    box-sizing: border-box;
   }
-
-  #info_boitier{
-    font-size: 25px;
-    font-weight: bold;
-
-    grid-column: 2 / 2;
-    grid-row: 1;
-      width: 100%;
-      height: 80%;
+  #enfanttexte{
+    width: 40%;
+    box-sizing: border-box;
   }
-
-  text1{
-    font-size: 30px;
+  
+  #enfantimage img{
+    width:50%;
+    height:auto;
   }
-
-  .content_infos{
-    position: relative;
-    width: 80%;
-    height: 80%;
-	border-radius: 10px;
-	box-shadow: 5px 5px 5px 5px #dbdbdb;
-	background:white;
-	padding:3%;
-	text-align:center;
-}
-
-#bracelet{
-    grid-column: 1 / 2;
-    grid-row: 2;
-    margin-left: 20%;
-
-}
+  
+  .boxdetexte{
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 5px #dbdbdb;
+    background:white;
+    padding:3%;
+    text-align:center;
+  }
