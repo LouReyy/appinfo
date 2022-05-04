@@ -48,6 +48,9 @@ if(isset($_SESSION['user'])){
 
                 </ul>
             </nav>
+            <div id="logomemo">
+                <a href="/appinfo/memory/memory.php"><img src="../memory/memoryim.png" alt="memory"></a>
+            </div>
             <a class="cta" href= "/appinfo/auth/<?php  echo $editprofil?> "> <?php echo $title ?></a>
 
             <?php
@@ -124,9 +127,11 @@ if(isset($_SESSION['user'])){
                 <h4>NAVIGATION</h4>
                 <ul>
                     <li><a href= "/appinfo/homepage/homepage.php">Accueil</a></li>
-                    <li><a href= "/appinfo/Chantier/Chantier.php">Votre chantier</a></li>
+                    <li><a href= "/appinfo/<?php echo $chantier ?>">Votre chantier</a></li>
                     <li><a href= "/appinfo/forum/forum.php">Forum</a></li>
-                    <li><a href= "/appinfo/contact/contact_essai.html">Contactez-nous</a></li>
+                    <li><a href= "/appinfo/faq/faq.php">FAQ</a></li>
+                    <li><a href= "/appinfo/contact/contact_essai.php">Contactez-nous</a></li>
+                    <li><a href= "/appinfo/notre_solution/notre_solution.php">Notre solution</a></li>
                 </ul>
             </div>
             <div class=" footer-col">
@@ -135,7 +140,6 @@ if(isset($_SESSION['user'])){
                     <li><a href= "/appinfo/auth/views/inscription.php">Inscription</a></li>
                     <li><a href= "/appinfo/auth/model/connexion.php">Connexion</a></li>
                     <li><a href= "/appinfo/cgu/cgu.php">Mentions Légales</a></li>
-                    <li><a href= "/appinfo/faq/faq.php">FAQ</a></li>
                 </ul>
             </div>
             <div class=" footer-col">
