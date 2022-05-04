@@ -1,14 +1,11 @@
 <?php
-    ini_set( 'display_errors', 1 );
-    error_reporting( E_ALL );
-    $from = "test@hostinger-tutorials.fr";
-    $to = "louis.rey@eleve.isep.fr";
-    $subject = "Essai de PHP Mail";
-    $message = "PHP Mail fonctionne parfaitement";
-    $headers = 'MIME-Version: 1.0'."\n";
-    $headers ='Content-Type: text/html; charset="UTF-8"'."\n";
-    $headers ='Content-Transfer-Encoding: 8bit';
-
-    mail($to,$subject,$message, $headers);
-    echo "L'email a été envoyé.";
+  $dest = "louis.rey2@gmail.com";
+  $sujet = "Email de test";
+  $corp = "Salut ceci est un email de test envoyer par un script PHP";
+  $headers = "From: VotreGmailId@gmail.com";
+  if (mail($dest, $sujet, $corp, $headers)) {
+    echo "Email envoyé avec succès à $dest ...";
+  } else {
+    echo "Échec de l'envoi de l'email...";
+  }
 ?>
