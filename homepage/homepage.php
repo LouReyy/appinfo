@@ -11,6 +11,11 @@ if(isset($_SESSION['user'])){
         $title = "Connexion";
 
     }
+    if(isset($_SESSION['type']) && ($_SESSION['type']) == "Administrateur"){
+        $chantier = "Chantier/PageChantier.php";    }
+    else{
+        $chantier = "VotreChantier/votrechantier.php";
+    }
 
 
 ?>
@@ -30,14 +35,16 @@ if(isset($_SESSION['user'])){
 <header>
             <div id ="logoimg">
             <a  href="/appinfo/homepage/homepage.php"><img src="../auth/logo_infinite.png" alt="logo"></a>
-        </div>  
+            </div>  
             <nav>
                 <ul class="nav__links">
                     <li><a href="/appinfo/homepage/homepage.php">Accueil</a></li>
-                    <li><a href="/appinfo/Chantier/Chantier.php">Votre chantier</a></li>
+                    <li><a href="/appinfo/<?php echo $chantier ?>" >Votre chantier</a></li>
                     <li><a href="/appinfo/forum/forum.php">Forum</a></li>
                     <li><a href="/appinfo/faq/faq.php">FAQ</a></li>
-                    <li><a href="/appinfo/contact/contact_essai.html">Contactez-nous</a></li>
+                    <li><a href="/appinfo/contact/contact_essai.php">Contactez-nous</a></li>
+                    <li><a href="/appinfo/notre_solution/notre_solution.php">Notre solution</a></li>
+
                 </ul>
             </nav>
             <a class="cta" href= "/appinfo/auth/<?php  echo $editprofil?> "> <?php echo $title ?></a>
@@ -94,21 +101,21 @@ if(isset($_SESSION['user'])){
         <div class="chantier">
             <img src="grues.jpg" alt="">
             <h2>Votre chantier</h2>
-            <p3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed quam ut metus faucibus convallis nec sed tellus.</p3>
+            <p3>Accéder à cette section pour découvrir les informations sur votre chantier : Localisation, les dates & la nature du chantier.</p3>
         </div>
 
 
         <div class="stats">
             <img src="stats2.jpg" alt="">
             <h2>Statistiques</h2>
-            <p3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed quam ut metus faucibus convallis nec sed tellus.</p3>
+            <p3>Accéder à cette page afin de constater les statistiqes de votre chantier, l'environnement de travail des ouvriers est notre priorité, vous trouverez fonc différents graphiques avec notamment les valeurs de temperatures et d'humidité.</p3>
         </div>
     
 
         <div class="forum">
             <img src="forum.jpg" alt="">
             <h2>Forum</h2>
-            <p3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed quam ut metus faucibus convallis nec sed tellus.</p3>
+            <p3>Sur cette page, vous trouverez un ensemble de questions-réponses pour différents sujets. Posez égaleemtns vos questions en rapport avec votre chantier pour bénificier de l'aide la communauté  </p3>
         </div>
     </div>
     </main> 

@@ -1,3 +1,24 @@
+<?php
+session_start(); 
+
+if(isset($_SESSION['user'])){
+        $editprofil ="landing.php";
+        $title = "Profil";
+    }
+    else{
+        $editprofil ="index.php";
+        $title = "Connexion";
+
+    }
+
+    if(isset($_SESSION['type']) && ($_SESSION['type']) == "Administrateur"){
+        $chantier = "Chantier/Chantier.php";
+    }
+    else{
+        $chantier = "VotreChantier/votrechantier.php";
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,10 +37,10 @@
             <nav>
                 <ul class="nav__links">
                     <li><a href="/appinfo/homepage/homepage.php">Accueil</a></li>
-                    <li><a href="/appinfo/Chantier/Chantier.php">Votre chantier</a></li>
+                    <li><a href="/appinfo/<?php echo $chantier ?>" >Votre chantier</a></li>
                     <li><a href="/appinfo/forum/forum.php">Forum</a></li>
                     <li><a href="/appinfo/faq/faq.php">FAQ</a></li>
-                    <li><a href="/appinfo/contact/contact_essai.html">Contactez-nous</a></li>
+                    <li><a href="/appinfo/contact/contact_essai.php">Contactez-nous</a></li>
                 </ul>
             </nav>
             <a class="cta" href= "/appinfo/auth/<?php  echo $editprofil?> "> <?php echo $title ?></a>

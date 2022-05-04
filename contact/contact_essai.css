@@ -4,24 +4,36 @@
     padding: 0;
 }
 
-header {
-    width: 100%;
-    height : 100px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 20px 2%;
-    background-color: #fbfbfb;
+header{
+  position: relative;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px 2%;
+  background-color: #fbfbfb;
+  z-index: 1;
   }
+
+#logoimg{
+  display: flex;
+  justify-content: flex-start;
+  flex:3
+}
 
   
   header img{  /*taille image logo dans la barre du haut*/  
     width: 110px;
     height: 110px;
-    margin-right: auto;
-    margin-top: 10px;
+    margin-left: 0;
     padding: 10px;
+    align-self:baseline;
+  
+
   }
+
+ 
 
   .nav__links a,
   .overlay__content a {  /* style des barres du menu */
@@ -35,7 +47,8 @@ header {
     margin-left: auto;
   }
 
-  .cta{ /*style du texte dans le bouton connexion*/
+  .cta{ 
+      flex:0.3;/*style du texte dans le bouton connexion*/
     font-family: "Quicksand", sans-serif;
     font-weight: 10;
     font-size: 18px;
@@ -52,8 +65,8 @@ header {
     padding: 0px 50px;
   }
   
- .nav__links li a { /* chgmt de couleur quand curseur sur le mot qui dure 0.5s et commence apres 0.1s */
-    transition: color 0.5s ease 0.1s;
+ .nav__links li a { /* chgmt de couleur quand curseur sur le mot qui dure 0.2s et commence apres 0s */
+    transition: color 0.2s ease 0s;
   }
   
   .nav__links li a:hover { /* couleur du texte quand il curseur dessus*/
@@ -67,12 +80,15 @@ header {
     border-radius: 10px;
     cursor: pointer;
     font-size: 20px;
+    text-align: center;
   }
   
   .cta:hover { /*couleur du cadre quand curseur dessus*/
     background-color: #8aceff;
   }
 .boite{
+  font-family: "Quicksand";
+
   display: flex;
   flex-direction: column;
 
@@ -103,16 +119,18 @@ form{  /**Sélectionne tout ce qui est dans form**/
     /**padding sert à avoir un espace de 20 pixels entre le corps 
     (ici form) et le background **/
     border-radius: 10px;  /**pour arrondir les bords de 10 pixels **/
+    font-family: "Quicksand";
 }
 
 form h1{ /**Sélectionne h1 qui est dans form **/
     font-size: 30px;
     transform: translate(-50%,-50%);
-    margin-left: 50%;
+    margin-left: 55%;
+    width: 60%;
 }
 form .trait{
   position: absolute;
-    margin-left: 18%;
+    margin-left: 23%;
     width : 48%;
     height : 2px;
     background-color: #00ccff;
@@ -122,6 +140,8 @@ form .formulaire{
     display:flex;
     flex-wrap: wrap;
     margin-bottom: 30px; /**On espace le div<formulaire> de 30 px p/t au bas du formulaire (form) **/
+    font-family: "Quicksand";
+
 }
 form .formulaire .case{ /**toutes les classes case de formulaire**/
     position: relative;
@@ -135,6 +155,8 @@ form .formulaire .gauche .case input{ /**On sélectionne les cases de gauche**/
     border: 1px solid rgb(138, 134, 134);
     border-radius: 5px;
     outline-color: grey;
+    font-family: "Quicksand";
+
 
 }
 form .formulaire .droite .case textarea{ /**On sémectionne la case de droite réservée à la question**/
@@ -143,6 +165,8 @@ form .formulaire .droite .case textarea{ /**On sémectionne la case de droite r�
     border: 1px solid rgb(138, 134, 134);
     border-radius: 5px;
     outline-color: grey;
+    font-family: "Quicksand";
+
 }
 
 form .formulaire .gauche .case i{ /**Sélectionne les images à gauche**/
@@ -162,6 +186,29 @@ form .formulaire .droite .case i{
 
 }
 .envoyer{
-  margin-left: 50%;
+  margin-left: 30%;
   color: #00ccff;
+}
+
+button[type=submit]{
+  background-color: #00ccff;
+  color: white;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+  font-family: "Quicksand";  
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  width: 50%;
+}
+
+button[type=submit]:hover{
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+
 }

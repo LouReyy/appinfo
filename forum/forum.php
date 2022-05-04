@@ -13,6 +13,11 @@ else{
     $editprofil ="index.php";
     $title = "Connexion";
 }
+if(isset($_SESSION['type']) && ($_SESSION['type']) == "Administrateur"){
+    $chantier = "Chantier/PageChantier.php";}
+else{
+    $chantier = "VotreChantier/votrechantier.php";
+}
  
 ?>
 
@@ -28,17 +33,19 @@ else{
 </head>
 <body>
     <div id = "container1">
-        <header>
+    <header>
             <div id ="logoimg">
             <a  href="/appinfo/homepage/homepage.php"><img src="../auth/logo_infinite.png" alt="logo"></a>
             </div>  
             <nav>
                 <ul class="nav__links">
                     <li><a href="/appinfo/homepage/homepage.php">Accueil</a></li>
-                    <li><a href="/appinfo/Chantier/Chantier.php">Votre chantier</a></li>
+                    <li><a href="/appinfo/<?php echo $chantier ?>" >Votre chantier</a></li>
                     <li><a href="/appinfo/forum/forum.php">Forum</a></li>
                     <li><a href="/appinfo/faq/faq.php">FAQ</a></li>
-                    <li><a href="/appinfo/contact/contact_essai.html">Contactez-nous</a></li>
+                    <li><a href="/appinfo/contact/contact_essai.php">Contactez-nous</a></li>
+                    <li><a href="/appinfo/notre_solution/notre_solution.php">Notre solution</a></li>
+
                 </ul>
             </nav>
             <a class="cta" href= "/appinfo/auth/<?php  echo $editprofil?> "> <?php echo $title ?></a>
@@ -190,23 +197,21 @@ else{
 
                     if(isset($_GET['search']) AND !empty($_GET['search'])){
 
-                        $search = htmlspecialchars($_GET['search']);
-                        $topic = $search;
-                        
-                    }elseif (isset($_GET['param'])){
-                        $topic = htmlspecialchars($_GET['param']);
-                    }
-                    else{
-                        $topic = "Bienvenue";
-                    }
+            $search = htmlspecialchars($_GET['search']);
+            $topic = $search;
+            
+        }elseif (isset($_GET['param'])){
+            $topic = htmlspecialchars($_GET['param']);
+            
+        }
+        else{
+            $topic = "Bienvenue";
+        }
 
-                    
-                
-
-
-                    $req2= $bdd->prepare('SELECT * FROM message WHERE topic = ?');
-                    $req2->execute(array($topic));
-                    $data2 = $req2->fetchAll();
+       
+        $req2= $bdd->prepare('SELECT * FROM message WHERE topic = ?');
+        $req2->execute(array($topic));
+        $data2 = $req2->fetchAll();
 
                     
                     foreach($data2 as $row){
@@ -226,6 +231,8 @@ else{
                             else{
                             $file_name = "../auth/pp";
                             }
+
+                }
 
 
 
@@ -260,10 +267,19 @@ else{
 
                                     <a  class="<?php echo $button ?>"  href="./supprimer_msg.php?id=<?php echo $row['id_message']?>">Supprimer</a> 
 
-                                </div>
-                
-                            </div>
-                            <?php
+                    </div>
+    
+                </div>
+                <?php
+
+            }
+        
+    
+        ?>
+
+
+            
+    </div>
 
                         }
                     }

@@ -379,6 +379,15 @@ button4{
   margin-top: 2%;
 }
 
+.contenu {
+  position: relative;
+  width: 90%;
+  height: 100%;
+  flex:6;
+  margin-left: 5%;
+  margin-top: 2%;
+}
+
 
 topic{
   position: relative;
