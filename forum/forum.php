@@ -34,7 +34,7 @@ else{
 </head>
 <body>
     <div id = "container1">
-        <header>
+    <header>
             <div id ="logoimg">
             <a  href="/appinfo/homepage/homepage.php"><img src="../auth/logo_infinite.png" alt="logo"></a>
             </div>  
@@ -45,7 +45,9 @@ else{
                     <li><a href="/appinfo/forum/forum.php">Forum</a></li>
                     <li><a href="/appinfo/faq/faq.php">FAQ</a></li>
                     <li><a href="/appinfo/contact/contact_essai.php">Contactez-nous</a></li>
-                    <li><a href= "/appinfo/notre_solution/notre_solution.php">Notre solution</a></li>
+                    <li><a href="/appinfo/notre_solution/notre_solution.php">Notre solution</a></li>
+                    <li><a href="/appinfo/cgu/cgu.php">CGU</a></li>
+
                 </ul>
             </nav>
             <div id="logomemo">
