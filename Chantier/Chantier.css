@@ -1,5 +1,6 @@
 body{
     margin:0;
+    font-family: "Quicksand";
 }
 
 * {
@@ -103,7 +104,7 @@ body {
     
     
 .contenu {
-    position: relative;
+    position: absolute;
     top: 20%;
     left: 35%;
     background-color: whitesmoke;

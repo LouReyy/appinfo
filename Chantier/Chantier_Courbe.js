@@ -2,7 +2,7 @@
 function getData() {
   //On entre les différents points de notre courbe (abscisses et ordonnées)
     return [
-      ['1990',12],
+      ['1989',12],
       ['1991',14],
       ['1993',21],
       ['1994',21],
@@ -17,7 +17,7 @@ function getData() {
       ['2012',42],
       ['2014',48],
       ['2016',50],
-      ['2018',57]
+      ['2018',77]
     ];
 }
 // create a data set on our data

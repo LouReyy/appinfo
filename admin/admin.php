@@ -1,22 +1,4 @@
-<?php
-
-
-session_start(); 
-require_once '../auth/model/config.php'; 
-
-
-
-if(isset($_SESSION['user'])){
-
-    $editprofil ="landing.php";
-    $title = "Profil";
-}
-
-else{
-    $editprofil ="index.php";
-    $title = "Connexion";
-}
-?>
+<?php include("./model/setup.php"); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +6,7 @@ else{
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/appinfo/admin/admin.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="/appinfo/admin/css/admin.css" media="screen" type="text/css" />
     <title>Document</title>
 </head>
 <body>
@@ -34,7 +16,7 @@ else{
 
 <header>
             <div id ="logoimg">
-            <a  href="/appinfo/homepage/homepage.php"><img src="../auth/logo_infinite.png" alt="logo"></a>
+            <a  href="/appinfo/homepage/homepage.php"><img src="/appinfo/auth/logo_infinite.png" alt="logo"></a>
         </div>  
             <nav>
                 <ul class="nav__links">
@@ -81,7 +63,7 @@ else{
 
                 <div id = title>
 
-                    <img class = img_user src = "user.png">
+                    <img class = img_user src = "img/user.png">
 
                     <titre>Liste des utilisateurs</titre>
 
@@ -91,7 +73,7 @@ else{
                     </form>
 
                     
-                    <a class = button1 href = "ajouter_user.php" >Ajouter un utilisateur</a>
+                    <a class = button1 href = "./views/ajouter_user.php" >Ajouter un utilisateur</a>
                     
 
                 </div>
@@ -198,7 +180,7 @@ else{
 
                     <div class = photo>
                         <img class = "pp" src="<?php echo $file_name; ?>.jpg"> </img>
-                        <img class = "line" src="line4.png"> </img>
+                        <img class = "line" src="img/line4.png"> </img>
                     </div>
 
 
@@ -216,9 +198,9 @@ else{
 
                     <div class = button>
 
-                     <a  class="button2"  href="./supprimer.php?id=<?php echo $row['id']?>">Supprimer</a> 
-                     <a class="button2" href="./bannir.php?id=<?php echo $row['id']?>" >Bannir</a> 
-                     <a class="button3" href="./modifier_user.php?id=<?php echo $row['id']?>" >Modifier</a> 
+                     <a  class="button2"  href="./model/supprimer.php?id=<?php echo $row['id']?>">Supprimer</a> 
+                     <a class="button2" href="./model/bannir.php?id=<?php echo $row['id']?>" >Bannir</a> 
+                     <a class="button3" href="./views/modifier_user.php?id=<?php echo $row['id']?>" >Modifier</a> 
 
                     </div>
 

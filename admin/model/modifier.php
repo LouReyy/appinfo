@@ -1,7 +1,7 @@
 <?php
 
 session_start(); 
-require_once("../auth/model/config.php");
+require_once 'config.php'; 
 
 if(!isset($_SESSION['user'])){
     header('Location:index.php');
@@ -24,10 +24,10 @@ if($password === $password_retype){
     $update = $bdd->prepare('UPDATE utilisateurs SET pseudo = ?,password = ?, type = ? WHERE email = ?');
     $update->execute(array($pseudo,$password,$type,$email));
 
-    header('Location: ./admin.php?reg_err=success');die();
+    header('Location: ../admin.php?reg_err=success');die();
 
 }else{
-    header('Location: ./admin.php?reg_err=password'); die();}
+    header('Location: ../admin.php?reg_err=password'); die();}
 
 
 
