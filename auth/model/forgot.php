@@ -24,6 +24,8 @@
             $subject = "Test envoi mail";
             $body = '<a href="'.$link.'">Réinitialise ton email en cliquant ici !</a>';
  
+            mail($to_email, $subject, $body, $headers);
+
             if (mail($to_email, $subject, $body, $headers)) {
                 echo "l'email a bien été envoyé à $to_email...";
             } else {
