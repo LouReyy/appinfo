@@ -209,11 +209,17 @@ h1 {
       text-align: center;
   }
 
-  .boxdetextedroite{
-    margin-top: 2%;
+  #container{
     border-radius: 10px;
     box-shadow: 5px 5px 5px 5px #dbdbdb;
     background:white;
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 2%;
+  }
+
+  .boxdetextedroite{
+    margin-top: 2%;
     padding:3%;
     text-align:center;
     font-family: "Quicksand";
@@ -224,9 +230,6 @@ h1 {
 
   .boxdetextegauche{
     margin-top: 2%;
-    border-radius: 10px;
-    box-shadow: 5px 5px 5px 5px #dbdbdb;
-    background:white;
     padding:3%;
     text-align:center;
     font-family: "Quicksand";
