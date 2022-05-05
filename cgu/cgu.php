@@ -62,12 +62,17 @@ if(isset($_SESSION['user'])){
             <?php }?>
         </header>
 
+       
+
+
         <h1>
             Conditions Générales d'Utilisation 
             <hr/>
             
         </h1>
-    </div>
+
+        <div id = container>
+    
             
     
             <div class="boxdetextedroite">
@@ -246,6 +251,7 @@ if(isset($_SESSION['user'])){
                         Le présent contrat est valable pour une durée indéterminée. Le début de l’utilisation des services du site marque l’application du contrat à l’égard de l’utilisateur.
                     </p>
                 </div>
+        </div>
         </div>
 </body>
 <footer class="footer">
