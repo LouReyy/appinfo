@@ -15,12 +15,15 @@
       padding: 20px 2%;
       background-color: white;
     }
-  
-    #logoimg{
-      display: flex;
-      justify-content: flex-start;
-      flex:3
+#logomemo img{
+  width: 70px;
+  height: 70px;
   }
+#logoimg{
+  display: flex;
+  justify-content: flex-start;
+  flex:3
+}
   
     
     header img{  /*taille image logo dans la barre du haut*/  
