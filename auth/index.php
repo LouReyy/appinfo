@@ -28,6 +28,11 @@ if(isset($_SESSION['user'])){
         $title = "Connexion";
 
     }
+    if(isset($_SESSION['type'])){
+        $chantier = "Chantier/PageChantier.php";    }
+    else{
+        $chantier = "VotreChantier/votrechantier.php";
+    }
 
     include("views/container.php")
 ?>

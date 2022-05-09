@@ -18,6 +18,12 @@ else{
 }
 
     $file_name = "/appinfo/auth/pp";
+
+    if(isset($_SESSION['type'])){
+        $chantier = "Chantier/PageChantier.php";    }
+    else{
+        $chantier = "VotreChantier/votrechantier.php";
+    }
         
         
 
