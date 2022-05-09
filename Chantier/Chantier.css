@@ -104,7 +104,7 @@ body {
     
 .noms_onglets{ /**Tous les noms d"onglets dans la bande cette classe est la mère de la classe onglets**/
     position: absolute;
-    background: #fbfbfb;
+    background: yellow;
     width: 20%;
     height : 86%;
     max-height: 100%;
@@ -272,17 +272,17 @@ body {
     margin-left: 50px;
 }
 #graph1{
-    height: 90%;
+    height: 50%;
     width: 95%;
     margin-left: 2px;
 }
 #graph2{
-    height: 90%;
+    height: 50%;
     width: 95%;
     margin-left: 2px;
 }
 #graph3{
-    height: 90%;
+    height: 50%;
     width: 95%;
     margin-left: 2px;
 }
