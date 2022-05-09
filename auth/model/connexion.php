@@ -26,6 +26,7 @@ echo "test";
                     $_SESSION['user'] = $data['token'];
                     $_SESSION['type'] = $data['type'];
                     $_SESSION['id'] = $data['id'];
+                    $_SESSION['pseudo'] = $data['pseudo'];
 
                     header('Location: /appinfo/forum/forum.php');die();
                 }else{ header('Location: ../index.php?login_err=password'); die(); }
