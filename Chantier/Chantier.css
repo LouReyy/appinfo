@@ -96,7 +96,7 @@ header{
     }
 
 body {
-    background: grey;
+    background: white;
     height: 100%;
 }
     
@@ -104,7 +104,7 @@ body {
     
 .noms_onglets{ /**Tous les noms d"onglets dans la bande cette classe est la mère de la classe onglets**/
     position: absolute;
-    background: whitesmoke;
+    background: #fbfbfb;
     width: 20%;
     height : 86%;
     max-height: 100%;
@@ -121,12 +121,12 @@ body {
     
 .contenu {
     position: absolute;
-    top: 20%;
-    left: 35%;
-    background-color: whitesmoke;
+    top: 17%;
+    left: 25%;
+    background-color: #fbfbfb;
     opacity: 0;
-    height: 60%;
-    width: 45%;
+    height: 80%;
+    width: 70%;
     border-radius: 10px;
 }
 
@@ -138,7 +138,7 @@ body {
     width: 20%;
     height: 2px;
     margin-left: 20px;
-    background: #000;
+    background: #00ccff;
     border: none;
 }
 .contenu p {
@@ -249,8 +249,8 @@ body {
     }
 }
 .ongletInactif{/** Espace entre les onglets**/
-    margin-top: 80px;
-    height: 100px;
+    margin-top: 50px;
+    height: 80px;
     width: 250px;
     border: solid grey 3px;
     border-radius: 10px;
@@ -260,7 +260,7 @@ body {
 }
 .Actif{
     margin-top: 50px;
-    height: 100px;
+    height: 80px;
     width: 250px;
     border: solid grey 3px;
     border-radius: 10px;
@@ -273,17 +273,17 @@ body {
 }
 #graph1{
     height: 90%;
-    width: 90%;
-    margin-left: 20px;
+    width: 95%;
+    margin-left: 2px;
 }
 #graph2{
     height: 90%;
-    width: 90%;
-    margin-left: 20px;
+    width: 95%;
+    margin-left: 2px;
 }
 #graph3{
     height: 90%;
-    width: 90%;
-    margin-left: 20px;
+    width: 95%;
+    margin-left: 2px;
 }
 

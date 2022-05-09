@@ -28,7 +28,10 @@ header{
   background-color: #fbfbfb;
   z-index: 1;
   }
-
+#logomemo img{
+  width: 70px;
+  height: 70px;
+  }
 #logoimg{
   display: flex;
   justify-content: flex-start;

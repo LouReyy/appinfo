@@ -86,13 +86,17 @@ if(isset($_SESSION['user'])){
                     <h1>Température</h1>
                 </div> 
             </div> <!--idem-->
+            <div class="onglets" data-anim="4">
+                <div class="ongletInactif">
+                    <h1>CO2</h1>
+                </div> 
+            </div> <!--idem-->
         </div>
 
         <div class="contenu activeContenu" data-anim="1">
             <!--Classe représentant le contenu de l'onglet 1 (il a donc le même attribut que son titre)-->
             <h3>Votre Fréquence Cardiaque</h3>
             <hr>
-            <p>Graphique de la fréquence cardiaque</p>
             
             <div id="graph1">
                 <canvas id="card"></canvas>
@@ -109,6 +113,7 @@ if(isset($_SESSION['user'])){
                             backgroundColor: 'rgb(0,204,255)',
                             borderColor: 'rgb(0,204,255)',
                             data: Ycard,
+                            fill: true,
                         }]
                     };
 
@@ -117,7 +122,7 @@ if(isset($_SESSION['user'])){
                         data: data,
                         options: {
                             scales: {
-                                tension: 1,
+                                tension: 0.4,
                                 y: {
                                     beginAtZero: true
                                 }
@@ -137,7 +142,6 @@ if(isset($_SESSION['user'])){
             <!--Classe représentant le contenu de l'onglet 2 (il a donc le même attribut que son titre)-->
             <h3>Votre exposition aux bruits</h3>
             <hr>
-            <p>Niveau de bruit en dB</p>
             <div id="graph2">
             <canvas id="son"></canvas>
                     <script>
@@ -153,6 +157,7 @@ if(isset($_SESSION['user'])){
                                 backgroundColor: 'rgb(0,204,255)',
                                 borderColor: 'rgb(0,204,255)',
                                 data: Yson,
+                                fill: true,
                             }]
                         };
 
@@ -182,28 +187,28 @@ if(isset($_SESSION['user'])){
             <!--Classe représentant le contenu de l'onglet 3 (il a donc le même attribut que son titre)-->
             <h3>La température de votre environnement</h3>
             <hr>
-            <p>On affiche la température et son évolution</p>
             <div id="graph3">
                 <canvas id="temp"></canvas>
                     <script>
-                        var tempTable= <?php echo json_encode($tempTable);?>; 
-                        var Xtemp= <?php echo json_encode($Xtemp);?>;
-                        var Ytemp= <?php echo json_encode($Ytemp);?>; 
-                        const labels =Xtemp;
+                        var tempTable= <?php echo json_encode($tempTable);?>; //CHANGE
+                        var Xtemp= <?php echo json_encode($Xtemp);?>;    //CHANGE
+                        var Ytemp= <?php echo json_encode($Ytemp);?>; //CHANGE
+                        const labels =Xtemp;                         //CHANGE labels aussi 
 
-                        const dataTemp = {
-                            labels: labels,
+                        const dataTemp = {  //CHANGE
+                            labels: labels, //CHANGE
                             datasets: [{
-                                label: 'Température',
+                                label: 'Température en degré', //CHANGE
                                 backgroundColor: 'rgb(0,204,255)',
                                 borderColor: 'rgb(0,204,255)',
-                                data: Ytemp,
+                                data: Ytemp, //CHANGE
+                                fill: true,
                             }]
                         };
 
-                        const config1 = {
+                        const config1 = {  //CHANGE
                             type: 'line',
-                            data: dataTemp,
+                            data: dataTemp, //CHANGE
                             options: {
                                 tension: 0.4,
                                 scales: {
@@ -215,12 +220,58 @@ if(isset($_SESSION['user'])){
                         };
                     </script>
                     <script>
-                        const myChart1 = new Chart(
-                        document.getElementById('temp'),
-                        config1
+                        const myChart1 = new Chart( //CHANGE
+                        document.getElementById('temp'), //CHANGE
+                        config1  //CHANGE
                         );
                     </script>
             </div>   
+        </div>
+        <div class="contenu" data-anim="4">
+            <h3>Votre exposition au CO2</h3>
+            <hr>
+            <div id="graph3">
+                <canvas id="CO2"></canvas>
+                    <script>
+                        var CO2Table= <?php echo json_encode($CO2Table);?>; //CHANGE
+                        var XCO2= <?php echo json_encode($XCO2);?>;    //CHANGE
+                        var YCO2= <?php echo json_encode($YCO2);?>; //CHANGE
+                        const label2 =XCO2;                         //CHANGE labels aussi 
+
+                        const dataCO2 = {  //CHANGE
+                            labels: label2, //CHANGE
+                            datasets: [{
+                                label: 'taux de CO2 en ppm', //CHANGE
+                                backgroundColor: 'rgb(0,204,255)',
+                                borderColor: 'rgb(0,204,255)',
+                                data: YCO2, //CHANGE
+                                fill: true,
+                            }]
+                        };
+
+                        const config3 = {  //CHANGE
+                            type: 'line',
+                            data: dataCO2, //CHANGE
+                            options: {
+                                tension: 0.4,
+                                scales: {
+                                    y: {
+                                        beginAtZero: true
+                                    }
+                                }
+                            }
+                        };
+                    </script>
+                    <script>
+                        const myChart3 = new Chart( //CHANGE
+                        document.getElementById('CO2'), //CHANGE
+                        config3  //CHANGE
+                        );
+                    </script>
+            </div>   
+
+
+        </div>
     </div>
     <script src="Chantier.js"></script>
 </body>
