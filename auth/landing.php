@@ -14,6 +14,11 @@
         $editprofil ="landing.php";
         $title = "Profil";
     }
+    if(isset($_SESSION['type'])){
+        $chantier = "Chantier/PageChantier.php";    }
+    else{
+        $chantier = "VotreChantier/votrechantier.php";
+    }
     
     $req = $bdd->prepare('SELECT * FROM utilisateurs WHERE token = ?');
     $req->execute(array($_SESSION['user']));

@@ -12,7 +12,7 @@ if(isset($_SESSION['user'])){
 
     }
 
-    if(isset($_SESSION['type']) && ($_SESSION['type']) == "Administrateur"){
+    if(isset($_SESSION['type'])){
         $chantier = "Chantier/PageChantier.php";    }
     else{
         $chantier = "VotreChantier/votrechantier.php";
