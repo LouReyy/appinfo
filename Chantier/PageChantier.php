@@ -3,6 +3,12 @@
 
 session_start(); 
 
+$id= $_SESSION['id'];
+echo ($id);
+echo($_SESSION['pseudo']);
+
+
+
 if(isset($_SESSION['user'])){
         $editprofil ="landing.php";
         $title = "Profil";
@@ -100,8 +106,7 @@ if(isset($_SESSION['user'])){
             
             <div id="graph1">
                 <canvas id="card"></canvas>
-                <script>
-                    var table= <?php echo json_encode($cardTable);?>; 
+                <script> 
                     var Xcard= <?php echo json_encode($Xcard);?>;
                     var Ycard= <?php echo json_encode($Ycard);?>; 
                     const hor =Xcard;
@@ -145,7 +150,6 @@ if(isset($_SESSION['user'])){
             <div id="graph2">
             <canvas id="son"></canvas>
                     <script>
-                        var sonTable= <?php echo json_encode($sonTable);?>; 
                         var Xson= <?php echo json_encode($Xson);?>;
                         var Yson= <?php echo json_encode($Yson);?>; 
                         const horSon =Xson;
@@ -190,7 +194,7 @@ if(isset($_SESSION['user'])){
             <div id="graph3">
                 <canvas id="temp"></canvas>
                     <script>
-                        var tempTable= <?php echo json_encode($tempTable);?>; //CHANGE
+                         //CHANGE
                         var Xtemp= <?php echo json_encode($Xtemp);?>;    //CHANGE
                         var Ytemp= <?php echo json_encode($Ytemp);?>; //CHANGE
                         const labels =Xtemp;                         //CHANGE labels aussi 
@@ -233,7 +237,7 @@ if(isset($_SESSION['user'])){
             <div id="graph3">
                 <canvas id="CO2"></canvas>
                     <script>
-                        var CO2Table= <?php echo json_encode($CO2Table);?>; //CHANGE
+                     //CHANGE
                         var XCO2= <?php echo json_encode($XCO2);?>;    //CHANGE
                         var YCO2= <?php echo json_encode($YCO2);?>; //CHANGE
                         const label2 =XCO2;                         //CHANGE labels aussi 
