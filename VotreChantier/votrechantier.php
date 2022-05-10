@@ -44,8 +44,6 @@ else{
                     <li><a href="/appinfo/faq/faq.php">FAQ</a></li>
                     <li><a href="/appinfo/contact/contact_essai.php">Contactez-nous</a></li>
                     <li><a href="/appinfo/notre_solution/notre_solution.php">Notre solution</a></li>
-                    <li><a href="/appinfo/cgu/cgu.php">CGU</a></li>
-
                 </ul>
             </nav>
             <div id="logomemo">
@@ -65,6 +63,7 @@ else{
         </header>
         
     <h1 >Exemple de chantier</h1>
+    <hr/>
     <div class = "DivGrid">
         <div><img class="image1" src ="chantier.jpeg"  ></div>
         <div class = "deux">
@@ -81,6 +80,8 @@ else{
         </div>
     </div>
     <h1 >Caractéristiques du chantier</h1>
+    <hr/>
+
     <div class = "Grid_chantier">
         <div class = "Gauche">
             <h1 class = "Deux_2">Localisation</h1>

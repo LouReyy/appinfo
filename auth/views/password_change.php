@@ -1,5 +1,16 @@
 <?php 
-    require_once("../model/config.php");
+
+session_start();
+require_once("../model/config.php");
+
+        $editprofil ="index.php";
+        $title = "Connexion";
+    
+    if(isset($_SESSION['type'])){
+        $chantier = "Chantier/PageChantier.php";    }
+    else{
+        $chantier = "VotreChantier/votrechantier.php";
+    }
     if(!empty($_GET['u'])){
         $token = htmlspecialchars(base64_decode($_GET['u']));
         $check = $bdd->prepare('SELECT * FROM mdp_recover WHERE token_user = ?');
@@ -20,14 +31,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/appinfo/auth/index.css" media="screen" type="text/css" />
   </head>
   <body>
       <div id = container1>
       <header>
             <div id ="logoimg">
-            <a  href="/appinfo/homepage/homepage.php"><img src="../auth/logo_infinite.png" alt="logo"></a>
+            <a  href="/appinfo/homepage/homepage.php"><img src="/appinfo/auth/logo_infinite.png" alt="logo"></a>
         </div>  
             <nav>
                 <ul class="nav__links">

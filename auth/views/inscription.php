@@ -38,17 +38,22 @@ else{
 
         <header>
             <div id ="logoimg">
-            <a  href="/appinfo/homepage/homepage.php"><img src="../logo_infinite.png" alt="logo"></a>
-        </div>  
+            <a  href="/appinfo/homepage/homepage.php"><img src="/appinfo/auth/logo_infinite.png" alt="logo"></a>
+            </div>  
             <nav>
                 <ul class="nav__links">
                     <li><a href="/appinfo/homepage/homepage.php">Accueil</a></li>
-                    <li><a href="/appinfo/Chantier/Chantier.php">Votre chantier</a></li>
+                    <li><a href="/appinfo/<?php echo $chantier ?>" >Votre chantier</a></li>
                     <li><a href="/appinfo/forum/forum.php">Forum</a></li>
                     <li><a href="/appinfo/faq/faq.php">FAQ</a></li>
-                    <li><a href="/appinfo/contact/contact_essai.html">Contactez-nous</a></li>
+                    <li><a href="/appinfo/contact/contact_essai.php">Contactez-nous</a></li>
+                    <li><a href="/appinfo/notre_solution/notre_solution.php">Notre solution</a></li>
+
                 </ul>
             </nav>
+            <div id="logomemo">
+                <a href="/appinfo/memory/memory.php"><img src="/appinfo/memory/memoryim.png" alt="memory"></a>
+            </div>
             <a class="cta" href= "/appinfo/auth/<?php  echo $editprofil?> "> <?php echo $title ?></a>
 
             <?php
@@ -143,13 +148,13 @@ else{
                 ?>
             </div>
 
-            <img class = "forme1"src="../forme1.png"></img>
 
-                <h1 class="text-center">Inscription</h1>
 
 
             <form action="../model/inscription_traitement.php" method="post">
-                <h2 class="text-center">Inscription</h2>       
+                <h2 class="text-center">Inscription</h2>   
+                <img class = "forme1"src="../forme1.png"></img>
+    
                 <div class="form-group">
                     <input type="text" name="pseudo" class="form-control" placeholder="Pseudo" required="required" autocomplete="off">
                 </div>
@@ -203,28 +208,21 @@ else{
 
 
     #container{
-        margin-top: 30%;
-        width: 700px;
-        height: 250px;
+        margin-top: 20%;
+        width: 70%;
+        height: 55%;
     }
+
 
     
     .forme1{
         width: 45%;
-        height: 6%;
+        height: 4%;
         display: block;
         margin-left: 4%;
         
     }
 
-
-    h1{
-    color : black;
-    position: relative;
-    font-size: 4em;
-    padding-bottom: 5%;
-    margin-top: -10%;
-    }
 
     .login-form{
         font-size : 10px;
@@ -234,6 +232,12 @@ else{
     .form-group{
         font-size: 15px;
         padding: 5px;
+        
+    }
+
+    form{
+        width: 90%;
+        height: 80%;
     }
 
     #button1{
