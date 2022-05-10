@@ -7,6 +7,13 @@
   font-weight: 20;
 }
 
+p{
+  font-size: 1.1em;
+  text-align: justify ;
+  line-height : 1.5em;
+  text-indent: 1.5em ;
+  
+}
   header {
     width: 100%;
     height: 100px;
@@ -121,9 +128,10 @@ h1 hr:hover{
   width:28%;
 }
 h2{
-	font-size: 40px;
+	font-size: 2em;
+  margin-top:3%;
 	margin-bottom:3%;
-	font-weight: 20;
+	font-weight: 2em;
 }
 /*PARTIE AVEC IMAGES EOL+CHAN et texte________________*/
 #container{
@@ -138,7 +146,7 @@ h2{
 }
 
 #enfantimage{
-	width: 25%;
+	width: 35vw;
 	box-sizing: border-box;
 }
 #enfanttexte{
@@ -186,7 +194,9 @@ h2{
   border-radius: 60px;
   box-shadow: 3px 3px 2px 2px #dbdbdb;
   margin-right: 7%;
-  width:400px
+  padding: 4%;
+  height: auto;
+  width:auto
 }
 .chantier img{
   border-radius: 60px 60px 0 0;
@@ -199,7 +209,9 @@ h2{
   border-radius: 60px;
   box-shadow: 3px 3px 2px 2px #dbdbdb;
   margin-right: 7%;
-  width:400px
+  padding: 4%;
+  width:auto;
+  height: auto;
 }
 .stats img{
   border-radius: 60px 60px 0 0;
@@ -210,10 +222,12 @@ h2{
 .forum{
   grid-column: 3;
   grid-row: 1;
+  padding: 4%;
   border-radius: 60px;
   box-shadow: 3px 3px 2px 2px #dbdbdb;
   margin-right: 7%;
-  width:400px
+  height: auto;
+  width:auto;
 }
 .forum img{
   border-radius: 60px 60px 0 0;
@@ -221,7 +235,7 @@ h2{
   width: 100%;
 }
 
-p3{
+.p3{
   text-align: center;
   font-size: 1.2vw;
   margin: 2%;
@@ -233,8 +247,8 @@ p3{
 
 .container{
 
-  max-width: 2000px;
-  margin:20px;
+  max-width: 80vw;
+  margin:10vw;
   font-family: "Quicksand";
 
 }
