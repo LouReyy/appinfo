@@ -1,0 +1,8 @@
+.container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /**On a donc une grille de quatre colonnes uniformes car chaque fr vaut 1**/
+    grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr; /**De même pour les lignes de notre grille**/
+    
+
+}

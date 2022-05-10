@@ -3,9 +3,9 @@
 
 session_start(); 
 
-$id= $_SESSION['id'];
-echo ($id);
-echo($_SESSION['pseudo']);
+//$id= $_SESSION['id'];
+//echo ($id);
+//echo($_SESSION['pseudo']);
 
 
 
