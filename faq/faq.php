@@ -62,8 +62,6 @@ else{
                     <li><a href="/appinfo/faq/faq.php">FAQ</a></li>
                     <li><a href="/appinfo/contact/contact_essai.php">Contactez-nous</a></li>
                     <li><a href="/appinfo/notre_solution/notre_solution.php">Notre solution</a></li>
-                    <li><a href="/appinfo/cgu/cgu.php">CGU</a></li>
-
                 </ul>
             </nav>
             <div id="logomemo">
@@ -83,8 +81,8 @@ else{
         </header>
 
     <div id = containercentre>
-        <img id = "forme1"src="/appinfo/auth/forme1.png"></img>
         <h1>Foire Aux Questions (FAQ) </h1>
+        <hr>
     </div>
 
 
