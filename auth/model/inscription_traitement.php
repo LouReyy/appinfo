@@ -13,11 +13,12 @@
 
         if($_POST['type'] == "Administrateur"){
 
-            $link = 'http://localhost/appinfo/auth/views/admin_verif';
+            $link = 'http://localhost/appinfo/auth/views/admin_verif.php?email='.$email;
             $headers = 'Content-type: text/html; charset=utf-8'."\r\n";
             $to_email = "tech4healthg9c@gmail.com";
             $subject = "Demande Administrateur";
-            $body = '<a href="'.$link.'">Un utilisateurs souhaire sinscrire en tant quadministrateur !</a>';
+            $body = '<a href="'.$link.'">Un utilisateur souhaite s inscrire en tant qu administrateur !</a>' .
+            '<br> son email a renseigner :"'.$email.'" ';
  
 
             if (mail($to_email, $subject, $body, $headers)) {
@@ -26,10 +27,18 @@
                 echo "Email sending failed...";
             }
 
+            $admin ="true";
 
-            header('Location: ../views/inscription.php?reg_err=admin'); die();
+            }
 
-        }
+
+
+
+            header('Location: ../views/inscription.php?reg_err=admin');
+
+        
+
+        $type= "Utilisateur";
 
         $check0 = $bdd->prepare('SELECT pseudo, email, password FROM users_banned');
         $check0->execute();
@@ -83,7 +92,13 @@
                                 'type' => $type
                             ));
                             // On redirige avec le message de succès
-                            header('Location:../views/inscription.php?reg_err=success');
+
+                            if($admin == true){
+                                header('Location:../views/inscription.php?reg_err=admin');
+
+                            }else{
+                                header('Location:../views/inscription.php?reg_err=success');
+                            }
                             die();
                         }else{ header('Location: ../views/inscription.php?reg_err=password'); die();}
                     }else{ header('Location: ../views/inscription.php?reg_err=email'); die();}
@@ -91,6 +106,9 @@
             }else{ header('Location: ../views/inscription.php?reg_err=pseudo_length'); die();}
         }else{ header('Location: ../views/inscription.php?reg_err=select_type'); die();}
         }else{ header('Location: ../views/inscription.php?reg_err=already'); die();}
+
+
+    
     
     }
 

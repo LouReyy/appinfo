@@ -152,7 +152,7 @@ else{
                         case 'admin':
                             ?>
                                 <div class="alert alert-danger">
-                                    <strong>Erreur</strong> Nous envoyons une demande au staff pour votre inscription en mode Administrateur
+                                    <strong>Important</strong> Nous envoyons une demande au staff pour votre inscription en mode Administrateur
                                 </div>
                             <?php 
 
