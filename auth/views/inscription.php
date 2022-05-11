@@ -142,6 +142,12 @@ else{
                                 <strong>Erreur</strong> Vous avez été banni, vous n'avez plus accès a ce site
                             </div>
                         <?php 
+                         case 'robust':
+                            ?>
+                                <div class="alert alert-danger">
+                                    <strong>Erreur</strong> Votre mot de passe doit contenir au moins une majuscule, un chiffre, et un caractère spécial
+                                </div>
+                            <?php 
 
                     }
                 }
@@ -227,6 +233,7 @@ else{
     .login-form{
         font-size : 10px;
         margin-left:0;
+        margin-top:5%;
     }
 
     .form-group{

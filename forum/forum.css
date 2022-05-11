@@ -105,7 +105,7 @@ header{
 
     #divgauche{
       position: absolute;
-      margin-top: 15%;
+      margin-top: 10%;
       width: 30%;
       height : 80%;
       margin-left: 2%;
@@ -195,7 +195,7 @@ button[type=submit]:hover{
   display: flex;
   flex-direction: column;
   position: absolute;
-  margin-top: 8%;
+  margin-top: 5%;
   width: 65%;
   height : 80%;
   margin-left: 2%;
@@ -384,6 +384,8 @@ button4{
   flex:6;
   margin-left: 5%;
   margin-top: 2%;
+  display: flex;
+  flex-direction: column;
 }
 
 .contenu {
@@ -392,7 +394,6 @@ button4{
   height: 100%;
   flex:6;
   margin-left: 5%;
-  margin-top: 2%;
 }
 
 
@@ -403,8 +404,27 @@ topic{
 }
 
 msg{
+  margin-top: 1%;
   position: relative;
   width: 80%;
+}
+
+a.repondre{
+  position: relative;
+  background-color: #00ccff;
+  color: white;
+  padding: 6px 10px 10px 10px;
+  border: none;
+  cursor: pointer;
+  width: 20%;
+  height:30%;
+  border-radius: 25px;
+  font-family: "Quicksand";  
+  text-align: center; 
+  display: inline-block;
+  text-decoration: none;
+  font-size: 15px;
+
 }
 
 .info{
@@ -434,6 +454,8 @@ a.button2{
   font-size: 15px;
 
 }
+
+
 
 a.button2:hover{
   background-color: white;
