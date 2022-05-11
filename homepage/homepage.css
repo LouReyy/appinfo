@@ -188,6 +188,10 @@ h2{
   text-align: center;
   justify-content: space-around;
   padding:2%;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+
 }
 
 .chantier{
@@ -195,10 +199,8 @@ h2{
   grid-row: 1;
   border-radius: 60px;
   box-shadow: 3px 3px 2px 2px #dbdbdb;
-  margin-right: 7%;
-  padding: 4%;
   height: auto;
-  width:auto
+  width:80%;
 }
 .chantier img{
   border-radius: 60px 60px 0 0;
@@ -210,9 +212,7 @@ h2{
   grid-row: 1;
   border-radius: 60px;
   box-shadow: 3px 3px 2px 2px #dbdbdb;
-  margin-right: 7%;
-  padding: 4%;
-  width:auto;
+  width:80%;
   height: auto;
 }
 .stats img{
@@ -224,12 +224,11 @@ h2{
 .forum{
   grid-column: 3;
   grid-row: 1;
-  padding: 4%;
   border-radius: 60px;
   box-shadow: 3px 3px 2px 2px #dbdbdb;
-  margin-right: 7%;
+  width:80%;
   height: auto;
-  width:auto;
+  
 }
 .forum img{
   border-radius: 60px 60px 0 0;
@@ -242,6 +241,34 @@ h2{
   font-size: 1.2vw;
   margin: 2%;
 }
+
+a.btn_forum{
+  margin-top: 5%;
+  position: relative;
+  background-color: #00ccff;
+  color: white;
+  padding: 15px 10px 10px 10px;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  height:10%;
+  border-radius: 25px;
+  font-family: "Quicksand";  
+  text-align: center; 
+  display: inline-block;
+  text-decoration: none;
+  font-size: 20px;
+
+}
+
+a.btn_forum:hover{
+
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+
+}
+
 
 
 
@@ -399,7 +426,6 @@ ul{
     border-radius: 60px;
     box-shadow: 3px 3px 2px 2px #dbdbdb;
     
-    padding: 4%;
     height: auto;
     width:auto
   }
@@ -414,7 +440,6 @@ ul{
     border-radius: 60px;
     box-shadow: 3px 3px 2px 2px #dbdbdb;
     
-    padding: 4%;
     width:auto;
     height: auto;
   }
@@ -427,7 +452,6 @@ ul{
   .forum{
     grid-column: 1;
     grid-row: 3;
-    padding: 4%;
     border-radius: 60px;
     box-shadow: 3px 3px 2px 2px #dbdbdb;
    
