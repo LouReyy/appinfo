@@ -150,15 +150,16 @@ else{
                                     <strong>Erreur</strong> Votre mot de passe doit contenir au moins une majuscule, un chiffre, et un caractère spécial
                                 </div>
                             <?php 
-                        case 'admin':
                             break;
+                        case 'admin':
+                            
                             ?>
                                 <div class="alert alert-danger">
                                     <strong>Important</strong>Vous avez été inscrit pour le moment en tant qu'utilisateur.
                                      Nous envoyons une demande au staff pour votre inscription en mode Administrateur
                                 </div>
                             <?php 
-                            break;
+
 
                     }
                 }
