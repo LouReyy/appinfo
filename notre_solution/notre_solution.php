@@ -77,8 +77,7 @@ else{
 			<div id="enfanttexte">
 				<div class="boxdetexte">
 				<h2>Informations sur notre boitier Tech4Health :</h2>
-				<p>Voici notre boitier éléctronique permettant la gestion et la visualisation de nos données environnementales.</p>
-				<p>Celui-ci communique par Bluetooth à nos différents capteurs présents au sein du chantier étudié.</p>
+				<p>Voici notre boitier éléctronique permettant la gestion et la visualisation de nos données environnementales. Celui-ci communique par Bluetooth à nos différents capteurs présents au sein du chantier étudié.</p>
 				</div>
 			</div>
         </div>
@@ -90,8 +89,7 @@ else{
 				<div class="boxdetexte">
 				<h2>
 				Informations sur notre bracelet Tech4Health :</h2><br>
-				<p>Voici notre bracelet éléctronique permettant la prise de la frequence cardiaque.</p>
-				<p>Celui-ci communique l'information a notre boitier. </p>
+				<p>Voici notre bracelet éléctronique permettant la prise de la frequence cardiaque. Celui-ci communique l'information a notre boitier. </p>
 				</div>
 			</div>
 
@@ -104,8 +102,7 @@ else{
 				<div class="boxdetexte">
 				<h2>
 				Informations sur notre boitier de capteurs Tech4Health :</h2><br>
-				<p>Voici notre boitier éléctronique contenant l'ensemble des capteurs suivants:</p>
-				<p>Humidite, temperature et CO2 </p>
+				<p>Voici notre boitier éléctronique contenant l'ensemble des capteurs suivants  : Humidite, temperature et CO2 </p>
 				</div>
 			</div>
 
