@@ -104,11 +104,9 @@
   #sidebar {
     grid-area: sidebar;
   }
-  .noms_onglets{ /**Tous les noms d"onglets dans la bande cette classe est la mère de la classe onglets**/
+  /*.noms_onglets{ /**Tous les noms d"onglets dans la bande cette classe est la mère de la classe onglets**/
 
 
-        
-}
 .onglets { /**Chaque onglet particulier sauf le premier**/
     margin-left: 10px;
     cursor: pointer;
