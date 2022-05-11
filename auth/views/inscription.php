@@ -85,6 +85,7 @@ else{
                         ?>
                             <div class="alert alert-success">
                                 <strong>Succès</strong> inscription réussie !
+                              
                             </div>
                         <?php
                         break;
@@ -214,7 +215,7 @@ else{
 
 
     #container{
-        margin-top: 20%;
+        margin-top: 15%;
         width: 70%;
         height: 55%;
     }
@@ -240,16 +241,22 @@ else{
         font-size: 15px;
         padding: 5px;
         
+        
     }
 
     form{
         width: 90%;
         height: 80%;
+        margin-top:4%;
     }
 
     #button1{
         width: 100%;
     }
     </style>
+
+        </body>
+
+        <script src = "alert.js"></script>
 
 </html>
