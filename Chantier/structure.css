@@ -100,14 +100,13 @@
   }
   
   #sidebar {
-    background: magenta;
     grid-area: sidebar;
   }
   .noms_onglets{ /**Tous les noms d"onglets dans la bande cette classe est la mère de la classe onglets**/
     background: pink;
-    /*width: 20%;
-    height : 86%;
-    max-height: 100%;*/
+    height: 100%;
+    width: 100%;
+
 
         
 }
@@ -150,12 +149,11 @@
 }
 .contenu {
     position: absolute;
-    /*top: 17%;
-    left: 25%;*/
+    /*top: 25vh;
+    left: 60vh;
+    height: 50vh;*/
     background-color: #fbfbfb;
     opacity: 0;
-    /*height: 80%;
-    width: 70%;*/
     border-radius: 10px;
 }
 
