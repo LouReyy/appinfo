@@ -70,14 +70,28 @@ else{
             <h1>Nouveau Topic</h1>
             <hr>
 
+            <?php 
+            if (isset($_GET['topic'])){
+                $value = $_GET['topic'];
+                $focus = "autofocus";
+            }
+            else{
+                $value = "";
+                $focus ="";
+
+            } 
+            ?>
+
+
+
 
             <div id = "newmessages">
 
                 <form action="envoi_message.php" method="post">
 
-                    <input type="topic" name="topic" class="topic_msg" placeholder="Topic" required="required" autocomplete="off"> </input>
+                    <input type="topic" name="topic" class="topic_msg" placeholder="Topic" required="required" autocomplete="off" value= "<?php echo $value ?>">  </input>
 
-                    <textarea type="content" name="content" class="content_msg" placeholder="Content" required="required" autocomplete="off"> </textarea>
+                    <textarea <?php echo $focus ?> type="content" name="content" class="content_msg" placeholder="Content" required="required" autocomplete="off"> </textarea>
 
                     <button type = submit >Envoyer</button>
 
@@ -179,7 +193,7 @@ else{
             </ul>
 
             <form method ="GET">
-                <input id="searchbar"  type="text" name="search" placeholder="Recherche...">
+                <input id="searchbar"  type="text" name="search" placeholder="Rechercher un forum">
         
             </form>
 
@@ -219,26 +233,29 @@ else{
         $req2->execute(array($topic));
         $data2 = $req2->fetchAll();
 
+
         
         foreach($data2 as $row){
 
+            $pseudo =  $row['pseudo_user'];
 
   
-            $req= $bdd->prepare('SELECT * FROM utilisateurs');
-            $req->execute();
+            $req= $bdd->prepare('SELECT * FROM utilisateurs where pseudo = ?');
+            $req->execute(array($pseudo));
             $data = $req->fetchAll();
 
-            foreach($data as $row2){
-
-                if(file_exists( "../auth/profil_picture/" . hash('sha256',  $row2['email']). ".jpg")){
-
-                $file_name = "../auth/profil_picture/" . hash('sha256',  $row2['email'] );
-                }
-                else{
-                $file_name = "../auth/pp";
-                }
-
-
+        
+    
+                foreach($data as $row2){
+                    if(file_exists( "../auth/profil_picture/" . hash('sha256',  $row2['email']). ".jpg")){
+    
+                        $file_name = "../auth/profil_picture/" . hash('sha256',  $row2['email'] );
+                        }
+                        else{
+                        $file_name = "../auth/pp";
+                        }
+        
+                
 
                 if(isset($_SESSION['type']) && ($_SESSION['type']) == "Administrateur"){
                 $button = "button2";
@@ -255,11 +272,15 @@ else{
                      <img class = "pp" src="<?php echo $file_name; ?>.jpg"> </img>
                     </div>
 
+                    
+
                     <div class = content>
 
                         <topic> <?php echo $row['topic']; ?> </topic>
-                        <br>
                         <msg> <?php echo $row['content']; ?> </msg>
+
+                        <a  class="repondre" href="./forum.php?topic=<?php echo $row['topic']?>">Repondre</a> 
+
 
                     </div>
             
@@ -269,13 +290,15 @@ else{
                         <br>
                         <date> <?php  echo $row['date_message']; ?> </date>
 
-                        <a  class="<?php echo $button ?>"  href="./supprimer_msg.php?id=<?php echo $row['id_message']?>">Supprimer</a> 
+                        <t >  <a  class="<?php echo $button ?>" href="./supprimer_msg.php?id=<?php echo $row['id_message']?>" >Supprimer</a> </t> 
 
                     </div>
     
                 </div>
                 <?php
 
+            
+            
             }
         }
     
@@ -343,8 +366,10 @@ else{
                 <div class = content>
 
                     <topic> <?php echo $row['topic']; ?> </topic>
-                    <br>
                     <msg> <?php echo $row['content']; ?> </msg>
+
+                    <a  class="repondre" href="./forum.php?topic=<?php echo $row['topic']?>">Repondre</a> 
+
 
                 </div>
 
@@ -352,9 +377,10 @@ else{
 
                     <pseudo> <?php  echo $row['pseudo_user']; ?> </pseudo>
                     <br>
+
                     <date> <?php  echo $row['date_message']; ?> </date>
 
-                    <a class="<?php echo $button ?>"  href="./supprimer_msg.php?id=<?php echo $row['id_message']?>">Supprimer</a> 
+                    <t >  <a  class="<?php echo $button ?>" href="./supprimer_msg.php?id=<?php echo $row['id_message']?>" >Supprimer</a> </t> 
 
                 </div>
 
@@ -431,8 +457,10 @@ else{
                     <div class = content>
 
                         <topic> <?php echo $row['topic']; ?> </topic>
-                        <br>
                         <msg> <?php echo $row['content']; ?> </msg>
+
+                        <a  class="repondre" href="./forum.php?topic=<?php echo $row['topic']?>">Repondre</a> 
+
 
                     </div>
 
@@ -442,7 +470,7 @@ else{
                         <br>
                         <date> <?php  echo $row['date_message']; ?> </date>
 
-                         <a class="<?php echo $button?>"  href="./supprimer_msg.php?id=<?php echo $row['id_message']?>">Supprimer</a> 
+                        <t >  <a  class="<?php echo $button ?>" href="./supprimer_msg.php?id=<?php echo $row['id_message']?>" >Supprimer</a> </t> 
 
                     </div>
 

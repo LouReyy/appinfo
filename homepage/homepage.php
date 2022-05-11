@@ -105,6 +105,8 @@ if(isset($_SESSION['user'])){
             <img src="grues.jpg" alt="">
             <h2>Votre chantier</h2>
             <p>Accéder à cette section pour découvrir les informations sur votre chantier : Localisation, les dates & la nature du chantier.</p>
+            <a class = btn_forum href = "/appinfo/Chantier/PageChantier.php">Accès au chantier</a>
+
         </div>
 
 
@@ -112,13 +114,18 @@ if(isset($_SESSION['user'])){
             <img src="stats2.jpg" alt="">
             <h2>Statistiques</h2>
             <p>Accéder à cette page afin de constater les statistiqes de votre chantier, l'environnement de travail des ouvriers est notre priorité.</p>
+            <a class = btn_forum href = "/appinfo/Chantier/PageChantier.php">Accès aux statistiques</a>
+
         </div>
     
 
-        <div class="forum">
+        <div class="forum" >
             <img src="forum.jpg" alt="">
+
             <h2>Forum</h2>
             <p>Sur cette page, vous trouverez un ensemble de questions-réponses pour différents sujets.</p>
+            <a class = btn_forum href = "/appinfo/forum/forum.php">Accès au forum</a>
+
         </div>
     </div>
     </main> 

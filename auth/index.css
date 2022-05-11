@@ -140,18 +140,18 @@ header{
 
 .login-form{
     position: relative;
-    width:500px;
-    height: 100px;;
+    width:100%;
+    height: 10%;
     font-family: "Quicksand";
-    margin-top: -20%;
+    margin-top: 10%;
     margin-left:10%;
     
 }
 
 .alert{
     position: relative;
-    width: 800px;
-    height: 30px;
+    width: 100%;
+    height: 10%;
     color : red;
     font-family: "Quicksand";
     font-size: 2.3em;

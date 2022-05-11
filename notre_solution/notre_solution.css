@@ -7,6 +7,7 @@ body{
 #container1{
     display: flex;
     flex-direction: column;
+    
 }
 
 * {
@@ -105,16 +106,21 @@ header{
     #containercentre{
         position: relative;
         margin-top: 5%;
-        width: 30%;
+        width: auto;
         height : 80%;
-        margin-left: 35%;
         font-family: "Quicksand";
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
   
     h1{
       position: relative;
       text-align: center;
       margin-top: -9%;
+      font-size: 3em;
+
+
     }
     hr{
       border-top: 7px solid #00ccff;
@@ -124,6 +130,7 @@ header{
       border-radius:90px;
       border-bottom:none;
       transition: width 1s ease 0.2s;
+      margin-bottom: 5vw;
       }
 
   
@@ -153,16 +160,17 @@ header{
     flex-flow: row wrap;
     justify-content:center;
     align-items:center;
-    gap:5px; 
+    margin-top: 2vw;
     
   }
   
   #enfantimage{
-    width: 25%;
+    max-width: 30%;
+    height: 80%;
     box-sizing: border-box;
   }
   #enfanttexte{
-    width: 40%;
+    width: 50%;
     box-sizing: border-box;
   }
   
@@ -178,3 +186,279 @@ header{
     padding:3%;
     text-align:center;
   }
+
+  p{
+    font-size: 1.3em;
+    text-align: justify;
+    text-indent: 1.3em;
+    margin-top: 1.3em;
+    line-height: 1.4em;
+  }
+
+  body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (max-width: 800px) {
+    #containercentre{
+      position: relative;
+      margin-top: 5%;
+      width: auto;
+      height : 80%;
+      font-family: "Quicksand";
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+  #enfantimage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 30%;
+    height: 80%;
+    box-sizing: border-box;
+  }
+  #enfanttexte{
+    margin-bottom: 7vw;
+    width: 80%;
+    box-sizing: border-box;
+  }
+  #container{
+    font-family: "Quicksand";
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+    justify-content:center;
+    align-items:center;
+    margin-top: 2vw;
+    
+  }
+  h1{
+    position: relative;
+    text-align: center;
+    margin-top: 9%;
+    font-size: 9vw ;
+    max-width: 80%;
+  }
+  body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #containercentre{
+    position: relative;
+    margin-top: 5%;
+    width: auto;
+    height : 80%;
+    font-family: "Quicksand";
+    display: flex;
+    flex-direction: column;
+    align-items : center;
+}
+hr{
+  border-top: 7px solid #00ccff;
+  margin-left: auto;
+  margin-right: auto;
+  width:60vw;
+  border-radius:90px;
+  border-bottom:none;
+  transition: width 1s ease 0.2s;
+  margin-bottom: 5vw;
+  }
+} 
+
+
+/* Partie: Nos services */
+#containerpartie2 {
+  font-family: "Quicksand";
+  display: grid;
+  text-align: center;
+  padding:2%;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 10%;
+
+  
+}
+
+.chantier{
+  grid-column: 1;
+  grid-row: 1;
+  border-radius: 60px;
+  box-shadow: 3px 3px 2px 2px #dbdbdb;
+  height: auto;
+  width:80%;
+  padding-bottom: 4%;
+  align-self: center;
+  justify-self: center;
+
+}
+.chantier img{
+  border-radius: 60px 60px 0 0;
+  height: 50%;
+  width: 100%;
+}
+.stats{
+  grid-column: 2;
+  grid-row: 1;
+  border-radius: 60px;
+  box-shadow: 3px 3px 2px 2px #dbdbdb;
+  width:80%;
+  height: auto;
+  padding-bottom: 4%;
+  align-self: center;
+  justify-self: center;
+
+}
+.stats img{
+  border-radius: 60px 60px 0 0;
+  height: 50%;
+  width: 100%;
+}
+
+.forum{
+  grid-column: 3;
+  grid-row: 1;
+  border-radius: 60px;
+  box-shadow: 3px 3px 2px 2px #dbdbdb;
+  width:80%;
+  height: auto;
+  padding-bottom: 4%;
+  justify-self: center;
+
+  
+}
+.forum img{
+  border-radius: 60px 60px 0 0;
+  height: 50%;
+  width: 100%;
+  
+}
+
+.p3{
+  text-align: center;
+  font-size: 1.2vw;
+  margin: 2%;
+}
+
+p{
+  padding:4%
+}
+
+
+a.btn_forum{
+  margin-bottom: 2%;
+  background-color: #00ccff;
+  color: white;
+  padding: 3%;
+  border: none;
+  cursor: pointer;
+  width: 60%;
+  height:10%;
+  border-radius: 25px;
+  font-family: "Quicksand";  
+  text-align: center; 
+  display: inline-block;
+  text-decoration: none;
+  font-size: 20px;
+
+}
+
+a.btn_forum:hover{
+
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+
+}
+
+
+
+
+/*Footer*/
+
+.container{
+
+  font-family: "Quicksand";
+  width: 100%;
+
+}
+.row{
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+}
+ul{
+  list-style:none;
+}
+
+.footer{
+  background-color: rgb(0, 217, 255);
+  padding: 75px 0;
+  width: 100%;
+
+}
+.footer-col{
+  width: 25%;
+  padding:0 5%;
+
+}
+.footer-col h4{
+  font-size:18px;
+  color:aliceblue;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position:relative;
+  
+}
+.footer-col h4::before{
+  content: '';
+  position:absolute;
+  left:0;
+  bottom: -10px;
+  background-color:blue;
+  height: 2px;
+  box-sizing:border-box;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child){
+  margin-bottom: 10px;
+}
+.footer-col ul li a{
+  font-size: 16px;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 300;
+  color:aliceblue;
+  display:block;
+  transition: all 0,3s ease;
+}
+.footer-col ul li a:hover{
+  color:rgba(22, 61, 190, 0.747);
+  padding-left: 7px;
+
+}
+.footer-col .logo{
+  width: 190px;
+  height: 190px;
+}
+.footer-col .social-links a{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(22, 61, 190, 0.747);
+  margin-right: 0 10px 10px 0;
+  text-align:center;
+  line-height:40px;
+  border-radius: 50px;
+  color: rgb(255, 249, 249);
+}
+.footer-col .social-links a:hover{
+  color:rgba(22, 61, 190, 0.747);
+  background-color: aliceblue;
+}

@@ -85,6 +85,7 @@ else{
                         ?>
                             <div class="alert alert-success">
                                 <strong>Succès</strong> inscription réussie !
+                              
                             </div>
                         <?php
                         break;
@@ -142,6 +143,12 @@ else{
                                 <strong>Erreur</strong> Vous avez été banni, vous n'avez plus accès a ce site
                             </div>
                         <?php 
+                         case 'robust':
+                            ?>
+                                <div class="alert alert-danger">
+                                    <strong>Erreur</strong> Votre mot de passe doit contenir au moins une majuscule, un chiffre, et un caractère spécial
+                                </div>
+                            <?php 
 
                     }
                 }
@@ -208,7 +215,7 @@ else{
 
 
     #container{
-        margin-top: 20%;
+        margin-top: 15%;
         width: 70%;
         height: 55%;
     }
@@ -227,22 +234,29 @@ else{
     .login-form{
         font-size : 10px;
         margin-left:0;
+        margin-top:5%;
     }
 
     .form-group{
         font-size: 15px;
         padding: 5px;
         
+        
     }
 
     form{
         width: 90%;
         height: 80%;
+        margin-top:4%;
     }
 
     #button1{
         width: 100%;
     }
     </style>
+
+        </body>
+
+        <script src = "alert.js"></script>
 
 </html>

@@ -15,7 +15,11 @@
         $check0->execute();
         $data0 = $check0->fetchAll();
 
-        var_dump($data0);
+        $pattern = '/(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/';
+        if (!(preg_match($pattern, $password))) {
+            header('Location: ../views/inscription.php?reg_err=robust'); die();}
+
+
 
         foreach($data0 as $row0){
 

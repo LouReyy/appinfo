@@ -434,6 +434,7 @@ ul{
   display: flex;
   flex-direction: row;
   align-items: center;
+  column-gap: 5%;
   order: 3;
   background-color: rgb(255, 255, 255);
   border-radius: 30px;
@@ -443,16 +444,17 @@ ul{
 }
 .Droite .Deux_2{
   order: 2  ; 
-  width: 50%;
+  max-width: 30%;
+
 
 }
 
 h1{
-  font-size: 2.2em  ;
+  font-size: 4vw  ;
 }
 .Droite .texte{
   width: 70%; 
-  font-size: 1em;
+  font-size: 2vw;
   margin-top: 0%;
 }
 .Center_barre{
@@ -463,7 +465,7 @@ h1{
 }
 
 .Deux_2{
-  font-size: 1.11em;
+  font-size: 3vw;
 }
 
 }
