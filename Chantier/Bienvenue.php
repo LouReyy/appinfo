@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Structure</title>
+    <title>Bienvenue</title>
     <link rel="stylesheet" href="structure.css" media="screen" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
 </head>
@@ -30,36 +30,38 @@
         </header>
         <div id="sidebar">
             <div class="noms_onglets">
-                <div class="onglets" data-anim="1">
-                    <div class="ongletInactif">
-                        <h1>Fréquence cardiaque</h1><p><br><br>Dernière valeur : <?php echo $lastCard; ?> bpm</p>
+                <div class="onglets" data-anim="1"> <!--"onglets active"-->
+                    <div class="ongletInactif">  <!--"Actif-->
+                        <h4>Fréquence cardiaque</h4>
+                        <p>Dernière valeur</p>
                     </div>
                 </div> 
                 <!--La syntaxe "data-" permet de rajouter un attribut qui sera utilisé ensuite avec javascript-->
                 <div class="onglets" data-anim="2">
                     <div class="ongletInactif">
-                        <h1>Niveau de bruit</h1><p><br><br>Dernière valeur : <?php echo $lastSon; ?> dB</p>
+                        <h1>Niveau de bruit</h1>
                     </div>   
                 </div> <!--idem-->
                 <div class="onglets" data-anim="3">
                     <div class="ongletInactif">
-                        <h1>Température</h1><p><br><br>Dernière valeur : <?php echo $lastTemp; ?> °C</p>
+                        <h1>Température</h1>
                     </div> 
                 </div> <!--idem-->
                 <div class="onglets" data-anim="4">
                     <div class="ongletInactif">
-                        <h1>CO2</h1><p><br><br>Dernière valeur : <?php echo $lastCO2; ?> ppm</p>
+                        <h1>CO2</h1>
                     </div> 
                 </div> <!--idem-->
             </div>
         </div>
-        
+
+
         <main>
             <div class="contenu activeContenu">
                 <h1>Bienvenue dans la rubrique votre Chantier "pseudo"</h1>
                 <p>Dans cette rubrique vous pouvez consulter les dernières données de votre boîtier grâce aux différents capteurs qu'il contient. Cliquez sur les différentes grandeurs à gauche pour pouvoir les consulter !</p>
             </div>
-            <div class="contenu" data-anim="1">
+            <div class="contenu" data-anim="1"> <!--"contenu activeContenu"-->
                 <!--Classe représentant le contenu de l'onglet 1 (il a donc le même attribut que son titre)-->
                 <h3>Votre Fréquence Cardiaque</h3>
                 <hr>

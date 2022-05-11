@@ -13,6 +13,7 @@
   header {
     background: #a7ffeb;
     grid-area: header;
+
   }
   #logomemo img{
     width: 70px;
@@ -94,6 +95,7 @@
 
   
   main {
+    position: relative;
     background: #84ffff;
     grid-area: main;
     
@@ -102,16 +104,10 @@
   #sidebar {
     grid-area: sidebar;
   }
-  .noms_onglets{ /**Tous les noms d"onglets dans la bande cette classe est la mère de la classe onglets**/
-    background: pink;
-    height: 100%;
-    width: 100%;
+  /*.noms_onglets{ /**Tous les noms d"onglets dans la bande cette classe est la mère de la classe onglets**/
 
 
-        
-}
 .onglets { /**Chaque onglet particulier sauf le premier**/
-    /**Point de sauvegarde**/
     margin-left: 10px;
     cursor: pointer;
     
@@ -125,33 +121,23 @@
     }
 }
 .ongletInactif{
-    margin-top: 50px; /** Espace entre les onglets**/
+    margin-top: 7vh; /** marge de chaque onglet inactif avec le haut de la page**/
     height: 80px;
     width: 250px;
     border: solid grey 3px;
     border-radius: 10px;
     display: flex;
-    align-items: center;
+    /*align-items: center;
     justify-content: center;
+    text-align: center;*/
+
 }
-.Actif{
-    /*margin-top: 50px;*/
-    height: 80px;
-    width: 250px;
-    border: solid grey 3px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.Actif h1{
-    margin-left: 50px;
-}
+
 .contenu {
     position: absolute;
-    /*top: 25vh;
-    left: 60vh;
-    height: 50vh;*/
+    left: 5vh;
+    height: 75vh;
+    width: 120vh;
     background-color: #fbfbfb;
     opacity: 0;
     border-radius: 10px;
@@ -182,7 +168,18 @@
     animation: fade 0.3s forwards;
 
 }
+#sidebar h1{
+  position: absolute;
+  font-size: 14px;
+  margin-left: 1vh;
+  font-weight: 1000;
+  height: 3vh;
+  width: 30vh;
+}
+#sidebar p{
+  margin-left: 1vh;
 
+}
 
 
 
