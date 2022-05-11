@@ -142,6 +142,7 @@ h2{
 	justify-content:center;
 	align-items:center;
 	gap:5px; 
+  margin-bottom: min(40px);
 	
 }
 
@@ -161,6 +162,7 @@ h2{
 
 .boxdetexte{
 	border-radius: 10px;
+  min-height: 25vw;
 	box-shadow: 5px 5px 5px 5px #dbdbdb;
 	background:white;
 	padding:3%;
@@ -330,48 +332,126 @@ ul{
 
 
 
-@media only screen and (max-width: 700px){
 
-  h1 {
-    margin-left: 35%;
-    margin-right: auto;
+@media (max-width: 800px) {
+  #container{
+    display:flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    flex-flow: column wrap;
+    justify-content:center;
+    align-items:center;
+    
   }
-  h1 hr{
-    margin-left: auto;
-    margin-right: auto;
-    width:55%;
-  } 
-
-  img{
-    width: 300px;
-    height: 300px;
+  
+  #enfantimage{
+    
+    width: 60vw;
+    box-sizing: border-box;
+  }
+  #enfanttexte{
+    order: 1;
+    position: relative;
+    bottom: 15vw;
+    width: 80%;
+    box-sizing: border-box;
+  }
+  
+  #enfantimage img{
+    width:100%;
+    height:auto;
+  }
+  
+  .boxdetexte{
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 5px #dbdbdb;
+    background:white;
+    padding:3%;
+    text-align:center;
+  }
+  
+  .boxdetexte img{
+    width:10%;
+    height:auto;
+  }
+  
+  
+  .img1{
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24); 
   }
 
+  /*Footer*/
 
-  p{
-    padding:2px;
-
+  #containerpartie2 {
+    font-family: "Quicksand";
+    display: grid;
+    justify-content: space-between;
+    text-align: center;
+    justify-content: space-around;
+    gap: 10vw;
+    padding-left:10vw;
+    padding-right:10vw;
   }
-
-  p2{
-    padding:2px;
-  }
-
+  
   .chantier{
     grid-column: 1;
     grid-row: 1;
-    margin-bottom: 6%;
+    border-radius: 60px;
+    box-shadow: 3px 3px 2px 2px #dbdbdb;
+    
+    padding: 4%;
+    height: auto;
+    width:auto
   }
-
+  .chantier img{
+    border-radius: 60px 60px 0 0;
+    height: 50%;
+    width: 100%;
+  }
   .stats{
     grid-column: 1;
     grid-row: 2;
-    margin-bottom: 6%;
+    border-radius: 60px;
+    box-shadow: 3px 3px 2px 2px #dbdbdb;
+    
+    padding: 4%;
+    width:auto;
+    height: auto;
   }
-
+  .stats img{
+    border-radius: 60px 60px 0 0;
+    height: 50%;
+    width: 100%;
+  }
+  
   .forum{
     grid-column: 1;
     grid-row: 3;
-    margin-bottom: 6%;
+    padding: 4%;
+    border-radius: 60px;
+    box-shadow: 3px 3px 2px 2px #dbdbdb;
+   
+    height: auto;
+    width:auto;
   }
+  .forum img{
+    border-radius: 60px 60px 0 0;
+    height: 50%;
+    width: 100%;
+  }
+  
+  .p3{
+    text-align: center;
+    font-size: 1.2vw;
+    margin: 2%;
+  }
+  h1 hr{
+    border-top: 7px solid #00ccff;
+    margin-left: auto;
+    margin-right: auto;
+    width:40%;
+    border-radius:90px;
+    border-bottom:none;
+    transition: width 1s ease 0.2s;
+    }
 }
