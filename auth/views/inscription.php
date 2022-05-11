@@ -143,6 +143,7 @@ else{
                                 <strong>Erreur</strong> Vous avez été banni, vous n'avez plus accès a ce site
                             </div>
                         <?php 
+                        break;
                          case 'robust':
                             ?>
                                 <div class="alert alert-danger">
@@ -150,12 +151,14 @@ else{
                                 </div>
                             <?php 
                         case 'admin':
+                            break;
                             ?>
                                 <div class="alert alert-danger">
                                     <strong>Important</strong>Vous avez été inscrit pour le moment en tant qu'utilisateur.
                                      Nous envoyons une demande au staff pour votre inscription en mode Administrateur
                                 </div>
                             <?php 
+                            break;
 
                     }
                 }
