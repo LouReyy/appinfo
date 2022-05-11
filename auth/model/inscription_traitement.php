@@ -11,6 +11,26 @@
         $password_retype = htmlspecialchars($_POST['password_retype']);
         $type = htmlspecialchars($_POST['type']);
 
+        if($_POST['type'] == "Administrateur"){
+
+            $link = 'http://localhost/appinfo/auth/views/admin_verif';
+            $headers = 'Content-type: text/html; charset=utf-8'."\r\n";
+            $to_email = "tech4healthg9c@gmail.com";
+            $subject = "Demande Administrateur";
+            $body = '<a href="'.$link.'">Un utilisateurs souhaire sinscrire en tant quadministrateur !</a>';
+ 
+
+            if (mail($to_email, $subject, $body, $headers)) {
+                echo "l'email a bien été envoyé à $to_email...";
+            } else {
+                echo "Email sending failed...";
+            }
+
+
+            header('Location: ../views/inscription.php?reg_err=admin'); die();
+
+        }
+
         $check0 = $bdd->prepare('SELECT pseudo, email, password FROM users_banned');
         $check0->execute();
         $data0 = $check0->fetchAll();
