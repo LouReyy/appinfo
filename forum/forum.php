@@ -290,7 +290,7 @@ else{
                         <br>
                         <date> <?php  echo $row['date_message']; ?> </date>
 
-                        <a  class="<?php echo $button ?>"  href="./supprimer_msg.php?id=<?php echo $row['id_message']?>">Supprimer</a> 
+                        <t >  <a  class="<?php echo $button ?>" href="./supprimer_msg.php?id=<?php echo $row['id_message']?>" >Supprimer</a> </t> 
 
                     </div>
     
@@ -376,9 +376,11 @@ else{
                 <div class = info>
 
                     <pseudo> <?php  echo $row['pseudo_user']; ?> </pseudo>
+                    <br>
+
                     <date> <?php  echo $row['date_message']; ?> </date>
 
-                    <a class="<?php echo $button ?>"  href="./supprimer_msg.php?id=<?php echo $row['id_message']?>">Supprimer</a> 
+                    <t >  <a  class="<?php echo $button ?>" href="./supprimer_msg.php?id=<?php echo $row['id_message']?>" >Supprimer</a> </t> 
 
                 </div>
 
@@ -468,7 +470,7 @@ else{
                         <br>
                         <date> <?php  echo $row['date_message']; ?> </date>
 
-                         <a class="<?php echo $button?>"  href="./supprimer_msg.php?id=<?php echo $row['id_message']?>">Supprimer</a> 
+                        <t >  <a  class="<?php echo $button ?>" href="./supprimer_msg.php?id=<?php echo $row['id_message']?>" >Supprimer</a> </t> 
 
                     </div>
 
