@@ -130,7 +130,7 @@ if(isset($_SESSION['user'])){
     <div class="container">
         <div class="row">
             <div class=" footer-col">
-                <img src="../auth/logo_infinite.png" class="logo">
+                <img src="/appinfo/auth/img/logo_infinite.png" class="logo">
                 </div>
             <div class=" footer-col">
                 <h4>NAVIGATION</h4>
