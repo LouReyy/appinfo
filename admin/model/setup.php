@@ -8,7 +8,7 @@ require_once 'config.php';
 
 if(isset($_SESSION['user'])){
 
-    $editprofil ="landing.php";
+    $editprofil ="views/landing.php";
     $title = "Profil";
 }
 

@@ -71,11 +71,42 @@ else{
             <p> Pas de panique ! Renseignez votre email ci-dessous et nous vous enverons par email les informations pour vous creer un nouveau mot de passe.</p>
 
             <div class="form-group">
-                <form action="../model/forgot.php" method="POST">
+                <form action="/appinfo/auth/model/forgot.php" method="POST">
                     <input type="email" name="email" class="form-control" placeholder="Adresse Email" required="required" autocomplete="off">
                     <button type="submit" class="btn btn-primary btn-block">Reinitialiser mon mot de passe </button>
                  </form>
             </div>
+
+            <div class="msg-form">
+                <?php 
+                if(isset($_GET['reg_err']))
+                {
+                    $err = htmlspecialchars($_GET['reg_err']);
+
+                    switch($err)
+                    {
+                        case 'success':
+                        ?>
+                            <div class="alert alert-success">
+                                <strong>Succès</strong> Un mail de Reinitialisation vous a été envoyé !
+                              
+                            </div>
+                        <?php
+                        break;
+                        case 'user':
+                            ?>
+                                <div class="alert alert-success">
+                                    <strong>Erreur</strong> L'utilisateur n'existe pas !
+                                  
+                                </div>
+                            <?php
+                            break;
+                    }
+                }
+                        ?>
+                   
+                
+             </div>
 
         </div>
 

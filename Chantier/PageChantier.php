@@ -10,8 +10,8 @@ session_start();
 
 
 if(isset($_SESSION['user'])){
-        $editprofil ="landing.php";
-        $title = "Profil";
+    $editprofil ="views/landing.php";
+    $title = "Profil";
     }
     else{
         $editprofil ="index.php";
