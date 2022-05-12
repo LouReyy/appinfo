@@ -41,135 +41,101 @@ if(isset($_SESSION['user'])){
 
 
 <body>
-<header>
-            <div id ="logoimg">
-            <a  href="/appinfo/homepage/homepage.php"><img src="../auth/logo_infinite.png" alt="logo"></a>
-            </div>  
-            <nav>
-                <ul class="nav__links">
-                    <li><a href="/appinfo/homepage/homepage.php">Accueil</a></li>
-                    <li><a href="/appinfo/<?php echo $chantier ?>" >Votre chantier</a></li>
-                    <li><a href="/appinfo/forum/forum.php">Forum</a></li>
-                    <li><a href="/appinfo/faq/faq.php">FAQ</a></li>
-                    <li><a href="/appinfo/contact/contact_essai.php">Contactez-nous</a></li>
-                    <li><a href="/appinfo/notre_solution/notre_solution.php">Notre solution</a></li>
 
-                </ul>
-            </nav>
-            <div id="logomemo">
-                <a href="/appinfo/memory/memory.php"><img src="../memory/memoryim.png" alt="memory"></a>
-            </div>
-            <a class="cta" href= "/appinfo/auth/<?php  echo $editprofil?> "> <?php echo $title ?></a>
-
-            <?php
-           
-
-           if(isset($_SESSION['type']) && ($_SESSION['type']) == "Administrateur"){
-            
-            ?>
-            <a class="cta" href= "/appinfo/admin/admin.php">Admin</a>
-
-            <?php }?>
-        </header>
 
     <div class="container"> 
+        <header>
+                <div id ="logoimg">
+                <a  href="/appinfo/homepage/homepage.php"><img src="../auth/logo_infinite.png" alt="logo"></a>
+                </div>  
+                <nav>
+                    <ul class="nav__links">
+                        <li><a href="/appinfo/homepage/homepage.php">Accueil</a></li>
+                        <li><a href="/appinfo/<?php echo $chantier ?>" >Votre chantier</a></li>
+                        <li><a href="/appinfo/forum/forum.php">Forum</a></li>
+                        <li><a href="/appinfo/faq/faq.php">FAQ</a></li>
+                        <li><a href="/appinfo/contact/contact_essai.php">Contactez-nous</a></li>
+                        <li><a href="/appinfo/notre_solution/notre_solution.php">Notre solution</a></li>
 
-        <div class="noms_onglets">
-            <div class="onglets active" data-anim="1">
-                <div class="Actif">
-                <h1>Fréquence cardiaque</h1>
+                    </ul>
+                </nav>
+                <div id="logomemo">
+                    <a href="/appinfo/memory/memory.php"><img src="../memory/memoryim.png" alt="memory"></a>
                 </div>
-            </div> 
-            <!--La syntaxe "data-" permet de rajouter un attribut qui sera utilisé ensuite avec javascript-->
-            <div class="onglets" data-anim="2">
-                <div class="ongletInactif">
-                    <h1>Niveau de bruit</h1>
-                </div>   
-            </div> <!--idem-->
-            <div class="onglets" data-anim="3">
-                <div class="ongletInactif">
-                    <h1>Température</h1>
-                </div> 
-            </div> <!--idem-->
-            <div class="onglets" data-anim="4">
-                <div class="ongletInactif">
-                    <h1>CO2</h1>
-                </div> 
-            </div> <!--idem-->
-        </div>
+                <a class="cta" href= "/appinfo/auth/<?php  echo $editprofil?> "> <?php echo $title ?></a>
 
-        <div class="contenu activeContenu" data-anim="1">
-            <!--Classe représentant le contenu de l'onglet 1 (il a donc le même attribut que son titre)-->
-            <h3>Votre Fréquence Cardiaque</h3>
-            <hr>
+                <?php
             
-            <div id="graph1">
-                <canvas id="card"></canvas>
-                <script> 
-                    var Xcard= <?php echo json_encode($Xcard);?>;
-                    var Ycard= <?php echo json_encode($Ycard);?>; 
-                    const hor =Xcard;
 
-                    const data = {
-                        labels: hor,
-                        datasets: [{
-                            label: 'Fréquence cardique en bpm',
-                            backgroundColor: 'rgb(0,204,255)',
-                            borderColor: 'rgb(0,204,255)',
-                            data: Ycard,
-                            fill: true,
-                        }]
-                    };
+            if(isset($_SESSION['type']) && ($_SESSION['type']) == "Administrateur"){
+                
+                ?>
+                <a class="cta" href= "/appinfo/admin/admin.php">Admin</a>
 
-                    const config = {
-                        type: 'line',
-                        data: data,
-                        options: {
-                            scales: {
-                                tension: 0.4,
-                                y: {
-                                    beginAtZero: true
-                                }
-                            }
-                        }
-                    };
-                </script>
-                <script>
-                    const myChart = new Chart(
-                    document.getElementById('card'),
-                    config
-                    );
-                </script>
+                <?php }?>
+            </header>
+        <div id="sidebar">
+            <div class="noms_onglets">
+                <div class="onglets" data-anim="1">
+                    <div class="ongletInactif">
+                        <h1>Fréquence cardiaque</h1><p><br><br>Dernière valeur : <?php echo $lastCard; ?> bpm</p>
+                    </div>
+                </div> 
+                <!--La syntaxe "data-" permet de rajouter un attribut qui sera utilisé ensuite avec javascript-->
+                <div class="onglets" data-anim="2">
+                    <div class="ongletInactif bis">
+                        <h1>Niveau de bruit</h1><p><br><br>Dernière valeur : <?php echo $lastSon; ?> dB</p>
+                    </div>   
+                </div> <!--idem-->
+                    <div class="onglets" data-anim="3">
+                        <div class="ongletInactif bis">
+                            <h1>Température</h1><p><br><br>Dernière valeur : <?php echo $lastTemp; ?> °C</p>
+                        </div> 
+                    </div> <!--idem-->
+                    <div class="onglets" data-anim="4">
+                        <div class="ongletInactif bis">
+                            <h1>CO2</h1><p><br><br>Dernière valeur : <?php echo $lastCO2; ?> ppm</p>
+                        </div> 
+                    </div> <!--idem-->
             </div>
-        </div>
-        <div class="contenu" data-anim="2">
-            <!--Classe représentant le contenu de l'onglet 2 (il a donc le même attribut que son titre)-->
-            <h3>Votre exposition aux bruits</h3>
-            <hr>
-            <div id="graph2">
-            <canvas id="son"></canvas>
-                    <script>
-                        var Xson= <?php echo json_encode($Xson);?>;
-                        var Yson= <?php echo json_encode($Yson);?>; 
-                        const horSon =Xson;
 
-                        const dataSon = {
-                            labels: horSon,
+        </div>
+        
+        <main>
+            <div class="contenu activeContenu">
+                <div class="imgStat"></div>
+                <h1>Bienvenue dans la rubrique votre Chantier "pseudo"</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate consequatur repudiandae at sint iusto ea tempore incidunt quam? Necessitatibus commodi dolore blanditiis amet minus nam fugiat cumque aspernatur dolorum deleniti!</p>
+            </div>    
+            <div class="contenu" data-anim="1">
+                <!--Classe représentant le contenu de l'onglet 1 (il a donc le même attribut que son titre)-->
+                <h3>Votre Fréquence Cardiaque</h3>
+                <hr>
+                
+                <div id="graph1">
+                    <canvas id="card"></canvas>
+                    <script> 
+                        var Xcard= <?php echo json_encode($Xcard);?>;
+                        var Ycard= <?php echo json_encode($Ycard);?>; 
+                        const hor =Xcard;
+
+                        const data = {
+                            labels: hor,
                             datasets: [{
-                                label: 'Intensité sonore en dB',
+                                label: 'Fréquence cardique en bpm',
                                 backgroundColor: 'rgb(0,204,255)',
                                 borderColor: 'rgb(0,204,255)',
-                                data: Yson,
+                                data: Ycard,
                                 fill: true,
                             }]
                         };
 
-                        const config2 = {
+                        const config = {
                             type: 'line',
-                            data: dataSon,/////////
+                            data: data,
                             options: {
-                                tension: 0.4,
                                 scales: {
+                                    tension: 0.4,
                                     y: {
                                         beginAtZero: true
                                     }
@@ -178,103 +144,147 @@ if(isset($_SESSION['user'])){
                         };
                     </script>
                     <script>
-                        const myChart2 = new Chart(
-                        document.getElementById('son'),
-                        config2
+                        const myChart = new Chart(
+                        document.getElementById('card'),
+                        config
                         );
                     </script>
-            </div>  
-        </div> 
+                </div>
+            </div>
+            <div class="contenu" data-anim="2">
+                <!--Classe représentant le contenu de l'onglet 2 (il a donc le même attribut que son titre)-->
+                <h3>Votre exposition aux bruits</h3>
+                <hr>
+                <div id="graph2">
+                <canvas id="son"></canvas>
+                        <script>
+                            var Xson= <?php echo json_encode($Xson);?>;
+                            var Yson= <?php echo json_encode($Yson);?>; 
+                            const horSon =Xson;
 
-        <div class="contenu" data-anim="3">
-            <!--Classe représentant le contenu de l'onglet 3 (il a donc le même attribut que son titre)-->
-            <h3>La température de votre environnement</h3>
-            <hr>
-            <div id="graph3">
-                <canvas id="temp"></canvas>
-                    <script>
-                         //CHANGE
-                        var Xtemp= <?php echo json_encode($Xtemp);?>;    //CHANGE
-                        var Ytemp= <?php echo json_encode($Ytemp);?>; //CHANGE
-                        const labels =Xtemp;                         //CHANGE labels aussi 
+                            const dataSon = {
+                                labels: horSon,
+                                datasets: [{
+                                    label: 'Intensité sonore en dB',
+                                    backgroundColor: 'rgb(0,204,255)',
+                                    borderColor: 'rgb(0,204,255)',
+                                    data: Yson,
+                                    fill: true,
+                                }]
+                            };
 
-                        const dataTemp = {  //CHANGE
-                            labels: labels, //CHANGE
-                            datasets: [{
-                                label: 'Température en degré', //CHANGE
-                                backgroundColor: 'rgb(0,204,255)',
-                                borderColor: 'rgb(0,204,255)',
-                                data: Ytemp, //CHANGE
-                                fill: true,
-                            }]
-                        };
-
-                        const config1 = {  //CHANGE
-                            type: 'line',
-                            data: dataTemp, //CHANGE
-                            options: {
-                                tension: 0.4,
-                                scales: {
-                                    y: {
-                                        beginAtZero: true
+                            const config2 = {
+                                type: 'line',
+                                data: dataSon,/////////
+                                options: {
+                                    tension: 0.4,
+                                    scales: {
+                                        y: {
+                                            beginAtZero: true
+                                        }
                                     }
                                 }
-                            }
-                        };
-                    </script>
-                    <script>
-                        const myChart1 = new Chart( //CHANGE
-                        document.getElementById('temp'), //CHANGE
-                        config1  //CHANGE
-                        );
-                    </script>
-            </div>   
-        </div>
-        <div class="contenu" data-anim="4">
-            <h3>Votre exposition au CO2</h3>
-            <hr>
-            <div id="graph3">
-                <canvas id="CO2"></canvas>
-                    <script>
-                     //CHANGE
-                        var XCO2= <?php echo json_encode($XCO2);?>;    //CHANGE
-                        var YCO2= <?php echo json_encode($YCO2);?>; //CHANGE
-                        const label2 =XCO2;                         //CHANGE labels aussi 
+                            };
+                        </script>
+                        <script>
+                            const myChart2 = new Chart(
+                            document.getElementById('son'),
+                            config2
+                            );
+                        </script>
+                </div>  
+            </div> 
 
-                        const dataCO2 = {  //CHANGE
-                            labels: label2, //CHANGE
-                            datasets: [{
-                                label: 'taux de CO2 en ppm', //CHANGE
-                                backgroundColor: 'rgb(0,204,255)',
-                                borderColor: 'rgb(0,204,255)',
-                                data: YCO2, //CHANGE
-                                fill: true,
-                            }]
-                        };
+            <div class="contenu" data-anim="3">
+                <!--Classe représentant le contenu de l'onglet 3 (il a donc le même attribut que son titre)-->
+                <h3>La température de votre environnement</h3>
+                <hr>
+                <div id="graph3">
+                    <canvas id="temp"></canvas>
+                        <script>
+                            //CHANGE
+                            var Xtemp= <?php echo json_encode($Xtemp);?>;    //CHANGE
+                            var Ytemp= <?php echo json_encode($Ytemp);?>; //CHANGE
+                            const labels =Xtemp;                         //CHANGE labels aussi 
 
-                        const config3 = {  //CHANGE
-                            type: 'line',
-                            data: dataCO2, //CHANGE
-                            options: {
-                                tension: 0.4,
-                                scales: {
-                                    y: {
-                                        beginAtZero: true
+                            const dataTemp = {  //CHANGE
+                                labels: labels, //CHANGE
+                                datasets: [{
+                                    label: 'Température en degré', //CHANGE
+                                    backgroundColor: 'rgb(0,204,255)',
+                                    borderColor: 'rgb(0,204,255)',
+                                    data: Ytemp, //CHANGE
+                                    fill: true,
+                                }]
+                            };
+
+                            const config1 = {  //CHANGE
+                                type: 'line',
+                                data: dataTemp, //CHANGE
+                                options: {
+                                    tension: 0.4,
+                                    scales: {
+                                        y: {
+                                            beginAtZero: true
+                                        }
                                     }
                                 }
-                            }
-                        };
-                    </script>
-                    <script>
-                        const myChart3 = new Chart( //CHANGE
-                        document.getElementById('CO2'), //CHANGE
-                        config3  //CHANGE
-                        );
-                    </script>
-            </div>   
+                            };
+                        </script>
+                        <script>
+                            const myChart1 = new Chart( //CHANGE
+                            document.getElementById('temp'), //CHANGE
+                            config1  //CHANGE
+                            );
+                        </script>
+                </div>   
+            </div>
+            <div class="contenu" data-anim="4">
+                <h3>Votre exposition au CO2</h3>
+                <hr>
+                <div id="graph3">
+                    <canvas id="CO2"></canvas>
+                        <script>
+                        //CHANGE
+                            var XCO2= <?php echo json_encode($XCO2);?>;    //CHANGE
+                            var YCO2= <?php echo json_encode($YCO2);?>; //CHANGE
+                            const label2 =XCO2;                         //CHANGE labels aussi 
 
+                            const dataCO2 = {  //CHANGE
+                                labels: label2, //CHANGE
+                                datasets: [{
+                                    label: 'taux de CO2 en ppm', //CHANGE
+                                    backgroundColor: 'rgb(0,204,255)',
+                                    borderColor: 'rgb(0,204,255)',
+                                    data: YCO2, //CHANGE
+                                    fill: true,
+                                }]
+                            };
 
-        </div>
+                            const config3 = {  //CHANGE
+                                type: 'line',
+                                data: dataCO2, //CHANGE
+                                options: {
+                                    tension: 0.4,
+                                    scales: {
+                                        y: {
+                                            beginAtZero: true
+                                        }
+                                    }
+                                }
+                            };
+                        </script>
+                        <script>
+                            const myChart3 = new Chart( //CHANGE
+                            document.getElementById('CO2'), //CHANGE
+                            config3  //CHANGE
+                            );
+                        </script>
+                </div>   
+            </div>
+
+        </main>
+        
     </div>
     <script src="Chantier.js"></script>
 </body>
