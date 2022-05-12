@@ -220,7 +220,7 @@ body {
         opacity: 1;
     }
 }
-.ongletInactif{/** Espace entre les onglets**/
+.ongletInactif{
     position: relative;
     height: 10vh;
     width: 16vw;
@@ -228,9 +228,7 @@ body {
     border-radius: 10px;
     display: flex;
     background-color: #fbfbfb;
-    /*align-items: center;
-    justify-content: center;
-    text-align: center;*/
+   
 
 }
 .bis{
