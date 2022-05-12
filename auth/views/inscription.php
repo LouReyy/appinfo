@@ -26,7 +26,7 @@ else{
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <meta name="author" content="NoS1gnal"/>
 
-            <link rel="stylesheet" href="../inscription.css" media="screen" type="text/css" />
+            <link rel="stylesheet" href="/appinfo/auth/css/inscription.css" media="screen" type="text/css" />
 
     
             <title>Inscription</title>
@@ -38,7 +38,7 @@ else{
 
         <header>
             <div id ="logoimg">
-            <a  href="/appinfo/homepage/homepage.php"><img src="/appinfo/auth/logo_infinite.png" alt="logo"></a>
+            <a  href="/appinfo/homepage/homepage.php"><img src="/appinfo/auth/img/logo_infinite.png" alt="logo"></a>
             </div>  
             <nav>
                 <ul class="nav__links">
@@ -78,9 +78,9 @@ else{
 
 
 
-            <form action="../model/inscription_traitement.php" method="post">
+            <form action="/appinfo/auth/model/inscription_traitement.php" method="post">
                 <h2 class="text-center">Inscription</h2>   
-                <img class = "forme1"src="../forme1.png"></img>
+                <img class = "forme1"src="/appinfo/auth/img/forme1.png"></img>
     
                 <div class="form-group">
                     <input type="text" name="pseudo" class="form-control" placeholder="Pseudo" required="required" autocomplete="off">

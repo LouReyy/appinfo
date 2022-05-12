@@ -3,7 +3,7 @@
 
 <header>
             <div id ="logoimg">
-            <a  href="/appinfo/homepage/homepage.php"><img src="../auth/logo_infinite.png" alt="logo"></a>
+            <a  href="/appinfo/homepage/homepage.php"><img src="/appinfo/auth/img/logo_infinite.png" alt="logo"></a>
             </div>  
             <nav>
                 <ul class="nav__links">
@@ -46,7 +46,7 @@
                 <div id = container-title>
                 
 
-                    <img id = "forme1"src="forme1.png"></img>
+                    <img id = "forme1"src="/appinfo/auth/img/forme1.png"></img>
 
                     <h1 class="text-center">Bienvenue</h1>
 
@@ -56,7 +56,7 @@
 
     
             
-                <form action="./model/connexion.php" method="post">
+                <form action="/appinfo/auth/model/connexion.php" method="post">
                      <h2 class="text-center">Connexion</h2>       
                         <div class="form-group">
                          <input type="email" name="email" class="form-control" placeholder="Email" required="required" autocomplete="off">
@@ -70,9 +70,9 @@
                     </div>   
                 </form>
 
-                <a id = "button1" href="views/inscription.php">Inscription</a>
+                <a id = "button1" href="/appinfo/auth/views/inscription.php">Inscription</a>
 
-                <a  id = "button2" href="views/edit.php">Mot de passe oublié</a>
+                <a  id = "button2" href="/appinfo/auth/views/edit_password.php">Mot de passe oublié</a>
 
 
                 <div class="login-form">
