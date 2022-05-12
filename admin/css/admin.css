@@ -365,7 +365,7 @@ a.button2{
     position: relative;
     background-color: #c71f09;
     color: white;
-    padding: 10px 10px;
+    padding: 6px 10px;
     border: none;
     cursor: pointer;
     width: 80%;
@@ -385,7 +385,7 @@ a.button3{
   position: relative;
   background-color: #00ccff;
   color: white;
-  padding: 10px 10px;
+  padding: 6px 10px;
   border: none;
   cursor: pointer;
   width: 80%;
