@@ -37,17 +37,17 @@
                 </div> 
                 <!--La syntaxe "data-" permet de rajouter un attribut qui sera utilisé ensuite avec javascript-->
                 <div class="onglets" data-anim="2">
-                    <div class="ongletInactif">
+                    <div class="ongletInactif bis">
                         <h1>Niveau de bruit</h1><p><br><br>Dernière valeur : <?php echo $lastSon; ?> dB</p>
                     </div>   
                 </div> <!--idem-->
                 <div class="onglets" data-anim="3">
-                    <div class="ongletInactif">
+                    <div class="ongletInactif bis">
                         <h1>Température</h1><p><br><br>Dernière valeur : <?php echo $lastTemp; ?> °C</p>
                     </div> 
                 </div> <!--idem-->
                 <div class="onglets" data-anim="4">
-                    <div class="ongletInactif">
+                    <div class="ongletInactif bis">
                         <h1>CO2</h1><p><br><br>Dernière valeur : <?php echo $lastCO2; ?> ppm</p>
                     </div> 
                 </div> <!--idem-->
@@ -56,8 +56,9 @@
         
         <main>
             <div class="contenu activeContenu">
+                <div class="imgStat"></div>
                 <h1>Bienvenue dans la rubrique votre Chantier "pseudo"</h1>
-                <p>Dans cette rubrique vous pouvez consulter les dernières données de votre boîtier grâce aux différents capteurs qu'il contient. Cliquez sur les différentes grandeurs à gauche pour pouvoir les consulter !</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate consequatur repudiandae at sint iusto ea tempore incidunt quam? Necessitatibus commodi dolore blanditiis amet minus nam fugiat cumque aspernatur dolorum deleniti!</p>
             </div>
             <div class="contenu" data-anim="1">
                 <!--Classe représentant le contenu de l'onglet 1 (il a donc le même attribut que son titre)-->
