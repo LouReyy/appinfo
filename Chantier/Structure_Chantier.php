@@ -1,5 +1,34 @@
 <?php include('DataChantier.php')
 ?>
+
+<?php
+
+session_start(); 
+
+//$id= $_SESSION['id'];
+//echo ($id);
+//echo($_SESSION['pseudo']);
+
+
+
+if(isset($_SESSION['user'])){
+        $editprofil ="landing.php";
+        $title = "Profil";
+    }
+    else{
+        $editprofil ="index.php";
+        $title = "Connexion";
+
+    }
+
+    if(isset($_SESSION['type'])){
+        $chantier = "Chantier/Structure_Chantier.php";
+    }
+    else{
+        $chantier = "VotreChantier/votrechantier.php";
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +41,7 @@
 </head>
 <body>
     <div class="container">
-        <header>
+        <header> 
             <nav>
                 <ul class="nav__links">
                 
@@ -26,6 +55,20 @@
 
                 </ul>
             </nav>
+            <div id="logomemo">
+                    <a href="/appinfo/memory/memory.php"><img src="../memory/memoryim.png" alt="memory"></a>
+                </div>
+                <a class="cta" href= "/appinfo/auth/<?php  echo $editprofil?> "> <?php echo $title ?></a>
+
+                <?php
+            
+
+            if(isset($_SESSION['type']) && ($_SESSION['type']) == "Administrateur"){
+                
+                ?>
+                <a class="cta" href= "/appinfo/admin/admin.php">Admin</a>
+
+                <?php }?>
             
         </header>
         <div id="sidebar">

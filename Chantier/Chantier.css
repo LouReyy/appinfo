@@ -9,8 +9,22 @@ body{
     padding: 0;
 }
 
+
+.container{
+  display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1.5fr 1.5fr 0.5fr;
+    grid-template-areas:
+      "header header header header"
+      "sidebar main main main"
+      "sidebar main main main"
+      "sidebar main main main";
+}
+
 header{
-    position: relative;
+  grid-area: header;
+  position: relative;
     height: 100px;
     width: 100%;
     display: flex;
@@ -20,6 +34,25 @@ header{
     background-color: #fbfbfb;
     z-index: 1;
     }
+    main {
+      position: relative;
+      background: white;
+      grid-area: main;
+      
+    }   
+    #sidebar {
+      position: relative;
+      grid-area: sidebar;
+      background: #fbfbfb;
+    }  
+
+
+
+
+
+
+
+
   #logomemo img{
     width: 70px;
     height: 70px;
@@ -98,36 +131,33 @@ header{
 body {
     background: white;
     height: 100%;
-}
-    
-    
-    
+}  
 .noms_onglets{ /**Tous les noms d"onglets dans la bande cette classe est la mère de la classe onglets**/
-    position: absolute;
-    background: #fbfbfb;
-    width: 20%;
-    height : 86%;
-    max-height: 100%;
+  position: absolute;
+  top: 2.5vh;
+  left: 1vw;
 
         
 }
 .onglets { /**Chaque onglet particulier sauf le premier**/
     /**Point de sauvegarde**/
-    margin-left: 10px;
     cursor: pointer;
     
 }
     
     
 .contenu {
-    position: absolute;
-    top: 17%;
-    left: 25%;
-    background-color: #fbfbfb;
-    opacity: 0;
-    height: 80%;
-    width: 70%;
-    border-radius: 10px;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  height: 74vh;
+  width: 60vw;
+  background-color: #fbfbfb;
+  opacity: 0;
+  border-radius: 10px;
+  /*box-shadow: 0 15px 50px rgba(0,0,.2);*/
+  padding: 10px;
 }
 
 
@@ -143,6 +173,22 @@ body {
 }
 .contenu p {
     padding: 20px;
+}
+
+#sidebar h1{
+  position: absolute;
+  font-size: 2.2vh;
+  margin-left: 0.5vw;    
+  font-weight: 1000;
+  height: 3vh;
+  width: 14vw;
+}
+#sidebar p{
+  position: absolute;
+  top: 1vh;
+  margin-left: 0.5vw;
+  font-size: 2vh;
+
 }
     
 .active {
@@ -164,80 +210,6 @@ body {
     font-family: "Quicksand";
   
   }
-  .row{
-    flex-direction: row;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  ul{
-    list-style:none;
-  }
-  
-  .footer{
-    background-color: rgb(0, 217, 255);
-    padding: 75px 0;
-  
-  }
-  .footer-col{
-    width: 25%;
-    padding:0 5%;
-  
-  }
-  .footer-col h4{
-    font-size:18px;
-    color:aliceblue;
-    text-transform: capitalize;
-    margin-bottom: 35px;
-    font-weight: 500;
-    position:relative;
-    
-  }
-  .footer-col h4::before{
-    content: '';
-    position:absolute;
-    left:0;
-    bottom: -10px;
-    background-color:blue;
-    height: 2px;
-    box-sizing:border-box;
-    width: 50px;
-  }
-  .footer-col ul li:not(:last-child){
-    margin-bottom: 10px;
-  }
-  .footer-col ul li a{
-    font-size: 16px;
-    text-transform: capitalize;
-    text-decoration: none;
-    font-weight: 300;
-    color:aliceblue;
-    display:block;
-    transition: all 0,3s ease;
-  }
-  .footer-col ul li a:hover{
-    color:rgba(22, 61, 190, 0.747);
-    padding-left: 7px;
-  
-  }
-  .footer-col .logo{
-    width: 190px;
-    height: 190px;
-  }
-  .footer-col .social-links a{
-    display: inline-block;
-    height: 40px;
-    width: 40px;
-    background-color: rgba(22, 61, 190, 0.747);
-    margin-right: 0 10px 10px 0;
-    text-align:center;
-    line-height:40px;
-    border-radius: 50px;
-    color: rgb(255, 249, 249);
-  }
-  .footer-col .social-links a:hover{
-    color:rgba(22, 61, 190, 0.747);
-    background-color: aliceblue;
-  }
 
   
 @keyframes fade {
@@ -249,41 +221,144 @@ body {
     }
 }
 .ongletInactif{/** Espace entre les onglets**/
-    margin-top: 50px;
-    height: 80px;
-    width: 250px;
-    border: solid grey 3px;
+    position: relative;
+    height: 10vh;
+    width: 16vw;
+    border: solid grey 2px;
     border-radius: 10px;
     display: flex;
-    align-items: center;
+    background-color: #fbfbfb;
+    /*align-items: center;
     justify-content: center;
+    text-align: center;*/
+
 }
-.Actif{
-    margin-top: 50px;
-    height: 80px;
-    width: 250px;
-    border: solid grey 3px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.bis{
+  margin-top: 7vh;
 }
-.Actif h1{
-    margin-left: 50px;
-}
-#graph1{
-    height: 90%;
-    width: 95%;
-    margin-left: 2px;
-}
-#graph2{
-    height: 90%;
-    width: 95%;
-    margin-left: 2px;
-}
-#graph3{
-    height: 90%;
-    width: 95%;
-    margin-left: 2px;
+.imgStat{
+  width: 250px;
+  height: 250px;
+  background: url(https://www.statplustraining.tn/wp-content/uploads/2017/09/statistique-200x250.png);
+  background-size: 100% 100%;
+  border-radius: 50%;
+  float: left;
+  shape-outside: circle();
+  margin: 10px;
+
+
 }
 
+
+
+
+
+
+/*Responsive*/
+
+@media only screen and (max-width: 1050px) {
+  .container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 0.6fr 2fr;
+    grid-template-areas:
+      "header header header header"
+      "sidebar sidebar sidebar sidebar"
+      "main main main main"
+      ;
+  }
+  .noms_onglets{
+    display: flex;
+    flex-direction: row;
+  }
+  .bis{
+    margin-top: 0vh;
+  }
+  .ongletInactif{
+    width: 23vw;
+    border: solid grey 1px;
+  }
+  #sidebar h1{
+    font-size: 14px;
+  }
+  #sidebar p{
+    font-size: 12px;
+  }
+}
+
+
+
+
+.row{
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+}
+ul{
+  list-style:none;
+}
+
+.footer{
+  background-color: rgb(0, 217, 255);
+  padding: 75px 0;
+
+}
+.footer-col{
+  width: 25%;
+  padding:0 5%;
+
+}
+.footer-col h4{
+  font-size:18px;
+  color:aliceblue;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position:relative;
+  
+}
+.footer-col h4::before{
+  content: '';
+  position:absolute;
+  left:0;
+  bottom: -10px;
+  background-color:blue;
+  height: 2px;
+  box-sizing:border-box;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child){
+  margin-bottom: 10px;
+}
+.footer-col ul li a{
+  font-size: 16px;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 300;
+  color:aliceblue;
+  display:block;
+  transition: all 0,3s ease;
+}
+.footer-col ul li a:hover{
+  color:rgba(22, 61, 190, 0.747);
+  padding-left: 7px;
+
+}
+.footer-col .logo{
+  width: 190px;
+  height: 190px;
+}
+.footer-col .social-links a{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(22, 61, 190, 0.747);
+  margin-right: 0 10px 10px 0;
+  text-align:center;
+  line-height:40px;
+  border-radius: 50px;
+  color: rgb(255, 249, 249);
+}
+.footer-col .social-links a:hover{
+  color:rgba(22, 61, 190, 0.747);
+  background-color: aliceblue;
+}
