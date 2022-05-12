@@ -29,14 +29,14 @@ require_once("../model/config.php");
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/appinfo/admin/css/ajouter_user.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="/appinfo/auth/css/admin_verif.css" media="screen" type="text/css" />
     <title>Ajout d'un Administrateur</title>
 </head>
 <body>
 
     <header>
         <div id ="logoimg">
-            <a  href="/appinfo/homepage/homepage.php"><img src="/appinfo/auth/logo_infinite.png" alt="logo"></a>
+            <a  href="/appinfo/homepage/homepage.php"><img src="/appinfo/auth/img/logo_infinite.png" alt="logo"></a>
         </div>  
             <nav>
                 <ul class="nav__links">
@@ -75,15 +75,15 @@ require_once("../model/config.php");
     </header>
 
 
-    <div id="container">
+<div id="container">
 
-<div class="login-form">
-<h1>Ajouter un Administrateur</h1>
-    <img id = "forme1"src="../forme1.png"></img>
-</div>
+    <div class="login-form">
+        <h1>Ajouter un Administrateur</h1>
+        <img id = "forme1"src="/appinfo/auth/img/forme1.png"></img>
+    </div>
       <p> Renseignez son adresse email : </p>
         <div class="form-group">
-            <form action="../model/add_admin.php" method="POST">
+            <form action="/appinfo/auth/model/add_admin.php" method="POST">
                 <input type="email" name="email" class="form-control" placeholder="Email" value = "<?php echo $email ?>"/>
                 <br />
                 <button type="submit" class="btn btn-primary btn-lg m-3">Modifier</button>
@@ -105,6 +105,14 @@ require_once("../model/config.php");
                             </div>
                         <?php
                         break;
+                        case 'user':
+                            ?>
+                                <div class="alert alert-success">
+                                    <strong>Erreur</strong> L'utilisateur n'existe pas !
+                                  
+                                </div>
+                            <?php
+                            break;
                     }
                 }
                         ?>
@@ -114,96 +122,6 @@ require_once("../model/config.php");
   </div>
 </div>
 </div>
-<style>
-
-#container{
-align-items: center;
-position: absolute;
-display: flex;
-margin-top:5%;
-width: 80%;
-height: 75%;
-margin-left: 10%;
-flex-direction: column;
-text-align: center;
-}
-
-.login-form {
-padding-bottom: 4%;
-position: relative;
-margin-top:0;
-width: 100%;
-font-family: "Quicksand";
-}
-
-h1{
-position: relative;
-font-size: 3em;
-margin-top:0;
-
-}   
-
-#forme1{
-position: relative;
-width: 45%;
-height: 20%;
-}
-
-p{
-position: relative;
-font-size: 40px;
-text-align: center;
-margin: 0;
-
-}
-
-.form-group {
-margin-top:5%;
-width:100%;
-margin-left: 0;
-text-align: center;
-justify-content: center;
-
-}
-
-.msg-form{
-  position: relative;
-  height: auto;;
-  font-family: "Quicksand";
-  margin-top: 0;
-  
-}
-
-.alert{
-  position: relative;
-  width: 800px;
-  height: 30px;
-  color : red;
-  font-family: "Quicksand";
-  font-size: 1.5em;
-
-}
-
-
-input[type=text], input[type=email] {
-flex-wrap: nowrap;
-font-size: 30px;
-width: 50%;
-height:40%;
-border-radius: 60px;
-justify-self: center;
-}
-
-button[type=submit] {
-width: 40%; 
-height : 40%;
-margin-top: 2%;
-border-radius: 60px ;
-font-size: 25px;
-}
-
-
-</style>
 
 </div>
 </body>

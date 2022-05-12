@@ -8,7 +8,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <meta name="author" content="NoS1gnal"/>
 
-            <link rel="stylesheet" href="/appinfo/auth/index.css" media="screen" type="text/css" />
+            <link rel="stylesheet" href="/appinfo/auth/css/index.css" media="screen" type="text/css" />
             
             <title>Connexion</title>
         </head>
@@ -24,7 +24,7 @@ if(isset($_SESSION['user'])){
         $title = "Profil";
     }
     else{
-        $editprofil ="index.php";
+        $editprofil ="/appinfo/auth/views/landing.php";
         $title = "Connexion";
 
     }

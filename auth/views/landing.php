@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    require_once './model/config.php'; 
+    require_once '../model/config.php'; 
 
 
     if(!isset($_SESSION['user'])){
@@ -11,7 +11,7 @@
         $title = "Connexion";
     }
     else{
-        $editprofil ="landing.php";
+        $editprofil ="views/landing.php";
         $title = "Profil";
     }
     if(isset($_SESSION['type'])){
@@ -26,14 +26,14 @@
 
     
    
-    if(file_exists( "./profil_picture/" . hash('sha256',  $data['email']). ".jpg")){
+    if(file_exists( "../profil_picture/" . hash('sha256',  $data['email']). ".jpg")){
 
-        $file_name = "./profil_picture/" . hash('sha256',  $data['email'] );
+        $file_name = "/appinfo/auth/profil_picture/" . hash('sha256',  $data['email'] );
 
     }
 
     else{
-        $file_name = "./pp";
+        $file_name = "/appinfo/auth/img/pp";
 
     }
 
@@ -47,7 +47,7 @@
     
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="edit.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="/appinfo/auth/css/edit_profil.css" media="screen" type="text/css" />
 
 
     
@@ -59,7 +59,7 @@
 
   <header>
             <div id ="logoimg">
-            <a  href="/appinfo/homepage/homepage.php"><img src="../auth/logo_infinite.png" alt="logo"></a>
+            <a  href="/appinfo/homepage/homepage.php"><img src="/appinfo/auth/img/logo_infinite.png" alt="logo"></a>
             </div>  
             <nav>
                 <ul class="nav__links">
@@ -73,7 +73,7 @@
                 </ul>
             </nav>
             <div id="logomemo">
-                <a href="/appinfo/memory/memory.php"><img src="../memory/memoryim.png" alt="memory"></a>
+                <a href="/appinfo/memory/memory.php"><img src="/appinfo/memory/memoryim.png" alt="memory"></a>
             </div>
             <a class="cta" href= "/appinfo/auth/<?php  echo $editprofil?> "> <?php echo $title ?></a>
 
@@ -90,7 +90,7 @@
 
     <div id = "title">
              <titre1>Modifier votre profil</titre1>
-             <img class = "forme1"src="forme1.png"></img>
+             <img class = "forme1"src="/appinfo/auth/img/forme1.png"></img>
     </div>
 
 
@@ -99,7 +99,7 @@
         
     <div id = gauche>
 
-        <form action="../auth/model/modify_profil.php" method="post">      
+        <form action="/appinfo/auth/model/modify_profil.php" method="post">      
             <div class="form-group">
             <t>Pseudo : </t><input type="text" name="pseudo" class="form-control" placeholder="Pseudo" value= "<?php echo $data['pseudo']; ?>"  required="required" autocomplete="off">
             </div>
@@ -132,7 +132,7 @@
             <div class="button1">
                 <button type="submit" class="btn_gauche">Modifier</button>
 
-                <a class="button" href="./model/deconnexion.php" >Déconnexion</a> 
+                <a class="button" href="/appinfo/auth/model/deconnexion.php" >Déconnexion</a> 
 
             </div>   
 
@@ -188,16 +188,16 @@
     </div>
 
 
-    <img class = line src = ../admin/img/line4.png>
+    <img class = line src = /appinfo/admin/img/line4.png>
 
 
 
 
         <div id = pp>
 
-            <img class = "avatar"src="./<?php echo $file_name; ?>.jpg"></img>
+            <img class = "avatar"src="<?php echo $file_name; ?>.jpg"></img>
 
-            <form class = "form-img" method="POST" action = "./model/modify_profilpic.php" enctype="multipart/form-data" >
+            <form class = "form-img" method="POST" action = "/appinfo/auth/model/modify_profilpic.php" enctype="multipart/form-data" >
 
                 <label class="file">
                     <input type="file" name = "picture" id="avatar"   accept="image/jpg">
