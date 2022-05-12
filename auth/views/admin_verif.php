@@ -116,17 +116,7 @@ require_once("../model/config.php");
 </div>
 <style>
 
-#container{
-align-items: center;
-position: absolute;
-display: flex;
-margin-top:5%;
-width: 80%;
-height: 75%;
-margin-left: 10%;
-flex-direction: column;
-text-align: center;
-}
+
 
 .login-form {
 padding-bottom: 4%;
