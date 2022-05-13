@@ -13,40 +13,142 @@ function shuffleArray(list){
 shuffleArray(listeImages);
 
 
-
-
-
 for(i=0;i<jeux.length;i++){
-
     jeux[i].src=listeImages[i];
-
-
 }
-var count_click =0;
+var count_click =10;
+const coup = document.querySelector(".coups-display");
+coup.innerHTML = `${count_click}`;
+coup.innerText ="salut";
+
+listsrc=[];
+listjeu=[];
+listjeu1=[];
+listpos=[];
+
+    jeux2.forEach(jeu => {
+        console.log(jeu.id);
 
 
-  
-        jeux2.forEach(jeu => {
  
 
     jeu.addEventListener('click',()=>{
-        jeu.style.visibility="hidden";
 
-      
-        src = jeu.src;
-   
+
+        listjeu.push(jeu.id);
+        console.log(listjeu);
+
+
+        jeu.style.opacity="0";   
         count_click += 1;
-        console.log(count_click,src);
 
-        if(count_click >= 3){
-            jeu.style.transition='all 10s ease-out';
-            jeu.style.visibility="visible";
+        let rect = jeu.getBoundingClientRect();
+
+        listpos.push(rect.x);
+        listpos.push(rect.y);
+
+
+        jeux.forEach(jeu1 => {
+              
+
+
+
+            let rect2 = jeu1.getBoundingClientRect();
+        
+            if(rect2.x == rect.x && rect2.y == rect.y){
+                src = jeu1.src;
+                listsrc.push(src);
+                listjeu1.push(jeu1.id);
+                console.log(listjeu1);
+                console.log(listsrc);
+
+                
+               
+            }
+         
+
+           
+
+                if(listsrc[0] == listsrc[1] && count_click == 2){
+                    
+                    console.log("c'est win");
+
+
+
+                  var jeuid0 = document.getElementById(listjeu1[0]);
+                  var jeuid1= document.getElementById(listjeu1[1]);
+
+                  var jeu3 = document.getElementById(listjeu[0]);
+                  var jeu2= document.getElementById(listjeu[1]);
+
+                  console.log(jeu3);
+                  console.log(jeu2);
+
+                  jeu3.style.opacity = "0";
+                  jeu2.style.opacity = "0";
+
+                    jeuid0.style.opacity = "0.5";
+                    jeuid1.style.opacity = "0.5";
+                    
+                }
+
+
+                else if(count_click == 2){
+
+                 
+
+             
+                    for(i=0;i<listjeu.length;i++){
+                    
+                     var jeu3 = document.getElementById(listjeu[0]);
+                    var jeu2= document.getElementById(listjeu[1]);
+
+                    
+            
+                    function bord(){
+                        jeu3.style.opacity = "1";
+                        jeu2.style.opacity = "1";
+                        }
     
-        }
+    
+                    
+                       
+
+                    }
+
+                
+                  
+                   
+
+                  
+                    
+                 
+             
+                }
+                if(listsrc.length==2){
+                    listsrc=[];
+                    count_click = 0;
+                    listjeu=[];
+                    listjeu1=[];
+                    setTimeout(bord,2000);
+
+                    
+                }
+               
+
+             
+                
+
+               
+                
+
+                
+              
 
 
+        })
 
-   
+
 })
 
 
@@ -55,6 +157,11 @@ var count_click =0;
 });
 
 
+
+
+
+
+    
 
 
 
