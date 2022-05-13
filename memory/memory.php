@@ -60,7 +60,7 @@ if(isset($_SESSION['user'])){
 <main>
 <h1> Memory <hr/></h1>
 
-<div id="jeu" align="center">
+<div id="jeu">
     <table id="tabledejeu">
            <tr>
             <td><img src="face.png">
@@ -98,6 +98,7 @@ if(isset($_SESSION['user'])){
         var cartesRetournees=[];
         var nbPairesTrouvees=0;
         var imgCartes=document.getElementById("jeu").getElementsByTagName("img");
+        
         
         function majAffichage(){ /*Mise a jour de l'affichage du jeu*/
 	            
