@@ -22,19 +22,35 @@ for(i=0;i<jeux.length;i++){
 
 
 }
+var count_click =0;
 
-jeux2.forEach(jeu => {
+
+  
+        jeux2.forEach(jeu => {
  
-
-
-    console.log(i);
 
     jeu.addEventListener('click',()=>{
         jeu.style.visibility="hidden";
+
+      
+        src = jeu.src;
+   
+        count_click += 1;
+        console.log(count_click,src);
+
+        if(count_click >= 3){
+            jeu.style.transition='all 10s ease-out';
+            jeu.style.visibility="visible";
     
+        }
 
 
-    })
+
+   
+})
+
+
+    
 
 });
 

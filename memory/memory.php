@@ -63,7 +63,7 @@ if(isset($_SESSION['user'])){
 
 <div id = container align ="center">
 
-<div id="jeu2" >
+<div id="jeu2">
     <table id="tabledejeu2">
            <tr>
             <td><img src="face.png" class = "img2">
