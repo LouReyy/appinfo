@@ -82,8 +82,8 @@
                             
                             
 
-                            
-                            $insert = $bdd->prepare('INSERT INTO utilisateurs(pseudo, email, password, token,type) VALUES(:pseudo, :email, :password, :token,:type)');
+                                                        
+                            $insert = $bdd->prepare('INSERT INTO `utilisateurs`(`pseudo`, `email`, `password`, `token`, `type`) VALUES (:pseudo, :email, :password, :token, :type)');
                             $insert->execute(array(
                                 'pseudo' => $pseudo,
                                 'email' => $email,

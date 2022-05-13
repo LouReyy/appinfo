@@ -1,32 +1,4 @@
 <?php include('DataChantier.php') ?>
-<?php
-
-session_start(); 
-
-//$id= $_SESSION['id'];
-//echo ($id);
-//echo($_SESSION['pseudo']);
-
-
-
-if(isset($_SESSION['user'])){
-    $editprofil ="views/landing.php";
-    $title = "Profil";
-    }
-    else{
-        $editprofil ="index.php";
-        $title = "Connexion";
-
-    }
-
-    if(isset($_SESSION['type'])){
-        $chantier = "Chantier/PageChantier.php";
-    }
-    else{
-        $chantier = "VotreChantier/votrechantier.php";
-    }
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -104,8 +76,13 @@ if(isset($_SESSION['user'])){
         <main>
             <div class="contenu activeContenu">
                 <div class="imgStat"></div>
-                <h1>Bienvenue dans la rubrique votre Chantier "pseudo"</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate consequatur repudiandae at sint iusto ea tempore incidunt quam? Necessitatibus commodi dolore blanditiis amet minus nam fugiat cumque aspernatur dolorum deleniti!</p>
+                <h2>Statistiques de <?php echo $pseudo; ?></h2>
+                <p1><br><br>Dans cette rubrique vous pouvez consulter les différentes statistiques concernant votre chantier, grâce aux différents capteurs disposés sur la HealthBox.</p1>
+                <h4><br><br><br><br><br>Seuils :</h4>
+                <p><br>Fréquence cardiaque : Si votre fréquence cardiaque est supérieur à 80 bpm, vous avez soit été exposé à une situation de stress ou à un effort important.</p>
+                <p><br>Niveau de Bruit : Les sons deviennent nocifs pour l'oreille humaine à partir de 90 dB.</p>
+                <p><br>Température : Donnée familière.</p>
+                <p><br>CO2 : Considère exposé à la pollution à partir de 800 ppm de CO2 dans l'air.</p>
             </div>    
             <div class="contenu" data-anim="1">
                 <!--Classe représentant le contenu de l'onglet 1 (il a donc le même attribut que son titre)-->
@@ -116,7 +93,7 @@ if(isset($_SESSION['user'])){
                     <canvas id="card"></canvas>
                     <script> 
                         var Xcard= <?php echo json_encode($Xcard);?>;
-                        var Ycard= <?php echo json_encode($Ycard);?>; 
+                        var Ycard= <?php echo json_encode($Ycard);?>;
                         const hor =Xcard;
 
                         const data = {
