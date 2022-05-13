@@ -60,11 +60,72 @@ if(isset($_SESSION['user'])){
 <main>
 <h1> Memory <hr/></h1>
 
-<div id="jeu">
-<img src="face.png"><img src="face.png"><img src="face.png"><img src="face.png"><img src="face.png"><img src="face.png"><img src="face.png"><img src="face.png"><img src="face.png"><img src="face.png"><img src="face.png"><img src="face.png"><img src="face.png"><img src="face.png"><img src="face.png"><img src="face.png"><img src="face.png"><img src="face.png"><img src="face.png"><img src="face.png">
+<div id="jeu" align="center">
+    <table id="tabledejeu">
+           <tr>
+            <td><img src="face.png">
+            <td><img src="face.png">
+            <td><img src="face.png">
+            <td><img src="face.png">
+            <td><img src="face.png">
+           </tr>
+           <tr>
+            <td><img src="face.png">
+            <td><img src="face.png">
+            <td><img src="face.png">
+            <td><img src="face.png">
+            <td><img src="face.png">
+           </tr>
+           <tr>
+            <td><img src="face.png">
+            <td><img src="face.png">
+            <td><img src="face.png">
+            <td><img src="face.png">
+            <td><img src="face.png">
+           </tr>
+           <tr>
+            <td><img src="face.png">
+            <td><img src="face.png">
+            <td><img src="face.png">
+            <td><img src="face.png">
+            <td><img src="face.png">
+           </tr>
+    </table>
+    
+    <script>
+        var motifsCartes=[1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10];
+        var etatsCartes=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]; 
+        var cartesRetournees=[];
+        var nbPairesTrouvees=0;
+        var imgCartes=document.getElementById("jeu").getElementsByTagName("img");
+        
+        function majAffichage(){ /*Mise a jour de l'affichage du jeu*/
+	            
+	    }
+
+
+        function Verification(){ /*Verification des cartes, des paires etc */
+
+        }
+        
+        function Initialisation(){ /* Initialise le jeu */
+
+        }
+
+        function Rejouer(){ /*Boutton pour rejouer au jeu */
+
+        }
+
+    </script>
+
+    <h3> Nombre de coups:</h3>
+    <h3> Temps: </h3>
 </div>
 
 <h2> Regle du jeu <hr></h2>
+<p>Vous devez retrouver toutes les paires du jeu!</p>
+<p>Pour cela retourner 2 cartes et si elles sont identiques, vous avez former une paire. Sinon, les cartes se retournent et vous devez repiocher.</p>
+<p>Mais attention, n'oubliez pas les positions des cartes que vous avez deja vu!</p>
 </main>
 
 </body>
