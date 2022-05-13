@@ -64,7 +64,6 @@ if(isset($_SESSION['user'])){
     <table id="tabledejeu">
            <tr>
             <td><img src="face.png" class = img1>
-            <img src="1.jpg" class = img2>
             </td>
             
 

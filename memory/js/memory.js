@@ -39,7 +39,7 @@ jeu.forEach(jeu => {
     jeu.addEventListener('click',()=>{
 
         jeu.style.visibility ="hidden";
-        jeu.style.
+        jeu.src = "1.jpg";
 
     
     
