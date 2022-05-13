@@ -63,11 +63,11 @@ if(isset($_SESSION['user'])){
 <div id="jeu">
     <table id="tabledejeu">
            <tr>
-            <td><img src="face.png" class = img1>
+            <td><img src="face.png" class = "img1">
             </td>
             
 
-            <td><img src="face.png" class = img1>
+            <td><img src="face.png" class = "img1">
             <td><img src="face.png" class = img1>
             <td><img src="face.png" class = img1>
             <td><img src="face.png" class = img1>

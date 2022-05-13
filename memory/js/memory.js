@@ -1,52 +1,39 @@
-const jeu = document.querySelectorAll(".img1");
-
-
-positionX =[];
-positionY=[];
+const jeux = document.querySelectorAll(".img1");
 
 
 
-jeu.forEach(jeu => {
 
-    function elementPosition (a) {
-        var b = a.getBoundingClientRect(jeu);
-        return {
-          clientX: a.offsetLeft,
-          clientY: a.offsetTop,
-          viewportX: (b.x || b.left),
-          viewportY: (b.y || b.top)
-        }
-      }
+listeImages = ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg","1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg","7.jpg","8.jpg","9.jpg","10.jpg"];
 
-    
-    jeu.style.backgroundColor ='red';
+function shuffleArray(list){
+    list.sort(()=> Math.random()-0.5)
+}
 
-
-    var positions = elementPosition(jeu);
-
- 
-
-   positionX.push(positions.viewportX);
-   positionY.push(positions.viewportY);
-
-   console.log(positionX);
+shuffleArray(listeImages);
 
 
 
 
 
+for(i=0;i<jeux.length;i++){
 
-    jeu.addEventListener('click',()=>{
+    jeux[i].src=listeImages[i];
 
-        jeu.style.visibility ="hidden";
-        jeu.src = "1.jpg";
+    console.log(jeux[i]);
+
+
+    jeux[i].addEventListener('click',()=>{
+
+        jeux[i].style.visibility="hidden";
+
+
+})
+};
+
 
     
     
-    })
     
-    
-});
 
 
 
