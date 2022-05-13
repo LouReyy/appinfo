@@ -1,4 +1,4 @@
-<?php include('DataChantier.php') ?>
+<?php include('model/DataChantier.php') ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -263,6 +263,6 @@
         </main>
         
     </div>
-    <script src="Chantier.js"></script>
+    <script src="js/Chantier.js"></script>
 </body>
 </html>
