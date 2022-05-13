@@ -60,13 +60,46 @@ if(isset($_SESSION['user'])){
 <main>
 <h1> Memory <hr/></h1>
 
-<div id="jeu">
+
+<div id = container align ="center">
+
+<div id="jeu2" >
+    <table id="tabledejeu2">
+           <tr>
+            <td><img src="face.png" class = "img2">
+            <td><img src="face.png" class = "img2">
+            <td><img src="face.png" class = img2>
+            <td><img src="face.png" class = img2>
+            <td><img src="face.png" class = img2>
+           </tr>
+           <tr>
+            <td><img src="face.png" class = img2>
+            <td><img src="face.png" class = img2>
+            <td><img src="face.png" class = img2>
+            <td><img src="face.png" class = img2>
+            <td><img src="face.png" class = img2>
+           </tr>
+           <tr>
+            <td><img src="face.png" class = img2>
+            <td><img src="face.png" class = img2>
+            <td><img src="face.png" class = img2>
+            <td><img src="face.png" class = img2>
+            <td><img src="face.png" class = img2>
+           </tr>
+           <tr>
+            <td><img src="face.png" class = img2>
+            <td><img src="face.png" class = img2>
+            <td><img src="face.png" class = img2>
+            <td><img src="face.png" class = img2>
+            <td><img src="face.png" class = img2>
+           </tr>
+    </table>
+</div>
+
+<div id="jeu" >
     <table id="tabledejeu">
            <tr>
             <td><img src="face.png" class = "img1">
-            </td>
-            
-
             <td><img src="face.png" class = "img1">
             <td><img src="face.png" class = img1>
             <td><img src="face.png" class = img1>
@@ -98,6 +131,8 @@ if(isset($_SESSION['user'])){
     
     <h3> Nombre de coups:</h3>
     <h3> Temps: </h3>
+</div>
+
 </div>
 
 <h2> Regle du jeu <hr></h2>

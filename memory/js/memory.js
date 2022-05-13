@@ -1,4 +1,5 @@
 const jeux = document.querySelectorAll(".img1");
+const jeux2 = document.querySelectorAll(".img2");
 
 
 
@@ -19,16 +20,26 @@ for(i=0;i<jeux.length;i++){
 
     jeux[i].src=listeImages[i];
 
-    console.log(jeux[i]);
+
+}
+
+jeux2.forEach(jeu => {
+ 
 
 
-    jeux[i].addEventListener('click',()=>{
+    console.log(i);
 
-        jeux[i].style.visibility="hidden";
+    jeu.addEventListener('click',()=>{
+        jeu.style.visibility="hidden";
+    
 
 
-})
-};
+    })
+
+});
+
+
+
 
 
     
