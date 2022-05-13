@@ -20,7 +20,7 @@ jeu.forEach(jeu => {
 
     
     jeu.style.backgroundColor ='red';
-    
+
 
     var positions = elementPosition(jeu);
 
@@ -39,6 +39,7 @@ jeu.forEach(jeu => {
     jeu.addEventListener('click',()=>{
 
         jeu.style.visibility ="hidden";
+        jeu.style.
 
     
     
