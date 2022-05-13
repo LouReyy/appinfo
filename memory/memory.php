@@ -3,8 +3,8 @@
 session_start(); 
 
 if(isset($_SESSION['user'])){
-        $editprofil ="landing.php";
-        $title = "Profil";
+    $editprofil ="views/landing.php";
+    $title = "Profil";
     }
     else{
         $editprofil ="index.php";
@@ -28,7 +28,7 @@ if(isset($_SESSION['user'])){
 <div id = "container1">
 <header>
             <div id ="logoimg">
-            <a  href="/appinfo/homepage/homepage.php"><img src="../auth/logo_infinite.png" alt="logo"></a>
+            <a  href="/appinfo/homepage/homepage.php"><img src="/appinfo/auth/img/logo_infinite.png" alt="logo"></a>
             </div>  
             <nav>
                 <ul class="nav__links">

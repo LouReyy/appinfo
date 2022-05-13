@@ -31,13 +31,13 @@ require_once("../model/config.php");
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="/appinfo/auth/index.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="/appinfo/auth/css/password_change.css" media="screen" type="text/css" />
   </head>
   <body>
       <div id = container1>
       <header>
             <div id ="logoimg">
-            <a  href="/appinfo/homepage/homepage.php"><img src="/appinfo/auth/logo_infinite.png" alt="logo"></a>
+            <a  href="/appinfo/homepage/homepage.php"><img src="/appinfo/auth/img/logo_infinite.png" alt="logo"></a>
         </div>  
             <nav>
                 <ul class="nav__links">
@@ -67,7 +67,7 @@ require_once("../model/config.php");
         <div id="container">
 
             <div class="login-form">
-                <img id = "forme1"src="../forme1.png"></img>
+                <img id = "forme1"src="/appinfo/auth/img/forme1.png"></img>
                   <h1>Réinitialiser mon mot de passe</h1>
             </div>
                   <p> Renseignez vos nouvelles informations</p>
@@ -86,16 +86,7 @@ require_once("../model/config.php");
       </div>
       <style>
 
-        #container{
-            align-items: center;
-            position: absolute;
-            display: flex;
-            margin-top:10%;
-            width: 80%;
-            height: 75%;
-            margin-left: 10%;
-            flex-direction: column;
-        }
+
 
         .login-form {
             padding-bottom: 4%;

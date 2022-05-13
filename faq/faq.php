@@ -1,40 +1,8 @@
 <?php
 
-session_start(); 
-require_once '../auth/model/config.php'; 
+include('model/paramfaq.php')
 
 
-
-
-if(isset($_SESSION['user'])){
-
-        $editprofil ="landing.php";
-        $title = "Profil";
-
-}
-
-
-else{
-    $editprofil ="index.php";
-    $title = "Connexion";
-}
-
-if(isset($_SESSION['type'])){
-    $div = "newquestion";
-    $chantier = "Chantier/PageChantier.php";
-
-}
-
-
-else{
-   
-    $div = "none";
-    $chantier = "VotreChantier/votrechantier.php";
-
-}
-
-
- 
 ?>
 
 <!DOCTYPE html>
@@ -43,235 +11,34 @@ else{
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="faq.css" media="screen" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <link rel="stylesheet" href="/appinfo/faq/css/faq.css" media="screen" type="text/css" />
     <title>FAQ</title>
 </head>
 <body>
 
 <div id = "container1">
-<header>
-            <div id ="logoimg">
-            <a  href="/appinfo/homepage/homepage.php"><img src="../auth/logo_infinite.png" alt="logo"></a>
-            </div>  
-            <nav>
-                <ul class="nav__links">
-                    <li><a href="/appinfo/homepage/homepage.php">Accueil</a></li>
-                    <li><a href="/appinfo/<?php echo $chantier ?>" >Votre chantier</a></li>
-                    <li><a href="/appinfo/forum/forum.php">Forum</a></li>
-                    <li><a href="/appinfo/faq/faq.php">FAQ</a></li>
-                    <li><a href="/appinfo/contact/contact_essai.php">Contactez-nous</a></li>
-                    <li><a href="/appinfo/notre_solution/notre_solution.php">Notre solution</a></li>
-                </ul>
-            </nav>
-            <div id="logomemo">
-                <a href="/appinfo/memory/memory.php"><img src="../memory/memoryim.png" alt="memory"></a>
-            </div>
-            <a class="cta" href= "/appinfo/auth/<?php  echo $editprofil?> "> <?php echo $title ?></a>
 
-            <?php
-           
+    <?php
+        include("views/header.php");
 
-           if(isset($_SESSION['type']) && ($_SESSION['type']) == "Administrateur"){
-            
-            ?>
-            <a class="cta" href= "/appinfo/admin/admin.php">Admin</a>
+        include("views/container1faq.php");
 
-            <?php }?>
-        </header>
+        include("views/affichage_question.php");
 
-    <div id = containercentre>
-        <h1>Foire Aux Questions (FAQ) </h1>
-        <hr>
-    </div>
+    ?>
+
+</div>
+</div>
+</div>
 
 
-        <div id = "<?php echo $div ?>">
-        
+</body>
 
-             <form action="envoi_question.php" method="post">
-
-                <input type="topic" name="topic" class="topic_question" placeholder="Ecrivez votre Question" required="required" autocomplete="off"> </input>
-
-                <textarea type="content" name="content" class="content_question" placeholder="Content" required="required" autocomplete="off"> </textarea>
-
-                <button type = submit >Envoyer</button>
-
-            </form>
-
-        </div>
-
-        <div class="msg-form">
-                <?php 
-                if(isset($_GET['reg_err']))
-                {
-                    $err = htmlspecialchars($_GET['reg_err']);
-
-                    switch($err)
-                    {
-                        case 'success':
-                        ?>
-                            <div class="alert alert-success">
-                                <strong>Succès</strong> Question postée !
-                            </div>
-                        <?php
-                        break;
-
-                        case 'notconnected':
-                        ?>
-                            <div class="alert alert-danger">
-                                <strong>Erreur</strong> Vous devez être connecté en mode Admin pour poster une question
-                            </div>
-                            <?php 
-                            break;
-                            case 'supp':
-                                ?>
-                                    <div class="alert alert-supp">
-                                        <strong>Succès</strong> La question a bien été supprimée
-                                    </div>
-                                <?php
-
-                    }
-                }
-                ?>
-            </div>
-
-   
-
-        <div id = "droite">
-
-
-        <form method ="GET">
-        <input id="searchbar"  type="text" name="search" placeholder="Recherche...">
-        
-        </form>
-
-
-        <?php
-
-        
-
-
-if(isset($_GET['search']) AND !empty($_GET['search'])){
-
-    $search = htmlspecialchars($_GET['search']);
-    $topic = $search;
-
-    $req2= $bdd->prepare('SELECT * FROM question WHERE topic = ?');
-        $req2->execute(array($topic));
-        $data2 = $req2->fetchAll();
-    
-}else{
-    $req2= $bdd->prepare('SELECT * FROM question');
-    $req2->execute();
-    $data2 = $req2->fetchAll();
-}
-
-
-
-$i = 0;
-foreach($data2 as $row){
-
-$i++;
-
+<?php
+include("views/footer.php");
 
 ?>
 
-<div id = 'question<?php echo $i ?>' class = question>
-
-    <?php 
-
-    if(isset($_SESSION['type']) && ($_SESSION['type']) == "Administrateur"){
-
-        $button = "button2";
-
-    }
-    else{
-        $button = "button2invisible";
-
-    }
-    ?>
-
-
-             <div id = 'topic<?php echo $i ?>' class = topic>
-
-                 <topic> <?php echo $row['topic']; ?> </topic>
-
-                 <a  class="<?php echo $button ?>"  href="./supprimer-question.php?id=<?php echo $row['id_question']?>">Supprimer</a> 
-
-                    <img id = 'fleche<?php echo $i ?>' src ="fleche.png" class = fleche>
-             </div>
-
-             <div id = 'content<?php echo $i ?>' class = content>
-                <qst> <?php echo $row['content']; ?> </qst>
-                <br>
-                <date> <?php echo $row['date_question']; ?> </date>
-               
-             </div>
-
-             
-
-                     
-            
-</div>
-            <?php
-
-        }
-    
-        ?>
-
-        </div>
-    </div>
-
-
-
-</div>
-
-
-    
-</body>
-
-
-<footer class="footer">
-    <div class="container">
-        <div class="row">
-            <div class=" footer-col">
-                <img src="infinite.png" class="logo">
-                </div>
-            <div class=" footer-col">
-                <h4>NAVIGATION</h4>
-                <ul>
-                    <li><a href= "/appinfo/homepage/homepage.php">Accueil</a></li>
-                    <li><a href= "/appinfo/<?php echo $chantier ?>">Votre chantier</a></li>
-                    <li><a href= "/appinfo/forum/forum.php">Forum</a></li>
-                    <li><a href= "/appinfo/faq/faq.php">FAQ</a></li>
-                    <li><a href= "/appinfo/contact/contact_essai.php">Contactez-nous</a></li>
-                    <li><a href= "/appinfo/notre_solution/notre_solution.php">Notre solution</a></li>
-                </ul>
-            </div>
-            <div class=" footer-col">
-                <h4>PLUS D'INFOS</h4>
-                <ul>
-                    <li><a href= "/appinfo/auth/views/inscription.php">Inscription</a></li>
-                    <li><a href= "/appinfo/auth/model/connexion.php">Connexion</a></li>
-                    <li><a href= "/appinfo/cgu/cgu.php">Mentions Légales</a></li>
-                </ul>
-            </div>
-            <div class=" footer-col">
-                <h4>SUIVEZ-NOUS</h4>
-                <div class="social-links">
-                    <a href= "#"><i class="fab fa-facebook-f"></i></a>
-                    <a href= "#"><i class="fab fa-twitter"></i></a>
-                    <a href= "#"><i class="fab fa-instagram"></i></a>
-                    <a href= "#"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-    
-</footer>
-
-<script src= faq.js></script>
+<script src= "/appinfo/faq/js/faq.js"></script>
 
 </html>

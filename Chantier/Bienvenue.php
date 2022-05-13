@@ -1,113 +1,67 @@
-<?php include('DataChantier.php') ?>
-<?php
-
-session_start(); 
-
-//$id= $_SESSION['id'];
-//echo ($id);
-//echo($_SESSION['pseudo']);
-
-
-
-if(isset($_SESSION['user'])){
-    $editprofil ="views/landing.php";
-    $title = "Profil";
-    }
-    else{
-        $editprofil ="index.php";
-        $title = "Connexion";
-
-    }
-
-    if(isset($_SESSION['type'])){
-        $chantier = "Chantier/PageChantier.php";
-    }
-    else{
-        $chantier = "VotreChantier/votrechantier.php";
-    }
-
+<?php include('DataChantier.php')
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PageChantier</title>
-    <link rel="stylesheet" href="Chantier.css" media="screen" type="text/css" />
+    <title>Bienvenue</title>
+    <link rel="stylesheet" href="structure.css" media="screen" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
-    </head>
-
-
+</head>
 <body>
-
-
-    <div class="container"> 
+    <div class="container">
         <header>
-                <div id ="logoimg">
-                <a  href="/appinfo/homepage/homepage.php"><img src="/appinfo/auth/img/logo_infinite.png" alt="logo"></a>
-                </div>  
-                <nav>
-                    <ul class="nav__links">
-                        <li><a href="/appinfo/homepage/homepage.php">Accueil</a></li>
-                        <li><a href="/appinfo/<?php echo $chantier ?>" >Votre chantier</a></li>
-                        <li><a href="/appinfo/forum/forum.php">Forum</a></li>
-                        <li><a href="/appinfo/faq/faq.php">FAQ</a></li>
-                        <li><a href="/appinfo/contact/contact_essai.php">Contactez-nous</a></li>
-                        <li><a href="/appinfo/notre_solution/notre_solution.php">Notre solution</a></li>
-
-                    </ul>
-                </nav>
-                <div id="logomemo">
-                    <a href="/appinfo/memory/memory.php"><img src="../memory/memoryim.png" alt="memory"></a>
-                </div>
-                <a class="cta" href= "/appinfo/auth/<?php  echo $editprofil?> "> <?php echo $title ?></a>
-
-                <?php
-            
-
-            if(isset($_SESSION['type']) && ($_SESSION['type']) == "Administrateur"){
+            <nav>
+                <ul class="nav__links">
                 
-                ?>
-                <a class="cta" href= "/appinfo/admin/admin.php">Admin</a>
+                    <li><div id ="logoimg"><a  href="/appinfo/homepage/homepage.php"><img src="../auth/logo_infinite.png" alt="logo"></a></div></li>   
+                    <li><a href="/appinfo/homepage/homepage.php">Accueil</a></li>
+                    <li><a href="/appinfo/<?php echo $chantier ?>" >Votre chantier</a></li>
+                    <li><a href="/appinfo/forum/forum.php">Forum</a></li>
+                    <li><a href="/appinfo/faq/faq.php">FAQ</a></li>
+                    <li><a href="/appinfo/contact/contact_essai.php">Contactez-nous</a></li>
+                    <li><a href="/appinfo/notre_solution/notre_solution.php">Notre solution</a></li>
 
-                <?php }?>
-            </header>
+                </ul>
+            </nav>
+            
+        </header>
         <div id="sidebar">
             <div class="noms_onglets">
-                <div class="onglets" data-anim="1">
-                    <div class="ongletInactif">
-                        <h1>Fréquence cardiaque</h1><p><br><br>Dernière valeur : <?php echo $lastCard; ?> bpm</p>
+                <div class="onglets" data-anim="1"> <!--"onglets active"-->
+                    <div class="ongletInactif">  <!--"Actif-->
+                        <h4>Fréquence cardiaque</h4>
+                        <p>Dernière valeur</p>
                     </div>
                 </div> 
                 <!--La syntaxe "data-" permet de rajouter un attribut qui sera utilisé ensuite avec javascript-->
                 <div class="onglets" data-anim="2">
-                    <div class="ongletInactif bis">
-                        <h1>Niveau de bruit</h1><p><br><br>Dernière valeur : <?php echo $lastSon; ?> dB</p>
+                    <div class="ongletInactif">
+                        <h1>Niveau de bruit</h1>
                     </div>   
                 </div> <!--idem-->
-                    <div class="onglets" data-anim="3">
-                        <div class="ongletInactif bis">
-                            <h1>Température</h1><p><br><br>Dernière valeur : <?php echo $lastTemp; ?> °C</p>
-                        </div> 
-                    </div> <!--idem-->
-                    <div class="onglets" data-anim="4">
-                        <div class="ongletInactif bis">
-                            <h1>CO2</h1><p><br><br>Dernière valeur : <?php echo $lastCO2; ?> ppm</p>
-                        </div> 
-                    </div> <!--idem-->
+                <div class="onglets" data-anim="3">
+                    <div class="ongletInactif">
+                        <h1>Température</h1>
+                    </div> 
+                </div> <!--idem-->
+                <div class="onglets" data-anim="4">
+                    <div class="ongletInactif">
+                        <h1>CO2</h1>
+                    </div> 
+                </div> <!--idem-->
             </div>
-
         </div>
-        
+
+
         <main>
             <div class="contenu activeContenu">
-                <div class="imgStat"></div>
                 <h1>Bienvenue dans la rubrique votre Chantier "pseudo"</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate consequatur repudiandae at sint iusto ea tempore incidunt quam? Necessitatibus commodi dolore blanditiis amet minus nam fugiat cumque aspernatur dolorum deleniti!</p>
-            </div>    
-            <div class="contenu" data-anim="1">
+                <p>Dans cette rubrique vous pouvez consulter les dernières données de votre boîtier grâce aux différents capteurs qu'il contient. Cliquez sur les différentes grandeurs à gauche pour pouvoir les consulter !</p>
+            </div>
+            <div class="contenu" data-anim="1"> <!--"contenu activeContenu"-->
                 <!--Classe représentant le contenu de l'onglet 1 (il a donc le même attribut que son titre)-->
                 <h3>Votre Fréquence Cardiaque</h3>
                 <hr>
@@ -242,7 +196,7 @@ if(isset($_SESSION['user'])){
             <div class="contenu" data-anim="4">
                 <h3>Votre exposition au CO2</h3>
                 <hr>
-                <div id="graph3">
+                <div id="graph4">
                     <canvas id="CO2"></canvas>
                         <script>
                         //CHANGE
@@ -281,11 +235,12 @@ if(isset($_SESSION['user'])){
                             );
                         </script>
                 </div>   
-            </div>
 
+
+            </div>
         </main>
-        
     </div>
     <script src="Chantier.js"></script>
+    
 </body>
 </html>

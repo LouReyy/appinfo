@@ -184,14 +184,13 @@ h2{
 #containerpartie2 {
   font-family: "Quicksand";
   display: grid;
-  justify-content: space-between;
   text-align: center;
-  justify-content: space-around;
   padding:2%;
   width: 90%;
   margin-left: 5%;
   margin-right: 5%;
 
+  
 }
 
 .chantier{
@@ -201,6 +200,10 @@ h2{
   box-shadow: 3px 3px 2px 2px #dbdbdb;
   height: auto;
   width:80%;
+  padding-bottom: 4%;
+  align-self: center;
+  justify-self: center;
+
 }
 .chantier img{
   border-radius: 60px 60px 0 0;
@@ -214,6 +217,10 @@ h2{
   box-shadow: 3px 3px 2px 2px #dbdbdb;
   width:80%;
   height: auto;
+  padding-bottom: 4%;
+  align-self: center;
+  justify-self: center;
+
 }
 .stats img{
   border-radius: 60px 60px 0 0;
@@ -228,12 +235,16 @@ h2{
   box-shadow: 3px 3px 2px 2px #dbdbdb;
   width:80%;
   height: auto;
+  padding-bottom: 4%;
+  justify-self: center;
+
   
 }
 .forum img{
   border-radius: 60px 60px 0 0;
   height: 50%;
   width: 100%;
+  
 }
 
 .p3{
@@ -242,15 +253,19 @@ h2{
   margin: 2%;
 }
 
+p{
+  padding:4%
+}
+
+
 a.btn_forum{
-  margin-top: 5%;
-  position: relative;
+  margin-bottom: 2%;
   background-color: #00ccff;
   color: white;
-  padding: 15px 10px 10px 10px;
+  padding: 3%;
   border: none;
   cursor: pointer;
-  width: 50%;
+  width: 60%;
   height:10%;
   border-radius: 25px;
   font-family: "Quicksand";  

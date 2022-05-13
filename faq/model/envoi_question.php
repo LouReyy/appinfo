@@ -2,7 +2,7 @@
 
 
 session_start(); 
-    require_once '../auth/model/config.php'; 
+    require_once 'config.php'; 
     if(!isset($_SESSION['user'])){
         header('Location: ../auth/index.php?login_err=notconnected'); die();}
 
@@ -23,4 +23,4 @@ session_start();
     $insert = $bdd->prepare('INSERT INTO question(topic,content) VALUES(:topic, :content)');
     $insert->execute(array('topic' =>$topic , 'content' => $content ));
 
-    header('Location: faq.php?reg_err=success'); die();
+    header('Location: /appinfo/faq/faq.php?reg_err=success'); die();

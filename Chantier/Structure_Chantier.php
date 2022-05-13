@@ -1,18 +1,47 @@
 <?php include('DataChantier.php')
 ?>
+
+<?php
+
+session_start(); 
+
+//$id= $_SESSION['id'];
+//echo ($id);
+//echo($_SESSION['pseudo']);
+
+
+
+if(isset($_SESSION['user'])){
+        $editprofil ="landing.php";
+        $title = "Profil";
+    }
+    else{
+        $editprofil ="index.php";
+        $title = "Connexion";
+
+    }
+
+    if(isset($_SESSION['type'])){
+        $chantier = "Chantier/Structure_Chantier.php";
+    }
+    else{
+        $chantier = "VotreChantier/votrechantier.php";
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Structure</title>
     <link rel="stylesheet" href="structure.css" media="screen" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
 </head>
 <body>
     <div class="container">
-        <header>
+        <header> 
             <nav>
                 <ul class="nav__links">
                 
@@ -26,37 +55,55 @@
 
                 </ul>
             </nav>
+            <div id="logomemo">
+                    <a href="/appinfo/memory/memory.php"><img src="../memory/memoryim.png" alt="memory"></a>
+                </div>
+                <a class="cta" href= "/appinfo/auth/<?php  echo $editprofil?> "> <?php echo $title ?></a>
+
+                <?php
+            
+
+            if(isset($_SESSION['type']) && ($_SESSION['type']) == "Administrateur"){
+                
+                ?>
+                <a class="cta" href= "/appinfo/admin/admin.php">Admin</a>
+
+                <?php }?>
             
         </header>
         <div id="sidebar">
             <div class="noms_onglets">
-                <div class="onglets active" data-anim="1">
-                    <div class="Actif">
-                    <h1>Fréquence cardiaque</h1>
+                <div class="onglets" data-anim="1">
+                    <div class="ongletInactif">
+                        <h1>Fréquence cardiaque</h1><p><br><br>Dernière valeur : <?php echo $lastCard; ?> bpm</p>
                     </div>
                 </div> 
                 <!--La syntaxe "data-" permet de rajouter un attribut qui sera utilisé ensuite avec javascript-->
                 <div class="onglets" data-anim="2">
-                    <div class="ongletInactif">
-                        <h1>Niveau de bruit</h1>
+                    <div class="ongletInactif bis">
+                        <h1>Niveau de bruit</h1><p><br><br>Dernière valeur : <?php echo $lastSon; ?> dB</p>
                     </div>   
                 </div> <!--idem-->
                 <div class="onglets" data-anim="3">
-                    <div class="ongletInactif">
-                        <h1>Température</h1>
+                    <div class="ongletInactif bis">
+                        <h1>Température</h1><p><br><br>Dernière valeur : <?php echo $lastTemp; ?> °C</p>
                     </div> 
                 </div> <!--idem-->
                 <div class="onglets" data-anim="4">
-                    <div class="ongletInactif">
-                        <h1>CO2</h1>
+                    <div class="ongletInactif bis">
+                        <h1>CO2</h1><p><br><br>Dernière valeur : <?php echo $lastCO2; ?> ppm</p>
                     </div> 
                 </div> <!--idem-->
             </div>
         </div>
-
-
+        
         <main>
-            <div class="contenu activeContenu" data-anim="1">
+            <div class="contenu activeContenu">
+                <div class="imgStat"></div>
+                <h1>Bienvenue dans la rubrique votre Chantier "pseudo"</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate consequatur repudiandae at sint iusto ea tempore incidunt quam? Necessitatibus commodi dolore blanditiis amet minus nam fugiat cumque aspernatur dolorum deleniti!</p>
+            </div>
+            <div class="contenu" data-anim="1">
                 <!--Classe représentant le contenu de l'onglet 1 (il a donc le même attribut que son titre)-->
                 <h3>Votre Fréquence Cardiaque</h3>
                 <hr>

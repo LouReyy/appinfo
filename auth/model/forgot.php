@@ -27,8 +27,12 @@
 
             if (mail($to_email, $subject, $body, $headers)) {
                 echo "l'email a bien été envoyé à $to_email...";
+                header('Location: /appinfo/auth/views/edit_password.php?reg_err=success');
+
             } else {
                 echo "Email sending failed...";
+                
+            die();
             }
 
         }else{
