@@ -119,19 +119,6 @@ h1 hr:hover{
     width:20%;
 }
 
-#jeu{
-    justify-content: center;
-   text-align: center;
-}
-
-#tabledejeu{
-    justify-content: center;
-    text-align: center;
-    justify-self: center;
-}
-
-
-
 #jeu img{
     padding: 2px;
 }

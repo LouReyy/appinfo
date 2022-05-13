@@ -63,38 +63,40 @@ if(isset($_SESSION['user'])){
 <div id="jeu">
     <table id="tabledejeu">
            <tr>
-            <td><img src="face.png">
-            <td><img src="face.png">
-            <td><img src="face.png">
-            <td><img src="face.png">
-            <td><img src="face.png">
+            <td><img src="face.png" class = img1>
+            <img src="1.jpg" class = img2>
+            </td>
+            
+
+            <td><img src="face.png" class = img1>
+            <td><img src="face.png" class = img1>
+            <td><img src="face.png" class = img1>
+            <td><img src="face.png" class = img1>
            </tr>
            <tr>
-            <td><img src="face.png">
-            <td><img src="face.png">
-            <td><img src="face.png">
-            <td><img src="face.png">
-            <td><img src="face.png">
+            <td><img src="face.png" class = img1>
+            <td><img src="face.png" class = img1>
+            <td><img src="face.png" class = img1>
+            <td><img src="face.png" class = img1>
+            <td><img src="face.png" class = img1>
            </tr>
            <tr>
-            <td><img src="face.png">
-            <td><img src="face.png">
-            <td><img src="face.png">
-            <td><img src="face.png">
-            <td><img src="face.png">
+            <td><img src="face.png" class = img1>
+            <td><img src="face.png" class = img1>
+            <td><img src="face.png" class = img1>
+            <td><img src="face.png" class = img1>
+            <td><img src="face.png" class = img1>
            </tr>
            <tr>
-            <td><img src="face.png">
-            <td><img src="face.png">
-            <td><img src="face.png">
-            <td><img src="face.png">
-            <td><img src="face.png">
+            <td><img src="face.png" class = img1>
+            <td><img src="face.png" class = img1>
+            <td><img src="face.png" class = img1>
+            <td><img src="face.png" class = img1>
+            <td><img src="face.png" class = img1>
            </tr>
     </table>
     
-    <script src="js/memory.js">
-    </script>
-
+    
     <h3> Nombre de coups:</h3>
     <h3> Temps: </h3>
 </div>
@@ -104,6 +106,8 @@ if(isset($_SESSION['user'])){
 <p>Pour cela retourner 2 cartes et si elles sont identiques, vous avez former une paire. Sinon, les cartes se retournent et vous devez repiocher.</p>
 <p>Mais attention, n'oubliez pas les positions des cartes que vous avez deja vu!</p>
 </main>
+
+<script src="/appinfo/memory/js/memory.js"></script>
 
 </body>
 </html>

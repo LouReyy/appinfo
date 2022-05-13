@@ -1,23 +1,51 @@
-var motifsCartes=[1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10];
-        var etatsCartes=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]; 
-        var cartesRetournees=[];
-        var nbPairesTrouvees=0;
-        var imgCartes=document.getElementById("jeu").getElementsByTagName("img");
-        
-        
-        function majAffichage(){ /*Mise a jour de l'affichage du jeu*/
-	            
-	    }
+const jeu = document.querySelectorAll(".img1");
 
 
-        function Verification(){ /*Verification des cartes, des paires etc */
+positionX =[];
+positionY=[];
 
+
+
+jeu.forEach(jeu => {
+
+    function elementPosition (a) {
+        var b = a.getBoundingClientRect(jeu);
+        return {
+          clientX: a.offsetLeft,
+          clientY: a.offsetTop,
+          viewportX: (b.x || b.left),
+          viewportY: (b.y || b.top)
         }
-        
-        function Initialisation(){ /* Initialise le jeu */
+      }
 
-        }
+    
+    jeu.style.backgroundColor ='red';
+    
 
-        function Rejouer(){ /*Boutton pour rejouer au jeu */
-salut
-        }
+    var positions = elementPosition(jeu);
+
+ 
+
+   positionX.push(positions.viewportX);
+   positionY.push(positions.viewportY);
+
+   console.log(positionX);
+
+
+
+
+
+
+    jeu.addEventListener('click',()=>{
+
+        jeu.style.visibility ="hidden";
+
+    
+    
+    })
+    
+    
+});
+
+
+
