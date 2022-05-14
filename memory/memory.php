@@ -146,7 +146,7 @@ if(isset($_SESSION['user'])){
 </div>
 </main>
 
-<script src="/appinfo/memory/js/memory.js"></scrip;>
+<script src="/appinfo/memory/js/memory.js"></script>
 
 </body>
 </html>

@@ -1,5 +1,6 @@
 const jeux = document.querySelectorAll(".img1");
 const jeux2 = document.querySelectorAll(".img2");
+const coup = document.querySelector("#coups");
 
 
 
@@ -16,10 +17,10 @@ shuffleArray(listeImages);
 for(i=0;i<jeux.length;i++){
     jeux[i].src=listeImages[i];
 }
-var count_click =10;
-const coup = document.querySelector(".coups-display");
-coup.innerHTML = `${count_click}`;
-coup.innerText ="salut";
+var count_click =0;
+var coups =0;
+
+
 
 listsrc=[];
 listjeu=[];
@@ -41,6 +42,7 @@ listpos=[];
 
         jeu.style.opacity="0";   
         count_click += 1;
+
 
         let rect = jeu.getBoundingClientRect();
 
@@ -121,9 +123,6 @@ listpos=[];
                    
 
                   
-                    
-                 
-             
                 }
                 if(listsrc.length==2){
                     listsrc=[];
@@ -131,6 +130,9 @@ listpos=[];
                     listjeu=[];
                     listjeu1=[];
                     setTimeout(bord,2000);
+                    coups += 1;
+                    coup.innerHTML = `${coups}`;
+
 
                     
                 }
