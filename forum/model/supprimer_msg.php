@@ -1,6 +1,6 @@
 <?php
 
-require_once("../auth/model/config.php");
+require_once("config.php");
 session_start(); 
 
 
