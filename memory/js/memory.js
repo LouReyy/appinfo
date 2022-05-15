@@ -1,6 +1,8 @@
 const jeux = document.querySelectorAll(".img1");
 const jeux2 = document.querySelectorAll(".img2");
 const coup = document.querySelector("#coups");
+const divjeu = document.querySelector("#container");
+
 
 
 
@@ -33,7 +35,8 @@ listpos=[];
 
  
 
-    jeu.addEventListener('click',()=>{
+
+        function jeufct(){
 
 
         listjeu.push(jeu.id);
@@ -91,25 +94,41 @@ listpos=[];
 
                     jeuid0.style.opacity = "0.5";
                     jeuid1.style.opacity = "0.5";
+                    divjeu.style.pointerEvents = 'auto';
+
+
+                
                     
                 }
 
 
                 else if(count_click == 2){
+                    divjeu.style.pointerEvents = 'none';
+
+                    
+                        
+
+
 
                  
 
              
                     for(i=0;i<listjeu.length;i++){
-                    
-                     var jeu3 = document.getElementById(listjeu[0]);
-                    var jeu2= document.getElementById(listjeu[1]);
+        
+                        var jeu3 = document.getElementById(listjeu[0]);
+                        var jeu2= document.getElementById(listjeu[1]);
 
-                    
             
-                    function bord(){
-                        jeu3.style.opacity = "1";
-                        jeu2.style.opacity = "1";
+                        function bord(){
+                            jeu3.style.opacity = "1";
+                            jeu2.style.opacity = "1";
+                            divjeu.style.pointerEvents = 'auto';
+
+
+
+
+
+                      
                         }
     
     
@@ -120,21 +139,19 @@ listpos=[];
 
                 
                   
-                   
-
-                  
                 }
+
+              
+
+
                 if(listsrc.length==2){
                     listsrc=[];
                     count_click = 0;
                     listjeu=[];
                     listjeu1=[];
-                    setTimeout(bord,2000);
+                    setTimeout(bord,1000);
                     coups += 1;
                     coup.innerHTML = `${coups}`;
-
-
-                    
                 }
                
 
@@ -145,13 +162,14 @@ listpos=[];
                 
 
                 
-              
+            })
+
+            
 
 
-        })
+}
 
-
-})
+jeu.addEventListener('click',jeufct);
 
 
     
