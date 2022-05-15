@@ -60,50 +60,90 @@ if(isset($_SESSION['user'])){
 <main>
 <h1> Memory <hr/></h1>
 
-<div id="jeu">
-    <table id="tabledejeu">
-           <tr>
-            <td><img src="face.png" class = "img1">
-            </td>
-            
 
-            <td><img src="face.png" class = "img1">
-            <td><img src="face.png" class = img1>
-            <td><img src="face.png" class = img1>
-            <td><img src="face.png" class = img1>
+<div id = container align ="center">
+
+<div id="jeu2">
+    <table id="tabledejeu2">
+           <tr>
+            <td><img src="face.png" class = "img2" id= "1">
+            <td><img src="face.png" class = "img2" id= "2">
+            <td><img src="face.png" class = img2 id= "3">
+            <td><img src="face.png" class = img2 id= "4">
+            <td><img src="face.png" class = img2 id= "5">
            </tr>
            <tr>
-            <td><img src="face.png" class = img1>
-            <td><img src="face.png" class = img1>
-            <td><img src="face.png" class = img1>
-            <td><img src="face.png" class = img1>
-            <td><img src="face.png" class = img1>
+            <td><img src="face.png" class = img2 id= "6">
+            <td><img src="face.png" class = img2 id= "7">
+            <td><img src="face.png" class = img2 id= "8">
+            <td><img src="face.png" class = img2 id= "9">
+            <td><img src="face.png" class = img2 id= "10">
            </tr>
            <tr>
-            <td><img src="face.png" class = img1>
-            <td><img src="face.png" class = img1>
-            <td><img src="face.png" class = img1>
-            <td><img src="face.png" class = img1>
-            <td><img src="face.png" class = img1>
+            <td><img src="face.png" class = img2 id= "11">
+            <td><img src="face.png" class = img2 id= "12">
+            <td><img src="face.png" class = img2 id= "13">
+            <td><img src="face.png" class = img2 id= "14">
+            <td><img src="face.png" class = img2 id= "15">
            </tr>
            <tr>
-            <td><img src="face.png" class = img1>
-            <td><img src="face.png" class = img1>
-            <td><img src="face.png" class = img1>
-            <td><img src="face.png" class = img1>
-            <td><img src="face.png" class = img1>
+            <td><img src="face.png" class = img2 id= "16">
+            <td><img src="face.png" class = img2 id= "17">
+            <td><img src="face.png" class = img2 id= "18">
+            <td><img src="face.png" class = img2 id= "19">
+            <td><img src="face.png" class = img2 id= "20">
            </tr>
     </table>
+</div>
+
+<div id="jeu" >
+    <table id="tabledejeu">
+           <tr>
+            <td><img src="face.png" class = "img1" id= "1a">
+            <td><img src="face.png" class = "img1" id= "2a">
+            <td><img src="face.png" class = img1 id= "3a">
+            <td><img src="face.png" class = img1 id= "4a">
+            <td><img src="face.png" class = img1 id= "5a">
+           </tr>
+           <tr>
+            <td><img src="face.png" class = img1 id= "6a">
+            <td><img src="face.png" class = img1 id= "7a">
+            <td><img src="face.png" class = img1 id= "8a">
+            <td><img src="face.png" class = img1 id= "9a">
+            <td><img src="face.png" class = img1 id= "10a">
+           </tr>
+           <tr>
+            <td><img src="face.png" class = img1 id= "11a">
+            <td><img src="face.png" class = img1 id= "12a">
+            <td><img src="face.png" class = img1 id= "13a">
+            <td><img src="face.png" class = img1 id= "14a">
+            <td><img src="face.png" class = img1 id= "15a">
+           </tr>
+           <tr>
+            <td><img src="face.png" class = img1 id= "16a">
+            <td><img src="face.png" class = img1 id= "17a">
+            <td><img src="face.png" class = img1 id= "18a">
+            <td><img src="face.png" class = img1 id= "19a">
+            <td><img src="face.png" class = img1 id= "20a">
+           </tr>
+    </table>
+
+    <div id="coups-display">
+        <h2>Nombre de coups:</h2>
+        <div id="coups">0</div>
+    </div>
     
-    
-    <h3> Nombre de coups:</h3>
+
     <h3> Temps: </h3>
 </div>
 
+</div>
+<div id = regle>
 <h2> Regle du jeu <hr></h2>
 <p>Vous devez retrouver toutes les paires du jeu!</p>
 <p>Pour cela retourner 2 cartes et si elles sont identiques, vous avez former une paire. Sinon, les cartes se retournent et vous devez repiocher.</p>
 <p>Mais attention, n'oubliez pas les positions des cartes que vous avez deja vu!</p>
+</div>
 </main>
 
 <script src="/appinfo/memory/js/memory.js"></script>
