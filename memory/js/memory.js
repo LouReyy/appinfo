@@ -4,13 +4,6 @@ const coup = document.querySelector("#coups");
 const divjeu = document.querySelector("#container");
 
 
-
-
-
-
-
-
-
 listeImages = new Array(20).fill(".jpg").map((ext, index) => (index % 10) + 1 + ext)
 console.log(listeImages)
 
@@ -87,7 +80,7 @@ jeux2.forEach(jeu => {
         
 
 
-            if (listsrc[0] == listsrc[1] && count_click == 2 && jeuid1 != jeuid0) {
+            if (listsrc[0] == listsrc[1] && count_click == 2) {
 
                 console.log("c'est win");
 
@@ -96,6 +89,8 @@ jeux2.forEach(jeu => {
 
                 jeuid0.style.opacity = "0.5";
                 jeuid1.style.opacity = "0.5";
+                divjeu.style.pointerEvents = 'auto';
+
 
                 
 

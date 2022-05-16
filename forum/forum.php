@@ -29,7 +29,7 @@ include("views/head_forum.php");
 
             <div id = "newmessages">
 
-                <form action="envoi_message.php" method="post">
+                <form action="./model/envoi_message.php" method="post">
 
                     <input type="topic" name="topic" class="topic_msg" placeholder="Topic" required="required" autocomplete="off" value= "<?php echo $value ?>">  </input>
 
