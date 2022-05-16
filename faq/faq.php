@@ -7,6 +7,7 @@ include('model/paramfaq.php')
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,22 +15,23 @@ include('model/paramfaq.php')
     <link rel="stylesheet" href="/appinfo/faq/css/faq.css" media="screen" type="text/css" />
     <title>FAQ</title>
 </head>
+
 <body>
 
-<div id = "container1">
+    <div id="container1">
 
-    <?php
+        <?php
         include("views/header.php");
 
         include("views/container1faq.php");
 
         include("views/affichage_question.php");
 
-    ?>
+        ?>
 
-</div>
-</div>
-</div>
+    </div>
+    </div>
+    </div>
 
 
 </body>
@@ -39,6 +41,6 @@ include("views/footer.php");
 
 ?>
 
-<script src= "/appinfo/faq/js/faq.js"></script>
+<script src="/appinfo/faq/js/faq.js"></script>
 
 </html>
