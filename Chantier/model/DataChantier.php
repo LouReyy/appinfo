@@ -5,6 +5,7 @@ $id= $_SESSION['id'];
 $pseudo=$_SESSION['pseudo'];
 
 
+
 if(isset($_SESSION['user'])){
     $editprofil ="views/landing.php";
     $title = "Profil";

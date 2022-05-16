@@ -1,3 +1,12 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
 body{
     font-family: "Quicksand";
     background: whitesmoke;
@@ -8,7 +17,7 @@ body{
     display: grid;
       height: 100vh;
       grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-template-rows: 0.5fr 0.7fr 5.5fr;
+      grid-template-rows: 0.5fr 0.9fr 4fr;
       grid-template-areas:
         "header header header header"
         "equipe equipe equipe equipe"
@@ -16,7 +25,16 @@ body{
   }
 
   header{
-      grid-area: header;
+    grid-area: header;
+    position: relative;
+      height: 100px;
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 20px 2%;
+      background-color: #fbfbfb;
+      z-index: 1;
 
   }
 
@@ -36,11 +54,11 @@ body{
 .barre{
     position: absolute;
     left: 50%;
-    top: 78%;
+    top: 80%;
     transform: translate(-50%,-50%);
     height: 3px;
     width: 230px;
-    background: red;
+    background: #00ccff;
 
 }
 
@@ -49,12 +67,6 @@ body{
       position: relative;
       grid-area: form;
   }
-
-  footer{
-    
-  }
-
-
 
   #logomemo img{
     width: 70px;
@@ -131,15 +143,17 @@ body{
       background-color: #8aceff;
     }
 
-
-
-    /*CSS du formulaire Contactez-nous*/
-
 .content{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    background-color: white;
+    width: 40vw;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
 }
 .content h1{
     margin-left: 33%;
@@ -154,6 +168,7 @@ form .formulaire{
     display:flex;
     flex-wrap: wrap;
     font-family: "Quicksand";
+    margin-bottom: 20px;
 
 }
 form .formulaire .case{ /**toutes les classes case de formulaire**/
@@ -179,6 +194,8 @@ form .formulaire .droite .case textarea{ /**On s√©mectionne la case de droite r√
     border-radius: 5px;
     outline-color: grey;
     font-family: "Quicksand";
+    height: 30vh;
+    width: 20vw;
 
 }
 
@@ -244,7 +261,6 @@ button[type=submit]:hover{
   }
   
   .footer{
-    margin-top: 40%;
     background-color: rgb(0, 217, 255);
     padding: 75px 0;
   

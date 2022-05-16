@@ -132,6 +132,12 @@ if(isset($_SESSION['user'])){
         <h2>Nombre de coups:</h2>
         <div id="coups">0</div>
     </div>
+
+    <div id="rejouer">
+    <form>
+        <input type="button" value="Rejouer" onClick="history.go(0)">
+    </form>
+    </div>
     
 
     <h3> Temps: </h3>
