@@ -57,13 +57,16 @@ if($password === $password_retype){
     $update = $bdd->prepare('UPDATE utilisateurs SET pseudo = ?,password = ?, type = ? WHERE email = ?');
     $update->execute(array($pseudo,$password,$type,$email));
 
-    header('Location: /appinfo/auth/views/landing.php?reg_err=success');die();
+    if($admin == true){
+        header('Location:../views/inscription.php?reg_err=admin');
 
-}else{
-    header('Location: /appinfo/auth/views/landing.php?reg_err=password'); die();}
+    }else{
+        header('Location:../views/inscription.php?reg_err=success');
+    }
+    die();
 
 
-
+}
 
 
 ?>
