@@ -1,3 +1,29 @@
+
+<?php
+session_start(); 
+
+if(isset($_SESSION['user'])){
+    $editprofil ="views/landing.php";
+    $title = "Profil";
+    }
+    else{
+        $editprofil ="index.php";
+        $title = "Connexion";
+
+    }
+
+    if(isset($_SESSION['type'])){
+        $chantier = "Chantier/PageChantier.php";    }
+    else{
+        $chantier = "VotreChantier/votrechantier.php";
+    }
+?>
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +39,7 @@
 <body>
     <div class="container">
         <header>
-            <div id ="logoimg">
+        <div id ="logoimg">
                 <a  href="/appinfo/homepage/homepage.php"><img src="/appinfo/auth/img/logo_infinite.png" alt="logo"></a>
                 </div>  
                 <nav>
@@ -27,6 +53,20 @@
 
                     </ul>
                 </nav>
+                <div id="logomemo">
+                    <a href="/appinfo/memory/memory.php"><img src="../memory/memoryim.png" alt="memory"></a>
+                </div>
+                <a class="cta" href= "/appinfo/auth/<?php  echo $editprofil?> "> <?php echo $title ?></a>
+
+                <?php
+            
+
+            if(isset($_SESSION['type']) && ($_SESSION['type']) == "Administrateur"){
+                
+                ?>
+                <a class="cta" href= "/appinfo/admin/admin.php">Admin</a>
+
+                <?php }?>
         </header>
         <div class="equipe">
             <a>Notre équipe</a>
