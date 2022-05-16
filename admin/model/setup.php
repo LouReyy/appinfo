@@ -17,7 +17,7 @@ else{
     $title = "Connexion";
 }
 
-    $file_name = "/appinfo/auth/pp";
+    $file_name = "/appinfo/auth/img/pp";
 
     if(isset($_SESSION['type'])){
         $chantier = "Chantier/PageChantier.php";    }

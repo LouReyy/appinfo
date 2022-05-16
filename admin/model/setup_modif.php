@@ -48,7 +48,7 @@ if(file_exists(dirname(__FILE__,3) . "\auth/profil_picture/".hash('sha256',  $da
 }
 
 else{
-    $file_name = "/appinfo/auth/pp";
+    $file_name = "/appinfo/auth/img/pp";
 
 }
 

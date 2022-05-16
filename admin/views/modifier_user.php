@@ -13,7 +13,7 @@
 
 <header>
             <div id ="logoimg">
-            <a  href="/appinfo/homepage/homepage.php"><img src="/appinfo/auth/logo_infinite.png" alt="logo"></a>
+            <a  href="/appinfo/homepage/homepage.php"><img src="/appinfo/auth/img/logo_infinite.png" alt="logo"></a>
             </div>  
             <nav>
                 <ul class="nav__links">
@@ -51,7 +51,7 @@
         <div id = container-title>
                 
 
-            <img id = "forme1"src="/appinfo/auth/forme1.png"></img>
+            <img id = "forme1"src="/appinfo/auth/img/forme1.png"></img>
 
             <h1 class="text-center">Modifier un Utilisateur</h1>
 
