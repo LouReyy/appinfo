@@ -22,7 +22,7 @@
             $headers = 'Content-type: text/html; charset=utf-8'."\r\n";
             $to_email = $email;
             $subject = "Test envoi mail";
-            $body = '<a href="'.$link.'">Réinitialise ton email en cliquant ici !</a>';
+            $body = '<a href="'.$link.'">Réinitialise ton mot de passe en cliquant ici !</a>';
  
 
             if (mail($to_email, $subject, $body, $headers)) {
