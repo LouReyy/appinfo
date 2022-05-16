@@ -300,6 +300,13 @@ body {
 
 
 
+.footerContent{
+
+  max-width: 2000px;
+  margin:20px;
+  font-family: "Quicksand";
+
+}
 .row{
   flex-direction: row;
   display: flex;
