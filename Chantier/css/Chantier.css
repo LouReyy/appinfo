@@ -5,7 +5,7 @@
     padding: 0;
 }
 body{
-  color: black;
+  color: white;
 }
 
 
@@ -136,11 +136,10 @@ body {
   position: absolute;
   top: 2.5vh;
   left: 1vw;
-  color: white;
 
         
 }
-.onglets { 
+.onglets { /**Chaque onglet particulier sauf le premier**/
     /**Point de sauvegarde**/
     cursor: pointer;
     
@@ -301,13 +300,6 @@ body {
 
 
 
-.footerContent{
-
-  max-width: 2000px;
-  margin:20px;
-  font-family: "Quicksand";
-
-}
 .row{
   flex-direction: row;
   display: flex;

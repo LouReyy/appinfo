@@ -80,7 +80,7 @@ jeux2.forEach(jeu => {
         
 
 
-            if (listsrc[0] == listsrc[1] && count_click == 2 && jeuid0!=jeuid1) {
+            if (listsrc[0] == listsrc[1] && count_click == 2) {
 
                 console.log("c'est win");
 
@@ -97,10 +97,7 @@ jeux2.forEach(jeu => {
                 listPaire.push(listsrc[0]);
                 console.log(listPaire);
 
-                if (listPaire.length==10){
-                    alert("C'est gagne");
-                    window.location.reload();
-                }
+
 
 
             }
@@ -136,7 +133,7 @@ jeux2.forEach(jeu => {
             }
             if ( jeuid1 == jeuid0) {
 
-                console.log('tu as clique sur la meme carte')
+                console.log('tu     a cliau3 ')
                 
             
             }
@@ -160,15 +157,17 @@ jeux2.forEach(jeu => {
 
 
         })
+        if (listPaire.length==10){
+            alert("C'est gagne");
+        }
+
+
         
 
 
 
 
-
-
     }
-
 
     jeu.addEventListener('click', jeufct);
 
