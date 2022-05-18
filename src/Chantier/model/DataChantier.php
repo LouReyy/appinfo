@@ -3,11 +3,6 @@ session_start();
 
 $id= $_SESSION['id'];
 $pseudo=$_SESSION['pseudo'];
-$type=$_SESSION['type'];
-echo $type;
-if ($type=="Gestionnaire"){
-    header("location:/appinfo/Chantier/PageChantier2.php");die;
-}
 
 
 
