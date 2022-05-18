@@ -1,4 +1,2 @@
-<?php
-echo "test";
- header('Location:homepage/homepage.php');
+<?php header('Location:homepage/homepage.php');die();
 ?>
