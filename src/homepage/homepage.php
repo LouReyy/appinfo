@@ -34,7 +34,7 @@ include("model/setup_homepage.php");
             <div id="logomemo">
                 <a href="/memory/memory.php"><img src="../memory/memoryim.png" alt="memory"></a>
             </div>
-            <a class="cta" href= "/auth/<?php  echo $editprofil?> "> <?php echo $title ?></a>
+            <a class="cta" href= "/auth/<?php echo $editprofil?> "> <?php echo $title ?></a>
 
             <?php
            
