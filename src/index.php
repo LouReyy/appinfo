@@ -1,2 +1,2 @@
-<?php header('Location:/src/homepage/homepage.php');die();
+<?php header('Location:./src/homepage/homepage.php');die();
 ?>
