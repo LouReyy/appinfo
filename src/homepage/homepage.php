@@ -1,21 +1,6 @@
 <?php
 
-session_start(); 
-
-if(isset($_SESSION['user'])){
-        $editprofil ="views/landing.php";
-        $title = "Profil";
-    }
-    else{
-        $editprofil ="index.php";
-        $title = "Connexion";
-
-    }
-    if(isset($_SESSION['type'])){
-        $chantier = "Chantier/PageChantier.php";    }
-    else{
-        $chantier = "VotreChantier/votrechantier.php";
-    }
+include("setup_homepage.php");
 
 
 ?>
@@ -33,11 +18,11 @@ if(isset($_SESSION['user'])){
 <body>
 <header>
             <div id ="logoimg">
-            <a  href="/appinfo/homepage/homepage.php"><img src="/appinfo/auth/img/logo_infinite.png" alt="logo"></a>
+            <a  href="/homepage/homepage.php"><img src="/auth/img/logo_infinite.png" alt="logo"></a>
             </div>  
             <nav>
                 <ul class="nav__links">
-                    <li><a href="/appinfo/homepage/homepage.php">Accueil</a></li>
+                    <li><a href="/homepage/homepage.php">Accueil</a></li>
                     <li><a href="/appinfo/<?php echo $chantier ?>" >Votre chantier</a></li>
                     <li><a href="/appinfo/forum/forum.php">Forum</a></li>
                     <li><a href="/appinfo/faq/faq.php">FAQ</a></li>
