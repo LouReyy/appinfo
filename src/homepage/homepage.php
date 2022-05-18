@@ -1,6 +1,6 @@
 <?php
 
-include("model/setup_homepage.php");
+include("setup_homepage.php");
 
 
 ?>
