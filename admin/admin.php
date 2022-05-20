@@ -24,7 +24,7 @@
                     <li><a href="/appinfo/<?php echo $chantier ?>" >Votre chantier</a></li>
                     <li><a href="/appinfo/forum/forum.php">Forum</a></li>
                     <li><a href="/appinfo/faq/faq.php">FAQ</a></li>
-                    <li><a href="/appinfo/contact/contact_essai.php">Contactez-nous</a></li>
+                    <li><a href="/appinfo/contact/PageContact.php">Contactez-nous</a></li>
                     <li><a href="/appinfo/notre_solution/notre_solution.php">Notre solution</a></li>
 
                 </ul>

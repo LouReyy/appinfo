@@ -3,6 +3,15 @@ session_start();
 
 $id= $_SESSION['id'];
 $pseudo=$_SESSION['pseudo'];
+$type=$_SESSION['type'];
+
+
+
+
+
+if ($type=="Gestionnaire"){
+   header('Location: http://localhost/appinfo/Chantier/PageGestionnaire.php');die;
+}
 
 
 
