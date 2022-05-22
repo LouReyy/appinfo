@@ -59,14 +59,19 @@ $size=count($allId);
 </head>
 <body>
     <a>Bienvenue dans la page du gestionnaire</a><br>
-    <script>
-        var pseudo = <?php echo json_encode($allPesudo);?>;
-        var id = <?php echo json_encode($allId);?>;
-        for (i=0;i<id.length;i++){
-            console.log(id[i]);
-            document.write(id[i]+"<br>");
-        }
-    </script>
+    <?php
+    for ($i=0;$i<count($allPesudo);$i++){
+        $id=$allId[$i];
+        $pseudo=$allPesudo[$i];
+        echo "<a href='http://localhost/appinfo/Chantier/GestionGestionnaire.php?id=$id&pseudo=$pseudo'>Pseudo : $pseudo</a>";
+        echo ("<br>");
+    }
+    //Il faut que quand on clique sur un pseudo on puisse accéder à une page avec le graph de l'id
+    //Testons 
+    $test=10;
+    
+    ?>
+    
 
 
     
