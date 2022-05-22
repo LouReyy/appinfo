@@ -194,7 +194,7 @@ form .formulaire .droite .case textarea{ /**On s√©mectionne la case de droite r√
     border-radius: 5px;
     outline-color: grey;
     font-family: "Quicksand";
-    height: 30vh;
+    height: 20vh;
     width: 20vw;
 
 }
@@ -247,7 +247,7 @@ button[type=submit]:hover{
 .footerContent{
 
     max-width: 2000px;
-    margin:20px;
+    
     font-family: "Quicksand";
   
   }

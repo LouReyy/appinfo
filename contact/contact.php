@@ -1,7 +1,7 @@
 
 
 
-<?php include("contact_essai.php")?>
+<?php include("PageContact.php")?>
 <?php
 require_once __DIR__.'/config.php';
 

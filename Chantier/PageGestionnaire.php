@@ -46,7 +46,6 @@ $allId=getArray($utilId,'id');
 $size=count($allId);
 //On a maintenant nos deux listes contenant les pseudos et les id.
 //Il faut ensuite les afficher de manière à ce que quand on clique dessus on accède au données de celui-ci
-//il faudrait faire du js
 
 ?>
 
