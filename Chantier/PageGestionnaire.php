@@ -70,7 +70,7 @@ $size=count($allId);
                     <li><a href="/appinfo/<?php echo $chantier ?>" >Votre chantier</a></li>
                     <li><a href="/appinfo/forum/forum.php">Forum</a></li>
                     <li><a href="/appinfo/faq/faq.php">FAQ</a></li>
-                    <li><a href="/appinfo/contact/contact_essai.php">Contactez-nous</a></li>
+                    <li><a href="/appinfo/contact/PageContact.php">Contactez-nous</a></li>
                     <li><a href="/appinfo/notre_solution/notre_solution.php">Notre solution</a></li>
 
                 </ul>
@@ -91,7 +91,7 @@ $size=count($allId);
         </div>
         <div class="links">
             <div class="boite">
-                <p>Dans cette rubrique vous pouvez consulter les différentes statistiques des membres de votre chantier en cliquant sur leur pseudo.</p><br>
+                <p>Dans cette rubrique vous pouvez consulter les différentes statistiques des membres de votre chantier en cliquant sur leur pseudo.</p>
                 <div class="gauche">
                     <?php
                     for ($i=0;$i<count($allPesudo);$i++){

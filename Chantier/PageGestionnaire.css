@@ -157,10 +157,6 @@ header {
         color: white;
         text-decoration: inherit;
     }
-
-    /* .other{
-        margin-top: 4vh;
-    } */
     .local{
         margin-top: 4vh;
         margin-left: 0.5vw;
@@ -172,6 +168,13 @@ header {
     .local:hover{
         background: grey;
     }
+    .boite p{
+        font-size: 1.4vw;
+    }
+
+
+
+
 
 
 /*Rajoute le footer*/
