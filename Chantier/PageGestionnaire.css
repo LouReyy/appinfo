@@ -136,28 +136,34 @@ header {
         position: relative;
 
     }
-    .allLinks{
+    .boite{
         position: absolute;
         left: 50%;
         transform: translate(-50%,0%);
         width: 70vw;
         height: 65vh;
+        background: white;
+        border-radius: 10px;
+        padding: 12px;
+    }
+    .gauche{
+        width: 12.5vw;
+        height: 57vh;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        background: white;
-        border-radius: 10px;
-        padding: 15px;
     }
     .local a{
         color: white;
         text-decoration: inherit;
     }
 
-    .other{
+    /* .other{
         margin-top: 4vh;
-    }
+    } */
     .local{
+        margin-top: 4vh;
+        margin-left: 0.5vw;
         background-color: #00ccff;
         width: 12vw;
         border-radius: 5px;

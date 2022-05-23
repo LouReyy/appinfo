@@ -90,20 +90,22 @@ $size=count($allId);
             <div class="barre"></div>
         </div>
         <div class="links">
-            <div class="allLinks">
+            <div class="boite">
                 <p>Dans cette rubrique vous pouvez consulter les différentes statistiques des membres de votre chantier en cliquant sur leur pseudo.</p><br>
-                <?php
-                for ($i=0;$i<count($allPesudo);$i++){
-                    $id=$allId[$i];
-                    $pseudo=$allPesudo[$i];
-                    if ($i==0){
-                        echo "<div class='local'><a href='http://localhost/appinfo/Chantier/GestionGestionnaire.php?id=$id&pseudo=$pseudo'>$pseudo</a></div>";  
+                <div class="gauche">
+                    <?php
+                    for ($i=0;$i<count($allPesudo);$i++){
+                        $id=$allId[$i];
+                        $pseudo=$allPesudo[$i];
+                        if ($i==0){
+                            echo "<div class='local'><a href='http://localhost/appinfo/Chantier/GestionGestionnaire.php?id=$id&pseudo=$pseudo'>$pseudo</a></div>";  
+                        }
+                        else{
+                            echo "<div class='local other'><a href='http://localhost/appinfo/Chantier/GestionGestionnaire.php?id=$id&pseudo=$pseudo'>$pseudo</a></div>";
+                        }
                     }
-                    else{
-                        echo "<div class='local other'><a href='http://localhost/appinfo/Chantier/GestionGestionnaire.php?id=$id&pseudo=$pseudo'>$pseudo</a></div>";
-                    }
-                }
-                ?>
+                    ?>
+                </div>
             </div>
             
         </div>
