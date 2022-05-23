@@ -56,24 +56,56 @@ $size=count($allId);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="PageGestionnaire.css" media="screen" type="text/css" />
 </head>
 <body>
-    <a>Bienvenue dans la page du gestionnaire</a><br>
-    <?php
-    for ($i=0;$i<count($allPesudo);$i++){
-        $id=$allId[$i];
-        $pseudo=$allPesudo[$i];
-        echo "<a href='http://localhost/appinfo/Chantier/GestionGestionnaire.php?id=$id&pseudo=$pseudo'>Pseudo : $pseudo</a>";
-        echo ("<br>");
-    }
-    //Il faut que quand on clique sur un pseudo on puisse accéder à une page avec le graph de l'id
-    //Testons 
-    $test=10;
-    
-    ?>
-    
+    <div class="container">
+        <header>
+            <div id ="logoimg">
+                <a  href="/appinfo/homepage/homepage.php"><img src="/appinfo/auth/img/logo_infinite.png" alt="logo"></a>
+            </div>  
+            <nav>
+                <ul class="nav__links">
+                    <li><a href="/appinfo/homepage/homepage.php">Accueil</a></li>
+                    <li><a href="/appinfo/<?php echo $chantier ?>" >Votre chantier</a></li>
+                    <li><a href="/appinfo/forum/forum.php">Forum</a></li>
+                    <li><a href="/appinfo/faq/faq.php">FAQ</a></li>
+                    <li><a href="/appinfo/contact/contact_essai.php">Contactez-nous</a></li>
+                    <li><a href="/appinfo/notre_solution/notre_solution.php">Notre solution</a></li>
 
-
-    
+                </ul>
+            </nav>
+            <div id="logomemo">
+                <a href="/appinfo/memory/memory.php"><img src="../memory/memoryim.png" alt="memory"></a>
+            </div>
+            <a class="cta" href= "/appinfo/auth/<?php  echo $editprofil?> "> <?php echo $title ?></a>
+            <?php
+            if(isset($_SESSION['type']) && ($_SESSION['type']) == "Administrateur"){      
+            ?>
+                <a class="cta" href= "/appinfo/admin/admin.php">Admin</a>
+            <?php }?>
+        </header>
+        <div class="title">
+            <h3>Bienvenue dans la page du gestionnaire</h3>
+            <div class="barre"></div>
+        </div>
+        <div class="links">
+            <div class="allLinks">
+                <?php
+                for ($i=0;$i<count($allPesudo);$i++){
+                    $id=$allId[$i];
+                    $pseudo=$allPesudo[$i];
+                    if ($i==0){
+                        echo "<div class='local'><a href='http://localhost/appinfo/Chantier/GestionGestionnaire.php?id=$id&pseudo=$pseudo'>Pseudo : $pseudo</a></div>";  
+                    }
+                    else{
+                        echo "<div class='local other'><a href='http://localhost/appinfo/Chantier/GestionGestionnaire.php?id=$id&pseudo=$pseudo'>Pseudo : $pseudo</a></div>";
+                    }
+                }
+                ?>
+            </div>
+            
+        </div>
+    </div>
 </body>
 </html>
