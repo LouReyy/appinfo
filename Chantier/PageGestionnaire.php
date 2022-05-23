@@ -91,15 +91,16 @@ $size=count($allId);
         </div>
         <div class="links">
             <div class="allLinks">
+                <p>Dans cette rubrique vous pouvez consulter les différentes statistiques des membres de votre chantier en cliquant sur leur pseudo.</p><br>
                 <?php
                 for ($i=0;$i<count($allPesudo);$i++){
                     $id=$allId[$i];
                     $pseudo=$allPesudo[$i];
                     if ($i==0){
-                        echo "<div class='local'><a href='http://localhost/appinfo/Chantier/GestionGestionnaire.php?id=$id&pseudo=$pseudo'>Pseudo : $pseudo</a></div>";  
+                        echo "<div class='local'><a href='http://localhost/appinfo/Chantier/GestionGestionnaire.php?id=$id&pseudo=$pseudo'>$pseudo</a></div>";  
                     }
                     else{
-                        echo "<div class='local other'><a href='http://localhost/appinfo/Chantier/GestionGestionnaire.php?id=$id&pseudo=$pseudo'>Pseudo : $pseudo</a></div>";
+                        echo "<div class='local other'><a href='http://localhost/appinfo/Chantier/GestionGestionnaire.php?id=$id&pseudo=$pseudo'>$pseudo</a></div>";
                     }
                 }
                 ?>
@@ -107,5 +108,44 @@ $size=count($allId);
             
         </div>
     </div>
+
+    <footer class="footer">
+        <div class="footerContent">
+            <div class="row">
+                <div class=" footer-col">
+                    <img src="/appinfo/auth/img/logo_infinite.png" class="logo">
+                    </div>
+                <div class=" footer-col">
+                    <h4>NAVIGATION</h4>
+                    <ul>
+                        <li><a href= "/appinfo/homepage/homepage.php">Accueil</a></li>
+                        <li><a href= "/appinfo/<?php echo $chantier ?>">Votre chantier</a></li>
+                        <li><a href= "/appinfo/forum/forum.php">Forum</a></li>
+                        <li><a href= "/appinfo/faq/faq.php">FAQ</a></li>
+                        <li><a href= "/appinfo/contact/contact_essai.php">Contactez-nous</a></li>
+                        <li><a href= "/appinfo/notre_solution/notre_solution.php">Notre solution</a></li>
+                    </ul>
+                </div>
+                <div class=" footer-col">
+                    <h4>PLUS D'INFOS</h4>
+                    <ul>
+                        <li><a href= "/appinfo/auth/views/inscription.php">Inscription</a></li>
+                        <li><a href= "/appinfo/auth/model/connexion.php">Connexion</a></li>
+                        <li><a href= "/appinfo/cgu/cgu.php">Mentions Légales</a></li>
+                    </ul>
+                </div>
+                <div class=" footer-col">
+                    <h4>SUIVEZ-NOUS</h4>
+                    <div class="social-links">
+                        <a href= "#"><i class="fab fa-facebook-f"></i></a>
+                        <a href= "#"><i class="fab fa-twitter"></i></a>
+                        <a href= "#"><i class="fab fa-instagram"></i></a>
+                        <a href= "#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div> 
+    </footer>
 </body>
 </html>
