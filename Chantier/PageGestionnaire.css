@@ -148,7 +148,7 @@ header {
     }
     .gauche{
         width: 12.5vw;
-        height: 57vh;
+        height: 52vh;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
