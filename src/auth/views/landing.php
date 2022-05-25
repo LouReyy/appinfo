@@ -112,6 +112,9 @@
             <div class="form-group">
             <input type="password" name="password_retype" class="form-control" placeholder="Re-tapez le mot de passe" required="required" autocomplete="off">
             </div>
+            <div class="form-group">
+                <t>Numéro Chantier </t><input type="id_chantier" name="id_chantier" class="form-control" placeholder="Numero de chantier" required="required" autocomplete="off">
+            </div>
 
             <div class="form-group">
 
@@ -124,8 +127,7 @@
                     <option value="Administrateur">Administrateur</option>
                 </select>
 
-                <div class="form-group">
-                <t>Numéro Chantier </t><input type="id_chantier" name="id_chantier" class="form-control" placeholder="Numero de chantier" required="required" autocomplete="off">
+                
 
             </div>
 
