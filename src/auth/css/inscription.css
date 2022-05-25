@@ -281,7 +281,7 @@ input[type=text], input[type=password] {
 
 input[type=text], input[type=id_chantier] {
     font-size: 20px;
-    width: 10%;
+    width: 50%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
