@@ -279,6 +279,19 @@ input[type=text], input[type=password] {
     font-family: "Quicksand";  
 }
 
+input[type=text], input[type=id_chantier] {
+    font-size: 20px;
+    width: 10%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 25px;
+    font-family: "Quicksand";  
+    
+}
+
 
 label {
     font-family: "Quicksand";  
