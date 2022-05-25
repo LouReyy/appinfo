@@ -1,0 +1,783 @@
+body{
+    height: 100%;
+    margin: 0;
+}
+
+
+#container1{
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* menu deroulant */
+
+.menu{
+  width: 25px;
+  height: 25px;
+  margin-left: 0;
+  color: white;
+  float: left;
+}
+
+.profil{
+  width: 30px;
+  height: 30px;
+  float: right;
+  border-radius: 30px;
+
+}
+
+#menu{
+  visibility: hidden;
+  width: 100%;
+  text-align: center;
+  display: none;
+
+
+}
+
+li {
+  list-style:none !important;
+  color:black;
+  padding:10px;
+  font-size:20px;
+  text-decoration:none;
+  }
+  #menu_ul {
+    background-color: #00ccff;
+    padding:0;
+  margin:0;
+  border-radius: 10px;
+
+  }
+
+  #sous_menu{
+    background-color: #00ccff;
+    text-align: center;
+    border-radius: 20px;
+    width: 100%;
+
+
+
+  }
+  #menu_li {
+  list-style: none;
+  line-height:44px;
+  float:left;
+  background-color: #00ccff;
+}
+  nav ul li a {
+  padding:10px;
+  font-size:20px;
+  text-decoration:none;
+  width: 100%;
+  }
+  li a:hover {
+  border-bottom:3px #FFF solid;
+  }
+  nav ul li ul { display:none; } /* Rend le menu déroulant caché par défaut */
+  nav ul li:hover ul { /* Affiche la dropNav au survol de la souris avec la class .drop */
+  z-index:99999;
+  display:list-item !important;
+  position:absolute;
+  margin-top:5px;
+  margin-left:-10px;
+  }
+  nav ul li:hover ul li {
+  float:none;
+  }
+
+  /* menu deroulant */
+
+header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px 2%;
+  background-color: white;
+}
+
+#logomemo img{
+width: 70px;
+height: 70px;
+}
+
+#logoimg{
+  display: flex;
+  justify-content: flex-start;
+  flex:3
+}
+
+
+header img{  /*taille image logo dans la barre du haut*/  
+  width: 110px;
+  height: 110px;
+  margin-right: auto;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+#test{
+  flex:5
+}
+
+.nav__links a,
+.overlay__content a {  /* style des barres du menu */
+  position: relative;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 10;
+  font-size: 17px;
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  margin-left: auto;
+}
+
+.cta{
+  flex:0.3; /*style du texte dans le bouton connexion*/
+  font-family: "Quicksand", sans-serif;
+  font-weight: 10;
+  font-size: 18px;
+  color:white;
+  text-decoration: none;
+}
+
+.nav__links {  /*mettre en liste horizontal*/
+  list-style: none;
+  display: flex;
+}
+
+.nav__links li { /*faire des espaces entre chaque groupe de mot*/
+  padding: 0px 50px;
+}
+
+.nav__links li a { /* chgmt de couleur quand curseur sur le mot qui dure 0.5s et commence apres 0.1s */
+  transition: color 0.5s ease 0.1s;
+}
+
+.nav__links li a:hover { /* couleur du texte quand il curseur dessus*/
+  color: #00ccff;
+}
+
+.cta { /*style cadre de connexion*/
+  margin-left: 20px;
+  padding: 9px 25px;
+  background-color: #00ccff;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  text-align: center;
+}
+
+.cta:hover { /*couleur du cadre quand curseur dessus*/
+  background-color: #8aceff;
+}
+
+
+  #container{
+ 
+      font-family: "Quicksand";
+  }
+
+  #container-title{
+    position: relative;
+    margin-top: 4%;
+    margin-left:36% ;
+}
+
+h1{
+
+    position: relative;
+    font-size: 3em;
+    margin-top: -6%;
+    font-weight: 500;
+   
+}
+
+#forme1{
+    position: relative;
+    width: 510px;
+    height: 25px;
+    margin-top: -10px;
+    margin-left: 6%;
+    
+}
+
+.msg-form{
+  position: relative;
+  width:500px;
+  height: auto;;
+  font-family: "Quicksand";
+  margin-top: 0;
+  margin-left:5%;
+  
+}
+
+.alert{
+  position: relative;
+  width: 800px;
+  height: 30px;
+  color : red;
+  font-family: "Quicksand";
+  font-size: 1.5em;
+
+}
+
+
+#users{
+    position: absolute;
+    width : 90%;
+    height : 75%;
+    margin-top : 2%;
+    margin-left:5%;
+    justify-content: center;
+}
+
+
+#title{
+  position: relative;
+  width : 100%;
+  height:10%;
+  margin-top: 1%;
+  border:solid 1px black;
+  background-color: #F5F5F5;
+  display: flex;
+  flex-direction: row;
+}
+
+.img_user{
+  margin-left:2%;
+  flex:0.5;
+}
+
+titre{
+  position: relative;
+  font-family: "Quicksand";
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 17px;
+  margin-left: 1%;
+  flex:10;
+}
+
+.search{
+  flex:5;
+}
+
+#searchbar{
+  margin-top: 2%;
+  position: relative;
+  padding:15px;
+  border-radius: 40px;
+  padding-left: 25px;
+  background: url("https://static.thenounproject.com/png/101791-200.png") no-repeat left;
+  background-size: 20px;
+  width :100%;
+ 
+}
+
+a.button1{
+  margin-top: 0.5%;
+  margin-left: 1%;
+  position: relative;
+  background-color: #00ccff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+  font-family: "Quicksand";  
+  text-align: center; 
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  margin-right: 1%;
+  flex:3;
+  height: 70%;
+  text-align: center;
+  padding-top: 10px;
+}
+  
+
+
+a.button1:hover, a.button2:hover, a.button3:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+
+#header{
+  position: relative;
+    width : 80%;
+    height : 5%;
+    margin-left: 10%;
+    background-color: #F5F5F5;
+    margin-top: 3%;
+    display: flex;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid black;
+}
+
+photo{
+  margin-top: 0.3%;
+  flex:0.6;
+}
+
+pseudo{
+  margin-top: 0.3%;
+ 
+  flex:0.7;
+}
+
+emailu{
+  margin-top: 0.3%;
+  
+  flex:1;
+}
+
+type{
+  margin-top: 0.3%;
+
+  flex:1;
+}
+
+action{
+  margin-top: 0.3%;
+
+  flex:3
+}
+
+
+
+
+#user{
+    position: relative;
+    width : 80%;
+    height : 15%;
+    margin-left: 10%;
+    margin-top: 1%;
+    background-color: #F5F5F5;
+    box-shadow: 5px 5px 5px lightblue;
+    display: flex;
+    flex-direction: row;
+    font-family: "Quicksand";
+}
+
+
+
+
+
+.photo{
+    position: relative;
+    height: 100%;
+    flex:1;
+    margin-top: -2%;
+
+  }
+
+  .pp{
+position: relative;
+    width : 60%;
+    height: 80%;
+    border-radius: 60%;
+    margin-left: 15%;
+  }
+
+  .line{
+    height: 90px;
+    position : relative;
+    margin-left: 10%;
+    margin-top: 2%;
+
+  }
+
+
+  .content{
+    margin-left: 1%;
+    display: flex;
+    flex-direction:row;
+    flex:4;
+    margin-top: 2%;
+  
+  }
+
+  t{
+    font-weight: bold;
+  }
+
+  nom{
+      flex : 2;
+    position: relative;
+    
+
+  }
+
+email{
+    flex : 2;
+  position: relative;
+
+}
+
+fonction{
+    flex : 2;
+    position: relative;
+
+}
+
+.button{
+  flex:4;
+    display : flex;
+    flex-direction: row;
+}
+
+a.button2{
+    margin-top: 5%;
+    margin-left : 3%;
+    position: relative;
+    background-color: #c71f09;
+    color: white;
+    padding: 6px 10px;
+    border: none;
+    cursor: pointer;
+    width: 80%;
+    height:40%;
+    border-radius: 25px;
+    font-family: "Quicksand";  
+    text-align: center; 
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+
+a.button3{
+  margin-top: 5%;
+  margin-left : 3%;
+  position: relative;
+  background-color: #00ccff;
+  color: white;
+  padding: 6px 10px;
+  border: none;
+  cursor: pointer;
+  width: 80%;
+  height:40%;
+  border-radius: 25px;
+  font-family: "Quicksand";  
+  text-align: center; 
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  margin-right: 2%;
+}
+
+table{
+  position: relative;
+  margin-top: 2%;
+  margin-left: 25%;
+  background-color: #F5F5F5;
+  box-shadow: 5px 5px 5px lightblue;
+  font-family: "Quicksand";
+  font-size: 20px;
+  width: 50%;
+  height:40%;
+  text-align: center;
+}
+
+table,
+td {
+    border: 1px solid #333;
+}
+
+thead,
+tfoot {
+  background-color: #F5F5F5;
+    color: black;
+}
+
+
+@media screen and (max-width: 1000px){
+
+  header{
+    visibility: hidden;
+    height: 0;
+  }
+
+  #menu{
+    visibility: visible;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+
+  }
+
+
+  #container{
+    font-family: sans-serif;
+  
+  }
+
+
+
+
+  #container-title{
+    position: relative;
+    margin-top: 6%;
+    text-align: center;
+    margin-left: 0;
+    font-family: sans-serif;
+
+}
+
+h1{
+
+  position: relative;
+  font-size: 3em;
+  margin-top: -10%;
+  font-weight: 500;
+ 
+}
+
+#forme1{
+  position: relative;
+  width: 510px;
+  height: 20px;
+  margin-top: -10px;
+  margin-left: 6%;
+  
+}
+
+
+
+.photo{
+  position: relative;
+  height: 100%;
+  flex:0.7;
+  margin-top: 0;
+
+}
+
+.line{
+  margin-left: 10%;
+  height: 100%;
+  visibility: hidden;
+
+}
+.pp{
+  width: 90%;
+  margin-top: -10%;
+
+
+}
+
+a.button1{
+  font-size: 15px;
+  padding-top: 13px;
+}
+
+action{
+  flex: 2;
+}
+
+.button{
+  flex-direction: column;
+  flex: 2;
+}
+
+
+a.button2{
+  height: 30%;
+  width: 80%;
+  padding: 4px 10px;
+  margin-top: 1%;
+  font-size: 10px;
+}
+
+a.button3{
+  height: 30%;
+  width: 80%;
+  padding: 4px 10px;
+  margin-top: 1%;
+  font-size: 10px;
+
+
+}
+
+
+
+}
+
+@media screen and (max-width: 500px){
+
+  header{
+    visibility: hidden;
+    height: 0;
+  }
+
+  #menu{
+    visibility: visible;
+    font-family: Arial, Helvetica, sans-serif;
+    display: block;
+
+  }
+
+
+#container{
+  font-family: sans-serif;
+
+}
+
+  #container-title{
+    font-family: sans-serif;
+    position: relative;
+    margin-top: 10%;
+    margin-left:0 ;
+    width: 100%;
+    text-align: center;
+}
+
+h1{
+
+  position: relative;
+  font-size: 1.9em;
+  margin-top: -15%;
+  font-weight: 800;
+ 
+}
+
+#forme1{
+  position: relative;
+  width: 310px;
+  height: 20px;
+  margin-top: -10px;
+  margin-left: 6%;
+  
+}
+
+
+
+#title{
+  margin-top: 4%;
+  width: 100%;
+  height: 10%;
+}
+
+
+.img_user{  
+  margin-left:2%;
+  margin-top: 2%;
+  flex:0.2;
+  width: 10%;
+  height: 40%;
+}
+
+titre{
+  position: relative;
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 2%;
+  flex:5;
+  margin-top: 2%;
+}
+
+.search{
+  flex:6;
+  margin-top: 2%;
+}
+
+
+
+#header{
+  width: 100%;
+  margin-left: 0;
+
+}
+
+
+#user{
+  font-family: sans-serif;
+  width: 100%;
+  margin-left: 0;
+
+
+}
+
+
+
+
+
+.photo{
+    position: relative;
+    width: 22%;
+    height: 100%;
+    flex:3;
+    margin-top: -2%;
+
+  }
+
+  .pp{
+    width : 70%;
+    height: 80%;
+    border-radius: 60%;
+    margin-left: 10%;
+  }
+
+  .content{
+    margin-left: 0%;
+    display: flex;
+    flex-direction:column;
+    flex:4;
+    margin-top: 2%;
+    text-align: center;
+  
+  }
+
+
+
+.button{
+  flex:4;
+    display : flex;
+    flex-direction: column;
+
+}
+
+a.button2{
+  height: 30%;
+  width: 60%;
+  margin-top: 1%;
+
+  padding: 4px 10px;
+}
+
+a.button3{
+  width: 60%;
+  height: 30%;
+  margin-top: 1%;
+
+  padding: 4px 10px;
+}
+
+#searchbar{
+  height: 10%;
+  width: 100%;
+}
+
+
+
+
+}
+
+
+
+

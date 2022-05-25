@@ -1,0 +1,439 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+body{
+    font-family: "Quicksand";
+    background: whitesmoke;
+}
+
+
+.container{
+    display: grid;
+      height: 100vh;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 0.5fr 0.9fr 4fr;
+      grid-template-areas:
+        "header header header header"
+        "equipe equipe equipe equipe"
+        "form form form form";
+  }
+
+  /* menu deroulant */
+
+.menu{
+  width: 25px;
+  height: 25px;
+  margin-left: 0;
+  float: left;
+}
+
+.profil{
+  width: 30px;
+  height: 30px;
+  float: right;
+  border-radius: 30px;
+
+}
+
+#menu{
+  visibility: hidden;
+  width: 100%;
+  text-align: center;
+  display: none;
+  position: absolute;
+
+}
+
+li {
+  list-style:none !important;
+  color:black;
+  padding:10px;
+  font-size:20px;
+  text-decoration:none;
+  }
+  #menu_ul {
+    background-color: #00ccff;
+    padding:0;
+  margin:0;
+  border-radius: 10px;
+
+  }
+
+  #sous_menu{
+    background-color: #00ccff;
+    text-align: center;
+    border-radius: 20px;
+    width: 100%;
+
+
+
+  }
+  #menu_li {
+  list-style: none;
+  line-height:44px;
+  float:left;
+  background-color: #00ccff;
+}
+  nav ul li a {
+  padding:10px;
+  font-size:20px;
+  text-decoration:none;
+  width: 100%;
+  }
+  li a:hover {
+  border-bottom:3px #FFF solid;
+  }
+  nav ul li ul { display:none; } /* Rend le menu déroulant caché par défaut */
+  nav ul li:hover ul { /* Affiche la dropNav au survol de la souris avec la class .drop */
+  z-index:99999;
+  display:list-item !important;
+  position:absolute;
+  margin-top:5px;
+  margin-left:-10px;
+  }
+  nav ul li:hover ul li {
+  float:none;
+  }
+
+  /* menu deroulant */
+
+  header{
+    grid-area: header;
+    position: relative;
+      height: 100px;
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 20px 2%;
+      background-color: #fbfbfb;
+      z-index: 1;
+
+  }
+
+  .equipe{
+      position: relative;
+      grid-area: equipe;
+  }
+
+.equipe a{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 35px;
+    font-weight: 500;
+}
+.barre{
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%,-50%);
+    height: 3px;
+    width: 230px;
+    background: #00ccff;
+
+}
+
+
+  form{
+      position: relative;
+      grid-area: form;
+  }
+
+  #logomemo img{
+    width: 70px;
+    height: 70px;
+    }
+  #logoimg{
+    display: flex;
+    justify-content: flex-start;
+    flex:3
+  }
+  
+    
+    header img{  /*taille image logo dans la barre du haut*/  
+      width: 110px;
+      height: 110px;
+      margin-left: 0;
+      padding: 10px;
+      align-self:baseline;
+    
+  
+    }
+  
+   
+  
+    .nav__links a,
+    .overlay__content a {  /* style des barres du menu */
+      position: relative;
+      font-family: "Quicksand", sans-serif;
+      font-weight: 10;
+      font-size: 17px;
+      color: black;
+      text-decoration: none;
+      text-align: center;
+      margin-left: auto;
+    }
+  
+    .cta{ 
+        flex:0.3;/*style du texte dans le bouton connexion*/
+      font-family: "Quicksand", sans-serif;
+      font-weight: 10;
+      font-size: 18px;
+      color:white;
+      text-decoration: none;
+    }
+    
+    .nav__links {  /*mettre en liste horizontal*/
+      list-style: none;
+      display: flex;
+    }
+    
+    .nav__links li { /*faire des espaces entre chaque groupe de mot*/
+      padding: 0px 50px;
+    }
+    
+   .nav__links li a { /* chgmt de couleur quand curseur sur le mot qui dure 0.2s et commence apres 0s */
+      transition: color 0.2s ease 0s;
+    }
+    
+    .nav__links li a:hover { /* couleur du texte quand il curseur dessus*/
+      color: #00ccff;
+    }
+    
+    .cta { /*style cadre de connexion*/
+      margin-left: 20px;
+      padding: 9px 25px;
+      background-color: #00ccff;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 20px;
+      text-align: center;
+    }
+    
+    .cta:hover { /*couleur du cadre quand curseur dessus*/
+      background-color: #8aceff;
+    }
+
+.content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    width: 40vw;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+.content h1{
+    margin-left: 33%;
+    font-size: 20px;
+}
+
+
+
+
+form .formulaire{
+
+    display:flex;
+    flex-wrap: wrap;
+    font-family: "Quicksand";
+    margin-bottom: 20px;
+
+}
+form .formulaire .case{ /**toutes les classes case de formulaire**/
+    position: relative;
+    display: flex; 
+    flex-direction: column; /**Commandes pour mettre toutes les cases positionnées en colonne**/
+    margin-top: 3vh;
+}
+form .formulaire .gauche .case input{ /**On sélectionne les cases de gauche**/
+    margin-top: 5px; /**descend chaque input de 5 pixels par rapport à la page**/
+    padding: 10px 5px 10px 30px; /**espace entre zone d'input et la case**/ 
+    border: 1px solid rgb(138, 134, 134);
+    border-radius: 5px;
+    outline-color: grey;
+    font-family: "Quicksand";
+
+
+}
+form .formulaire .droite .case textarea{ /**On sémectionne la case de droite réservée à la question**/
+    margin-top: 5px; /**descend de 5 pixels par rapport à la page**/
+    padding: 5px 2px 2px 30px;
+    border: 1px solid rgb(138, 134, 134);
+    border-radius: 5px;
+    outline-color: grey;
+    font-family: "Quicksand";
+    height: 20vh;
+    width: 20vw;
+
+}
+
+form .formulaire .gauche .case i{ /**Sélectionne les images à gauche**/
+    position: absolute; /**position par rapport à la classe mère**/
+    padding: 34px 2px 10px 5px;
+    color: #00ccff; 
+
+}
+form .formulaire .droite{
+    margin-left: 30px;
+}
+form .formulaire .droite .case i{
+    position: absolute;
+    margin-top: 29px;
+    margin-left: 4px;
+    color: #00ccff;
+
+}
+.envoyer{
+  margin-left: 30%;
+  color: #00ccff;
+}
+
+button[type=submit]{
+  background-color: #00ccff;
+  color: white;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+  font-family: "Quicksand";  
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  width: 50%;
+}
+
+button[type=submit]:hover{
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+
+}
+
+
+.footerContent{
+
+    max-width: 2000px;
+    
+    font-family: "Quicksand";
+  
+  }
+  .row{
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  ul{
+    list-style:none;
+  }
+  
+  .footer{
+    background-color: rgb(0, 217, 255);
+    padding: 75px 0;
+  
+  }
+  .footer-col{
+    width: 25%;
+    padding:0 5%;
+  
+  }
+  .footer-col h4{
+    font-size:18px;
+    color:aliceblue;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position:relative;
+    
+  }
+  .footer-col h4::before{
+    content: '';
+    position:absolute;
+    left:0;
+    bottom: -10px;
+    background-color:blue;
+    height: 2px;
+    box-sizing:border-box;
+    width: 50px;
+  }
+  .footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+  }
+  .footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-weight: 300;
+    color:aliceblue;
+    display:block;
+    transition: all 0,3s ease;
+  }
+  .footer-col ul li a:hover{
+    color:rgba(22, 61, 190, 0.747);
+    padding-left: 7px;
+  
+  }
+  .footer-col .logo{
+    width: 190px;
+    height: 190px;
+  }
+  .footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(22, 61, 190, 0.747);
+    margin-right: 0 10px 10px 0;
+    text-align:center;
+    line-height:40px;
+    border-radius: 50px;
+    color: rgb(255, 249, 249);
+  }
+  .footer-col .social-links a:hover{
+    color:rgba(22, 61, 190, 0.747);
+    background-color: aliceblue;
+  }
+
+  @media screen and (max-width: 1000px){
+
+    header{
+      visibility: hidden;
+      height: 0;
+    }
+  
+    #menu{
+      visibility: visible;
+      font-family: Arial, Helvetica, sans-serif;
+      display: block;
+  
+    }
+  }
+
+  @media screen and (max-width: 500px){
+
+    header{
+      visibility: hidden;
+      height: 0;
+    }
+  
+    #menu{
+      visibility: visible;
+      font-family: Arial, Helvetica, sans-serif;
+      display: block;
+  
+    }
+  }
+
+  
+

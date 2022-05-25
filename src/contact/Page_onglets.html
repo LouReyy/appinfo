@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Page_onglets.css" media="screen" type="text/css" />
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+
+    <div class="container">
+    
+        <div class="noms_onglets">
+            <div class="/appinfo/homepage/homepage.php" data-anim="1">Accueil</div> 
+            <!--La syntaxe "data-" permet de rajouter un attribut qui sera utilisé ensuite avec javascript-->
+            <div class="/appinfo/Chantier/Chantier.php" data-anim="2">Votre Chantier</div> <!--idem-->
+            <div class="/appinfo/forum/forum.php" data-anim="3">Forum</div> <!--idem-->
+            <div class="/appinfo/faq/faq.php" data-anim="3">FAQ</div> <!--idem-->
+            <div class="/appinfo/contact/contact_essai.html" data-anim="4">Contactez-nous</div> <!--idem-->
+    
+        </div>
+
+
+        <div class="contenu activeContenu" data-anim="1">
+            <!--Classe représentant le contenu de l'onglet 1 (il a donc le même attribut que son titre)-->
+            <h3>Voici l'onglet. 1</h3>
+            <hr>
+            <p>Page d'accueil</p>
+        </div>
+    
+        <div class="contenu" data-anim="2">
+            <!--Classe représentant le contenu de l'onglet 2 (il a donc le même attribut que son titre)-->
+            <h3>Voici l'onglet. 2</h3>
+            <hr>
+            <p>Dans votre chantier vous aurez accès à différentes données liées la qualité de l'environnement de votre lieu de travail comme l'intensité sonore, le taux de CO2 mais aussi des informations sur votre stress grâce à votre rhythme cardiaque.</p>
+        </div>
+    
+        <div class="contenu" data-anim="3">
+            <!--Classe représentant le contenu de l'onglet 3 (il a donc le même attribut que son titre)-->
+            <h3>Voici l'onglet. 3</h3>
+            <hr>
+            <p>Ici vous pouvez poser des questions.</p>
+        </div>
+        <div class="contenu" data-anim="4">
+            <!--Classe représentant le contenu de l'onglet 4 (il a donc le même attribut que son titre)-->
+            <form >
+                <h1>Contactez-nous</h1>
+                <div class="trait"></div>
+                <div class="formulaire">
+                    <div class="gauche">
+                        <div class="case">
+                            <label>Nom</label>
+                            <input type="input">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+        
+                        <div class="case">
+                            <label>Prénom</label>
+                            <input type="input">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+        
+                        <div class="case">
+                            <label>Mail</label>
+                            <input type="input">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+        
+                        <div class="case">
+                            <label>Téléphone</label>
+                            <input type="input">
+                            <i class="fa-solid fa-mobile"></i>
+                        </div>
+                        <div class="choix">
+                            <label>Quel est votre poste ?</label><br>
+                            <input type="radio"><label>Utilisateur</label><br>
+                            <input type="radio"><label>Gestionaire</label><br>
+                            <input type="radio"><label>Administrateur</label><br>
+                            <input type="radio"><label>Visiteur</label>
+
+
+                        </div>
+                    </div>
+        
+                    <div class="droite"> <!--Zone de texte pour la question-->
+                        <div class="case">
+                            <label >Message</label>
+                            <textarea type= "zoneText" name="question" id="" cols="30" rows="10"></textarea>
+                            <i class="fa-solid fa-circle-question"></i>
+                        
+                        </div>
+        
+                    </div>
+                </div>
+                <button type="boutton">Envoyer</button> <!--Le boutton ne fait pas parti du div<formulaire> -->
+            </form>
+            
+        </div>
+    
+    
+    </div>
+    <script src="Page_onglets.js"></script>
+
+    
+    
+    
+</body>
+</html>
