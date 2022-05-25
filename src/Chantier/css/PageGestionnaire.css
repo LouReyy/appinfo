@@ -246,7 +246,7 @@ header {
         padding: 7px 20px;
     }
 
-    a{
+    a.test{
       margin-top: 2%;
       margin-left: 0.5vw;
       background-color: #00ccff;
