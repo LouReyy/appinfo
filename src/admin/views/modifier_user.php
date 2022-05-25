@@ -1,5 +1,4 @@
-<?php include("../model/setup_modif.php");
-echo($file_name); ?>
+<?php include("../model/setup_modif.php"); ?>
 
 <!DOCTYPE html>
 <html lang="en">
