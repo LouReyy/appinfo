@@ -571,6 +571,16 @@ a.repondre:hover,a.button2:hover{
 
 }
 
+.cta2 { /*style cadre de connexion*/
+  margin-left: 20px;
+  padding: 9px 15px;
+  background-color: #00ccff;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  text-align: center;
+}
+
 
 
 
