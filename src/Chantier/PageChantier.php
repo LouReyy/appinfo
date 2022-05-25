@@ -6,7 +6,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PageChantier</title>
+    <title>Page Chantier</title>
+    <link rel="icon" type="image/png" href="../homepage/img/InfiniteMeasures.png" />
+
     <link rel="stylesheet" href="css/Chantier.css" media="screen" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
 </head>

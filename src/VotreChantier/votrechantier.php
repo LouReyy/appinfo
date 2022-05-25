@@ -12,7 +12,9 @@ include("model/setup.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/votrechantier.css">
     
-    <title>Document</title>
+    <title>Exemple de Chantier</title>
+    <link rel="icon" type="image/png" href="../homepage/img/InfiniteMeasures.png" />
+
 </head>
 <body>
 <?php include("views/header.php");

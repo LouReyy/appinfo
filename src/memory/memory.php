@@ -13,6 +13,8 @@ include("model/setup.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/memo.css" media="screen" type="text/css" />
     <title>Memory</title>
+    <link rel="icon" type="image/png" href="../homepage/img/InfiniteMeasures.png" />
+
 </head>
 
 <body>

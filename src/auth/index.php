@@ -11,6 +11,8 @@
             <link rel="stylesheet" href="css/index.css" media="screen" type="text/css" />
             
             <title>Connexion</title>
+            <link rel="icon" type="image/png" href="../homepage/img/InfiniteMeasures.png" />
+
         </head>
 
         <body>   

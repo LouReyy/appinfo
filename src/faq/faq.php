@@ -14,6 +14,8 @@ include('model/paramfaq.php')
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/faq/css/faq.css" media="screen" type="text/css" />
     <title>FAQ</title>
+    <link rel="icon" type="image/png" href="../homepage/img/InfiniteMeasures.png" />
+
 </head>
 
 <body>
