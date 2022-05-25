@@ -42,7 +42,7 @@ echo($data['email']);
 
 
 
-if(file_exists('auth/index.php')){
+if(file_exists('https://appinfofinal.herogu.garageisep.com/auth/index.php')){
     
     $file_name = "/auth/profil_picture/" . hash('sha256',  $data['email'] );
     }
