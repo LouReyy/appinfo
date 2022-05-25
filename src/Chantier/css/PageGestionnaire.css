@@ -237,7 +237,7 @@ header {
         color: white;
         text-decoration: inherit;
     }
-    .local{
+    a.local{
         margin-top: 4vh;
         margin-left: 0.5vw;
         background-color: #00ccff;
