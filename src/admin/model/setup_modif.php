@@ -51,6 +51,6 @@ if(file_exists( "src/auth/profil_picture/" . hash('sha256',  $data['email']). ".
     }
 
 
-echo("/auth/profil_picture/" . hash('sha256',  $data['email']). ".jpg");
+echo("src/auth/profil_picture/" . hash('sha256',  $data['email']). ".jpg");
 
 ?>
