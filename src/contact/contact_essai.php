@@ -32,7 +32,7 @@ include("views/menu_deroulant_tel.php");
             <a>Notre équipe</a>
             <div class="barre"></div>
         </div>
-        <form method="POST" action="manage.php">
+        <form method="POST" action="model/contact.php">
             <div class="content">
                 <h1>Contactez-nous</h1>
                 <div class="trait"></div>
