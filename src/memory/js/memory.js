@@ -131,6 +131,7 @@ jeux2.forEach(jeu => {
 
                 if (listPaire.length==10){
                     alert("C'est gagne!");
+                    document.getElementById('rejouer').style.visibility = 'visible';
                 }
 
 
