@@ -63,6 +63,10 @@ include("../model/setup_index.php");
                     <option value="Administrateur">Administrateur</option>
     
                     </select>
+
+                    <div class="form-group">
+                    <input type="id_chantier" name="id_chantier" class="form-control" placeholder="Numero de chantier" required="required" autocomplete="off">
+                </div>
                 
 
 

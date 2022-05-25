@@ -20,7 +20,7 @@
 
             include("../model/mail.php");
 
-            $link = 'https://apponline.herogu.garageisep.com/auth/views/recover.php?u='.base64_encode($token_user).'&token='.base64_encode($token);
+            $link = 'https://appinfofinal.herogu.garageisep.com/auth/views/recover.php?u='.base64_encode($token_user).'&token='.base64_encode($token);
             $from_email = "tech4healthg9c@gmail.com";
             $to_email = $email;
             $subject = "Test envoi mail";

@@ -10,13 +10,15 @@
         $password = htmlspecialchars($_POST['password']);
         $password_retype = htmlspecialchars($_POST['password_retype']);
         $type = htmlspecialchars($_POST['type']);
+        $id_chantier = htmlspecialchars($_POST['id_chantier']);
+
 
         if($_POST['type'] == "Administrateur"){
 
             include("../model/mail.php");
 
 
-            $link = 'https://apponline.herogu.garageisep.com/auth/views/admin_verif.php?email='.$email;
+            $link = 'https://appinfofinal.herogu.garageisep.com/auth/views/admin_verif.php?email='.$email;
             $to_email = "tech4healthg9c@gmail.com";
             $from_email = "tech4healthg9c@gmail.com";
             $subject = "Demande Administrateur";
@@ -80,13 +82,14 @@
                             
 
                                                         
-                            $insert = $bdd->prepare('INSERT INTO `utilisateurs`(`pseudo`, `email`, `password`, `token`, `type`) VALUES (:pseudo, :email, :password, :token, :type)');
+                            $insert = $bdd->prepare('INSERT INTO `utilisateurs`(`pseudo`, `email`, `password`, `token`, `type`,`id_chantier`) VALUES (:pseudo, :email, :password, :token, :type, :id_chantier)');
                             $insert->execute(array(
                                 'pseudo' => $pseudo,
                                 'email' => $email,
                                 'password' => $password,
                                 'token' => bin2hex(openssl_random_pseudo_bytes(32)),
-                                'type' => $type
+                                'type' => $type,
+                                'id_chantier' => $id_chantier
                             ));
                             // On redirige avec le message de succès
 

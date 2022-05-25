@@ -73,7 +73,7 @@
                 </ul>
             </nav>
             <div id="logomemo">
-                <a href="/memory/memory.php"><img src="/memory/memoryim.png" alt="memory"></a>
+                <a href="/memory/memory.php"><img src="/memory/img/memoryim.png" alt="memory"></a>
             </div>
             <a class="cta" href= "/auth/<?php echo $editprofil?> "> <?php echo $title ?></a>
 
@@ -112,6 +112,9 @@
             <div class="form-group">
             <input type="password" name="password_retype" class="form-control" placeholder="Re-tapez le mot de passe" required="required" autocomplete="off">
             </div>
+            <div class="form-group">
+                <t>Numéro Chantier </t><input type="id_chantier" name="id_chantier" class="form-control" placeholder="Numero de chantier" required="required" value = "<?php echo $data['id_chantier']; ?>"autocomplete="off">
+            </div>
 
             <div class="form-group">
 
@@ -123,6 +126,9 @@
                     <option value="Gestionnaire">Gestionnaire</option>
                     <option value="Administrateur">Administrateur</option>
                 </select>
+
+                
+
             </div>
 
 
