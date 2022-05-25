@@ -280,7 +280,7 @@ header img{  /*taille image logo dans la barre du haut*/
     padding-left: 25px;
     background: url("https://static.thenounproject.com/png/101791-200.png") no-repeat left;
     background-size: 20px;
-    width: 100%;
+    width: 95%;
   }
 
   input[type=text] {
