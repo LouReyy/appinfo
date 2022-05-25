@@ -41,16 +41,18 @@ $type = htmlspecialchars($data['type']);
 
 
 
-if(file_exists(dirname(__FILE__,3) . "\auth/profil_picture/".hash('sha256',  $data['email']) . ".jpg")){
+if(isset($data['email'])){
 
-    $file_name = "../auth/profil_picture/" . hash('sha256',  $data['email'] );
+    if(file_exists( "../auth/profil_picture/" . hash('sha256',  $data['email']). ".jpg")){
+    
+        $file_name = "../auth/profil_picture/" . hash('sha256',  $data['email'] );
+        }
+    }
+        else{
+        $file_name = "../auth/img/pp";
+        
 
-}
-
-else{
-    $file_name = "../auth/img/pp";
-
-}
+    }
 
 if(isset($_SESSION['email'])){
 
