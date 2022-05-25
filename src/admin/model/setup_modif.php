@@ -47,7 +47,7 @@ if(file_exists( "../auth/profil_picture/" . hash('sha256',  $data['email']). ".j
     $file_name = "../auth/profil_picture/" . hash('sha256',  $data['email'] );
     }
     else{
-    $file_name = "../auth/pp";
+    $file_name = "../auth/img/pp";
     }
 
 
