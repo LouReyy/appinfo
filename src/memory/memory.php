@@ -106,17 +106,16 @@ include("model/setup.php");
                     </div>
 
 
-                    <h3> Temps: </h3>
+                    <div id=regle>
+                        <h2> Règles du jeu
+                            <hr>
+                        </h2>
+                        <p>Vous devez retrouver toutes les paires du jeu!</p>
+                        <p>Pour cela retournez 2 cartes et si elles sont identiques, vous avez formé une paire. Sinon, les cartes se retournent et vous devez repiocher.</p>
+                        <p>Mais attention, n'oubliez pas les positions des cartes que vous avez deja vu!</p>
+                    </div>
                 </div>
 
-            </div>
-            <div id=regle>
-                <h2> Regle du jeu
-                    <hr>
-                </h2>
-                <p>Vous devez retrouver toutes les paires du jeu!</p>
-                <p>Pour cela retournez 2 cartes et si elles sont identiques, vous avez formé une paire. Sinon, les cartes se retournent et vous devez repiocher.</p>
-                <p>Mais attention, n'oubliez pas les positions des cartes que vous avez deja vu!</p>
             </div>
         </main>
 
