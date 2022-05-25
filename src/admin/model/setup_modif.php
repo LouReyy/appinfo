@@ -36,6 +36,7 @@ $type = htmlspecialchars($data['type']);
 
 echo($data['email']);
 echo($_SESSION['email']);
+var_dump($_SESSION);
 
 
 
