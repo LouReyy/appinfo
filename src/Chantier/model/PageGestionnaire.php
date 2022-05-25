@@ -89,7 +89,7 @@ $size=count($allId);
         <div class="footerContent">
             <div class="row">
                 <div class=" footer-col">
-                    <img src="/appinfo/auth/img/logo_infinite.png" class="logo">
+                    <img src="/auth/img/logo_infinite.png" class="logo">
                     </div>
                 <div class=" footer-col">
                     <h4>NAVIGATION</h4>
