@@ -42,7 +42,7 @@ echo($data['email']);
 
 
 
-if(file_exists('../src/auth/index.php')){
+if(file_exists($_SERVER['DOCUMENT_ROOT'] . 'auth/index.php')){
     
     $file_name = "/auth/profil_picture/" . hash('sha256',  $data['email'] );
     }
