@@ -72,7 +72,7 @@ $size=count($allId);
                         $id=$allId[$i];
                         $pseudo=$allPesudo[$i];
                         if ($i==0){
-                            echo "<div class='local'><a href='GestionGestionnaire.php?id=$id&pseudo=$pseudo'>$pseudo</a></div>";  
+                            echo "<div class='local'href='GestionGestionnaire.php?id=$id&pseudo=$pseudo'>$pseudo</></div>";  
                         }
                         else{
                             echo "<div class='local other'><a href='GestionGestionnaire.php?id=$id&pseudo=$pseudo'>$pseudo</a></div>";
