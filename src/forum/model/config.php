@@ -7,5 +7,5 @@
     }
     catch(PDOException $e)
     {
-        die('Erreur : '.$e->getMessage());
+        die('Erreur : zebi '.$e->getMessage());
     }
