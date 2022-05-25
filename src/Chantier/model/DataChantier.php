@@ -29,7 +29,7 @@ if(isset($_SESSION['user'])){
     }
 
 
-$conn=mysqli_connect('herogu.garageisep.com','P2i6H04k07_appinfofin','mJMzoauEGw0U53S0','haXoGjsQhU_appinfofin');
+$conn=mysqli_connect('herogu.garageisep.com','haXoGjsQhU_appinfofin','mJMzoauEGw0U53S0','P2i6H04k07_appinfofin');
 if (!$conn){
     echo 'Connection error: ' . mysqli_connect_error();
 }
