@@ -60,7 +60,7 @@ if($password === $password_retype){
     if($admin == "true"){
         if (smtpmailer($to_email,$from_email,$name, $subject, $body, )) {
             echo "l'email a bien été envoyé à $to_email...";
-            header('Location: ../views/inscription.php?reg_err=admin');
+            header('Location: ../views/landing.php?reg_err=admin');
 
         } else {
             echo "Email sending failed...";
@@ -69,7 +69,7 @@ if($password === $password_retype){
         
         }
     }else{
-             header('Location:../views/inscription.php?reg_err=success');
+             header('Location:../views/landing.php?reg_err=success');
     }
     die();
 
