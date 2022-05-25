@@ -42,9 +42,9 @@ echo($data['email']);
 
 
 
-if(file_exists( "../auth/profil_picture/" . hash('sha256',  $data['email']). ".jpg")){
+if(file_exists( "/auth/profil_picture/" . hash('sha256',  $data['email']). ".jpg")){
     
-    $file_name = "../auth/profil_picture/" . hash('sha256',  $data['email'] );
+    $file_name = "/auth/profil_picture/" . hash('sha256',  $data['email'] );
     }
     else{
     $file_name = "/auth/img/pp";
