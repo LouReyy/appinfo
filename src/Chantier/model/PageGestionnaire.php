@@ -75,7 +75,7 @@ $size=count($allId);
                             echo "<a href='GestionGestionnaire.php?id=$id&pseudo=$pseudo'<div class='local' >$pseudo</></div></a>";  
                         }
                         else{
-                            echo "<div class='local other'><a href='GestionGestionnaire.php?id=$id&pseudo=$pseudo'>$pseudo</a></div>";
+                            echo "<a href='GestionGestionnaire.php?id=$id&pseudo=$pseudo'<div class='local other'>$pseudo</div></a>";
                         }
                     }
                     ?>
