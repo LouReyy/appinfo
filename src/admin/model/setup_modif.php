@@ -37,9 +37,9 @@ $type = htmlspecialchars($data['type']);
 
 
 
-    if(file_exists( "/src/auth/profil_picture/" . hash('sha256',  $data['email']). ".jpg")){
+    if(file_exists( "/auth/profil_picture/" . hash('sha256',  $data['email']). ".jpg")){
     
-        $file_name = "/src/auth/profil_picture/" . hash('sha256',  $data['email'] );
+        $file_name = "/auth/profil_picture/" . hash('sha256',  $data['email'] );
         }
     
         else{
