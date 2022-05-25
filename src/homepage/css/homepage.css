@@ -94,7 +94,7 @@ li {
   float:none;
   }
 
-  /* menu deroulant */
+  /*FIN menu deroulant */
 
   header {
     width: 100%;
@@ -157,7 +157,7 @@ li {
   }
   
   .nav__links li { /*faire des espaces entre chaque groupe de mot*/
-    padding: 0px 50px;
+    padding: 0px 40px;
   }
   
  .nav__links li a { /* chgmt de couleur quand curseur sur le mot qui dure 0.5s et commence apres 0.1s */
@@ -170,7 +170,7 @@ li {
   
   .cta { /*style cadre de connexion*/
     margin-left: 20px;
-    padding: 9px 25px;
+    padding: 9px 15px;
     background-color: #00ccff;
     border-radius: 10px;
     cursor: pointer;
