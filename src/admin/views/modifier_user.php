@@ -24,7 +24,7 @@ include("menu_deroulant_tel.php");?>
         <div id = container-title>
                 
 
-            <img id = "forme1"src="/appinfo/auth/img/forme1.png"></img>
+            <img id = "forme1"src="/auth/img/forme1.png"></img>
 
             <h1 class="text-center">Modifier un Utilisateur</h1>
 
@@ -76,7 +76,7 @@ include("menu_deroulant_tel.php");?>
 
         </div> 
 
-        <img class = line src = ../img/line4.png>
+        <img class = line src = ../img/Line4.png>
 
         <div id = pp>
 
