@@ -82,13 +82,14 @@
                             
 
                                                         
-                            $insert = $bdd->prepare('INSERT INTO `utilisateurs`(`pseudo`, `email`, `password`, `token`, `type`,`id_chantier`) VALUES (:pseudo, :email, :password, :token, :type)');
+                            $insert = $bdd->prepare('INSERT INTO `utilisateurs`(`pseudo`, `email`, `password`, `token`, `type`,`id_chantier`) VALUES (:pseudo, :email, :password, :token, :type, :id_chantier)');
                             $insert->execute(array(
                                 'pseudo' => $pseudo,
                                 'email' => $email,
                                 'password' => $password,
                                 'token' => bin2hex(openssl_random_pseudo_bytes(32)),
-                                'type' => $type
+                                'type' => $type,
+                                'id_chantier' => $id_chantier
                             ));
                             // On redirige avec le message de succès
 
