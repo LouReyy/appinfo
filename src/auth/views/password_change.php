@@ -51,7 +51,7 @@ require_once("../model/config.php");
                 </ul>
             </nav>
             <div id="logomemo">
-                <a href="/memory/memory.php"><img src="/memory/memoryim.png" alt="memory"></a>
+                <a href="/memory/memory.php"><img src="/memory/img/memoryim.png" alt="memory"></a>
             </div>
             <a class="cta" href= "/auth/<?php echo $editprofil?> "> <?php echo $title ?></a>
 

@@ -23,8 +23,8 @@
             $link = 'https://appinfofinal.herogu.garageisep.com/auth/views/recover.php?u='.base64_encode($token_user).'&token='.base64_encode($token);
             $from_email = "tech4healthg9c@gmail.com";
             $to_email = $email;
-            $subject = "Test envoi mail";
-            $body = '<a href="'.$link.'">Reinitialise ton mot de passe en cliquant ici !</a>';
+            $subject = "Modification de votre mot de passe";
+            $body = '<a href="'.$link.'">Reinitialisez votre mot de passe en cliquant ici !</a>';
             $name = "Mot de passe oublie";
  
 

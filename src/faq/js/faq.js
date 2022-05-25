@@ -50,7 +50,7 @@ function verif(x){
     }
     else{
     droite.style.marginLeft = '15%';
-    droite.style.marginTop = '20%';
+    droite.style.marginTop = '15%';
     }
 }
 
