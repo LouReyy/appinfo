@@ -3,9 +3,9 @@
     try 
     {
         
-        $bdd = new PDO("mysql:host=herogu.garageisep.com;dbname=s24iyG1gNr_appinfo2;charset=utf8", "9F6O2KbNz9_appinfo2", "buGQrB3QQ7mFCCSq");
+        $bdd = new PDO("mysql:host=herogu.garageisep.com;dbname=P2i6H04k07_appinfofin;charset=utf8", "haXoGjsQhU_appinfofin", "mJMzoauEGw0U53S0");
     }
     catch(PDOException $e)
     {
-        die('Erreur : '.$e->getMessage());
+        die('Erreur : zebi '.$e->getMessage());
     }
