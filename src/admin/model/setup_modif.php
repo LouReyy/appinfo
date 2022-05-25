@@ -38,19 +38,20 @@ $password = htmlspecialchars($data['password']);
 $password_retype = htmlspecialchars($data['password']);
 $type = htmlspecialchars($data['type']);
 
-echo($data['email']);
 
 
 
-if(file_exists('https://appinfofinal.herogu.garageisep.com/auth/profil_picture/55e404d28b0c238be7958f68bca4ad4208baf10478525dd458ddeab5baffaaf5.jpg')){
-    
-    $file_name = "/auth/profil_picture/" . hash('sha256',  $data['email'] );
-    }
-    else{
-    $file_name = "/auth/img/pp";
-    }
+if(file_exists(dirname(__FILE__,3) . "\auth/index.php")){
+
+    $file_name = "../auth/profil_picture/" . hash('sha256',  $data['email'] );
+
+}
+
+else{
+    $file_name = "../auth/img/pp";
+
+}
 
 
-echo("src/auth/profil_picture/" . hash('sha256',  $data['email']). ".jpg");
 
 ?>
