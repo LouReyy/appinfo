@@ -52,7 +52,7 @@ else{
 
 }
 
-echo(dirname(__FILE__,3) . "\auth/profil_picture/".hash('sha256',  $data['email']) . ".jpg");
+echo(dirname(__FILE__,2) . "\auth/profil_picture/".hash('sha256',  $data['email']) . ".jpg");
 
 
 ?>
