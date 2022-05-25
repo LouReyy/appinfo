@@ -123,6 +123,8 @@ include("model/setup.php");
 
         <script src="js/memory.js"></script>
 
+
 </body>
+<?php include("views/footer.php")?>
 
 </html>
