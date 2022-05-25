@@ -130,8 +130,7 @@ jeux2.forEach(jeu => {
                 console.log(listPaire);
 
                 if (listPaire.length==10){
-                    alert("C'est gagne");
-                    window.location.reload();
+                    alert("C'est gagne!");
                 }
 
 

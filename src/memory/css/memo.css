@@ -247,11 +247,13 @@ h1 hr:hover{
 
 }
 
-#regle{
-    position: relative;
-    margin-top: 60%;
+#regle {
     text-align: center;
     font-size: 25px;
+}
+
+#regle p{
+    font-size:20px;
 }
 
 h2{
@@ -269,6 +271,22 @@ h2 hr{
     border-bottom:none;
     transition: width 1s ease 0.2s;
   }
+
+  #rejouer {
+    visibility: hidden;
+}
+
+input[type=button] {
+    background-color: #00ccff;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 200px;
+    border-radius: 25px;
+    font-size: 25px;
+}
 
   @media screen and (max-width: 1000px){
 
