@@ -237,8 +237,8 @@ header {
         color: white;
         text-decoration: inherit;
     }
-    .local{
-        margin-top: 4vh;
+    a.local{
+        margin-top: 0;
         margin-left: 0.5vw;
         background-color: #00ccff;
         width: 12vw;
