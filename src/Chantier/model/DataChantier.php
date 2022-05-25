@@ -28,6 +28,19 @@ if(isset($_SESSION['user'])){
         $chantier = "VotreChantier/votrechantier.php";
     }
 
+    if(isset($_SESSION['email'])){
+
+        if(file_exists( "../auth/profil_picture/" . hash('sha256',  $_SESSION['email']). ".jpg")){
+        
+            $file_name = "../auth/profil_picture/" . hash('sha256',  $_SESSION['email'] );
+            }
+        }
+            else{
+            $file_name = "../auth/img/pp";
+            
+    
+        }
+
 
 $conn=mysqli_connect('herogu.garageisep.com','haXoGjsQhU_appinfofin','mJMzoauEGw0U53S0','P2i6H04k07_appinfofin');
 if (!$conn){
