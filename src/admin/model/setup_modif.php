@@ -41,14 +41,14 @@ $type = htmlspecialchars($data['type']);
 
 
 
-if(file_exists(dirname(__FILE__,3) . "\auth/index.php")){
+if(file_exists(dirname(__FILE__,3) . "/auth/index.php")){
 
-    $file_name = "../auth/profil_picture/" . hash('sha256',  $data['email'] );
+    $file_name = "/auth/profil_picture/" . hash('sha256',  $data['email'] );
 
 }
 
 else{
-    $file_name = "../auth/img/pp";
+    $file_name = "/auth/img/pp";
 
 }
 
