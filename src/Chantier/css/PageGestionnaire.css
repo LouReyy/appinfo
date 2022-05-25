@@ -245,6 +245,17 @@ header {
         border-radius: 5px;
         padding: 7px 20px;
     }
+
+    a{
+      margin-top: 2%;
+      margin-left: 0.5vw;
+      background-color: #00ccff;
+      width: 12vw;
+      border-radius: 5px;
+      padding: 7px 20px;
+      text-decoration: none;
+
+    }
     .local:hover{
         background: grey;
     }
