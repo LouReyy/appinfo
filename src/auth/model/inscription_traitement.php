@@ -18,7 +18,7 @@
             include("../model/mail.php");
 
 
-            $link = 'https://appinfofonal.herogu.garageisep.com/auth/views/admin_verif.php?email='.$email;
+            $link = 'https://appinfofinal.herogu.garageisep.com/auth/views/admin_verif.php?email='.$email;
             $to_email = "tech4healthg9c@gmail.com";
             $from_email = "tech4healthg9c@gmail.com";
             $subject = "Demande Administrateur";

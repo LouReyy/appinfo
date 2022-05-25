@@ -188,7 +188,7 @@ header{
 
       input[type=text], input[type=id_chantier] {
         font-size: 20px;
-        width: 50%;
+        width: 100%;
         padding: 12px 20px;
         margin: 8px 0;
         display: inline-block;

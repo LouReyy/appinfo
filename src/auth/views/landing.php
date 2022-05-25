@@ -125,8 +125,8 @@
                 </select>
 
                 <div class="form-group">
-                    <input type="id_chantier" name="id_chantier" class="form-control" placeholder="Numero de chantier" required="required" autocomplete="off">
-                    
+                <t>Numéro Chantier </t><input type="id_chantier" name="id_chantier" class="form-control" placeholder="Numero de chantier" required="required" autocomplete="off">
+
             </div>
 
 
