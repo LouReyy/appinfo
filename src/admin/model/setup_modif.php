@@ -1,4 +1,7 @@
 <?php
+
+
+session_start(); 
 require_once 'config.php'; 
 
 
@@ -18,7 +21,9 @@ if(isset($_SESSION['type'])){
 else{
     $chantier = "VotreChantier/votrechantier.php";
 }
+?>
 
+<?php
 
 $id = $_GET['id'];
 
@@ -33,24 +38,21 @@ $password = htmlspecialchars($data['password']);
 $password_retype = htmlspecialchars($data['password']);
 $type = htmlspecialchars($data['type']);
 
-echo($data['email']);
-echo($_SESSION['email']);
-var_dump($_SESSION);
 
 
 
+if(file_exists(dirname(__FILE__,3) . "\auth/profil_picture/".hash('sha256',  $data['email']) . ".jpg")){
+
+    $file_name = "/auth/profil_picture/" . hash('sha256',  $data['email'] );
+
+}
+
+else{
+    $file_name = "/auth/img/pp";
+
+}
 
 
-    if(file_exists( "/auth/profil_picture/" . hash('sha256',  $data['email']). ".jpg")){
-    
-        $file_name = "/auth/profil_picture/" . hash('sha256',  $data['email'] );
-        }
-    
-        else{
-        $file_name = "/auth/img/pp";
-        
-
-    }
 
 
 ?>
