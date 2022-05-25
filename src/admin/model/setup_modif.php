@@ -1,6 +1,4 @@
 <?php
-
-
 session_start(); 
 require_once 'config.php'; 
 
@@ -21,9 +19,7 @@ if(isset($_SESSION['type'])){
 else{
     $chantier = "VotreChantier/votrechantier.php";
 }
-?>
 
-<?php
 
 $id = $_GET['id'];
 
@@ -38,7 +34,7 @@ $password = htmlspecialchars($data['password']);
 $password_retype = htmlspecialchars($data['password']);
 $type = htmlspecialchars($data['type']);
 
-$_filename = "wesh";
+$file_name = "wesh";
 
 
 if(isset($data['email'])){
