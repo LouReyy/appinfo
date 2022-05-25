@@ -15,6 +15,7 @@ $email = htmlspecialchars($_POST['email']);
 $password = htmlspecialchars($_POST['password']);
 $password_retype = htmlspecialchars($_POST['password_retype']);
 $type = htmlspecialchars($_POST['type']);
+$id_chantier = htmlspecialchars($_POST['id_chantier']);
 
 if($_POST['type'] == "Administrateur"){
 
@@ -53,8 +54,8 @@ if($password === $password_retype){
     $password = password_hash($password, PASSWORD_BCRYPT, $cost);
 
 
-    $update = $bdd->prepare('UPDATE utilisateurs SET pseudo = ?,password = ?, type = ? WHERE email = ?');
-    $update->execute(array($pseudo,$password,$type,$email));
+    $update = $bdd->prepare('UPDATE utilisateurs SET pseudo = ?,password = ?, type = ?,id_chantier = ? WHERE email = ?');
+    $update->execute(array($pseudo,$password,$type,$email,$id_chantier));
 
     if($admin == "true"){
         if (smtpmailer($to_email,$from_email,$name, $subject, $body, )) {
