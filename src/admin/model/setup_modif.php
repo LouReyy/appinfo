@@ -34,6 +34,8 @@ $password = htmlspecialchars($data['password']);
 $password_retype = htmlspecialchars($data['password']);
 $type = htmlspecialchars($data['type']);
 
+echo($data['email']);
+
 
 
 
