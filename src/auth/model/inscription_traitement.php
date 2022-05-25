@@ -10,6 +10,8 @@
         $password = htmlspecialchars($_POST['password']);
         $password_retype = htmlspecialchars($_POST['password_retype']);
         $type = htmlspecialchars($_POST['type']);
+        $id_chantier = htmlspecialchars($_POST['id_chantier']);
+
 
         if($_POST['type'] == "Administrateur"){
 
@@ -80,7 +82,7 @@
                             
 
                                                         
-                            $insert = $bdd->prepare('INSERT INTO `utilisateurs`(`pseudo`, `email`, `password`, `token`, `type`) VALUES (:pseudo, :email, :password, :token, :type)');
+                            $insert = $bdd->prepare('INSERT INTO `utilisateurs`(`pseudo`, `email`, `password`, `token`, `type`,`id_chantier`) VALUES (:pseudo, :email, :password, :token, :type)');
                             $insert->execute(array(
                                 'pseudo' => $pseudo,
                                 'email' => $email,
