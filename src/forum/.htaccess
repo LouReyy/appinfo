@@ -1,6 +1,6 @@
 RewriteEngine On
 
 
-RewriteRule ^forum/([0-9]+)$ forum.php?topic=Bienvenue
+RewriteRule ^forum$ forum.php?topic=Bienvenue
 
 
