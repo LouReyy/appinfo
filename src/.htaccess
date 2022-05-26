@@ -1,6 +1,6 @@
 RewriteEngine On
 
-RewriteRule ^saluta$ index.php
+RewriteRule ^https://appinfofinal.herogu.garageisep.com/saluta$ index.php
 
 
 RewriteRule ^for$ index.php
