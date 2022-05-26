@@ -111,6 +111,42 @@ include("views/menu_deroulant_tel.php");
             </div>
             
         </form>
+
+        <div class="msg-form">
+                <?php 
+                if(isset($_GET['reg_err']))
+                {
+                    $err = htmlspecialchars($_GET['reg_err']);
+
+                    switch($err)
+                    {
+                        case 'success':
+                        ?>
+                            <div class="alert alert-success">
+                                <strong>Succès</strong> Message envoyé !
+                            </div>
+                        <?php
+                        break;
+
+                        case 'notconnected':
+                        ?>
+                            <div class="alert alert-danger">
+                                <strong>Erreur</strong> Vous devez être connecté pour poster un message
+                            </div>
+                            <?php 
+                            break;
+                            case 'supp':
+                                ?>
+                                    <div class="alert alert-error">
+                                        <strong>Erreur</strong> Le message n'a pas été envoyé
+                                    </div>
+                                <?php
+
+                    }
+                }
+                ?>
+            </div>
+
     </div>
     <?php include("views/footer.php") ?>
     
