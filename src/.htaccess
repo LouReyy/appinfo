@@ -2,7 +2,7 @@ RewriteEngine On
 
 RewriteRule ^salut$ index.php
 
-RewriteRule ^forum/(-[a-z]*)$ forum.php?topic=$1
+RewriteRule ^forum/([a-z0-9]+)$ forum.php?topic=$1
 
 https://appinfofinal.herogu.garageisep.com/forum/forum.php?topic=Bienvenue
 
