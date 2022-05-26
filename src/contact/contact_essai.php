@@ -42,7 +42,7 @@ include("views/menu_deroulant_tel.php");
                     <div class="gauche">
                         <div class="case">
                             <label>Nom</label>
-                            <input type="text" name="nom" value="<?php //if(isset($_COOKIE['nom'])){ echo $_COOKIE['nom'];}?>">
+                            <input required = "required" type="text" name="nom" value="<?php //if(isset($_COOKIE['nom'])){ echo $_COOKIE['nom'];}?>">
                             <i class="fa-solid fa-user"></i>
                             <div class="erreur">
                                 <?php if(isset($err_nom)){echo $err_nom;}
@@ -52,7 +52,7 @@ include("views/menu_deroulant_tel.php");
         
                         <div class="case">
                             <label>Prénom</label>
-                            <input type="text" name="prenom" value="<?php //if(isset($_COOKIE['prenom'])){ echo $_COOKIE['prenom'];}?>">
+                            <input required = "required" type="text" name="prenom" value="<?php //if(isset($_COOKIE['prenom'])){ echo $_COOKIE['prenom'];}?>">
                             <i class="fa-solid fa-user"></i>
                             <div class="erreur">
                                 <?php if(isset($err_prenom)){echo $err_prenom;}
@@ -63,7 +63,7 @@ include("views/menu_deroulant_tel.php");
         
                         <div class="case">
                             <label>Mail</label>
-                            <input type="text" name="mail" value="<?php //if(isset($_COOKIE['mail'])){ echo $_COOKIE['mail'];}?>">
+                            <input type="text" required = "required" name="mail" value="<?php //if(isset($_COOKIE['mail'])){ echo $_COOKIE['mail'];}?>">
                             <i class="fa-solid fa-envelope"></i>
                             <div class="erreur">
                                 <?php if(isset($err_mail)){echo $err_mail;}
@@ -74,7 +74,7 @@ include("views/menu_deroulant_tel.php");
         
                         <div class="case">
                             <label>Téléphone</label>
-                            <input type="tel" name="num" value="<?php //if(isset($_COOKIE['num'])){ echo $_COOKIE['num'];}?>">
+                            <input type="tel" required = "required" name="num" value="<?php //if(isset($_COOKIE['num'])){ echo $_COOKIE['num'];}?>">
                             <i class="fa-solid fa-mobile"></i>
                             <div class="erreur">
                                 <?php if(isset($err_num)){echo $err_num;}
@@ -88,7 +88,7 @@ include("views/menu_deroulant_tel.php");
                     <div class="droite"> <!--Zone de texte pour la question-->
                         <div class="case">
                             <label >Message</label>
-                            <textarea type= "zoneText" name="question"  value="<?php //if(isset($_COOKIE['question'])){ echo $_COOKIE['question'];}?>"id="" cols="30" rows="5"></textarea>
+                            <textarea required = "required" type= "zoneText" name="question"  value="<?php //if(isset($_COOKIE['question'])){ echo $_COOKIE['question'];}?>"id="" cols="30" rows="5"></textarea>
                             <i class="fa-solid fa-circle-question"></i>
                             <div class="erreur">
                                 <?php if(isset($err_msg)){echo $err_msg;}
