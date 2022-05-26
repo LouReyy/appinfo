@@ -30,10 +30,7 @@ include ("model/setup.php");
 include ("views/header.php");
 include("views/menu_deroulant_tel.php");
 ?>
-        <div class="equipe">
-            <a>Notre équipe</a>
-            <div class="barre"></div>
-        </div>
+      
         <form method="POST" action="model/contact.php">
             <div class="content">
                 <h1>Contactez-nous</h1>

@@ -290,6 +290,27 @@ button[type=submit]:hover{
 
 }
 
+.msg-form{
+  position: relative;
+  width:500px;
+  height: auto;;
+  font-family: "Quicksand";
+  margin-top: 0;
+  margin-left:5%;
+  
+}
+
+.alert{
+  position: relative;
+  width: 800px;
+  height: 30px;
+  color : red;
+  font-family: "Quicksand";
+  font-size: 1.5em;
+
+}
+
+
 
 .footerContent{
 
