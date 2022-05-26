@@ -105,9 +105,7 @@ include("views/menu_deroulant_tel.php");
                     </div>
                 </div>
 
-            </div>
-
-            <div class="msg-form">
+                <div class="msg-form">
                 <?php 
                 if(isset($_GET['reg_err']))
                 {
@@ -141,6 +139,9 @@ include("views/menu_deroulant_tel.php");
                 }
                 ?>
             </div>
+
+            </div>
+
             
             
         </form>
