@@ -407,6 +407,21 @@ button[type=submit]:hover{
       display: block;
   
     }
+
+    .content{
+      width: 60vw;
+    }
+
+    form .formulaire .droite .case textarea {
+      margin-top: 5px;
+      padding: 5px 2px 2px 30px;
+      border: 1px solid rgb(138, 134, 134);
+      border-radius: 5px;
+      outline-color: grey;
+      font-family: "Quicksand";
+      height: 20vh;
+      width: 40vw;
+  }
   }
 
   @media screen and (max-width: 500px){
@@ -422,7 +437,22 @@ button[type=submit]:hover{
       display: block;
   
     }
+
+    .content{
+      width: 60vw;
+    }
+    form .formulaire .droite .case textarea {
+      margin-top: 5px;
+      padding: 5px 2px 2px 30px;
+      border: 1px solid rgb(138, 134, 134);
+      border-radius: 5px;
+      outline-color: grey;
+      font-family: "Quicksand";
+      height: 20vh;
+      width: 40vw;
   }
+
+}
 
   
 
