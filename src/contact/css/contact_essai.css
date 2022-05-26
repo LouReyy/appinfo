@@ -452,6 +452,22 @@ button[type=submit]:hover{
       width: 40vw;
   }
 
+  button[type=submit] {
+    background-color: #00ccff;
+    color: white;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    font-family: "Quicksand";
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    width: 80%;
+  }
+
 }
 
   
