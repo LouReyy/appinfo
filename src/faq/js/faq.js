@@ -41,7 +41,7 @@ console.log(none.style.visibility);
 function verif(x){
 
     if(x.matches){
-        droite.style.marginTop = '30%';
+        droite.style.marginTop = '35%';
         droite.style.marginLeft = '5%';
         header.remove();
 
