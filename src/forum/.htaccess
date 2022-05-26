@@ -1,6 +1,6 @@
 RewriteEngine On
 
 
-RewriteRule ^forum$ forum.php?topic=Bienvenue
+RewriteRule ^forum$ forum/forum.php?topic=Bienvenue
 
 
