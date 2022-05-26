@@ -431,7 +431,7 @@ ul{
         padding: 75px 0;
         position: absolute;
           width: 100%;
-          margin-top: 110%;
+          margin-top: 170%;
       
       }
 
@@ -451,7 +451,7 @@ ul{
           }
           #regle{
             position: relative;
-            margin-top: 100%;
+            margin-top: 0;
             text-align: center;
             font-size: 25px;
         }
