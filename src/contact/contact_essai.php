@@ -150,6 +150,8 @@ include("views/menu_deroulant_tel.php");
 
     </div>
     <?php include("views/footer.php") ?>
+
+    <script src = js/contact.js></script>
     
 </body>
 </html>
