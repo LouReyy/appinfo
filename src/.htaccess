@@ -1,6 +1,6 @@
 RewriteEngine On
 
-RewriteRule ^https://appinfofinal.herogu.garageisep.com/saluta$ index.php
+RewriteRule ^https://appinfofinal.herogu.garageisep.com/saluta$ https://appinfofinal.herogu.garageisep.com/forum/forum.php
 
 
 RewriteRule ^for$ index.php
