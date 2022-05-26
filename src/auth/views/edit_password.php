@@ -27,6 +27,8 @@ else{
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/edit_password.css" media="screen" type="text/css" />
+    <link rel="icon" type="image/png" href="../homepage/img/InfiniteMeasures.png" />
+
     <title>Modification de Mot de Passe</title>
 </head>
 <body>

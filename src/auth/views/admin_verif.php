@@ -38,6 +38,8 @@ require_once("../model/config.php");
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/admin_verif.css" media="screen" type="text/css" />
+    <link rel="icon" type="image/png" href="../homepage/img/InfiniteMeasures.png" />
+
     <title>Ajout d'un Administrateur</title>
 </head>
 <body>
