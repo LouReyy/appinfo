@@ -1,9 +1,9 @@
 RewriteEngine On
 
-RewriteRule ^salut$ index.php
+RewriteRule ^saluta$ index.php
 
 
-RewriteRule ^forum$ index.php
+RewriteRule ^for$ index.php
 
 
 
