@@ -2,6 +2,8 @@ RewriteEngine On
 
 RewriteRule ^salut$ index.php
 
-RewriteRule ^forum/([0-9]+)$ forum.php?topic=Bienvenue
+
+RewriteRule ^forum$ forum/forum.php?topic=Bienvenue
+
 
 
