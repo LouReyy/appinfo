@@ -4,17 +4,17 @@
             </div>  
             <nav>
                 <ul class="nav__links">
-                    <li><a href="/homepage/homepage.php">Accueil</a></li>
+                    <li><a href="/home">Accueil</a></li>
                     <li><a href="/<?php echo $chantier ?>" >Votre chantier</a></li>
-                    <li><a href="/forum/forum.php">Forum</a></li>
-                    <li><a href="/faq/faq.php">FAQ</a></li>
-                    <li><a href="/contact/contact_essai.php">Contactez-nous</a></li>
-                    <li><a href="/notre_solution/notre_solution.php">Notre solution</a></li>
+                    <li><a href="/forum">Forum</a></li>
+                    <li><a href="/faq">FAQ</a></li>
+                    <li><a href="/contact">Contactez-nous</a></li>
+                    <li><a href="/solution">Notre solution</a></li>
 
                 </ul>
             </nav>
             <div id="logomemo">
-                <a href="/memory/memory.php"><img src="/memory/img/memoryim.png" alt="memory"></a>
+                <a href="/memor"><img src="/memory/img/memoryim.png" alt="memory"></a>
             </div>
             <a class="cta" href= "<?php echo $editprofil?> "> <?php echo $title ?></a>
 
