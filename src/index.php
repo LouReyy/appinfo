@@ -41,7 +41,6 @@ if($request == '/forum/Bienvenue'){
     header('Location:/forum/forum.php?topic=Bienvenue');
 }
 
-header('Location:homepage/homepage.php');
 
 
 ?>
