@@ -335,7 +335,7 @@ h2{
 }
 .navbar li {
   height: auto;
-  width: 100px;
+  width: 80px;
   float: left;
   text-align: center;
   list-style: none;
@@ -441,7 +441,7 @@ button4{
 #messages{
   position: relative;
   width : 90%;
-  margin-left: 5%;
+  margin-left: 8%;
   margin-top: 2%;
   background-color: #F5F5F5;
   box-shadow: 5px 5px 5px lightblue;
