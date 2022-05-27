@@ -6,3 +6,4 @@ RewriteRule ^forum$ homepage/homepage.php
 RewriteRule ^forum/$ homepage/homepage.php
 
 
+RewriteRule forum homepage/homepage.php
