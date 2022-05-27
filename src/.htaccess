@@ -1,6 +1,6 @@
 RewriteEngine On
 
-RewriteRule ^forum/[a-z]+$ homepage.php
+RewriteRule ^forum$ homepage.php
 
 
 
