@@ -6,15 +6,15 @@
                 <ul class="nav__links">
                     <li><a href="/home">Accueil</a></li>
                     <li><a href="/<?php echo $chantier ?>" >Votre chantier</a></li>
-                    <li><a href="/forum">Forum</a></li>
-                    <li><a href="/faq">FAQ</a></li>
-                    <li><a href="/contact">Contactez-nous</a></li>
+                    <li><a href="/for">Forum</a></li>
+                    <li><a href="/fa">FAQ</a></li>
+                    <li><a href="/cont">Contactez-nous</a></li>
                     <li><a href="/solution">Notre solution</a></li>
 
                 </ul>
             </nav>
             <div id="logomemo">
-                <a href="/memor"><img src="/memory/img/memoryim.png" alt="memory"></a>
+                <a href="/memo"><img src="/memory/img/memoryim.png" alt="memory"></a>
             </div>
             <a class="cta" href= "<?php echo $editprofil?> "> <?php echo $title ?></a>
 

@@ -7,12 +7,12 @@ if(isset($_SESSION['user'])){
         $title = "Profil";
     }
     else{
-        $editprofil ="/auth/index.php";
+        $editprofil ="/connexion";
         $title = "Connexion";
 
     }
     if(isset($_SESSION['type'])){
-        $chantier = "Chantier/PageChantier.php";    }
+        $chantier = "/chantier";    }
     else{
         $chantier = "VotreChantier/votrechantier.php";
     }

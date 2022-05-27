@@ -15,15 +15,15 @@ if($request == '/chantier'){
     header('Location:Chantier/PageChantier.php');
 }
 
-if($request == '/forum'){
-    header('Location:homepage/homepage.php');
+if($request == '/for'){
+    header('Location:forum/forum.php');
 }
 
-if($request == '/faq'){
+if($request == '/fa'){
     header('Location:/faq/faq.php');
 }
 
-if($request == '/contact'){
+if($request == '/cont'){
     header('Location:/contact/contact_essai.php');
 }
 
@@ -31,21 +31,17 @@ if($request == '/solution'){
     header('Location:notre_solution/notre_solution.php');
 }
 
-if($request == '/memory'){
+if($request == '/memo'){
     header('Location:/memory/memory.php');
 }
 
 
 
-//if($request == '/forum/Bienvenue'){
-    //header('Location:/forum/forum.php?topic=Bienvenue');
-//}
+if($request == '/forum/Bienvenue'){
+    header('Location:/forum/forum.php?topic=Bienvenue');
+}
 
-
-
-
-// header('Location:homepage/homepage.php');
-
+header('Location:homepage/homepage.php');
 
 
 ?>
