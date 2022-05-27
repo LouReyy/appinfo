@@ -1,7 +1,5 @@
 RewriteEngine On
 
-RewriteBase /src/
-
 RewriteRule ^forum$ homepage/homepage.php
 
 
