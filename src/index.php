@@ -37,9 +37,9 @@ if($request == '/memory'){
 
 
 
-if($request == '/forum/Bienvenue'){
-    header('Location:/forum/forum.php?topic=Bienvenue');
-}
+//if($request == '/forum/Bienvenue'){
+    //header('Location:/forum/forum.php?topic=Bienvenue');
+//}
 
 
 
