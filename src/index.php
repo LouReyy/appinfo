@@ -37,10 +37,6 @@ if($request == '/memo'){
 
 
 
-if($request == '/forum/'. $topic){
-    header('Location:/forum/forum.php?topic='.$topic);
-}
-
 if($request == '/'){
 
 
