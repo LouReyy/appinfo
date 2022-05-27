@@ -35,7 +35,6 @@ if($request == '/memo'){
     header('Location:/memory/memory.php');
 }
 
-$topic = $_GET['topic'];
 
 
 if($request == '/forum/'. $topic){
