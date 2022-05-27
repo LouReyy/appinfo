@@ -125,7 +125,7 @@ include("views/menu_deroulant_tel.php");
         
                 <?php
 
-                $req2= $bdd->prepare('SELECT topic FROM message');
+                $req2= $bdd->prepare('SELECT DISTINCT topic FROM message');
                 $req2->execute();
                 $data2 = $req2->fetchAll();
 
