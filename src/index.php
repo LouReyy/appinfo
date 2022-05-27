@@ -41,6 +41,12 @@ if($request == '/forum/Bienvenue'){
     header('Location:/forum/forum.php?topic=Bienvenue');
 }
 
+if($request == '/'){
+
+
+header('Location:homepage/homepage.php');
+
+}
 
 
 ?>
