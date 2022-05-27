@@ -16,7 +16,7 @@ if($request == '/chantier'){
 }
 
 if($request == '/forum'){
-    header('Location:/forum/forum.php');
+    header('Location:homepage/homepage.php');
 }
 
 if($request == '/faq'){
