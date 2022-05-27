@@ -16,15 +16,15 @@ if($request == '/chantier'){
 }
 
 if($request == '/forum'){
-    header('Location:forum/forum.php');
+    header('Location:/forum/forum.php');
 }
 
 if($request == '/faq'){
-    header('Location:faq/faq.php');
+    header('Location:/faq/faq.php');
 }
 
 if($request == '/contact'){
-    header('Location:contact/contact_essai.php');
+    header('Location:/contact/contact_essai.php');
 }
 
 if($request == '/solution'){
@@ -32,7 +32,7 @@ if($request == '/solution'){
 }
 
 if($request == '/memory'){
-    header('Location:memory/memory.php');
+    header('Location:/memory/memory.php');
 }
 
 
