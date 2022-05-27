@@ -7,7 +7,9 @@ if($request == '/home'){
     header('Location:homepage/homepage.php');
 }
 
-if($request == '/connexion'){
+if($request == '/connexion' || $request == '/index.php'){
+
+
     header('Location:auth/index.php');
 }
 
