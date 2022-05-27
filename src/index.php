@@ -8,31 +8,31 @@ if($request == '/home'){
 }
 
 if($request == '/connexion'){
-    header('Location:/auth/index.php');
+    header('Location:auth/index.php');
 }
 
 if($request == '/chantier'){
-    header('Location:/Chantier/PageChantier.php');
+    header('Location:Chantier/PageChantier.php');
 }
 
 if($request == '/forum'){
-    header('Location:/forum/forum.php');
+    header('Location:forum/forum.php');
 }
 
 if($request == '/faq'){
-    header('Location:/faq/faq.php');
+    header('Location:faq/faq.php');
 }
 
 if($request == '/contact'){
-    header('Location:/contact/contact_essai.php');
+    header('Location:contact/contact_essai.php');
 }
 
 if($request == '/solution'){
-    header('Location:/notre_solution/notre_solution.php');
+    header('Location:notre_solution/notre_solution.php');
 }
 
 if($request == '/memory'){
-    header('Location:/memory/memory.php');
+    header('Location:memory/memory.php');
 }
 
 
