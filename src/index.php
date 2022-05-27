@@ -8,7 +8,7 @@ if($request == '/home'){
 }
 
 if($request == '/forum/Bienvenue'){
-    header('Location:forum/forum.php?topic=Bienvenue');
+    header('Location:/forum/forum.php?topic=Bienvenue');
 }
 
 
