@@ -1,9 +1,7 @@
 RewriteEngine On
 
-RewriteRule ^homepage/homepage$ homepage.php
+RewriteRule ^forum/[a-z]+$ homepage.php
 
-
-RewriteRule ^for$ index.php
 
 
 
