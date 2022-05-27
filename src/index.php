@@ -35,10 +35,11 @@ if($request == '/memo'){
     header('Location:/memory/memory.php');
 }
 
+$topic = $_GET['topic'];
 
 
-if($request == '/forum/Bienvenue'){
-    header('Location:/forum/forum.php?topic=Bienvenue');
+if($request == '/forum/'. $topic){
+    header('Location:/forum/forum.php?topic='.$topic);
 }
 
 if($request == '/'){
