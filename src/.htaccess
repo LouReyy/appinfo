@@ -1,9 +1,9 @@
 RewriteEngine on
 
-RewriteRule ^for$ homepage/homepage.php
+RewriteRule ^/for$ homepage/homepage.php
 
 
-RewriteRule ^for/$ homepage/homepage.php
+RewriteRule ^/for/$ homepage/homepage.php
 
 
-RewriteRule for homepage/homepage.php
+RewriteRule /for homepage/homepage.php
