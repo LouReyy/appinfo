@@ -233,7 +233,11 @@ header img{  /*taille image logo dans la barre du haut*/
       width: 40vw;
       height: 65vh;
       padding: 12px;
-      margin-top: 5%;
+      margin-top: 2%;
+  }
+
+  form{
+    margin-top: 5%;
   }
 
   input[type=text], input[type=id_chantier],input[type=nom],input[type=localisation],input[type=date] {
