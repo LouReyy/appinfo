@@ -203,6 +203,15 @@ header img{  /*taille image logo dans la barre du haut*/
         margin-top: 2%;
 
     }
+
+    h3 hr{
+      border-top: 7px solid #00ccff;
+      margin-left: auto;
+      margin-right: auto;
+      width:20%;
+      border-radius:90px;
+      border-bottom:none;
+      }
  
 
     .links{
