@@ -28,16 +28,15 @@
 
             $admin ="true";
 
-            }
+        }
+        else{
             $admin ="false";
-
-
-
+        }
 
 
         
 
-            $type = htmlspecialchars($_POST['type']);
+        $type = htmlspecialchars($_POST['type']);
 
         $check0 = $bdd->prepare('SELECT pseudo, email, password FROM users_banned');
         $check0->execute();
@@ -67,7 +66,7 @@
         
         
         if($row == 0){ 
-            if(strlen($type) > 0){
+            if(strlen($type) < 0){
             if(strlen($pseudo) <= 100){ 
                 if(strlen($email) <= 100){ 
                     if(filter_var($email, FILTER_VALIDATE_EMAIL)){ 
