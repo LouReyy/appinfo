@@ -228,7 +228,7 @@ header img{  /*taille image logo dans la barre du haut*/
     .chantier{
       position: relative;
       left: 5%;
-      width: 20vw;
+      width: 40vw;
       height: 65vh;
       padding: 12px;
   }
