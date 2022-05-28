@@ -70,8 +70,8 @@
         $email = strtolower($email); 
         
         
-        if($row == 0){ 
-            if(strlen($type) > 0){
+    if($row == 0){ 
+        if(strlen($type) > 0){
             if(strlen($pseudo) <= 100){ 
                 if(strlen($email) <= 100){ 
                     if(filter_var($email, FILTER_VALIDATE_EMAIL)){ 
@@ -112,10 +112,13 @@
                 }else{ header('Location: ../views/inscription.php?reg_err=email_length'); die();}
             }else{ header('Location: ../views/inscription.php?reg_err=pseudo_length'); die();}
         }else{ header('Location: ../views/inscription.php?reg_err=select_type'); die();}
-        }else{ header('Location: ../views/inscription.php?reg_err=already'); die();}
-        header('Location:../views/inscription.php?reg_err=success');
+    }else{ header('Location: ../views/inscription.php?reg_err=already'); die();}
 
 
+    header('Location:../views/inscription.php?reg_err=success');
+    echo("test");
     
     
     }
+
+    header('Location:../views/inscription.php?reg_err=email');
