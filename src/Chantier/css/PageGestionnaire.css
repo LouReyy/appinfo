@@ -218,6 +218,11 @@ header img{  /*taille image logo dans la barre du haut*/
 
     }
 
+    #content{
+      display: flex;
+      flex-direction: row;
+    }
+
     .chantier{
       position: relative;
       left: 5%;
@@ -279,7 +284,7 @@ button[type=submit]{
     .boite{
       position: relative;
       left: 5%;
-      width: 70vw;
+      width: 40vw;
       height: 65vh;
       background: white;
       border-radius: 10px;

@@ -68,6 +68,8 @@ $size=count($allId);
             <hr/>
         </div>
         <div class="links">
+
+        <div id = content>
             <div class = chantier>
             <h3>Information sur votre chantier</h3>
 
@@ -153,6 +155,7 @@ $size=count($allId);
                     }
                     ?>
                 </div>
+            </div>
             </div>
             
         </div>
