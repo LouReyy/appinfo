@@ -41,7 +41,7 @@ $type = htmlspecialchars($data['type']);
 
 
 
-if(file_exists(dirname(__FILE__,3) . "/auth/index.php")){
+if(file_exists(dirname(__FILE__,3) . "/auth/profil_picture/" . hash('sha256',  $data['email'] ."jpg"))){
 
     $file_name = "/auth/profil_picture/" . hash('sha256',  $data['email'] );
 
