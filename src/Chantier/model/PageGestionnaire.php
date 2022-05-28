@@ -122,7 +122,7 @@ $size=count($allId);
             <div class="form-group">
             <t>date de fin</t><input type="date" id="start"
             name="date_fin" value= "<?php echo $date_fin ?>"
-            min="2000-06-07T00:00" max="2022-06-14T00:00">
+            min="2000-06-07" max="2022-06-14">
             </div>
 
           
