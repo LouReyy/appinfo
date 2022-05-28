@@ -192,9 +192,7 @@ include("views/menu_deroulant_tel.php");
             $topic = "Bienvenue";
         }
 
-        
-       
-
+    
 
         $req2= $bdd->prepare('SELECT * FROM message WHERE topic = ?');
         $req2->execute(array($topic));
