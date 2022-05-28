@@ -101,10 +101,10 @@
                     
                                 } else {
                                     echo "Email sending failed...";
-                                    if (!empty($error)) echo $error;
+                                    die();
                                 
                                 }
-                            }die();
+                            }
 
                         }else{ header('Location: ../views/inscription.php?reg_err=password'); die();}
                     }else{ header('Location: ../views/inscription.php?reg_err=email'); die();}
