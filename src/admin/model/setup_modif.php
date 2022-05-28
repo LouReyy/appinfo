@@ -39,9 +39,9 @@ $password_retype = htmlspecialchars($data['password']);
 $type = htmlspecialchars($data['type']);
 
 
+echo(dirname(__FILE__,3) . "/auth/profil_picture/". hash('sha256', $data['email'])."jpg");
 
-
-if(file_exists(dirname(__FILE__,3) . "/auth/profil_picture/7b2a034655fd345ed79b83eb71dc152638445967a122adb693135307a89f2600.jpg")){
+if(file_exists(dirname(__FILE__,3) . "/auth/profil_picture/". hash('sha256', $data['email'])."jpg")){
 
     $file_name = "/auth/profil_picture/" . hash('sha256',  $data['email'] );
 
