@@ -139,6 +139,26 @@ $size=count($allId);
 
 
             </div>
+
+            <div id = pp>
+
+<img class = "avatar"src="../<?php echo $file_name; ?>.jpg"></img>
+
+<form class = "form-img" method="POST" action = "../model/modify_profilpic.php" enctype="multipart/form-data" >
+
+    <label class="file">
+        <input type="file" name = "picture" id="avatar"   accept="image/jpg">
+        <span class="file-custom"></span>
+    </label>    
+
+    <button type="submit" class="btn btn-primary btn-block">Modifier la photo</button>
+
+</form>
+
+
+</div>
+
+
             <div class="boite">
                 <p>Dans cette rubrique vous pouvez consulter les différentes statistiques des membres de votre chantier en cliquant sur leur pseudo.</p>
                 <div class="gauche">
