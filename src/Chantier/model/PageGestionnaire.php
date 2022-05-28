@@ -1,6 +1,9 @@
 
 <?php
 
+session_start(); 
+require_once 'config.php'; 
+
 if(isset($_SESSION['user'])){
     $editprofil ="views/landing.php";
     $title = "Profil";
@@ -54,7 +57,7 @@ $size=count($allId);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chantier Gestionnaire</title>
     <link rel="stylesheet" href="../css/PageGestionnaire.css" media="screen" type="text/css" />
-    <link rel="icon" type="image/png" href="../homepage/img/InfiniteMeasures.png" />
+    <link rel="icon" type="image/png" href="/src/auth/img/logo_infinite.png" />
 </head>
 <body>
     <div class="container">
