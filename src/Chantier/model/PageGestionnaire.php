@@ -73,32 +73,53 @@ $size=count($allId);
 
             <?php
 
-
+            if(isset($_SESSION['id_chantier'] )){
 
             $req = $bdd->prepare('SELECT * FROM chantier WHERE id_chantier = ?');
             $req->execute(array( $_SESSION['id_chantier'] ));
             $data = $req->fetch();
+
+            $id_chantier = $_SESSION['id_chantier'];
+            $nom = $data['nom'];
+            $localisation = $data['localisation'];
+            $date_debut = $data['date_debut'];
+            $date_fin = $data['date_fin'];
+
+
+
+
+
+            }
+            else{
+                $id_chantier = "";
+                $nom = "";
+                $localisation = "";
+                $date_debut = "2018-06-12T19:30";
+                $date_fin = "2018-06-12T19:30";
+            }
+
+
             
             ?>
 
             <form action="ajout_chantier.php" method="post">      
             <div class="form-group">
-                <t>Numéro Chantier </t><input type="id_chantier" name="id_chantier" class="form-control" placeholder="Numero de chantier" required="required" value = "<?php echo $data['id_chantier']; ?>"autocomplete="off">
+                <t>Numéro Chantier </t><input type="id_chantier" name="id_chantier" class="form-control" placeholder="Numero de chantier" required="required" value = "<?php echo $id_chantier ?>"autocomplete="off">
             </div>
             <div class="form-group">
-                <t>Nom : </t><input type="nom" name="nom" class="form-control" placeholder="nom" value= "<?php echo $data['nom']; ?>"  required="required" autocomplete="off">
+                <t>Nom : </t><input type="nom" name="nom" class="form-control" placeholder="nom" value= "<?php echo $nom ?>"  required="required" autocomplete="off">
             </div>
             <div class="form-group">
-            <t> Localisation : </t><input type="localisation" name="localisation" class="form-control" placeholder="Localisation" required="required" autocomplete="off">
+            <t> Localisation : </t><input type="localisation" name="localisation" value= "<?php echo $localisation?>" class="form-control" placeholder="Localisation" required="required" autocomplete="off">
             </div>
             <div class="form-group">
             <t>date de debut</t><input type="datetime-local" id="meeting-time"
-            name="date_debut" value="2018-06-12T19:30"
+            name="date_debut" value= "<?php echo $date_debut ?>" 
             min="2000-06-07T00:00" max="2022-06-14T00:00">
             </div>
             <div class="form-group">
             <t>date de fin</t><input type="datetime-local" id="meeting-time"
-            name="date_fin" value="2018-06-12T19:30"
+            name="date_fin" value= "<?php echo $date_fin ?>"
             min="2000-06-07T00:00" max="2022-06-14T00:00">
             </div>
 
