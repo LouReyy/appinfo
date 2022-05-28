@@ -3,8 +3,7 @@
 require_once 'config.php'; 
 
     
-if(!empty($_POST['id_chantier']) && !empty($_POST['nom']) && !empty($_POST['localisation']) && !empty($_POST['date_debut']) && !empty($_POST['date_fin']))
-{
+
 
     $id_chantier = htmlspecialchars($_POST['id_chantier']);
     $nom = htmlspecialchars($_POST['nom']);
@@ -28,9 +27,7 @@ if(!empty($_POST['id_chantier']) && !empty($_POST['nom']) && !empty($_POST['loca
 
 
 
-}
 
-echo("fail");
 
 
 
