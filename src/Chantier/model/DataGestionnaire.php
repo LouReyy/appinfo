@@ -20,15 +20,18 @@ if ($type=="Gestionnaire"){
 
 
 
-if(isset($_SESSION['user'])){
-    $editprofil ="/auth/views/landing.php";
-    $title = "Profil";
-    }
-    else{
-        $editprofil ="/auth/index.php";
-        $title = "Connexion";
-
-    }
+ session_start(); 
+ require_once 'config.php'; 
+ 
+ if(isset($_SESSION['user'])){
+     $editprofil ="/auth/views/landing.php";
+     $title = "Profil";
+     }
+     else{
+         $editprofil ="/auth/index.php";
+         $title = "Connexion";
+ 
+     }
 
     if(isset($_SESSION['type'])){
         $chantier = "Chantier/PageChantier.php";
