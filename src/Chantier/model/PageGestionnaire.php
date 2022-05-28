@@ -31,7 +31,7 @@ if(isset($_SESSION['user'])){
 
 $id_chantier=$_SESSION['id_chantier'];   //VARIABLE A MODIFIER APRES POUR S ADAPTER AUX DIFFERENTS GESTIONNAIRES
 
-$req_util='SELECT pseudo,id FROM `utilisateurs` WHERE id_chantier=1;';
+$req_util='SELECT pseudo,id FROM `utilisateurs` WHERE id_chantier='. $id_chantier;
 $result=mysqli_query($conn,$req_util);
 $utilId=mysqli_fetch_all($result, MYSQLI_ASSOC);
 function getArray($base,$attribute){
