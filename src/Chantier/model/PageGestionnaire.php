@@ -85,6 +85,8 @@ $size=count($allId);
             $date_debut = $data['date_debut'];
             $date_fin = $data['date_fin'];
 
+            echo($date_debut);
+
 
 
 
