@@ -217,17 +217,45 @@ header img{  /*taille image logo dans la barre du haut*/
         position: relative;
 
     }
+
+    .chantier{
+      position: relative;
+      left: 50%;
+      width: 70vw;
+      height: 65vh;
+      background: white;
+      border-radius: 10px;
+      padding: 12px;
+      margin-top: 5%;
+  }
+
+  input[type=text], input[type=id_chantier],input[type=nom],input[type=localisation],input[type=date] {
+    font-size: 20px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 25px;
+    font-family: "Quicksand";  
+    
+}
+
+
+
     .boite{
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%,0%);
-        width: 70vw;
-        height: 65vh;
-        background: white;
-        border-radius: 10px;
-        padding: 12px;
-        margin-top: 5%;
-    }
+      position: relative;
+      left: 50%;
+      width: 70vw;
+      height: 65vh;
+      background: white;
+      border-radius: 10px;
+      padding: 12px;
+      margin-top: 5%;
+  }
+
+
     .gauche{
         width: 12.5vw;
         height: 52vh;
