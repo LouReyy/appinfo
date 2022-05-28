@@ -16,6 +16,8 @@ if(!isset($_SESSION['user'])){
 
  echo $extension;
 
+ echo($nomfichier);
+
 
  echo($_FILES['picture']['tmp_name']);
 
