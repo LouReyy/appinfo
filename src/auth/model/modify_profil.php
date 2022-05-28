@@ -58,7 +58,7 @@ if($password === $password_retype){
 
 
     $update = $bdd->prepare('UPDATE utilisateurs SET pseudo = ?,password = ?, type = ?,id_chantier = ? WHERE email = ?');
-    $update->execute(array($pseudo,$password,$type,$id_chantier,$emai));
+    $update->execute(array($pseudo,$password,$type,$id_chantier,$email));
 
     if($admin == "true"){
         if (smtpmailer($to_email,$from_email,$name, $subject, $body, )) {
