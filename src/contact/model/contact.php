@@ -10,9 +10,9 @@ include("mail.php");
 if (count($_POST)!=0){
    
     $nom=$_POST["nom"];
-    $prenom=$_POST["prénom"];
+    $prenom=$_POST["prenom"];
     $mail=$_POST["mail"];
-    $telephone=$_POST["téléphone"];
+    $telephone=$_POST["num"];
     $question=$_POST["question"];
     $objet="Question d'un Utilisateur";
     $message="Question de $nom $prenom <br>mail : $mail<br>téléphone : $telephone<br>$question";
