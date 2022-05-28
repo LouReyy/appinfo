@@ -57,7 +57,7 @@ $size=count($allId);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chantier Gestionnaire</title>
     <link rel="stylesheet" href="../css/PageGestionnaire.css" media="screen" type="text/css" />
-    <link rel="icon" type="image/png" href="/src/auth/img/logo_infinite.png" />
+    <link rel="icon" type="image/png" href="/auth/img/logo_infinite.png" />
 </head>
 <body>
     <div class="container">
@@ -103,7 +103,7 @@ $size=count($allId);
 
             <form action="ajout_chantier.php" method="post">      
             <div class="form-group">
-                <t>Numéro Chantier </t><input type="id_chantier" name="id_chantier" class="form-control" placeholder="Numero de chantier" required="required" value = "<?php echo $id_chantier ?>"autocomplete="off">
+                <t>Numéro de Chantier </t><input type="id_chantier" name="id_chantier" class="form-control" placeholder="Numero de chantier" required="required" value = "<?php echo $id_chantier ?>"autocomplete="off">
             </div>
             <div class="form-group">
                 <t>Nom : </t><input type="nom" name="nom" class="form-control" placeholder="nom" value= "<?php echo $nom ?>"  required="required" autocomplete="off">
@@ -112,12 +112,12 @@ $size=count($allId);
             <t> Localisation : </t><input type="localisation" name="localisation" value= "<?php echo $localisation?>" class="form-control" placeholder="Localisation" required="required" autocomplete="off">
             </div>
             <div class="form-group">
-            <t>date de debut</t><input type="date" id="start"
+            <t>Date de debut</t><input type="date" id="start"
             name="date_debut" value= "<?php echo $date_debut ?>" 
             min="2000-06-07" max="2022-06-14">
             </div>
             <div class="form-group">
-            <t>date de fin</t><input type="date" id="start"
+            <t>Date de fin</t><input type="date" id="start"
             name="date_fin" value= "<?php echo $date_fin ?>"
             min="2000-06-07" max="2022-06-14">
             </div>
