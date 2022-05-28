@@ -24,6 +24,8 @@ $data = $req->fetch();
 
  echo $extension;
 
+ echo($_FILES['picture']['tmp_name']);
+
 
  if($extension == '.jpg'){
 
