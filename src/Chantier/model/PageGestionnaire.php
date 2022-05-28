@@ -92,7 +92,7 @@ $size=count($allId);
             <t> Localisation : </t><input type="localisation" name="localisation" class="form-control" placeholder="Localisation" required="required" autocomplete="off">
             </div>
             <div class="form-group">
-            <t>Date de début</t><input type="date_debut" name="date_debut" class="form-control" placeholder="date de debut" required="required" autocomplete="off">
+            <t>Date de début</t><input type="datetime_local" name="date_debut" class="form-control" value="2018-06-12T19:30" required="required" autocomplete="off">
             </div>
             <div class="form-group">
             <t>Date de fin</t><input type="date_fin" name="date_fin" class="form-control" placeholder="date de fin" required="required" autocomplete="off">
