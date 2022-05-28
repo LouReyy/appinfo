@@ -36,6 +36,27 @@ else{
 
 $admin ="false";
 }
+if($type == "Gestionnaire"){
+
+    include("mail.php");
+
+
+    $link = 'https://appinfofinal.herogu.garageisep.com/auth/views/gest_verif.php?email='.$email;
+    $to_email = "tech4healthg9c@gmail.com";
+    $from_email = "tech4healthg9c@gmail.com";
+    $subject = "Demande de Gestionnaire";
+    $body = '<a href="'.$link.'">Un utilisateur souhaite s inscrire en tant que gestionnaire !</a>' .
+    '<br> son email a renseigner :"'.$email.'" ';
+    $name = $pseudo;
+   
+
+    $gest ="true";
+
+}
+else{
+    $gest ="false";
+}
+
 
 
 $type = htmlspecialchars($_POST['type']);
@@ -71,10 +92,24 @@ if($password === $password_retype){
             die();
         
         }
-    }else{
-        header('Location: ../views/landing.php?reg_err=success');
-
+    
     }
+    if($gest == "true"){
+        if (smtpmailer($to_email,$from_email,$name, $subject, $body, )) {
+            echo "l'email a bien été envoyé à $to_email...";
+            header('Location: ../views/landing.php?reg_err=gest');
+            die();
+
+        } else {
+            echo "Email sending failed...";
+            die();
+        
+        }
+    }
+    
+    header('Location: ../views/landing.php?reg_err=success');
+
+    
     die();
 
 

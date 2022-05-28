@@ -176,6 +176,15 @@
                                              Nous envoyons une demande au staff pour votre inscription en mode Administrateur
                                         </div>
                                     <?php 
+                                    break;
+                                    case 'gest':
+                                
+                                        ?>
+                                            <div class="alert alert-danger">
+                                                <strong>Important</strong>Vous avez été inscrit pour le moment en tant qu'utilisateur.
+                                                 Nous envoyons une demande au staff pour votre inscription en mode Gestionnaire
+                                            </div>
+                                        <?php 
 
 
                     }
