@@ -33,7 +33,7 @@
     }
 
     else{
-        $file_name = "../img/pp";
+        $file_name = "img/pp";
 
     }
 
