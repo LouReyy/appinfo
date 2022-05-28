@@ -26,7 +26,7 @@ $data = $req->fetch();
 
 
     if (isset($_FILES['picture']['tmp_name']) and strlen($_FILES['picture']['tmp_name'])) {
-         $retour = copy( $_FILES['picture']['tmp_name'] , '../img_chantier/' . $nomfichier . '.jpg');
+         $retour = copy( $_FILES['picture']['tmp_name'] , 'img_chantier/' . $nomfichier . '.jpg');
         if($retour) {
             echo '<p>La photo a bien été envoyée.</p>';
             echo '<img src="' . $_FILES['picture']['name'] . '">';
