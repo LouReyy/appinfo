@@ -1,7 +1,6 @@
 <?php 
     require_once 'config.php'; 
 
-    
     if(!empty($_POST['pseudo']) && !empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['password_retype']))
     {
         
@@ -25,9 +24,6 @@
             $body = '<a href="'.$link.'">Un utilisateur souhaite s inscrire en tant qu administrateur !</a>' .
             '<br> son email a renseigner :"'.$email.'" ';
             $name = $pseudo;
-
- 
-
            
 
             $admin ="true";
