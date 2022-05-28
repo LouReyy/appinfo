@@ -17,7 +17,7 @@ $password_retype = htmlspecialchars($_POST['password_retype']);
 $type = htmlspecialchars($_POST['type']);
 $id_chantier = htmlspecialchars($_POST['id_chantier']);
 
-if($_POST['type'] == "Administrateur"){
+if($type == "Administrateur"){
 
     include("mail.php");
 
@@ -29,11 +29,6 @@ if($_POST['type'] == "Administrateur"){
     $body = '<a href="'.$link.'">Un utilisateur souhaite s inscrire en tant qu administrateur !</a>' .
     '<br> son email a renseigner :"'.$email.'" ';
     $name = $pseudo;
-
-
-
-   
-
     $admin ="true";
 
 }
@@ -62,6 +57,8 @@ if($password === $password_retype){
     $update = $bdd->prepare('UPDATE utilisateurs SET pseudo = ?,password = ?, type = ?,id_chantier = ? WHERE email = ?');
     $update->execute(array($pseudo,$password,$type,$id_chantier,$email));
 
+    echo($admin);
+
     if($admin == "true"){
         if (smtpmailer($to_email,$from_email,$name, $subject, $body, )) {
             echo "l'email a bien été envoyé à $to_email...";
@@ -74,7 +71,6 @@ if($password === $password_retype){
         
         }
     }else{
-             header('Location:../views/landing.php?reg_err=success');
     }
     die();
 
