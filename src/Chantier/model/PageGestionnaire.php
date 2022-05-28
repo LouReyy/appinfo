@@ -75,31 +75,32 @@ $size=count($allId);
 
 
 
-            $req = $bdd->prepare('SELECT * FROM utilisateurs WHERE id_chantier = ?');
+            $req = $bdd->prepare('SELECT * FROM chantier WHERE id_chantier = ?');
             $req->execute(array( $_SESSION['id_chantier'] ));
             $data = $req->fetch();
             
             ?>
 
-            <form action="../model/modify_profil.php" method="post">      
-            <div class="form-group">
-            <t>Pseudo : </t><input type="text" name="pseudo" class="form-control" placeholder="Pseudo" value= "<?php echo $data['pseudo']; ?>"  required="required" autocomplete="off">
-            </div>
-            <div class="form-group">
-                <t>Email : </t><input type="email" name="email" class="form-control" placeholder="Email" value= "<?php echo $data['email']; ?>"  required="required" autocomplete="off">
-            </div>
-            <div class="form-group">
-            <t>Mot de passe : </t><input type="password" name="password" class="form-control" placeholder="Nouveau Mot de passe" required="required" autocomplete="off">
-            </div>
-            <div class="form-group">
-            <input type="password" name="password_retype" class="form-control" placeholder="Re-tapez le mot de passe" required="required" autocomplete="off">
-            </div>
+            <form action="ajout_chantier.php" method="post">      
             <div class="form-group">
                 <t>Numéro Chantier </t><input type="id_chantier" name="id_chantier" class="form-control" placeholder="Numero de chantier" required="required" value = "<?php echo $data['id_chantier']; ?>"autocomplete="off">
             </div>
+            <div class="form-group">
+                <t>Nom : </t><input type="nom" name="nom" class="form-control" placeholder="nom" value= "<?php echo $data['nom']; ?>"  required="required" autocomplete="off">
+            </div>
+            <div class="form-group">
+            <t> Localisation : </t><input type="localisation" name="localisation" class="form-control" placeholder="Localisation" required="required" autocomplete="off">
+            </div>
+            <div class="form-group">
+            <t>Date de début</t><input type="date_début" name="date_début" class="form-control" placeholder="date de debut" required="required" autocomplete="off">
+            </div>
+            <div class="form-group">
+            <t>Date de fin</t><input type="date_fin" name="date_fin" class="form-control" placeholder="date de fin" required="required" autocomplete="off">
+            </div>
+           
 
             <div class="button1">
-                <button type="submit" class="btn_gauche">Modifier</button>
+                <button type="submit" class="btn_gauche">Ajouter</button>
 
             </div>   
 
