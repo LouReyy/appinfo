@@ -9,17 +9,15 @@ if(!isset($_SESSION['user'])){
 }
 
 
-$req = $bdd->prepare('SELECT * FROM utilisateurs WHERE token = ?');
-$req->execute(array($_SESSION['user']));
-$data = $req->fetch();
-
-
- $nomfichier = hash('sha256',  $data['id_chantier'] );
+ $nomfichier = hash('sha256',  $_SESSION['id_chantier'] );
  $nomdufichier= $_FILES['picture']['name'];
 
  $extension=strrchr($nomdufichier,'.');
 
  echo $extension;
+
+
+ echo($_FILES['picture']['tmp_name']);
 
 
  if($extension == '.jpg'){
