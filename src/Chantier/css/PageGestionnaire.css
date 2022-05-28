@@ -200,6 +200,7 @@ header img{  /*taille image logo dans la barre du haut*/
         transform: translate(-50%,-50%);
         font-size: 2.5vw;
         font-style: bold;
+        margin-top: 2%;
 
     }
  
