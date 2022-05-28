@@ -65,6 +65,48 @@ $size=count($allId);
             <hr/>
         </div>
         <div class="links">
+            <div class = chantier>
+            <h3>Information sur votre chantier</h3>
+
+            <?php
+
+
+
+            $req = $bdd->prepare('SELECT * FROM utilisateurs WHERE id_chantier = ?');
+            $req->execute(array( $_SESSION['id_chantier'] ));
+            $data = $req->fetch();
+            
+            ?>
+
+            <form action="../model/modify_profil.php" method="post">      
+            <div class="form-group">
+            <t>Pseudo : </t><input type="text" name="pseudo" class="form-control" placeholder="Pseudo" value= "<?php echo $data['pseudo']; ?>"  required="required" autocomplete="off">
+            </div>
+            <div class="form-group">
+                <t>Email : </t><input type="email" name="email" class="form-control" placeholder="Email" value= "<?php echo $data['email']; ?>"  required="required" autocomplete="off">
+            </div>
+            <div class="form-group">
+            <t>Mot de passe : </t><input type="password" name="password" class="form-control" placeholder="Nouveau Mot de passe" required="required" autocomplete="off">
+            </div>
+            <div class="form-group">
+            <input type="password" name="password_retype" class="form-control" placeholder="Re-tapez le mot de passe" required="required" autocomplete="off">
+            </div>
+            <div class="form-group">
+                <t>Numéro Chantier </t><input type="id_chantier" name="id_chantier" class="form-control" placeholder="Numero de chantier" required="required" value = "<?php echo $data['id_chantier']; ?>"autocomplete="off">
+            </div>
+
+            <div class="button1">
+                <button type="submit" class="btn_gauche">Modifier</button>
+
+            </div>   
+
+            
+    
+
+        </form>
+
+
+            </div>
             <div class="boite">
                 <p>Dans cette rubrique vous pouvez consulter les différentes statistiques des membres de votre chantier en cliquant sur leur pseudo.</p>
                 <div class="gauche">

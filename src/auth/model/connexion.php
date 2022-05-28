@@ -10,7 +10,7 @@ echo "test";
         
         $email = strtolower($email); 
         
-        $check = $bdd->prepare('SELECT id, pseudo, email, password, token,type FROM utilisateurs WHERE email = ?');
+        $check = $bdd->prepare('SELECT id, pseudo, email, password, token,type,id_chantier FROM utilisateurs WHERE email = ?');
         $check->execute(array($email));
         $data = $check->fetch();
         $row = $check->rowCount();
@@ -28,6 +28,7 @@ echo "test";
                     $_SESSION['id'] = $data['id'];
                     $_SESSION['pseudo'] = $data['pseudo'];
                     $_SESSION['email'] = $data['email'];
+                    $_SESSION['id_chantier'] = $data['id_chantier'];
 
 
                     header('Location: /forum/forum.php');die();
