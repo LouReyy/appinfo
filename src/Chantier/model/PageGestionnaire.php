@@ -62,7 +62,7 @@ $size=count($allId);
       include("../views/menu_deroulant_tel.php") ?>
         <div class="title">
             <h3>Bienvenue dans la page du gestionnaire</h3>
-            <div class="barre"></div>
+            <hr>
         </div>
         <div class="links">
             <div class="boite">
