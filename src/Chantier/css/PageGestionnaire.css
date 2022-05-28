@@ -221,6 +221,8 @@ header img{  /*taille image logo dans la barre du haut*/
     #content{
       display: flex;
       flex-direction: row;
+      background: white;
+      border-radius: 10px;
     }
 
     .chantier{
@@ -228,10 +230,7 @@ header img{  /*taille image logo dans la barre du haut*/
       left: 5%;
       width: 20vw;
       height: 65vh;
-      background: white;
-      border-radius: 10px;
       padding: 12px;
-      margin-top: 1%;
   }
 
   input[type=text], input[type=id_chantier],input[type=nom],input[type=localisation],input[type=date] {
@@ -273,16 +272,15 @@ button[type=submit]{
   text-decoration: none;
   color: white;
   font-size: 20px;
-  width: 30%;
+  width: 50%;
 }
 
 
 #pp{
           
-  position: absolute;
-  margin-left: 60%;
+  position: relative;
+  width: 40vw;
   text-align: center;
-  margin-top: 12%;
 
   
   
@@ -383,10 +381,8 @@ a{
       left: 5%;
       width: 40vw;
       height: 65vh;
-      background: white;
       border-radius: 10px;
       padding: 12px;
-      margin-top: 5%;
   }
 
 
