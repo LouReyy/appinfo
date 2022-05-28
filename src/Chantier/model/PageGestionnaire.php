@@ -94,11 +94,11 @@ $size=count($allId);
             <div class="form-group">
             <t>Date de début</t><input type="datetime_local" name="date_debut" class="form-control" value="2018-06-12T19:30" required="required" autocomplete="off">
             </div>
-            <label for="meeting-time">Choose a time for your appointment:</label>
-
-<input type="datetime-local" id="meeting-time"
-       name="meeting-time" value="2018-06-12T19:30"
-       min="2018-06-07T00:00" max="2018-06-14T00:00">
+            <div class="form-group">
+            <t>date de debut</t><input type="datetime-local" id="meeting-time"
+            name="date-fin" value="2018-06-12T19:30"
+            min="2000-06-07T00:00" max="2022-06-14T00:00">
+            </div>
             <div class="form-group">
             <t>Date de fin</t><input type="date_fin" name="date_fin" class="form-control" placeholder="date de fin" required="required" autocomplete="off">
             </div>
