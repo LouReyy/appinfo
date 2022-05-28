@@ -12,7 +12,7 @@ if(isset($_SESSION['user'])){
 
     }
     if(isset($_SESSION['type'])){
-        $chantier = "/chantier";    }
+        $chantier = "/chant";    }
     else{
         $chantier = "VotreChantier/votrechantier.php";
     }

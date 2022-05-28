@@ -13,7 +13,7 @@ if($request == '/connexion' || $request == '/index.php'){
     header('Location:auth/index.php');
 }
 
-if($request == '/chantier'){
+if($request == '/chant'){
     header('Location:Chantier/PageChantier.php');
 }
 
