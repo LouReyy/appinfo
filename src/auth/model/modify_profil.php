@@ -63,6 +63,7 @@ if($password === $password_retype){
         if (smtpmailer($to_email,$from_email,$name, $subject, $body, )) {
             echo "l'email a bien été envoyé à $to_email...";
             header('Location: ../views/landing.php?reg_err=admin');
+            die();
 
         } else {
             echo "Email sending failed...";
