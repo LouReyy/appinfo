@@ -35,7 +35,7 @@ $data = $req->fetch();
         if($retour) {
             echo '<p>La photo a bien été envoyée.</p>';
             echo '<img src="' . $_FILES['picture']['name'] . '">';
-            header('Location: ../views/landing.php');die();
+            header('Location: ../views/landing.php?reg_err=success');die();
         }
     }else{
         header('Location: ../views/landing.php?reg_err=picture');die();
