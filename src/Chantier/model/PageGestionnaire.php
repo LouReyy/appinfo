@@ -29,7 +29,7 @@ if(isset($_SESSION['user'])){
 //Pour ça il faut récupérer l'id Chantier de la table utilisateurs2 fixons le à 1 car on y arrive pas
 
 
-$id_chantier=1;   //VARIABLE A MODIFIER APRES POUR S ADAPTER AUX DIFFERENTS GESTIONNAIRES
+$id_chantier=$_SESSION['id_chantier'];   //VARIABLE A MODIFIER APRES POUR S ADAPTER AUX DIFFERENTS GESTIONNAIRES
 
 $req_util='SELECT pseudo,id FROM `utilisateurs` WHERE id_chantier=1;';
 $result=mysqli_query($conn,$req_util);
@@ -117,7 +117,7 @@ $size=count($allId);
             <div class="form-group">
             <t>date de debut</t><input type="date" id="start"
             name="date_debut" value= "<?php echo $date_debut ?>" 
-            min="2000-06-07T00:00" max="2022-06-14T00:00">
+            min="2000-06-07" max="2022-06-14">
             </div>
             <div class="form-group">
             <t>date de fin</t><input type="date" id="start"
