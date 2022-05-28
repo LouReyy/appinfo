@@ -591,6 +591,28 @@ ul{
 
   }
 
+  a.button2{
+    margin-top: 0.7%;
+    margin-left : 3%;
+    margin-right : 3%;
+    position: relative;
+    background-color: #c71f09;
+    color: white;
+    padding: 10px 10px;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    height:70%;
+    border-radius: 25px;
+    font-family: "Quicksand";  
+    text-align: center; 
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-size: 10px;
+    flex:1;
+}
+
 
 }
 
