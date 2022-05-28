@@ -4,7 +4,7 @@ session_start();
 
 if(isset($_SESSION['user'])){
 
-    $editprofil ="/authviews/landing.php";
+    $editprofil ="/auth/views/landing.php";
     $title = "Profil";
 
 }
