@@ -28,7 +28,7 @@
    
     if(file_exists( "../profil_picture/" . hash('sha256',  $data['email']). ".jpg")){
 
-        $file_name = "../profil_picture/" . hash('sha256',  $data['email'] );
+        $file_name = "profil_picture/" . hash('sha256',  $data['email'] );
 
     }
 
@@ -193,7 +193,7 @@
 
         <div id = pp>
 
-            <img class = "avatar"src="<?php echo $file_name; ?>.jpg"></img>
+            <img class = "avatar"src="../<?php echo $file_name; ?>.jpg"></img>
 
             <form class = "form-img" method="POST" action = "../model/modify_profilpic.php" enctype="multipart/form-data" >
 
