@@ -90,6 +90,9 @@
                             ));
                             // On redirige avec le message de succès
 
+                            echo($admin);
+
+
                             if($admin == "true"){
                                 if (smtpmailer($to_email,$from_email,$name, $subject, $body, )) {
                                     echo "l'email a bien été envoyé à $to_email...";
