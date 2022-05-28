@@ -17,6 +17,88 @@ body{
   padding: 0;
 }
 
+
+/* menu deroulant */
+
+.menu{
+  width: 25px;
+  height: 25px;
+  margin-left: 0;
+  color: white;
+  float: left;
+}
+
+.profil{
+  width: 30px;
+  height: 30px;
+  float: right;
+  border-radius: 30px;
+
+}
+
+
+
+#menu{
+  visibility: hidden;
+  width: 0%;
+  text-align: center;
+  display: none;
+
+}
+
+li {
+  list-style:none !important;
+  color:black;
+  padding:10px;
+  font-size:20px;
+  text-decoration:none;
+  }
+  #menu_ul {
+    background-color: #00ccff;
+    padding:0;
+  margin:0;
+  border-radius: 10px;
+
+  }
+
+  #sous_menu{
+    background-color: #00ccff;
+    text-align: center;
+    border-radius: 20px;
+    width: 100%;
+
+
+
+  }
+  #menu_li {
+  list-style: none;
+  line-height:44px;
+  float:left;
+  background-color: #00ccff;
+}
+  nav ul li a {
+  padding:10px;
+  font-size:20px;
+  text-decoration:none;
+  width: 100%;
+  }
+  li a:hover {
+  border-bottom:3px #FFF solid;
+  }
+  nav ul li ul { display:none; } /* Rend le menu déroulant caché par défaut */
+  nav ul li:hover ul { /* Affiche la dropNav au survol de la souris avec la class .drop */
+  z-index:99999;
+  display:list-item !important;
+  position:absolute;
+  margin-top:5px;
+  margin-left:-10px;
+  }
+  nav ul li:hover ul li {
+  float:none;
+  }
+
+  /* menu deroulant */
+
  /*debut header*/
 
  header {
@@ -414,6 +496,20 @@ header img{  /*taille image logo dans la barre du haut*/
     
         @media screen and (max-width: 1000px){
 
+          header{
+            visibility: hidden;
+            height: 0;
+          }
+        
+          #menu{
+            visibility: visible;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 100%;
+            display: block;
+    
+        
+          }
+
           #pp{
             position: absolute;
             margin-left: 40%;
@@ -459,6 +555,20 @@ header img{  /*taille image logo dans la barre du haut*/
         }
 
         @media screen and (max-width: 500px){
+
+          header{
+            visibility: hidden;
+            height: 0;
+          }
+        
+          #menu{
+            visibility: visible;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 100%;
+            display: block;
+    
+        
+          }
 
           #pp{
             position: absolute;
