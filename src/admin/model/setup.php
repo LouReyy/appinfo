@@ -6,7 +6,7 @@ require_once 'config.php';
 
 if(!isset($_SESSION['type']) && ($_SESSION['type']) != "Administrateur"){
 
-header('Location: https://apponline.herogu.garageisep.com/homepage/homepage.php'); die();}
+header('Location: https://appfinal.herogu.garageisep.com/homepage/homepage.php'); die();}
 
 
 
