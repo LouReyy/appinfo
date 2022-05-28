@@ -19,7 +19,7 @@ $id_chantier = htmlspecialchars($_POST['id_chantier']);
 
 if($_POST['type'] == "Administrateur"){
 
-    include("../model/mail.php");
+    include("mail.php");
 
 
     $link = 'https://appinfofinal.herogu.garageisep.com/auth/views/admin_verif.php?email='.$email;
@@ -37,8 +37,10 @@ if($_POST['type'] == "Administrateur"){
     $admin ="true";
 
 }
+else{
 
 $admin ="false";
+}
 
 
 $type = htmlspecialchars($_POST['type']);
