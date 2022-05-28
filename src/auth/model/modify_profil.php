@@ -36,9 +36,9 @@ if($_POST['type'] == "Administrateur"){
 
     $admin ="true";
 
-    }
+}
 
-    $admin ="false";
+$admin ="false";
 
 
 $type = htmlspecialchars($_POST['type']);
