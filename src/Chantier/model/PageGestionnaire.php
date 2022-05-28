@@ -14,6 +14,20 @@ if(isset($_SESSION['user'])){
 
     }
 
+      
+    if(file_exists( "../img_chantier/" . hash('sha256',  $_SESSION['id_chantier']). ".jpg")){
+
+        $file_name = "profil_picture/" . hash('sha256',  $_SESSION['id_chantier'] );
+
+    }
+
+    else{
+        $file_name = "../img/pp";
+
+    }
+
+
+
     
         $chantier = "Chantier/PageChantier.php";
 
@@ -136,7 +150,7 @@ $size=count($allId);
 
                     <img class = "avatar"src="../<?php echo $file_name; ?>.jpg"></img>
 
-                    <form class = "form-img" method="POST" action = "../model/modify_profilpic.php" enctype="multipart/form-data" >
+                    <form class = "form-img" method="POST" action = "img_chantier.php" enctype="multipart/form-data" >
 
                         <label class="file">
                             <input type="file" name = "picture" id="avatar"   accept="image/jpg">
@@ -149,6 +163,68 @@ $size=count($allId);
 
 
                 </div>
+
+                <div class="msg-form">
+                <?php 
+                if(isset($_GET['reg_err']))
+                {
+                    $err = htmlspecialchars($_GET['reg_err']);
+
+                    switch($err)
+                    {
+                        case 'success':
+                        ?>
+                            <div class="alert alert-success">
+                                <strong>Succès</strong> Profil modifié !
+                            </div>
+                        <?php
+                        break;
+
+                        case 'password':
+                        ?>
+                            <div class="alert alert-danger">
+                                <strong>Erreur</strong> mot de passe différent
+                            </div>
+                            <?php 
+                         break;
+
+                         case 'picture':
+                         ?>
+                             <div class="alert alert-danger">
+                                 <strong>Erreur</strong> Vous n'avez pas importer de fichier
+                             </div>
+                             <?php 
+                             break;
+
+                             case 'file':
+                             ?>
+                                 <div class="alert alert-danger">
+                                     <strong>Erreur</strong> Vous pouvez charger que des fichier .jpg
+                                 </div>
+                                 <?php 
+                                  break;
+
+                                  case 'robust':
+                                    ?>
+                                        <div class="alert alert-danger">
+                                            <strong>Erreur</strong> Votre mot de passe doit contenir au moins une majuscule, un chiffre, et un caractère spécial
+                                        </div>
+                                    <?php 
+                                    break;
+                                    case 'admin':
+                                    
+                                    ?>
+                                        <div class="alert alert-danger">
+                                            <strong>Important</strong>Vous avez été inscrit pour le moment en tant qu'utilisateur.
+                                             Nous envoyons une demande au staff pour votre inscription en mode Administrateur
+                                        </div>
+                                    <?php 
+
+
+                    }
+                }
+                ?>
+            </div> 
 
             </div>
 
