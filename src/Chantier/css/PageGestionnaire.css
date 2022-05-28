@@ -223,6 +223,8 @@ header img{  /*taille image logo dans la barre du haut*/
       flex-direction: row;
       background: white;
       border-radius: 10px;
+      width: 90%;
+      margin-left: 5%;
     }
 
     .chantier{
@@ -256,7 +258,7 @@ input[type=date] {
   box-sizing: border-box;
   border-radius: 25px;
   font-family: "Quicksand";  
-  
+  margin-left: 5%;
 }
 
 button[type=submit]{
@@ -281,6 +283,8 @@ button[type=submit]{
   position: relative;
   width: 40vw;
   text-align: center;
+  margin-left: 5%;
+
 
   
   
@@ -434,6 +438,7 @@ a{
     max-width: 2000px;
     margin:20px;
     font-family: "Quicksand";
+    margin-top: 50%;
   
   }
   .row{
