@@ -15,9 +15,9 @@ if(isset($_SESSION['user'])){
     }
 
       
-    if(file_exists( "../img_chantier/" . hash('sha256',  $_SESSION['id_chantier']). ".jpg")){
+    if(file_exists( "../img_chant/" . hash('sha256',  $_SESSION['id_chantier']). ".jpg")){
 
-        $file_name = "profil_picture/" . hash('sha256',  $_SESSION['id_chantier'] );
+        $file_name = "../img_chant/" . hash('sha256',  $_SESSION['id_chantier'] );
 
     }
 
@@ -148,7 +148,7 @@ $size=count($allId);
 
                 <div id = pp>
 
-                    <img class = "avatar"src="../<?php echo $file_name; ?>.jpg"></img>
+                    <img class = "avatar"src="<?php echo $file_name; ?>.jpg"></img>
 
                     <form class = "form-img" method="POST" action = "img_chantier.php" enctype="multipart/form-data" >
 
