@@ -7,6 +7,10 @@ const header = document.querySelector("header");
 const menu = document.querySelector("#menu");
 const sous_menu = document.querySelector("#sous_menu");
 
+if(x.matches){
+    header.remove();
+}
+
 function nomenu(){
     if(sous_menu.style.display != "none"){
 
@@ -57,13 +61,12 @@ function verif(x){
 
 if (none.style.visibility == 'hidden')
 
-    {
         verif(x)
         
 
-    }
-
     
+
+
 
 }
 
