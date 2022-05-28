@@ -7,11 +7,11 @@
         header('Location:index.php');
         die();
 
-        $editprofil ="index.php";
+        $editprofil ="../index.php";
         $title = "Connexion";
     }
     else{
-        $editprofil ="views/landing.php";
+        $editprofil ="../views/landing.php";
         $title = "Profil";
     }
     if(isset($_SESSION['type'])){

@@ -71,6 +71,8 @@ if($password === $password_retype){
         
         }
     }else{
+        header('Location: ../views/landing.php?reg_err=success');
+
     }
     die();
 
