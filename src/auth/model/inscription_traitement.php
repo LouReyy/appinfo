@@ -2,8 +2,6 @@
     require_once 'config.php'; 
 
     
-    if(!empty($_POST['pseudo']) && !empty($_POST['email']) && !empty($_POST['password']) && !empty($_POST['password_retype']))
-    {
         
         $pseudo = htmlspecialchars($_POST['pseudo']);
         $email = htmlspecialchars($_POST['email']);
@@ -116,9 +114,4 @@
 
 
     header('Location:../views/inscription.php?reg_err=success');
-    echo("test");
-    
-    
-    }
-
-    header('Location:../views/inscription.php?reg_err=email');
+  
