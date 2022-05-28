@@ -30,7 +30,7 @@ if(!isset($_SESSION['user'])){
         if($retour) {
             echo '<p>La photo a bien été envoyée.</p>';
             echo '<img src="' . $_FILES['picture']['name'] . '">';
-            header('Location: PageGestionnaire.php');die();
+            header('Location: PageGestionnaire.php?reg_err=success');die();
         }
     }else{
         header('Location: PageGestionnaire.php?reg_err=picture');die();
