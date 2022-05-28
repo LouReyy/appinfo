@@ -12,6 +12,8 @@ if(!empty($_POST['id_chantier']) && !empty($_POST['nom']) && !empty($_POST['loca
     $date_debut = htmlspecialchars($_POST['$date_debut']);
     $date_fin = htmlspecialchars($_POST['date_fin']);
 
+    echo($id_chantier . $nom . $localisation . $date_debut . $date_fin);
+
 
     $insert = $bdd->prepare('INSERT INTO `chantier`(`id_chantier`, `nom`, `localisation`, `date_debut`, `date_fin`) VALUES (:id_chantier, :nom, :localisation, :date_debut, :date_fin)');
                             $insert->execute(array(
@@ -22,9 +24,13 @@ if(!empty($_POST['id_chantier']) && !empty($_POST['nom']) && !empty($_POST['loca
                                 'date_fin' => $date_fin
                             ));
 
+                            echo("ajout de chantier");
+
 
 
 }
+
+echo("fail");
 
 
 
