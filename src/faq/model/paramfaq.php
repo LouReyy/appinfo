@@ -19,13 +19,21 @@ else{
     $title = "Connexion";
 }
 
+if(isset($_SESSION['type'])){
+
 if($_SESSION['type'] == "Administrateur"){
     $div = "newquestion";
     $chantier = "Chantier/PageChantier.php";
 
 }
 
+else{
+   
+    $div = "none";
+    $chantier = "VotreChantier/votrechantier.php";
 
+}
+}
 else{
    
     $div = "none";
