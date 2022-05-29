@@ -23,14 +23,17 @@ else{
 if(isset($_SESSION['email'])){
 
     if(file_exists( "../auth/profil_picture/" . hash('sha256',  $_SESSION['email']). ".jpg")){
-    
+
         $file_name = "../auth/profil_picture/" . hash('sha256',  $_SESSION['email'] );
         }
-    }
+
         else{
         $file_name = "../auth/img/pp";
-        
 
     }
- 
+}
+else{
+    $file_name = "../auth/img/pp";
+
+}
 ?>
