@@ -538,6 +538,42 @@ a{
     #content{
       flex-direction: column;
     }
+
+    .chantier{
+      width: 80vw;
+    }
+
+  
+  
+  #pp{
+            
+    position: relative;
+    width: 80vw;
+    text-align: center;
+    margin-left: 10%;
+  
+  
+    
+    
+  }
+  
+  .avatar{
+    width: 300px;
+    height: 300px;
+  
+  }
+
+  button[type = "submit"]{
+    width: 80%;
+  }
+
+  .boite{
+    width: 80vw;
+  }
+
+  .boite p {
+    font-size: 4.4vw;
+}
   
   
   }
@@ -558,4 +594,41 @@ a{
     #content{
       flex-direction: column;
     }
+
+    .chantier{
+      width: 80vw;
+    }
+
+  
+  
+  #pp{
+            
+    position: relative;
+    width: 80vw;
+    text-align: center;
+    margin-left: 10%;
+  
+  
+    
+    
+  }
+  
+  .avatar{
+    width: 300px;
+    height: 300px;
+  
+  }
+
+  button[type = "submit"]{
+    width: 80%;
+  }
+
+  .boite{
+    width: 80vw;
+  }
+
+  .boite p {
+    font-size: 4.4vw;
+}
+
   }

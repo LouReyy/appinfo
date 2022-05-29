@@ -26,6 +26,19 @@ if(isset($_SESSION['user'])){
 
     }
 
+    if(isset($_SESSION['email'])){
+
+        if(file_exists( "../auth/profil_picture/" . hash('sha256',  $_SESSION['email']). ".jpg")){
+        
+            $file_name2 = "../auth/profil_picture/" . hash('sha256',  $_SESSION['email'] );
+            }
+        }
+            else{
+            $file_name2 = "../auth/img/pp";
+            
+    
+        }
+
 
 
     
