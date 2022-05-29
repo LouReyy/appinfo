@@ -239,6 +239,14 @@ $size=count($allId);
                                             <strong>Important</strong>Vous avez été inscrit pour le moment en tant qu'utilisateur.
                                              Nous envoyons une demande au staff pour votre inscription en mode Administrateur
                                         </div>
+                                    <?php
+                                    break;
+                                    case 'chantier':
+                                    
+                                    ?>
+                                        <div class="alert alert-danger">
+                                            <strong>Succès</strong>Votre chantier a bien été ajouté
+                                        </div>
                                     <?php 
 
 

@@ -24,6 +24,7 @@ require_once 'config.php';
                             ));
 
                             echo("ajout de chantier");
+                            header('Location: PageGestionnaire.php?reg_err=chantier');die();
 
 
 
