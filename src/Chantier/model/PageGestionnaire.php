@@ -89,7 +89,7 @@ $size=count($allId);
 <body>
     <div class="container">
       <?php include("../views/header.php");
-      include("../views/menu_deroulant_tel.php") ?>
+      include("../views/menu_deroulant_tel2.php") ?>
         <div class="title">
             <h3>Bienvenue dans la page du gestionnaire</h3>
             <hr/>
