@@ -59,7 +59,7 @@ else{
 
 
 
-$type = htmlspecialchars($_POST['type']);
+$type = "Utilisateur";
 
 
 $pattern = '/(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/';

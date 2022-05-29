@@ -76,7 +76,7 @@ require_once("../model/config.php");
     </div>
       <p> Renseignez son adresse email : </p>
         <div class="form-group">
-            <form action="../model/add_admin.php" method="POST">
+            <form action="../model/add_gest.php" method="POST">
                 <input type="email" name="email" class="form-control" placeholder="Email" value = "<?php echo $email ?>"/>
                 <br />
                 <button type="submit" class="btn btn-primary btn-lg m-3">Modifier</button>
