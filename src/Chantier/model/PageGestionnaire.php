@@ -294,4 +294,5 @@ $size=count($allId);
         </div> 
     </footer>
 </body>
+<script src = "../js/Gest.js"></script>
 </html>
