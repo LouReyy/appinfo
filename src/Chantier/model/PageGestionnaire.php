@@ -95,6 +95,10 @@ $size=count($allId);
                     $req->execute(array( $_SESSION['id_chantier'] ));
                     $data = $req->fetch();
 
+                    }
+
+                    if(isset($data['nom']) && isset($data['localisation']) ){
+
                     $id_chantier = $_SESSION['id_chantier'];
                     $nom = $data['nom'];
                     $localisation = $data['localisation'];
@@ -103,7 +107,7 @@ $size=count($allId);
 
                     }
                     else{
-                        $id_chantier = "";
+                        $id_chantier = $_SESSION['id_chantier'];
                         $nom = "";
                         $localisation = "";
                         $date_debut = "2018-06-12T19:30";
