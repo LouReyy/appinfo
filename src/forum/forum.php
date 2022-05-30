@@ -217,7 +217,7 @@ include("views/menu_deroulant_tel.php");
                         $file_name = "../auth/profil_picture/" . hash('sha256',  $row2['email'] );
                         }
                         else{
-                        $file_name = "../auth/pp";
+                        $file_name = "../auth/img/pp";
                         }
         
                 
@@ -307,7 +307,7 @@ include("views/menu_deroulant_tel.php");
                     $file_name = "../auth/profil_picture/" . hash('sha256',  $row2['email'] );
                     }
                     else{
-                    $file_name = "../auth/pp";
+                    $file_name = "../auth/img/pp";
                     }
     
             }
@@ -396,7 +396,7 @@ include("views/menu_deroulant_tel.php");
                         $file_name = "../auth/profil_picture/" . hash('sha256',  $row2['email'] );
                         }
                         else{
-                        $file_name = "../auth/pp";
+                        $file_name = "../auth/img/pp";
                         }
         
                 }
