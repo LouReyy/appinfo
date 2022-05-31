@@ -11,6 +11,8 @@
         $type = htmlspecialchars($_POST['type']);
         $id_chantier = htmlspecialchars($_POST['id_chantier']);
 
+        echo $id_chantier;
+
 
         if($type == "Administrateur"){
 
