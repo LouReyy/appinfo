@@ -17,6 +17,8 @@ $password_retype = htmlspecialchars($_POST['password_retype']);
 $type = htmlspecialchars($_POST['type']);
 $id_chantier = htmlspecialchars($_POST['id_chantier']);
 
+echo($type);
+
 if($type == "Administrateur"){
 
     include("mail.php");
