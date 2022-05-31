@@ -135,7 +135,7 @@
             var_dump($data);
             echo($row);
 
-            if(!isset($data)){
+            if($row ==0){
                 $chant =0;
                 header('Location:../views/inscription.php?reg_err=chantierno');
                 die();
@@ -145,7 +145,7 @@
 
 
 
-                        elseif(isset($id_chantier) && $type == "Utilisateur" && isset($chant)){
+                        elseif(isset($id_chantier) && $type == "Utilisateur"){
 
                             $insert = $bdd->prepare('INSERT INTO `utilisateurs`(`pseudo`, `email`, `password`, `token`, `type`,`id_chantier`) VALUES (:pseudo, :email, :password, :token, :type, :id_chantier)');
                             $insert->execute(array(
