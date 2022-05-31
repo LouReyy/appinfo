@@ -92,11 +92,7 @@ if($password === $password_retype){
         $update->execute(array($pseudo,$password,$type,$id_chantier,$email));
 
 }
-
-
-var_dump($data);
-
-elseif(isset($id_chantier) && $type == "Utilisateur"){
+if(isset($id_chantier) && $type == "Utilisateur"){
 
     $req= $bdd->prepare('SELECT * FROM chantier WHERE id_chantier = ?');
     $req->execute(array($id_chantier));
@@ -104,6 +100,7 @@ elseif(isset($id_chantier) && $type == "Utilisateur"){
  
 
     var_dump($data);
+    echo("sqalut");
 
 
     if(!isset($data['nom'])){
@@ -117,7 +114,7 @@ elseif(isset($id_chantier) && $type == "Utilisateur"){
 
 
 }
-elseif($type == "Administrateur"){
+if($type == "Administrateur"){
     $update = $bdd->prepare('UPDATE utilisateurs SET pseudo = ?,password = ?, type = ? WHERE email = ?');
     $update->execute(array($pseudo,$password,$type,$email));
 
