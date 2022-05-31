@@ -113,6 +113,8 @@
                                 'date_fin' => "2000-01-01"
                             ));
 
+
+
                                                         
                             $insert = $bdd->prepare('INSERT INTO `utilisateurs`(`pseudo`, `email`, `password`, `token`, `type`,`id_chantier`) VALUES (:pseudo, :email, :password, :token, :type, :id_chantier)');
                             $insert->execute(array(
@@ -139,14 +141,14 @@
 
                         }
                         else{
-                            $insert = $bdd->prepare('INSERT INTO `utilisateurs`(`pseudo`, `email`, `password`, `token`, `type`,`id_chantier`) VALUES (:pseudo, :email, :password, :token, :type, :id_chantier)');
+                            $insert = $bdd->prepare('INSERT INTO `utilisateurs`(`pseudo`, `email`, `password`, `token`, `type`) VALUES (:pseudo, :email, :password, :token, :type, )');
                             $insert->execute(array(
                                 'pseudo' => $pseudo,
                                 'email' => $email,
                                 'password' => $password,
                                 'token' => bin2hex(openssl_random_pseudo_bytes(32)),
-                                'type' => $type,
-                                'id_chantier' => NULL
+                                'type' => $type
+                                
                             ));
 
                         }
