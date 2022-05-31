@@ -55,7 +55,7 @@ if(isset($_SESSION['email'])){
         }
     }
         else{
-        $file_name2 = "../auth/img/pp";
+        $file_name2 = "/auth/img/pp";
         
 
     }
