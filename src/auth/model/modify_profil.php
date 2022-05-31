@@ -17,6 +17,7 @@ $password_retype = htmlspecialchars($_POST['password_retype']);
 $type = htmlspecialchars($_POST['type']);
 $id_chantier = htmlspecialchars($_POST['id_chantier']);
 
+
 if($type == "Administrateur"){
 
     include("mail.php");
@@ -57,9 +58,10 @@ else{
     $gest ="false";
 }
 
+$type = htmlspecialchars($_POST['type']);
+echo($type);
+echo($id_chantier);
 
-
-$type = "Utilisateur";
 
 
 $pattern = '/(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/';
@@ -74,11 +76,55 @@ if($password === $password_retype){
     $cost = ['cost' => 12];
     $password = password_hash($password, PASSWORD_BCRYPT, $cost);
 
+    if(isset($id_chantier) && $type == "Gestionnaire"){
+
+        $req= $bdd->prepare('SELECT * FROM chantier WHERE id_chantier = ?');
+        $req->execute(array($id_chantier));
+        $data = $req->fetch();
+    
+
+        var_dump($data);
+  
+
+        if(isset($data['nom'])){
+            header('Location:../views/landing.php?reg_err=chantieryes');
+            die();
+
+        }
+
+        $update = $bdd->prepare('UPDATE utilisateurs SET pseudo = ?,password = ?, type = ?,id_chantier = ? WHERE email = ?');
+        $update->execute(array($pseudo,$password,$type,$id_chantier,$email));
+
+}
+if(isset($id_chantier) && $type == "Utilisateur"){
+
+    $req= $bdd->prepare('SELECT * FROM chantier WHERE id_chantier = ?');
+    $req->execute(array($id_chantier));
+    $data = $req->fetch();
+ 
+
+    var_dump($data);
+    echo("sqalut");
+
+
+    if(!isset($data['nom'])){
+        header('Location:../views/landing.php?reg_err=chantierno');
+        die();
+
+    }
 
     $update = $bdd->prepare('UPDATE utilisateurs SET pseudo = ?,password = ?, type = ?,id_chantier = ? WHERE email = ?');
-    $update->execute(array($pseudo,$password,$type,$id_chantier,$email));
+        $update->execute(array($pseudo,$password,$type,$id_chantier,$email));
 
-    echo($admin);
+
+}
+if($type == "Administrateur"){
+    $update = $bdd->prepare('UPDATE utilisateurs SET pseudo = ?,password = ?, type = ? WHERE email = ?');
+    $update->execute(array($pseudo,$password,$type,$email));
+
+
+}
+
 
     if($admin == "true"){
         if (smtpmailer($to_email,$from_email,$name, $subject, $body, )) {

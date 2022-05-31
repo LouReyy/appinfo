@@ -109,7 +109,7 @@
                                 var_dump($data);
                           
                     
-                                if(isset($data['nom'])){
+                                if(!isset($data['nom'])){
                                     header('Location:../views/inscription.php?reg_err=chantieryes');
                                     die();
                     
