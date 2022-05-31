@@ -65,9 +65,9 @@ $values_CO2=mysqli_fetch_all($resultCO2, MYSQLI_ASSOC);
 
 var_dump($values_card);
 
-echo($values_card['Type']);
+echo($values_card['Time']);
 
-if(isset($values_card['Type'])){
+if(isset($values_card['Time'])){
 
 
 function tableX($table){
