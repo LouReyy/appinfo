@@ -175,6 +175,14 @@ include("../model/setup_index.php");
                                          Nous envoyons une demande au staff pour votre inscription en mode Gestionnaire
                                     </div>
                                 <?php 
+                                break;
+                                case 'chantierno':
+                                
+                                    ?>
+                                        <div class="alert alert-danger">
+                                            <strong>Erreur</strong>Votre numero de chantier n'existe pas veuillez reessayer
+                                        </div>
+                                    <?php 
 
 
                     }
