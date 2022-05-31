@@ -91,6 +91,13 @@ include("menu_deroulant_tel.php"); ?>
                                 </div>
                                 <?php 
                                 break;
+                                case 'mdpok':
+                                    ?>
+                                        <div class="alert">
+                                            <strong>Succes</strong> Votre mot de passe a bien été modifié
+                                        </div>
+                                        <?php 
+                                        break;
                        }
                    }
                    ?> 

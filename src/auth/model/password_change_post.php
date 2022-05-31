@@ -21,7 +21,7 @@
                     $delete->execute(array($token));
 
                     echo "Le mot de passe a bien été modifie";
-                    header('Location: /auth/index.php');
+                    header('Location: /auth/index.php?login_err=mdpok');
 
                 }else{
                     echo "Les mots de passes ne sont pas identiques";
