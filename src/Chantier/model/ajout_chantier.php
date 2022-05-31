@@ -13,20 +13,11 @@ require_once 'config.php';
 
     echo($id_chantier . $nom . $localisation . $date_debut . $date_fin);
 
-
-    $insert = $bdd->prepare('UPDATE `chantier`(`id_chantier`, `nom`, `localisation`, `date_debut`, `date_fin`) VALUES (:id_chantier, :nom, :localisation, :date_debut, :date_fin)');
-                            $insert->execute(array(
-                                'id_chantier' => $id_chantier,
-                                'nom' => $nom,
-                                'localisation' => $localisation,
-                                'date_debut' => $date_debut,
-                                'date_fin' => $date_fin
-                            ));
+                            $update = $bdd->prepare('UPDATE chantier SET nom = ?,localisation = ?, date_debut = ?,date_fin = ? WHERE id_chantier = ?');
+                            $update->execute(array($nom,$localisation,$date_debut,$date_fin,$id_chantier));
 
                             echo("ajout de chantier");
                             header('Location: PageGestionnaire.php?reg_err=chantier');die();
-
-
 
 
 
