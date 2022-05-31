@@ -89,6 +89,9 @@ $size=count($allId);
     <title>Chantier Gestionnaire</title>
     <link rel="stylesheet" href="../css/PageGestionnaire.css" media="screen" type="text/css" />
     <link rel="icon" type="image/png" href="/auth/img/logo_infinite.png" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+
+
 </head>
 <body>
     <div class="container">
