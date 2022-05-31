@@ -104,12 +104,12 @@
                                 $req= $bdd->prepare('SELECT * FROM chantier WHERE id_chantier = ?');
                                 $req->execute(array($id_chantier));
                                 $data = $req->fetch();
-                                $row = $check->rowCount();
+                            
                     
                                 var_dump($data);
-                                echo($row);
+                          
                     
-                                if($row >0){
+                                if(isset($data['nom'])){
                                     header('Location:../views/inscription.php?reg_err=chantieryes');
                                     die();
                     
