@@ -59,8 +59,6 @@ else{
 
 
 
-$type = "Utilisateur";
-
 
 $pattern = '/(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/';
         if (!(preg_match($pattern, $password))) {
@@ -73,12 +71,6 @@ if($password === $password_retype){
                             
     $cost = ['cost' => 12];
     $password = password_hash($password, PASSWORD_BCRYPT, $cost);
-
-
-    $update = $bdd->prepare('UPDATE utilisateurs SET pseudo = ?,password = ?, type = ?,id_chantier = ? WHERE email = ?');
-    $update->execute(array($pseudo,$password,$type,$id_chantier,$email));
-
-    echo($admin);
 
     if(isset($id_chantier) && $type == "Gestionnaire"){
 
