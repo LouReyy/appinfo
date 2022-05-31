@@ -398,7 +398,6 @@ a.btn_forum:hover {
 /*Footer*/
 
 .containerfooter {
-
   max-width: 80vw;
   margin: 10vw;
   font-family: "Quicksand";
@@ -569,8 +568,6 @@ ul {
   .img1 {
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
   }
-
-  /*Footer*/
 
   #containerpartie2 {
     font-family: "Quicksand";
