@@ -17,18 +17,22 @@ if(isset($_SESSION['user'])){
         $chantier = "VotreChantier/votrechantier.php";
     }
 
-
+    if(isset($_SESSION['email'])){
 
         if(file_exists( "profil_picture/" . hash('sha256',  $_SESSION['email']). ".jpg")){
         
             $file_name = "profil_picture/" . hash('sha256',  $_SESSION['email'] );
             }
-        
+                else{
+                    $file_name = "img/pp";
+            }
+        }
             else{
             $file_name = "img/pp";
             
     
         }
+    
 
 
 ?>
