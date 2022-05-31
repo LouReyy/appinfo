@@ -15,8 +15,8 @@
             $token = bin2hex(openssl_random_pseudo_bytes(24));
             $token_user = $data['token']; 
 
-            $insert = $bdd->prepare('INSERT INTO mdp_recover(token_user, token) VALUES(?,?)');
-            $insert->execute(array($token_user, $token));
+            $insert = $bdd->prepare('INSERT INTO mdp_recover(token_user, token,id) VALUES(?,?)');
+            $insert->execute(array($token_user, $token,$data['id']));
 
             include("../model/mail.php");
 
