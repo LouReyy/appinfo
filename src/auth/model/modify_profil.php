@@ -115,7 +115,7 @@ elseif(isset($id_chantier) && $type == "Utilisateur"){
 
 
     if(!isset($data['nom'])){
-        header('Location:../views/inscription.php?reg_err=chantierno');
+        header('Location:../views/landing.php?reg_err=chantierno');
         die();
 
     }
