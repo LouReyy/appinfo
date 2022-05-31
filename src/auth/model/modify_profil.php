@@ -17,7 +17,6 @@ $password_retype = htmlspecialchars($_POST['password_retype']);
 $type = htmlspecialchars($_POST['type']);
 $id_chantier = htmlspecialchars($_POST['id_chantier']);
 
-echo($type);
 
 if($type == "Administrateur"){
 
@@ -154,7 +153,7 @@ if($type == "Administrateur"){
         }
     }
     
-    //header('Location: ../views/landing.php?reg_err=success');
+    header('Location: ../views/landing.php?reg_err=success');
 
     
     die();
