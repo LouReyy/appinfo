@@ -31,7 +31,7 @@ echo "test";
                     $_SESSION['id_chantier'] = $data['id_chantier'];
 
 
-                    header('Location: /forum/forum.php');die();
+                    header('Location: /homepage/homepage.php');die();
                 }else{ header('Location: ../index.php?login_err=password'); die(); }
             }else{ header('Location: ../index.php?login_err=email'); die(); }
         }else{ header('Location: ../index.php?login_err=already'); die(); }

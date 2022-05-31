@@ -82,7 +82,7 @@ include("menu_deroulant_tel.php");?>
 
             <img class = "avatar"src="<?php echo $file_name; ?>.jpg"></img>
 
-            <form class = "form-img" method="POST" action = "/auth/model/modify_profilpic2.php?email="<?php $data['email']?> enctype="multipart/form-data" >
+            <form class = "form-img" method="POST" action = "/auth/model/modify_profilpic2.php?email=<?php echo ($data['email'])?>" enctype="multipart/form-data" >
 
                 <label class="file">
                     <input type="file" name = "picture" id="avatar"   accept="image/jpg">
