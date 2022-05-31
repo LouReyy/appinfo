@@ -104,12 +104,12 @@
                                 $req= $bdd->prepare('SELECT * FROM chantier WHERE id_chantier = ?');
                                 $req->execute(array($id_chantier));
                                 $data = $req->fetch();
-                                $row = $check->rowCount();
+                            
                     
                                 var_dump($data);
-                                echo($row);
+                          
                     
-                                if($row >0){
+                                if(isset($data['nom'])){
                                     header('Location:../views/inscription.php?reg_err=chantieryes');
                                     die();
                     
@@ -151,13 +151,12 @@
                             $req= $bdd->prepare('SELECT * FROM chantier WHERE id_chantier = ?');
                             $req->execute(array($id_chantier));
                             $data = $req->fetch();
-                            $row = $check->rowCount();
+                         
                 
                             var_dump($data);
-                            echo($row);
+                      
                 
-                            if($row ==0){
-                                $chant =0;
+                            if(!isset($data['nom'])){
                                 header('Location:../views/inscription.php?reg_err=chantierno');
                                 die();
                 
@@ -221,7 +220,7 @@
             }else{ header('Location: ../views/inscription.php?reg_err=pseudo_length'); die();}
         }else{ header('Location: ../views/inscription.php?reg_err=select_type'); die();}
         }else{ header('Location: ../views/inscription.php?reg_err=already'); die();}
-        //header('Location:../views/inscription.php?reg_err=success');
+        header('Location:../views/inscription.php?reg_err=success');
 
 
     
