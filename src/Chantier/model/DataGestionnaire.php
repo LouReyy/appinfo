@@ -45,6 +45,20 @@ if ($type=="Gestionnaire"){
     if (!$conn){
     echo 'Connection error: ' . mysqli_connect_error();
 }
+
+
+if(isset($_SESSION['email'])){
+
+    if(file_exists( "/auth/profil_picture/" . hash('sha256',  $_SESSION['email']). ".jpg")){
+    
+        $file_name2= "/auth/profil_picture/" . hash('sha256',  $_SESSION['email'] );
+        }
+    }
+        else{
+        $file_name2 = "../auth/img/pp";
+        
+
+    }
 //La connexion fonctionne
 $req_temp='SELECT DISTINCT Time,Valeur FROM `capteur_table` WHERE id_utilisateur="'.$id.'" AND type="temp"ORDER BY Time DESC LIMIT 20;';
 $result=mysqli_query($conn,$req_temp);
