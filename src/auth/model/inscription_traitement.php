@@ -104,7 +104,11 @@
 
                             $insert = $bdd->prepare('INSERT INTO `chantier`(`id_chantier`, `nom`, `localisation`, `date_debut`, `date_fin`) VALUES (:id_chantier, :nom, :localisation, :date_debut, :date_fin)');
                             $insert->execute(array(
-                                'id_chantier' => $id_chantier
+                                'id_chantier' => $id_chantier,
+                                'nom' => "",
+                                'localisation' => "",
+                                'date_debut' => 2022-06-14,
+                                'date_fin' => 2022-08-14
                             ));
 
                                                         
