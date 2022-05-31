@@ -98,6 +98,13 @@ include("menu_deroulant_tel.php"); ?>
                                         </div>
                                         <?php 
                                         break;
+                                        case 'noexist':
+                                            ?>
+                                                <div class="alert">
+                                                    <strong>Erreur</strong> Vous n'avez pas de compte veuillez vous inscrire
+                                                </div>
+                                                <?php 
+                                                break;
                        }
                    }
                    ?> 

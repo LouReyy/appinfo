@@ -42,7 +42,7 @@
 
         }else{
             echo "Compte non existant";
-            header('Location: ../index.php');
+            header('Location: ../index.php?login_err=noexist');
             die();
         }
     }
