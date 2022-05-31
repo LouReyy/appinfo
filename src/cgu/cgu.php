@@ -2,11 +2,11 @@
 session_start(); 
 
 if(isset($_SESSION['user'])){
-    $editprofil ="views/landing.php";
+    $editprofil ="/auth/views/landing.php";
     $title = "Profil";
     }
     else{
-        $editprofil ="index.php";
+        $editprofil ="/auth/index.php";
         $title = "Connexion";
 
     }
