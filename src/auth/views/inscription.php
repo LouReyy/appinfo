@@ -183,6 +183,14 @@ include("../model/setup_index.php");
                                             <strong>Erreur</strong>Votre numero de chantier n'existe pas veuillez reessayer
                                         </div>
                                     <?php 
+                                break;
+                                case 'chantieryes':
+                                
+                                    ?>
+                                        <div class="alert alert-danger">
+                                            <strong>Erreur</strong>Ce numéro de chantier est deja attribué
+                                        </div>
+                                    <?php 
 
 
                     }
