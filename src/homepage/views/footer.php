@@ -7,10 +7,10 @@
             <div class=" footer-col">
                 <h4>NAVIGATION</h4>
                 <ul>
-                    <li><a href= "#">Accueil</a></li>
-                    <li><a href= "#">Votre chantier</a></li>
-                    <li><a href= "#">Forum</a></li>
-                    <li><a href= "#">Contactez-nous</a></li>
+                    <li><a href= "/home">Accueil</a></li>
+                    <li><a href= "/<?php echo $chantier ?>">Votre chantier</a></li>
+                    <li><a href= "/forum/forum.php">Forum</a></li>
+                    <li><a href= "/contact/contact_essai.php">Contactez-nous</a></li>
                 </ul>
             </div>
             <div class=" footer-col">
