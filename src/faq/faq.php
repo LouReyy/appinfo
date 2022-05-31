@@ -15,6 +15,8 @@ include('model/paramfaq.php')
     <link rel="stylesheet" href="/faq/css/faq.css" media="screen" type="text/css" />
     <title>FAQ</title>
     <link rel="icon" type="image/png" href="../homepage/img/InfiniteMeasures.png" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+
 
 </head>
 

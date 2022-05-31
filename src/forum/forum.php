@@ -15,6 +15,8 @@ include("model/setup_forum.php");
     <link rel="stylesheet" href="css/forum.css">
     <title>Forum</title>
     <link rel="icon" type="image/png" href="../homepage/img/InfiniteMeasures.png" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+
 
 </head>
 <body>
