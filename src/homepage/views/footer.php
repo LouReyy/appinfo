@@ -16,10 +16,9 @@
             <div class=" footer-col">
                 <h4>PLUS D'INFOS</h4>
                 <ul>
-                    <li><a href= "#">Inscription</a></li>
-                    <li><a href= "#">Connexion</a></li>
-                    <li><a href= "#">Mentions Légales</a></li>
-                    <li><a href= "#">CGU</a></li>
+                    <li><a href= "/auth/views/inscription.php">Inscription</a></li>
+                    <li><a href= "/auth/index.php">Connexion</a></li>
+                    <li><a href= "/cgu/cgu.php">Mentions Légales et CGU</a></li>
                 </ul>
             </div>
             <div class=" footer-col">
