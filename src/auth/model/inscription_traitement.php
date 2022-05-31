@@ -102,6 +102,8 @@
                             
                             echo $id_chantier;
 
+                            if(isset($id_chantier) || $type == "Gestionnaire"){
+
                             $insert = $bdd->prepare('INSERT INTO `chantier`(`id_chantier`, `nom`, `localisation`, `date_debut`, `date_fin`) VALUES (:id_chantier, :nom, :localisation, :date_debut, :date_fin)');
                             $insert->execute(array(
                                 'id_chantier' => $id_chantier,
@@ -121,6 +123,33 @@
                                 'type' => $type,
                                 'id_chantier' => $id_chantier
                             ));
+
+                        }
+                        elseif(isset($id_chantier) || $type == "Utilisateur"){
+
+                            $insert = $bdd->prepare('INSERT INTO `utilisateurs`(`pseudo`, `email`, `password`, `token`, `type`,`id_chantier`) VALUES (:pseudo, :email, :password, :token, :type, :id_chantier)');
+                            $insert->execute(array(
+                                'pseudo' => $pseudo,
+                                'email' => $email,
+                                'password' => $password,
+                                'token' => bin2hex(openssl_random_pseudo_bytes(32)),
+                                'type' => $type,
+                                'id_chantier' => $id_chantier
+                            ));
+
+                            
+                        else{
+                            $insert = $bdd->prepare('INSERT INTO `utilisateurs`(`pseudo`, `email`, `password`, `token`, `type`,`id_chantier`) VALUES (:pseudo, :email, :password, :token, :type, :id_chantier)');
+                            $insert->execute(array(
+                                'pseudo' => $pseudo,
+                                'email' => $email,
+                                'password' => $password,
+                                'token' => bin2hex(openssl_random_pseudo_bytes(32)),
+                                'type' => $type,
+                                'id_chantier' => NULL
+                            ));
+
+                        }
 
                             // On redirige avec le message de succès
 
