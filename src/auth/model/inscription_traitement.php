@@ -124,7 +124,22 @@
                             ));
 
                         }
-                        elseif(isset($id_chantier) && $type == "Utilisateur"){
+
+
+                       
+            $req= $bdd->prepare('SELECT * FROM chantier WHERE id_chantier = ?');
+            $req->execute(array($id_chantier));
+            $data = $req->fetch();
+            var_dump($data);
+
+            if(!isset($data)){
+                $chant =0;
+            }
+
+
+
+
+                        elseif(isset($id_chantier) && $type == "Utilisateur" && $chant !=0){
 
                             $insert = $bdd->prepare('INSERT INTO `utilisateurs`(`pseudo`, `email`, `password`, `token`, `type`,`id_chantier`) VALUES (:pseudo, :email, :password, :token, :type, :id_chantier)');
                             $insert->execute(array(
