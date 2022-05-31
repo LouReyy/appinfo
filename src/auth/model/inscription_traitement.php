@@ -109,8 +109,8 @@
                                 'id_chantier' => $id_chantier,
                                 'nom' => "",
                                 'localisation' => "",
-                                'date_debut' => "0000-00-00",
-                                'date_fin' => "0000-00-00"
+                                'date_debut' => "YYYY-MM-DD",
+                                'date_fin' => "YYYY-MM-DD"
                             ));
 
                                                         
