@@ -104,7 +104,6 @@ if(isset($id_chantier) && $type == "Utilisateur"){
  
 
     var_dump($data);
-    echo("sqalut");
 
 
     if(!isset($data['nom'])){
@@ -112,11 +111,14 @@ if(isset($id_chantier) && $type == "Utilisateur"){
         die();
 
     }
+    else{
 
     $update = $bdd->prepare('UPDATE utilisateurs SET pseudo = ?,password = ?, type = ?,id_chantier = ? WHERE email = ?');
         $update->execute(array($pseudo,$password,$type,$id_chantier,$email));
+        header('Location: ../views/landing.php?reg_err=success');
 
 
+    }
 }
 if($type == "Administrateur"){
     $update = $bdd->prepare('UPDATE utilisateurs SET pseudo = ?,password = ?, type = ? WHERE email = ?');
@@ -153,7 +155,7 @@ if($type == "Administrateur"){
         }
     }
     
-    header('Location: ../views/landing.php?reg_err=success');
+   // header('Location: ../views/landing.php?reg_err=success');
 
     
     die();
