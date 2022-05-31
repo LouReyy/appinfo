@@ -63,7 +63,9 @@ $req_CO2='SELECT DISTINCT Time,Valeur FROM `capteur_table`WHERE type="CO2" AND i
 $resultCO2=mysqli_query($conn,$req_CO2);
 $values_CO2=mysqli_fetch_all($resultCO2, MYSQLI_ASSOC);
 
-echo($values_card);
+var_dump($values_card);
+
+echo($values_card['type']);
 
 if(isset($values_card)){
 
