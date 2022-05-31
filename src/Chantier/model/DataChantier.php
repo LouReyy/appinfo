@@ -63,7 +63,10 @@ $req_CO2='SELECT DISTINCT Time,Valeur FROM `capteur_table`WHERE type="CO2" AND i
 $resultCO2=mysqli_query($conn,$req_CO2);
 $values_CO2=mysqli_fetch_all($resultCO2, MYSQLI_ASSOC);
 
-echo($table);
+echo($values_card);
+
+if(isset($values_card)){
+
 
 function tableX($table){
     $newTable= array();
@@ -110,7 +113,7 @@ $values_lastTemp=mysqli_fetch_all($resultLastTemp, MYSQLI_ASSOC);
 $req_lastCO2='SELECT Valeur FROM `capteur_table` WHERE type="CO2" AND Time=(SELECT MAX(Time) FROM `capteur_table` WHERE type="CO2" AND id_utilisateur="'.$id.'");';
 $resultLastCO2=mysqli_query($conn,$req_lastCO2);
 $values_lastCO2=mysqli_fetch_all($resultLastCO2, MYSQLI_ASSOC);
-echo($table);
+
 function getLast($table){
     if(isset($table)){
     return $table[0]['Valeur'];
@@ -121,4 +124,5 @@ $lastSon=getLast($values_lastSon);
 $lastTemp=getLast($values_lastTemp);
 $lastCO2=getLast($values_lastCO2);
 
+}
 ?>
