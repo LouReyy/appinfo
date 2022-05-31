@@ -11,6 +11,8 @@
         $data = $check->fetch();
         $row = $check->rowCount();
 
+        var_dump($data);
+
         if($row){
             $token = bin2hex(openssl_random_pseudo_bytes(24));
             $token_user = $data['token']; 
