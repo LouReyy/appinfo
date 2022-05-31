@@ -52,8 +52,7 @@ else{
 
          <div id = 'content<?php echo $i ?>' class = content>
             <qst> <?php echo $row['content']; ?> </qst>
-            <br>
-            <date> <?php echo $row['date_question']; ?> </date>
+        
            
          </div>
 
