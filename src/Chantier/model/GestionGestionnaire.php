@@ -17,7 +17,7 @@
 
     <div class="container"> 
         <?php include("../views/header.php");
-        include("../views/menu_deroulant_tel.php")  ?>
+        include("../views/menu_deroulant_tel2.php")  ?>
         <div id="sidebar">
             <div class="noms_onglets">
                 <div class="onglets" data-anim="1">
