@@ -94,8 +94,20 @@ if($password === $password_retype){
 
         $type ="Utilisateur";
 
+        $insert = $bdd->prepare('INSERT INTO `chantier`(`id_chantier`, `nom`, `localisation`, `date_debut`, `date_fin`) VALUES (:id_chantier, :nom, :localisation, :date_debut, :date_fin)');
+        $insert->execute(array(
+            'id_chantier' => $id_chantier,
+            'nom' => "",
+            'localisation' => "",
+            'date_debut' => "2000-01-01",
+            'date_fin' => "2000-01-01"
+        ));
+
         $update = $bdd->prepare('UPDATE utilisateurs SET pseudo = ?,password = ?, type = ?,id_chantier = ? WHERE email = ?');
         $update->execute(array($pseudo,$password,$type,$id_chantier,$email));
+
+
+  
 
 }
 if(isset($id_chantier) && $type == "Utilisateur"){
