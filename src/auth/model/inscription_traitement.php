@@ -202,7 +202,7 @@
             }else{ header('Location: ../views/inscription.php?reg_err=pseudo_length'); die();}
         }else{ header('Location: ../views/inscription.php?reg_err=select_type'); die();}
         }else{ header('Location: ../views/inscription.php?reg_err=already'); die();}
-        header('Location:../views/inscription.php?reg_err=success');
+        //header('Location:../views/inscription.php?reg_err=success');
 
 
     
