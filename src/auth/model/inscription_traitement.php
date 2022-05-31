@@ -107,8 +107,8 @@
                                 'id_chantier' => $id_chantier,
                                 'nom' => "",
                                 'localisation' => "",
-                                'date_debut' => 2022-06-14,
-                                'date_fin' => 2022-08-14
+                                'date_debut' => "2022-06-14",
+                                'date_fin' => "2022-08-14"
                             ));
 
                                                         
