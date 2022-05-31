@@ -94,7 +94,7 @@ if($password === $password_retype){
 }
 
 
-
+var_dump($data);
 
 elseif(isset($id_chantier) && $type == "Utilisateur"){
 
@@ -152,7 +152,7 @@ elseif($type == "Administrateur"){
         }
     }
     
-   // header('Location: ../views/landing.php?reg_err=success');
+    //header('Location: ../views/landing.php?reg_err=success');
 
     
     die();
