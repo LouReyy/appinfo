@@ -274,7 +274,7 @@ body {
 
 .container{
    
-    max-width: 2000px;
+  width: 100%;
     font-family: "Quicksand";
   
   }
