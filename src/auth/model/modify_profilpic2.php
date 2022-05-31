@@ -8,9 +8,10 @@ if(!isset($_SESSION['user'])){
     die();
 }
 
+var_dump($_GET);
 
-$req = $bdd->prepare('SELECT * FROM utilisateurs WHERE token = ?');
-$req->execute(array($_SESSION['user']));
+$req = $bdd->prepare('SELECT * FROM utilisateurs WHERE email = ?');
+$req->execute(array($_GET['email']));
 $data = $req->fetch();
 
 
@@ -35,17 +36,9 @@ $data = $req->fetch();
         if($retour) {
             echo '<p>La photo a bien été envoyée.</p>';
             echo '<img src="' . $_FILES['picture']['name'] . '">';
-            header('Location: ../views/landing.php?reg_err=success');die();
+         
         }
-    }else{
-        header('Location: ../views/landing.php?reg_err=picture');die();
     }
-
-}
- else{
-    header('Location: ../views/landing.php?reg_err=file');die();
-
-}
 
 
 ?>
