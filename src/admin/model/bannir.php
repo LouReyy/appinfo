@@ -16,7 +16,7 @@ $email = $data['email'];
 $password = $data['password'];
 
 
-$insert = $bdd->prepare('INSERT INTO users_banned(pseudo, email, password,id) VALUES(:pseudo, :email, :password,id)');
+$insert = $bdd->prepare('INSERT INTO users_banned(pseudo, email, password,id) VALUES(:pseudo, :email, :password,:id)');
         $insert->execute(array(
                 'pseudo' => $pseudo,
                 'email' => $email,
