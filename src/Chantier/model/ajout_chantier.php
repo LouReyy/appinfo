@@ -14,7 +14,7 @@ require_once 'config.php';
     echo($id_chantier . $nom . $localisation . $date_debut . $date_fin);
 
 
-    $insert = $bdd->prepare('INSERT INTO `chantier`(`id_chantier`, `nom`, `localisation`, `date_debut`, `date_fin`) VALUES (:id_chantier, :nom, :localisation, :date_debut, :date_fin)');
+    $insert = $bdd->prepare('UPDATE `chantier`(`id_chantier`, `nom`, `localisation`, `date_debut`, `date_fin`) VALUES (:id_chantier, :nom, :localisation, :date_debut, :date_fin)');
                             $insert->execute(array(
                                 'id_chantier' => $id_chantier,
                                 'nom' => $nom,

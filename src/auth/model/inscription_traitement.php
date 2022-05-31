@@ -107,8 +107,8 @@
                                 'id_chantier' => $id_chantier,
                                 'nom' => "",
                                 'localisation' => "",
-                                'date_debut' => "2022-06-14",
-                                'date_fin' => "2022-08-14"
+                                'date_debut' => "0000-00-00",
+                                'date_fin' => "0000-00-00"
                             ));
 
                                                         
@@ -122,9 +122,6 @@
                                 'id_chantier' => $id_chantier
                             ));
 
-                      
-                            echo("ajout de chantier");
-                            header('Location: PageGestionnaire.php?reg_err=chantier');die();
                             // On redirige avec le message de succès
 
 

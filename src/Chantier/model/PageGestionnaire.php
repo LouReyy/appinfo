@@ -158,7 +158,7 @@ $size=count($allId);
 
 
                         <div class="button1">
-                            <button type="submit" class="btn_gauche">Ajouter</button>
+                            <button type="submit" class="btn_gauche">Modifier</button>
 
                          </div>   
 
