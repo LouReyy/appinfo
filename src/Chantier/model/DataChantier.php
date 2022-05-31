@@ -65,9 +65,8 @@ $values_CO2=mysqli_fetch_all($resultCO2, MYSQLI_ASSOC);
 
 var_dump($values_card);
 
-echo($values_card['Time']);
 
-if(isset($values_card['Time'])){
+if(!empty($values_card)){
 
 
 function tableX($table){
@@ -126,5 +125,8 @@ $lastSon=getLast($values_lastSon);
 $lastTemp=getLast($values_lastTemp);
 $lastCO2=getLast($values_lastCO2);
 
+}
+else{
+    echo "salut";
 }
 ?>
