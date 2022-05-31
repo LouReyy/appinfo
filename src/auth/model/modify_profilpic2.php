@@ -8,7 +8,6 @@ if(!isset($_SESSION['user'])){
     die();
 }
 
-var_dump($_GET);
 
 $req = $bdd->prepare('SELECT * FROM utilisateurs WHERE email = ?');
 $req->execute(array($_GET['email']));
@@ -33,9 +32,12 @@ $data = $req->fetch();
 
     if (isset($_FILES['picture']['tmp_name']) and strlen($_FILES['picture']['tmp_name'])) {
          $retour = copy( $_FILES['picture']['tmp_name'] , '../profil_picture/' . $nomfichier . '.jpg');
+         header('Location: /admin/admin.php');die();
+
         if($retour) {
+            header('Location: /admin/admin.php');die();
+
             
-            header('Location :/admin/admin.php');
          
         }
     }

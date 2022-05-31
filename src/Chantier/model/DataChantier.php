@@ -110,7 +110,9 @@ $resultLastCO2=mysqli_query($conn,$req_lastCO2);
 $values_lastCO2=mysqli_fetch_all($resultLastCO2, MYSQLI_ASSOC);
 
 function getLast($table){
+    if(isset($table)){
     return $table[0]['Valeur'];
+    }
 }
 $lastCard=getLast($values_lastCard);
 $lastSon=getLast($values_lastSon);
