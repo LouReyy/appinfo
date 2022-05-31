@@ -16,9 +16,11 @@ if(isset($_SESSION['user'])){
     $title = "Profil";
 }
 
-if(($_SESSION['type'] == "Administrateur")){
+if(isset($_SESSION['type'])){
+    if(($_SESSION['type'] == "Administrateur")){
 
-    $chantier = "VotreChantier/votrechantier.php";
+        $chantier = "VotreChantier/votrechantier.php";
+    }
 }
 
 else{

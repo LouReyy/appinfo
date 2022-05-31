@@ -11,6 +11,12 @@ require_once("../model/config.php");
     else{
         $chantier = "VotreChantier/votrechantier.php";
     }
+    if(isset($_SESSION['type'])){
+        if(($_SESSION['type'] == "Administrateur")){
+    
+            $chantier = "VotreChantier/votrechantier.php";
+        }
+    }
     if(!empty($_GET['u'])){
         $token = htmlspecialchars(base64_decode($_GET['u']));
         $check = $bdd->prepare('SELECT * FROM mdp_recover WHERE token_user = ?');

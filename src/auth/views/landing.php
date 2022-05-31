@@ -19,6 +19,12 @@
     else{
         $chantier = "VotreChantier/votrechantier.php";
     }
+    if(isset($_SESSION['type'])){
+        if(($_SESSION['type'] == "Administrateur")){
+    
+            $chantier = "VotreChantier/votrechantier.php";
+        }
+    }
     
     $req = $bdd->prepare('SELECT * FROM utilisateurs WHERE token = ?');
     $req->execute(array($_SESSION['user']));

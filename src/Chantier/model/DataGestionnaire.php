@@ -39,6 +39,12 @@ if ($type=="Gestionnaire"){
     else{
         $chantier = "VotreChantier/votrechantier.php";
     }
+    if(isset($_SESSION['type'])){
+        if(($_SESSION['type'] == "Administrateur")){
+    
+            $chantier = "VotreChantier/votrechantier.php";
+        }
+    }
 
 
     $conn=mysqli_connect('herogu.garageisep.com','haXoGjsQhU_appinfofin','mJMzoauEGw0U53S0','P2i6H04k07_appinfofin');

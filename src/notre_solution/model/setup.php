@@ -19,6 +19,12 @@ if(isset($_SESSION['type'])){
 else{
     $chantier = "VotreChantier/votrechantier.php";
 }
+if(isset($_SESSION['type'])){
+    if(($_SESSION['type'] == "Administrateur")){
+
+        $chantier = "VotreChantier/votrechantier.php";
+    }
+}
 
 if(isset($_SESSION['email'])){
 
