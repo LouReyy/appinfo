@@ -16,6 +16,11 @@ if(isset($_SESSION['user'])){
     $title = "Profil";
 }
 
+if(($_SESSION['type'] == "Administrateur")){
+
+    $chantier = "VotreChantier/votrechantier.php";
+}
+
 else{
     $editprofil ="/auth/index.php";
     $title = "Connexion";

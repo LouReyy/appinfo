@@ -16,6 +16,10 @@ if(isset($_SESSION['user'])){
     else{
         $chantier = "VotreChantier/votrechantier.php";
     }
+    if(($_SESSION['type'] == "Administrateur")){
+
+        $chantier = "VotreChantier/votrechantier.php";
+    }
 
     if(isset($_SESSION['email'])){
 
