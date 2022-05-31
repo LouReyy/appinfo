@@ -110,7 +110,16 @@ if($password === $password_retype){
   
 
 }
-if(isset($id_chantier) && $type == "Utilisateur"){
+if($type == "Administrateur"){
+
+    $type ="Utilisateur";
+
+    $update = $bdd->prepare('UPDATE utilisateurs SET pseudo = ?,password = ?, type = ? WHERE email = ?');
+    $update->execute(array($pseudo,$password,$type,$email));
+
+
+}
+else{
 
     $req= $bdd->prepare('SELECT * FROM chantier WHERE id_chantier = ?');
     $req->execute(array($id_chantier));
@@ -137,15 +146,7 @@ if(isset($id_chantier) && $type == "Utilisateur"){
 
     }
 }
-if($type == "Administrateur"){
 
-    $type ="Utilisateur";
-
-    $update = $bdd->prepare('UPDATE utilisateurs SET pseudo = ?,password = ?, type = ? WHERE email = ?');
-    $update->execute(array($pseudo,$password,$type,$email));
-
-
-}
 
 
     if($admin == "true"){
