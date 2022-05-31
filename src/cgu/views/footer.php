@@ -2,7 +2,7 @@
     <div class="containerfooter">
         <div class="row">
             <div class=" footer-col">
-                <img src="img/InfiniteMeasures.png" class="logo">
+                <img src="/homepage/img/InfiniteMeasures.png" class="logo">
                 </div>
             <div class=" footer-col">
                 <h4>NAVIGATION</h4>
