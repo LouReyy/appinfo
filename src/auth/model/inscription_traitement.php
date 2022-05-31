@@ -102,7 +102,7 @@
                             
                             echo $id_chantier;
 
-                            if(isset($id_chantier) || $type == "Gestionnaire"){
+                            if(isset($id_chantier) && $type == "Gestionnaire"){
 
                             $insert = $bdd->prepare('INSERT INTO `chantier`(`id_chantier`, `nom`, `localisation`, `date_debut`, `date_fin`) VALUES (:id_chantier, :nom, :localisation, :date_debut, :date_fin)');
                             $insert->execute(array(
@@ -113,7 +113,7 @@
                                 'date_fin' => "2000-01-01"
                             ));
 
-
+                            
 
                                                         
                             $insert = $bdd->prepare('INSERT INTO `utilisateurs`(`pseudo`, `email`, `password`, `token`, `type`,`id_chantier`) VALUES (:pseudo, :email, :password, :token, :type, :id_chantier)');
@@ -127,7 +127,7 @@
                             ));
 
                         }
-                        elseif(isset($id_chantier) || $type == "Utilisateur"){
+                        elseif(isset($id_chantier) && $type == "Utilisateur"){
 
                             $insert = $bdd->prepare('INSERT INTO `utilisateurs`(`pseudo`, `email`, `password`, `token`, `type`,`id_chantier`) VALUES (:pseudo, :email, :password, :token, :type, :id_chantier)');
                             $insert->execute(array(
@@ -141,14 +141,14 @@
 
                         }
                         else{
-                            $insert = $bdd->prepare('INSERT INTO `utilisateurs`(`pseudo`, `email`, `password`, `token`, `type`) VALUES (:pseudo, :email, :password, :token, :type, )');
+                            $insert = $bdd->prepare('INSERT INTO `utilisateurs`(`pseudo`, `email`, `password`, `token`, `type`,`id_chantier`) VALUES (:pseudo, :email, :password, :token, :type, :id_chantier)');
                             $insert->execute(array(
                                 'pseudo' => $pseudo,
                                 'email' => $email,
                                 'password' => $password,
                                 'token' => bin2hex(openssl_random_pseudo_bytes(32)),
-                                'type' => $type
-                                
+                                'type' => $type,
+                                'id_chantier' => NULL
                             ));
 
                         }
