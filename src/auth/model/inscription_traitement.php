@@ -148,7 +148,7 @@
                                 'password' => $password,
                                 'token' => bin2hex(openssl_random_pseudo_bytes(32)),
                                 'type' => $type,
-                                'id_chantier' => NULL
+                                'id_chantier' => "NULL"
                             ));
 
                         }
