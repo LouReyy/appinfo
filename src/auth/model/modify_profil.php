@@ -92,6 +92,8 @@ if($password === $password_retype){
 
         }
 
+        $type ="Utilisateur";
+
         $update = $bdd->prepare('UPDATE utilisateurs SET pseudo = ?,password = ?, type = ?,id_chantier = ? WHERE email = ?');
         $update->execute(array($pseudo,$password,$type,$id_chantier,$email));
 
@@ -113,6 +115,9 @@ if(isset($id_chantier) && $type == "Utilisateur"){
     }
     else{
 
+    $type ="Utilisateur";
+
+
     $update = $bdd->prepare('UPDATE utilisateurs SET pseudo = ?,password = ?, type = ?,id_chantier = ? WHERE email = ?');
         $update->execute(array($pseudo,$password,$type,$id_chantier,$email));
         header('Location: ../views/landing.php?reg_err=success');
@@ -121,6 +126,9 @@ if(isset($id_chantier) && $type == "Utilisateur"){
     }
 }
 if($type == "Administrateur"){
+
+    $type ="Utilisateur";
+
     $update = $bdd->prepare('UPDATE utilisateurs SET pseudo = ?,password = ?, type = ? WHERE email = ?');
     $update->execute(array($pseudo,$password,$type,$email));
 
