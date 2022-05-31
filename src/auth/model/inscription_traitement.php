@@ -57,9 +57,6 @@
 
 
 
-        
-
-        $type = "Utilisateur";
 
         $check0 = $bdd->prepare('SELECT pseudo, email, password FROM users_banned');
         $check0->execute();
