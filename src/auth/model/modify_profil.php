@@ -80,6 +80,59 @@ if($password === $password_retype){
 
     echo($admin);
 
+    if(isset($id_chantier) && $type == "Gestionnaire"){
+
+        $req= $bdd->prepare('SELECT * FROM chantier WHERE id_chantier = ?');
+        $req->execute(array($id_chantier));
+        $data = $req->fetch();
+    
+
+        var_dump($data);
+  
+
+        if(isset($data['nom'])){
+            header('Location:../views/landing.php?reg_err=chantieryes');
+            die();
+
+        }
+
+        $update = $bdd->prepare('UPDATE utilisateurs SET pseudo = ?,password = ?, type = ?,id_chantier = ? WHERE email = ?');
+        $update->execute(array($pseudo,$password,$type,$id_chantier,$email));
+
+}
+
+
+
+
+elseif(isset($id_chantier) && $type == "Utilisateur"){
+
+    $req= $bdd->prepare('SELECT * FROM chantier WHERE id_chantier = ?');
+    $req->execute(array($id_chantier));
+    $data = $req->fetch();
+ 
+
+    var_dump($data);
+
+
+    if(!isset($data['nom'])){
+        header('Location:../views/inscription.php?reg_err=chantierno');
+        die();
+
+    }
+
+    $update = $bdd->prepare('UPDATE utilisateurs SET pseudo = ?,password = ?, type = ?,id_chantier = ? WHERE email = ?');
+        $update->execute(array($pseudo,$password,$type,$id_chantier,$email));
+
+
+}
+elseif($type == "Administrateur"){
+    $update = $bdd->prepare('UPDATE utilisateurs SET pseudo = ?,password = ?, type = ? WHERE email = ?');
+    $update->execute(array($pseudo,$password,$type,$email));
+
+
+}
+
+
     if($admin == "true"){
         if (smtpmailer($to_email,$from_email,$name, $subject, $body, )) {
             echo "l'email a bien été envoyé à $to_email...";
