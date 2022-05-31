@@ -158,8 +158,6 @@
                 
                             if($row ==0){
                                 $chant =0;
-                                header('Location:../views/inscription.php?reg_err=chantierno');
-                                die();
                 
                             }
 
