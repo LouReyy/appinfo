@@ -137,7 +137,7 @@
                                 'id_chantier' => $id_chantier
                             ));
 
-                            
+                        }
                         else{
                             $insert = $bdd->prepare('INSERT INTO `utilisateurs`(`pseudo`, `email`, `password`, `token`, `type`,`id_chantier`) VALUES (:pseudo, :email, :password, :token, :type, :id_chantier)');
                             $insert->execute(array(
