@@ -1,6 +1,6 @@
 <header>
             <div id ="logoimg">
-            <a  href="/homepage/homepage.php"><img src="/auth/img/logo_infinite.png" alt="logo"></a>
+            <a  href="/homepage/homepage.php"><img src="/homepage/img/InfiniteMeasures.png" alt="logo"></a>
             </div>  
             <nav>
                 <ul class="nav__links">
