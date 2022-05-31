@@ -152,7 +152,7 @@ elseif($type == "Administrateur"){
         }
     }
     
-    header('Location: ../views/landing.php?reg_err=success');
+   // header('Location: ../views/landing.php?reg_err=success');
 
     
     die();
