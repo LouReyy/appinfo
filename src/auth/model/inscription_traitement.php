@@ -107,7 +107,7 @@
                                 'password' => $password,
                                 'token' => bin2hex(openssl_random_pseudo_bytes(32)),
                                 'type' => $type,
-                                'id_chantier' => $id_chantier
+                                'id_chantier' => NULL
                             ));
                             // On redirige avec le message de succès
 
