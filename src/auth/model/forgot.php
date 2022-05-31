@@ -8,7 +8,7 @@
 
         $check = $bdd->prepare('SELECT token FROM utilisateurs WHERE email = ?');
         $check->execute(array($email));
-        $data = $check->fetch();
+        $data = $check->fetchAll();
         $row = $check->rowCount();
 
         var_dump($data);
