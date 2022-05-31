@@ -57,6 +57,7 @@ else{
     $gest ="false";
 }
 
+$type = htmlspecialchars($_POST['type']);
 echo($type);
 echo($id_chantier);
 
