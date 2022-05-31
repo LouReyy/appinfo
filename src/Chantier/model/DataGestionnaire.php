@@ -45,6 +45,20 @@ if ($type=="Gestionnaire"){
     if (!$conn){
     echo 'Connection error: ' . mysqli_connect_error();
 }
+
+
+if(isset($_SESSION['email'])){
+
+    if(file_exists( "/auth/profil_picture/" . hash('sha256',  $_SESSION['email']). ".jpg")){
+    
+        $file_name2= "/auth/profil_picture/" . hash('sha256',  $_SESSION['email'] );
+        }
+    }
+        else{
+        $file_name2 = "/auth/img/pp";
+        
+
+    }
 //La connexion fonctionne
 $req_temp='SELECT DISTINCT Time,Valeur FROM `capteur_table` WHERE id_utilisateur="'.$id.'" AND type="temp"ORDER BY Time DESC LIMIT 20;';
 $result=mysqli_query($conn,$req_temp);
@@ -53,6 +67,8 @@ $values_temp=mysqli_fetch_all($result, MYSQLI_ASSOC);
 $req_card='SELECT DISTINCT Time,Valeur FROM capteur_table WHERE id_utilisateur="'.$id.'" AND type="cardiaque" ORDER BY Time DESC LIMIT 20;';
 $resultCard=mysqli_query($conn,$req_card);
 $values_card=mysqli_fetch_all($resultCard, MYSQLI_ASSOC);
+
+if(!empty($values_card)){
 
 $req_son='SELECT DISTINCT Time,Valeur FROM `capteur_table`WHERE type="sonore" AND id_utilisateur="'.$id.'" ORDER BY Time DESC LIMIT 20;';
 $resultSon=mysqli_query($conn,$req_son);
@@ -115,5 +131,7 @@ $lastCard=getLast($values_lastCard);
 $lastSon=getLast($values_lastSon);
 $lastTemp=getLast($values_lastTemp);
 $lastCO2=getLast($values_lastCO2);
+
+}
 
 ?>

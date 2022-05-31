@@ -23,12 +23,16 @@ if(isset($_SESSION['user'])){
         
             $file_name = "profil_picture/" . hash('sha256',  $_SESSION['email'] );
             }
+                else{
+                    $file_name = "img/pp";
+            }
         }
             else{
             $file_name = "img/pp";
             
     
         }
+    
 
 
 ?>
