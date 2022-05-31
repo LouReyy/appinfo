@@ -1,5 +1,5 @@
 <footer class="footer">
-    <div class="container">
+    <div class="containerfooter">
         <div class="row">
             <div class=" footer-col">
                 <img src="img/InfiniteMeasures.png" class="logo">
