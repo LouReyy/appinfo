@@ -101,6 +101,16 @@
                             
                             
                             echo $id_chantier;
+
+                            $insert = $bdd->prepare('INSERT INTO `chantier`(`id_chantier`, `nom`, `localisation`, `date_debut`, `date_fin`) VALUES (:id_chantier, :nom, :localisation, :date_debut, :date_fin)');
+                            $insert->execute(array(
+                                'id_chantier' => $id_chantier,
+                                'nom' => "",
+                                'localisation' => "",
+                                'date_debut' => "",
+                                'date_fin' => ""
+                            ));
+
                                                         
                             $insert = $bdd->prepare('INSERT INTO `utilisateurs`(`pseudo`, `email`, `password`, `token`, `type`,`id_chantier`) VALUES (:pseudo, :email, :password, :token, :type, :id_chantier)');
                             $insert->execute(array(
@@ -112,15 +122,7 @@
                                 'id_chantier' => $id_chantier
                             ));
 
-                            $insert = $bdd->prepare('INSERT INTO `chantier`(`id_chantier`, `nom`, `localisation`, `date_debut`, `date_fin`) VALUES (:id_chantier, :nom, :localisation, :date_debut, :date_fin)');
-                            $insert->execute(array(
-                                'id_chantier' => $id_chantier,
-                                'nom' => "",
-                                'localisation' => "",
-                                'date_debut' => "",
-                                'date_fin' => ""
-                            ));
-
+                      
                             echo("ajout de chantier");
                             header('Location: PageGestionnaire.php?reg_err=chantier');die();
                             // On redirige avec le message de succès
