@@ -57,6 +57,8 @@ else{
     $gest ="false";
 }
 
+echo($type);
+echo($id_chantier);
 
 
 
