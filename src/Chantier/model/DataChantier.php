@@ -129,7 +129,5 @@ $lastTemp=getLast($values_lastTemp);
 $lastCO2=getLast($values_lastCO2);
 
 }
-else{
-    echo "salut";
-}
+
 ?>
