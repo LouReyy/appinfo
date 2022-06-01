@@ -105,7 +105,7 @@ include("model/setup.php");
                     </div>
 
                     <div id="coups-display">
-                        <h2>Nombre de coups:</h2>
+                        <h3>Nombre de coups:</h3>
                         <div id="coups">0</div>
                     </div>
 

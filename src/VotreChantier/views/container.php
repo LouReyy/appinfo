@@ -36,7 +36,7 @@
             <img src="img/grues.jpg" alt="">
             <h2>Votre chantier</h2>
             <p>Accéder à cette section pour découvrir les informations sur votre chantier : Localisation, les dates & la nature du chantier.</p>
-            <a class = btn_forum href = "/Chantier/PageChantier.php">Accès au chantier</a>
+            <a class = btn_forum href = "/<?php echo $chantier ?>">Accès au chantier</a>
 
         </div>
 
@@ -45,7 +45,7 @@
             <img src="img/stats2.jpg" alt="">
             <h2>Statistiques</h2>
             <p>Accéder à cette page afin de constater les statistiqes de votre chantier, l'environnement de travail des ouvriers est notre priorité.</p>
-            <a class = btn_forum href = "/Chantier/PageChantier.php">Accès aux statistiques</a>
+            <a class = btn_forum href = "/<?php echo $chantier ?>">Accès aux statistiques</a>
 
         </div>
     
