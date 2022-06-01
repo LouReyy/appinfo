@@ -55,23 +55,23 @@
             <div class="noms_onglets">
                 <div class="onglets" data-anim="1">
                     <div class="ongletInactif">
-                        <h1>Fréquence cardiaque</h1><p><br><br>Dernière valeur : <?php echo $lastCard; ?> bpm</p>
+                        <h1>Fréquence cardiaque</h1><p><br><br>Dernière valeur : <?php if(isset($lastCard)){ echo $lastCard;} ?> bpm</p>
                     </div>
                 </div> 
                 <!--La syntaxe "data-" permet de rajouter un attribut qui sera utilisé ensuite avec javascript-->
                 <div class="onglets" data-anim="2">
                     <div class="ongletInactif bis">
-                        <h1>Niveau de bruit</h1><p><br><br>Dernière valeur : <?php echo $lastSon; ?> dB</p>
+                        <h1>Niveau de bruit</h1><p><br><br>Dernière valeur : <?php if(isset($lastSon)){echo $lastSon;} ?> dB</p>
                     </div>   
                 </div> <!--idem-->
                     <div class="onglets" data-anim="3">
                         <div class="ongletInactif bis">
-                            <h1>Température</h1><p><br><br>Dernière valeur : <?php echo $lastTemp; ?> °C</p>
+                            <h1>Température</h1><p><br><br>Dernière valeur : <?php if(isset($lastTemp)){echo $lastTemp;} ?> °C</p>
                         </div> 
                     </div> <!--idem-->
                     <div class="onglets" data-anim="4">
                         <div class="ongletInactif bis">
-                            <h1>CO2</h1><p><br><br>Dernière valeur : <?php echo $lastCO2; ?> ppm</p>
+                            <h1>CO2</h1><p><br><br>Dernière valeur : <?php if(isset($lastC02)){echo $lastCO2;} ?> ppm</p>
                         </div> 
                     </div> <!--idem-->
             </div>
