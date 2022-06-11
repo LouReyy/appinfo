@@ -140,6 +140,8 @@ $lastCO2=getLast($values_lastCO2);
 
 }
 
+echo("test");
+
 $ch = curl_init();
 curl_setopt(
 $ch,
