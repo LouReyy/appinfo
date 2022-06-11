@@ -41,7 +41,7 @@ echo("$data");
             <?php include("views/menu_deroulant_tel.php");?>
 
 		
-            <h1> Wesh
+            <h1> Bienvenue
             <hr/>
             </h1>
             <br>
