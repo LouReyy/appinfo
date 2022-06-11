@@ -16,7 +16,14 @@ echo "Raw Data:<br />";
 echo("$data");
 var_dump($data);
 var_dump($ch);
-echo '<br> exec'.curl_exec($ch); //this results blank
+$response = curl_exec($ch);
+
+if ($response === false) 
+    $response = curl_error($ch);
+
+echo stripslashes($response);
+
+curl_close($ch)
 
 
 
