@@ -32,6 +32,9 @@ echo("$data");
     <title>Tech4Health</title>
 </head>
 <body>
+
+<?php
+echo "alloooooooooooooooooooooooooo"; ?>
 <?php include("views/header.php"); 
 
 ?>
