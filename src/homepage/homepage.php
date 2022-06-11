@@ -14,6 +14,7 @@ $data = curl_exec($ch);
 curl_close($ch);
 echo "Raw Data:<br />";
 echo("$data");
+var_dump($data);
 
 
 ?>
