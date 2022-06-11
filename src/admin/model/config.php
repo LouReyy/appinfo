@@ -3,7 +3,7 @@
     try 
     {
         
-        $bdd = new PDO("mysql:host=herogu.garageisep.com;dbname=P2i6H04k07_appinfofin;charset=utf8", "haXoGjsQhU_appinfofin", "mJMzoauEGw0U53S0");
+        $bdd = new PDO("mysql:host=herogu.garageisep.com;dbname=63gzSZSkw3_appg9c;charset=utf8", "Pfr8GD5QBt_appg9c", "zOp7YYeC5X9UUWwd");
     }
     catch(PDOException $e)
     {
