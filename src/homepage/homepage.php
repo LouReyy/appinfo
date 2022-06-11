@@ -33,8 +33,6 @@ echo("$data");
 </head>
 <body>
 
-<?php
-echo "alloooooooooooooooooooooooooo"; ?>
 <?php include("views/header.php"); 
 
 ?>
