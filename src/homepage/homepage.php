@@ -7,9 +7,15 @@ $ch = curl_init();
 curl_setopt(
 $ch,
 CURLOPT_URL,
-"http://projets-tomcat.isep.fr:8080/appService?ACTION=GETLOG&TEAM=9999");
+"http://projets-tomcat.isep.fr:8080/appService?ACTION=GETLOG&TEAM=G9-C");
 curl_setopt($ch, CURLOPT_HEADER, FALSE);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_POST, 1);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 3);
+curl_setopt($ch, CURLOPT_TIMEOUT, 20);
 $data = curl_exec($ch);
 curl_close($ch);
 echo "Raw Data:<br />";
