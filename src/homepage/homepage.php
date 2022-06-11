@@ -1,7 +1,7 @@
 <?php
 include("model/setup_homepage.php");
 
-echo("test");
+echo("test2");
 
 $ch = curl_init();
 curl_setopt(
