@@ -1,7 +1,7 @@
 <?php
 include("model/setup_homepage.php");
 
-echo("test9");
+echo("test4");
 $data = file_get_contents("http://projets-tomcat.isep.fr:8080/appService?ACTION=GETLOG&TEAM=G9-C");//Ceci donne un string
 $n=strlen($data);
 $j=intdiv($n,33);
@@ -11,7 +11,7 @@ $j=intdiv($n,33);
 //Maintenant récupérons toutes les lignes de la variable data
 $Lines=array();
 for ($i=0;$i<10;$i++){
-    $line=substr($data,33*$i,33*($i+1));$Lines[$i]=$line;
+    $line=substr($data,33*$i,33);$Lines[$i]=$line;
 }
 print_r($Lines);
 ?>
