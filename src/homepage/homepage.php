@@ -12,7 +12,7 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 $data = curl_exec($ch);
 curl_close($ch);
 echo "Raw Data:<br />";
-echo("$data");
+echo($data);
 
 // $data = file_get_contents("http://projets-tomcat.isep.fr:8080/appService?ACTION=GETLOG&TEAM=G9-C");
 // echo "Raw Data:<br />";
