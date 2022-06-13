@@ -1,7 +1,7 @@
 <?php
 include("model/setup_homepage.php");
 
-echo("test4");
+echo("test7");
 $data = file_get_contents("http://projets-tomcat.isep.fr:8080/appService?ACTION=GETLOG&TEAM=G9-C");//Ceci donne un string
 $n=strlen($data);
 $j=intdiv($n,33);
@@ -13,7 +13,12 @@ $Lines=array();
 for ($i=0;$i<10;$i++){
     $line=substr($data,33*$i,33);$Lines[$i]=$line;
 }
-print_r($Lines);
+//print_r($Lines);Ok ça marche
+$val=array();
+for ($i=0;$i<count($Lines);$i++){
+    $val[$i]=substr($Lines[$i],9,4);
+}
+print_r($val);
 ?>
 
 <!DOCTYPE html>
