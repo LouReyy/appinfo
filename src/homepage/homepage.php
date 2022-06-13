@@ -3,10 +3,11 @@ include("model/setup_homepage.php");
 
 echo("test3");
 $data = file_get_contents("http://projets-tomcat.isep.fr:8080/appService?ACTION=GETLOG&TEAM=G9-C");
-echo "Raw Data:<br />";
 echo("$data");
 var_dump($data);echo("<br>");
 echo(gettype($data));
+$fLine=substr($data,0,32);
+echo($fLine);
 //essayons de récupérer la première ligne par exemple
 // $L=array();
 // for ($i=0;$i<33;$i++){
