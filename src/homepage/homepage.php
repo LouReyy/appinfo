@@ -7,7 +7,7 @@ echo("$data");
 var_dump($data);echo("<br>");
 $n=strlen($data);
 echo ($n);
-$fLine=substr($data,0,33);
+//$fLine=substr($data,0,33);
 //echo($fLine);fonctionne 
 //essayons de récupérer la première ligne par exemple
 //Maintenant récupérons toutes les lignes de la variable data
