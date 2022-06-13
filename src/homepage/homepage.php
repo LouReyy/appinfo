@@ -1,9 +1,8 @@
 <?php
 include("model/setup_homepage.php");
 
-echo("test6");
+echo("test7");
 $data = file_get_contents("http://projets-tomcat.isep.fr:8080/appService?ACTION=GETLOG&TEAM=G9-C");//Ceci donne un string
-echo("$data");
 var_dump($data);echo("<br>");
 $n=strlen($data);
 echo ($n);
@@ -13,6 +12,12 @@ echo ("<br>$j");
 //echo($fLine);fonctionne 
 //essayons de récupérer la première ligne par exemple
 //Maintenant récupérons toutes les lignes de la variable data
+$Lines=array();
+for ($i;$i<$n-1;$i++){
+    $line=substr($data,33*$i,33*($i+1));$Lines[$i]=$line;
+}
+print_r($Lines);
+
 ?>
 
 <!DOCTYPE html>
