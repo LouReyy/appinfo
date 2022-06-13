@@ -1,12 +1,14 @@
 <?php
 include("model/setup_homepage.php");
 
-echo("test5");
+echo("test6");
 $data = file_get_contents("http://projets-tomcat.isep.fr:8080/appService?ACTION=GETLOG&TEAM=G9-C");//Ceci donne un string
 echo("$data");
 var_dump($data);echo("<br>");
 $n=strlen($data);
 echo ($n);
+$j=intdiv($n,33);
+echo ("<br>$j");
 //$fLine=substr($data,0,33);
 //echo($fLine);fonctionne 
 //essayons de récupérer la première ligne par exemple
