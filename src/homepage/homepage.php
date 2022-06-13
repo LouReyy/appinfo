@@ -11,7 +11,6 @@ $fLine=substr($data,0,33);
 //echo($fLine);fonctionne 
 //essayons de récupérer la première ligne par exemple
 //Maintenant récupérons toutes les lignes de la variable data
-for 
 ?>
 
 <!DOCTYPE html>
