@@ -10,7 +10,7 @@ $j=intdiv($n,33);
 //essayons de récupérer la première ligne par exemple
 //Maintenant récupérons toutes les lignes de la variable data
 $Lines=array();
-for ($i;$i<$j-1;$i++){
+for ($i=0;$i<$j-1;$i++){
     $line=substr($data,33*$i,33*($i+1));$Lines[$i]=$line;
 }
 print_r($Lines);
