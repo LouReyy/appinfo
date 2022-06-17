@@ -55,7 +55,6 @@ for ($i=0;$i<count($Lines);$i++){
     
 }
 echo("len type");
-echo(count($type2));
 
 
 
