@@ -55,7 +55,8 @@ for ($i=0;$i<count($Lines);$i++){
 
     echo($type);
 
-    gettype($type);
+    echo(gettype($type));
+    
 }
 
 
@@ -66,7 +67,7 @@ for ($i=0;$i<count($Lines);$i++){
 $req->execute(array(
     'time' => "2022-06-17 16:12:50",
     'valeur' => $val[0],
-    'type'=> $type,
+    'type'=> "temp",
     'id_utilisateur' => 26,
     'id_chantier' => 22
 
