@@ -30,27 +30,25 @@ for ($i=0;$i<count($Lines);$i++){
     $time[$i]=substr($Lines[$i],19,14);
 }
 print_r($time);
-for ($i=0;$i<count($val);$i++){
     $ins=$val[$i];
     //On insère dans la base de donnée
 
-    //$req= $bdd->prepare('INSERT INTO `capteur_table`(`time`, `valeur`, `type`, `id_utilisateur`, `id_chantier`) VALUES (:time, :valeur, :type, :id_utilisateur, :id_chantier)');
-//$req->execute(array(
-    //'time' => $time,
-    //'valeur' => $valeur,
-    //'type'=> $type,
-    //'id_utilisateur' => $id_utilisateur,
-    //'id_chantier' => $ins
+    $req= $bdd->prepare('INSERT INTO `capteur_table`(`time`, `valeur`, `type`, `id_utilisateur`, `id_chantier`) VALUES (:time, :valeur, :type, :id_utilisateur, :id_chantier)');
+$req->execute(array(
+    'time' => $time,
+    'valeur' => $valeur,
+    'type'=> $type,
+    'id_utilisateur' => $id_utilisateur,
+    'id_chantier' => $ins
 
-//));//Ici mettre la bonne requête 
+));//Ici mettre la bonne requête 
 //La connexion fonctionne
 
-   // $result=mysqli_query($conn,$req);
+   $result=mysqli_query($conn,$req);
 
 
     
 
-}
 ?>
 
 <!DOCTYPE html>
