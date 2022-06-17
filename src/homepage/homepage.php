@@ -22,7 +22,7 @@ $Lines=array();
 for ($i=0;$i<10;$i++){
     $line=substr($data,33*$i,33);$Lines[$i]=$line;
 }
-print_r($Lines);
+//print_r($Lines);Ok ça marche
 $val=array();
 $time=array();
 for ($i=0;$i<count($Lines);$i++){
@@ -30,6 +30,7 @@ for ($i=0;$i<count($Lines);$i++){
     $time[$i]=substr($Lines[$i],19,14);
 }
 print_r($time);
+echo($val);
     //On insère dans la base de donnée
 
     $req= $bdd->prepare('INSERT INTO `capteur_table`(`time`, `valeur`, `type`, `id_utilisateur`, `id_chantier`) VALUES (:time, :valeur, :type, :id_utilisateur, :id_chantier)');
