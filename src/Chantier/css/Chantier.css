@@ -206,6 +206,32 @@ body {
     cursor: pointer;
     
 }
+
+a.btn_data {
+  margin-bottom: 2%;
+  background-color: #00ccff;
+  color: white;
+  padding: 3%;
+  border: none;
+  cursor: pointer;
+  width: 60%;
+  height: 10%;
+  border-radius: 25px;
+  font-family: "Quicksand";
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 20px;
+
+}
+
+a.btn_data:hover {
+
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+
+}
     
     
 .contenu {
