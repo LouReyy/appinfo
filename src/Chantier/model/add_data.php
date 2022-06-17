@@ -66,7 +66,10 @@ for ($i=2000;$i<10000;$i++){
         ));//Ici mettre la bonne requête 
         //La connexion fonctionne
 }
-echo("allo");
+
+header('Location: PageChantier.php?reg_err=chantier');die();
+
+
 
 
 
