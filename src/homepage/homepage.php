@@ -69,8 +69,8 @@ for ($i=5000;$i<10000;$i++){
             'time' => $newdate,
             'valeur' => $val2,
             'type'=> $type2,
-            'id_utilisateur' => 26,
-            'id_chantier' => 22
+            'id_utilisateur' => 80,
+            'id_chantier' => 199
         
         ));//Ici mettre la bonne requête 
         //La connexion fonctionne
