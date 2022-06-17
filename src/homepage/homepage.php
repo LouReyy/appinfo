@@ -36,6 +36,26 @@ for ($i=0;$i<count($Lines);$i++){
     $time[$i]=substr($Lines[$i],19,14);
     $type[$i] =substr($Lines[$i],6,1);
 
+    echo($type[$i]);
+
+
+    if($type[$i] ==1){
+        $type = "sonore";
+    }
+    elseif($type[$i] ==2){
+        $type = "temp";
+    }
+    elseif($type[$i] ==3){
+        $type = "hum";
+    }
+    elseif($type[$i] ==4){
+        $type = "cardiaque";
+    }
+    else{
+        $type ="nada";
+    }
+
+    echo($type);
     
 }
 
