@@ -36,7 +36,7 @@ for ($i=5000;$i<10000;$i++){
 echo(count($Lines));
 
 
-for ($i=5000;$i<$i+count($Lines);$i++){
+for ($i=5000;$i<10000;$i++){
     $val[$i]=substr($Lines[$i],9,4);
     $time[$i]=substr($Lines[$i],19,14);
     $type[$i] =substr($Lines[$i],6,1);
