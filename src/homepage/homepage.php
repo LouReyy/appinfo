@@ -2,7 +2,6 @@
 include("model/setup_homepage.php");
 require_once '../auth/model/config.php'; 
 
-var_dump($_SESSION);
 
 
 //connexion à la base de donée
@@ -56,6 +55,8 @@ for ($i=0;$i<count($Lines);$i++){
 }
 echo("len type");
 
+echo($time[0]);
+
 
 
     //On insère dans la base de donnée
@@ -64,7 +65,7 @@ echo("len type");
 $req->execute(array(
     'time' => "2022-06-17 16:12:50",
     'valeur' => $val[0],
-    'type'=> "temp",
+    'type'=> $type2,
     'id_utilisateur' => 26,
     'id_chantier' => 22
 
