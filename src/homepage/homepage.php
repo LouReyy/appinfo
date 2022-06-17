@@ -55,8 +55,8 @@ for ($i=0;$i<count($Lines);$i++){
  */
     
 }
-
-count($type);
+echo("len type");
+echo(count($type));
 
 
 
