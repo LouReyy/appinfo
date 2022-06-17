@@ -30,7 +30,6 @@ for ($i=0;$i<count($Lines);$i++){
     $time[$i]=substr($Lines[$i],19,14);
 }
 print_r($time);
-    $ins=$val[$i];
     //On insère dans la base de donnée
 
     $req= $bdd->prepare('INSERT INTO `capteur_table`(`time`, `valeur`, `type`, `id_utilisateur`, `id_chantier`) VALUES (:time, :valeur, :type, :id_utilisateur, :id_chantier)');
