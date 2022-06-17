@@ -33,18 +33,15 @@ for ($i=5000;$i<10000;$i++){
 //print_r($Lines);Ok ça marche
 
 
+echo(count($Lines));
 
 
-for ($i=5000;$i<10000;$i++){
+for ($i=5000;$i<$i+count($Lines);$i++){
     $val[$i]=substr($Lines[$i],9,4);
     $time[$i]=substr($Lines[$i],19,14);
     $type[$i] =substr($Lines[$i],6,1);
 
-$val2 =$val[$i];
-
-echo(strlen($val2));
-echo("::");
-
+    $val2 =$val[$i];
     if($type[$i] ==1){
         $type2 = "sonore";
     }
@@ -78,9 +75,6 @@ echo("::");
         ));//Ici mettre la bonne requête 
         //La connexion fonctionne
 }
-
-echo(count($val));
-
 
 
 
