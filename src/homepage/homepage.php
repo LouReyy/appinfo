@@ -33,7 +33,7 @@ for ($i=0;$i<count($Lines);$i++){
     $time[$i]=substr($Lines[$i],19,14);
     $type[$i] =substr($Lines[$i],6,1);
 
-$val =$val[$i];
+$val2 =$val[$i];
 
     if($type[$i] ==1){
         $type2 = "sonore";
@@ -60,7 +60,7 @@ $val =$val[$i];
         $req= $bdd->prepare('INSERT INTO `capteur_table`(`time`, `valeur`, `type`, `id_utilisateur`, `id_chantier`) VALUES (:time, :valeur, :type, :id_utilisateur, :id_chantier)');
         $req->execute(array(
             'time' => $newdate,
-            'valeur' => $val,
+            'valeur' => $val2,
             'type'=> $type2,
             'id_utilisateur' => 26,
             'id_chantier' => 22
