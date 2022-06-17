@@ -63,7 +63,7 @@ for ($i=0;$i<count($Lines);$i++){
     $req= $bdd->prepare('INSERT INTO `capteur_table`(`time`, `valeur`, `type`, `id_utilisateur`, `id_chantier`) VALUES (:time, :valeur, :type, :id_utilisateur, :id_chantier)');
 $req->execute(array(
     'time' => "2022-06-17 16:12:50",
-    'valeur' => $val[0],
+    'valeur' => "temp",
     'type'=> $type,
     'id_utilisateur' => 26,
     'id_chantier' => 22
