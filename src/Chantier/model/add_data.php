@@ -75,7 +75,8 @@ for ($i=2000;$i<10000;$i++){
         //La connexion fonctionne
 }
 
-header('location : ../PageChantier.php');
+header('Location : PageChantier.php');die();
+
 
 
 
