@@ -27,7 +27,9 @@ $time=array();
 //Maintenant récupérons toutes les lignes de la variable data
 $Lines=array();
 for ($i=5000;$i<10000;$i++){
-    $line=substr($data,33*$i,33);$Lines[$i]=$line;
+    $line=substr($data,33*$i,33);
+    $Lines[$i]=$line;
+    echo($Lines[$i]);
 }
 //print_r($Lines);Ok ça marche
 
