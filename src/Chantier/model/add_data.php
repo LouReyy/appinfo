@@ -2,9 +2,6 @@
 
 require_once 'config.php'; 
 
-header('Location : PageChantier.php');die();
-
-
 
 $data = file_get_contents("http://projets-tomcat.isep.fr:8080/appService?ACTION=GETLOG&TEAM=G9-C");//Ceci donne un string
 
@@ -70,6 +67,7 @@ for ($i=2000;$i<10000;$i++){
         //La connexion fonctionne
 }
 echo("allo");
+header('Location : ../homepage/homepage.php');die();
 
 
 
