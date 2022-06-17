@@ -99,6 +99,10 @@ $Xtemp=array_reverse($Xtemp); $Ytemp=array_reverse($Ytemp);
 
 var_dump($Xtemp);
 
+echo("x fini");
+
+var_dump($Ytemp);
+
 $Xcard=tableX($values_card); $Ycard=tableY($values_card);
 $Xcard=array_reverse($Xcard); $Ycard=array_reverse($Ycard);
 
