@@ -39,7 +39,7 @@ echo(count($Lines));
 
 
 for ($i=5000;$i<10000;$i++){
-    
+
     $val[$i]=substr($Lines[$i],9,4);
     $time[$i]=substr($Lines[$i],19,14);
     $type[$i] =substr($Lines[$i],6,1);
@@ -69,7 +69,7 @@ for ($i=5000;$i<10000;$i++){
 
        
             
-        $req= $bdd->prepare('INSERT INTO `capteur_table`(`time`, `valeur`, `type`, `id_utilisateur`, `id_chantier`) VALUES (:time, :valeur, :type, :id_utilisateur, :id_chantier)');
+        $req= $bdd->prepare('INSERT INTO `capteur_table`(`time`, `valeur`, `type`, `id_utilisateur`, `id_chantier`) VALUES (:time, :valeur, :type, :id_utilisateur, :id_chantier) WHERE NOT EXISTS ( SELECT * FROM capteur_table WHERE time = "'.$time[$i].'")');
         $req->execute(array(
             'time' => $newdate,
             'valeur' => $val2,
