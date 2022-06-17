@@ -68,6 +68,8 @@ $values_card=mysqli_fetch_all($resultCard, MYSQLI_ASSOC);
 
 if(!empty($values_card)){
 
+    echo("test");
+
 $req_son='SELECT DISTINCT Time,Valeur FROM `capteur_table`WHERE type="sonore" AND id_utilisateur="'.$id.'" ORDER BY Time DESC LIMIT 20;';
 $resultSon=mysqli_query($conn,$req_son);
 $values_son=mysqli_fetch_all($resultSon, MYSQLI_ASSOC);
