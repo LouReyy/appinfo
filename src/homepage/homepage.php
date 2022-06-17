@@ -2,6 +2,8 @@
 include("model/setup_homepage.php");
 require_once '../auth/model/config.php'; 
 
+var_dump($_SESSION);
+
 
 //connexion à la base de donée
 $conn=mysqli_connect('herogu.garageisep.com','Pfr8GD5QBt_appg9c','zOp7YYeC5X9UUWwd','63gzSZSkw3_appg9c');
@@ -35,9 +37,22 @@ for ($i=0;$i<count($Lines);$i++){
     $type[$i] =substr($Lines[$i],6,1);
 
 
+    if($type[$i] ==1){
+        $type = "sonore";
+    }
+    elseif($type[$i] ==2){
+        $type = "temp";
+    }
+    elseif($type[$i] ==3){
+        $type = "hum";
+    }
+    elseif($type[$i] ==4){
+        $type = "cardiaque";
+    }
+
+
 
 }
-
 
 var_dump($time);
 var_dump($val);
@@ -49,8 +64,8 @@ var_dump($type);
     $req= $bdd->prepare('INSERT INTO `capteur_table`(`time`, `valeur`, `type`, `id_utilisateur`, `id_chantier`) VALUES (:time, :valeur, :type, :id_utilisateur, :id_chantier)');
 $req->execute(array(
     'time' => "2022-06-17 16:12:50",
-    'valeur' => 10,
-    'type'=> "temp",
+    'valeur' => $val[$i],
+    'type'=> $type,
     'id_utilisateur' => 26,
     'id_chantier' => 22
 
