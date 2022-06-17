@@ -33,7 +33,7 @@ for ($i=0;$i<count($val);$i++){
     //On insère dans la base de donnée
 
     $req= $bdd->prepare('INSERT INTO `capteur_table`(`time`, `valeur`, `type`, `id_utilisateur`, `id_chantier`) VALUES (:time, :valeur, :type, :id_utilisateur, :id_chantier)');
-$insert->execute(array(
+$req->execute(array(
     'id_chantier' => $ins
 ));//Ici mettre la bonne requête 
 //La connexion fonctionne
