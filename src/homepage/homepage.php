@@ -32,11 +32,12 @@ for ($i=0;$i<count($Lines);$i++){
 print_r($time);
     //On insère dans la base de donnée
 
-    $req= $bdd->prepare('INSERT INTO `capteur_table`(`time`, `valeur`, `type`,  `id_chantier`) VALUES (:time, :valeur, :type, :id_chantier)');
+    $req= $bdd->prepare('INSERT INTO `capteur_table`(`time`, `valeur`, `type`, `id_utilisateur`, `id_chantier`) VALUES (:time, :valeur, :type, :id_utilisateur, :id_chantier)');
 $req->execute(array(
     'time' => "2022-06-17 16:12:50",
     'valeur' => 10,
     'type'=> "temp",
+    'id_utilisateur' => 26,
     'id_chantier' => 22
 
 ));//Ici mettre la bonne requête 
