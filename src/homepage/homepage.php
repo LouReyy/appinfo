@@ -59,7 +59,8 @@ echo($time[0]);
 
 $date = $time[0];  
     $sec = strtotime($date);  
-    $newdate = date ("Y-d-m H:i", $sec);  
+    $newdate = date ("Y-m-d H:i", $sec);  
+    $newdate = $newdate . ":00"; 
     echo($newdate);
 
 
