@@ -42,13 +42,22 @@ for ($i=0;$i<count($Lines);$i++){
     if($type[$i] ==1){
         $type = "sonore";
     }
-    elseif($type[$i] ==2){
+    else{
+        $type ="nada";
+    }
+    if($type[$i] ==2){
         $type = "temp";
     }
-    elseif($type[$i] ==3){
+    else{
+        $type ="nada";
+    }
+    if($type[$i] ==3){
         $type = "hum";
     }
-    elseif($type[$i] ==4){
+    else{
+        $type ="nada";
+    }
+    if($type[$i] ==4){
         $type = "cardiaque";
     }
     else{
