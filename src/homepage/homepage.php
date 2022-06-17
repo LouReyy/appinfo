@@ -37,7 +37,7 @@ for ($i=0;$i<count($Lines);$i++){
 
     echo($type[$i]);
 
-
+/* 
     if($type[$i] ==1){
         $type = "sonore";
     }
@@ -52,9 +52,11 @@ for ($i=0;$i<count($Lines);$i++){
         $type = "cardiaque";
     }
    
-
+ */
     
 }
+
+len($type);
 
 
 
