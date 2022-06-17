@@ -64,7 +64,7 @@ for ($i=5000;$i<10000;$i++){
 
         //On insère dans la base de donnée
 
-        $req= $bdd->prepare('INSERT INTO `capteur_table`(`time`, `valeur`, `type`, `id_utilisateur`, `id_chantier`) VALUES (:time, :valeur, :type, :id_utilisateur, :id_chantier) WHERE NOT EXISTS (SELECT * FROM capteur_table WHERE Time = '.$time[$i].'');
+        $req= $bdd->prepare('INSERT INTO `capteur_table`(`time`, `valeur`, `type`, `id_utilisateur`, `id_chantier`) VALUES (:time, :valeur, :type, :id_utilisateur, :id_chantier) WHERE NOT EXISTS (SELECT * FROM capteur_table WHERE time ="'. $time[$i].'");
         ');
         $req->execute(array(
             'time' => $newdate,
