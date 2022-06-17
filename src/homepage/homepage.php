@@ -35,6 +35,9 @@ for ($i=0;$i<count($Lines);$i++){
 
 $val2 =$val[$i];
 
+echo(count($val2));
+echo("::");
+
     if($type[$i] ==1){
         $type2 = "sonore";
     }
