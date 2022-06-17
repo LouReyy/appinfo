@@ -67,7 +67,6 @@ for ($i=2000;$i<10000;$i++){
         //La connexion fonctionne
 }
 echo("allo");
-header('Location : ../homepage/homepage.php');die();
 
 
 
