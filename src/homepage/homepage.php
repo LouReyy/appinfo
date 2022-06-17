@@ -47,11 +47,11 @@ for ($i=5000;$i<10000;$i++){
     $req2->execute();
     $data2 = $req2->fetchAll();
 
-    if (in_array($time[$i], $data2)) {
+    if (in_array($time[5000], $data2)) {
         echo "Got Irix";
     }
 
-    
+
     else{
 
     $val2 =$val[$i];
