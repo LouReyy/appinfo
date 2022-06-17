@@ -12,7 +12,6 @@ if (!$conn){
 }
 
 
-echo("test7");
 $data = file_get_contents("http://projets-tomcat.isep.fr:8080/appService?ACTION=GETLOG&TEAM=G9-C");//Ceci donne un string
 
 
@@ -37,26 +36,26 @@ for ($i=0;$i<count($Lines);$i++){
 
     echo($type[$i]);
 
-/* 
+
     if($type[$i] ==1){
-        $type = "sonore";
+        $type2 = "sonore";
     }
     
     elseif($type[$i] ==2){
-        $type = "temp";
+        $type2 = "temp";
     }
     elseif($type[$i] ==3){
-        $type = "hum";
+        $type2 = "hum";
     }
     elseif($type[$i] ==4){
-        $type = "cardiaque";
+        $type2 = "cardiaque";
     }
    
- */
+ 
     
 }
 echo("len type");
-echo(count($type));
+echo(count($type2));
 
 
 
