@@ -27,13 +27,20 @@ $time=array();
 //Maintenant récupérons toutes les lignes de la variable data
 $Lines=array();
 for ($i=10000;$i<12000;$i++){
+    $line=substr($data,33*$i,33);$Lines[$i]=$line;
+}
+//print_r($Lines);Ok ça marche
 
 
+for ($i=10000;$i<count($Lines);$i++){
     $val[$i]=substr($Lines[$i],9,4);
     $time[$i]=substr($Lines[$i],19,14);
     $type[$i] =substr($Lines[$i],6,1);
 
-    $val2 =$val[$i];
+$val2 =$val[$i];
+
+echo(strlen($val2));
+echo("::");
 
     if($type[$i] ==1){
         $type2 = "sonore";
