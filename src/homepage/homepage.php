@@ -39,20 +39,10 @@ echo(count($Lines));
 
 
 for ($i=5000;$i<10000;$i++){
+    
     $val[$i]=substr($Lines[$i],9,4);
     $time[$i]=substr($Lines[$i],19,14);
     $type[$i] =substr($Lines[$i],6,1);
-
-    $req2= $bdd->prepare('SELECT time FROM capteur_table ');
-    $req2->execute();
-    $data2 = $req2->fetchAll();
-
-    if (in_array($time[5000], $data2)) {
-        echo "Got Irix";
-    }
-
-
-    else{
 
     $val2 =$val[$i];
     if($type[$i] ==1){
@@ -79,7 +69,7 @@ for ($i=5000;$i<10000;$i++){
 
        
             
-                $req= $bdd->prepare('INSERT INTO `capteur_table`(`time`, `valeur`, `type`, `id_utilisateur`, `id_chantier`) VALUES (:time, :valeur, :type, :id_utilisateur, :id_chantier)');
+        $req= $bdd->prepare('INSERT INTO `capteur_table`(`time`, `valeur`, `type`, `id_utilisateur`, `id_chantier`) VALUES (:time, :valeur, :type, :id_utilisateur, :id_chantier)');
         $req->execute(array(
             'time' => $newdate,
             'valeur' => $val2,
@@ -89,7 +79,7 @@ for ($i=5000;$i<10000;$i++){
         
         ));//Ici mettre la bonne requête 
         //La connexion fonctionne
-            }
+            
 
         
 }
