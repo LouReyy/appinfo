@@ -22,7 +22,7 @@ $Lines=array();
 for ($i=0;$i<10;$i++){
     $line=substr($data,33*$i,33);$Lines[$i]=$line;
 }
-//print_r($Lines);Ok ça marche
+print_r($Lines);
 $val=array();
 $time=array();
 for ($i=0;$i<count($Lines);$i++){
