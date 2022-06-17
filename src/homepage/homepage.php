@@ -1,5 +1,7 @@
 <?php
 include("model/setup_homepage.php");
+require_once '../auth/model/config.php'; 
+
 
 //connexion à la base de donée
 $conn=mysqli_connect('herogu.garageisep.com','Pfr8GD5QBt_appg9c','zOp7YYeC5X9UUWwd','63gzSZSkw3_appg9c');
