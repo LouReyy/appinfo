@@ -16,27 +16,24 @@ $data = file_get_contents("http://projets-tomcat.isep.fr:8080/appService?ACTION=
 
 $n=strlen($data);
 $j=intdiv($n,33);
+
+$val=array();
+$time=array();
+
+
 //$fLine=substr($data,0,33);
 //echo($fLine);fonctionne 
 //essayons de récupérer la première ligne par exemple
 //Maintenant récupérons toutes les lignes de la variable data
 $Lines=array();
-for ($i=0;$i<600;$i++){
-    $line=substr($data,33*$i,33);$Lines[$i]=$line;
-}
-//print_r($Lines);Ok ça marche
-$val=array();
-$time=array();
+for ($i=10000;$i<12000;$i++){
 
-for ($i=0;$i<count($Lines);$i++){
+
     $val[$i]=substr($Lines[$i],9,4);
     $time[$i]=substr($Lines[$i],19,14);
     $type[$i] =substr($Lines[$i],6,1);
 
-$val2 =$val[$i];
-
-echo(strlen($val2));
-echo("::");
+    $val2 =$val[$i];
 
     if($type[$i] ==1){
         $type2 = "sonore";
