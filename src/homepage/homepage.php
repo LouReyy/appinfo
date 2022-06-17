@@ -26,7 +26,7 @@ $time=array();
 //essayons de récupérer la première ligne par exemple
 //Maintenant récupérons toutes les lignes de la variable data
 $Lines=array();
-for ($i=10000;$i<12000;$i++){
+for ($i=8000;$i<10000;$i++){
     $line=substr($data,33*$i,33);$Lines[$i]=$line;
 }
 //print_r($Lines);Ok ça marche
