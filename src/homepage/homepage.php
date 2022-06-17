@@ -35,7 +35,7 @@ for ($i=0;$i<count($Lines);$i++){
 
 $val2 =$val[$i];
 
-echo(count($val2));
+echo(strlen($val2));
 echo("::");
 
     if($type[$i] ==1){
