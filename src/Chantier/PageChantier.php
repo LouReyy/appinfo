@@ -52,7 +52,7 @@
         </header>
         <?php include("views/menu_deroulant_tel.php") ?>
         <div id="sidebar">
-            <a class = btn_data href = ../homepage/homepage.php> Charger les données </a>
+            <a class = btn_data href = model/add_data.php> Charger les données </a>
             <div class="noms_onglets">
                 <div class="onglets" data-anim="1">
                     <div class="ongletInactif">

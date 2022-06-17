@@ -208,20 +208,19 @@ body {
 }
 
 a.btn_data {
-  margin-bottom: 2%;
   background-color: #00ccff;
   color: white;
-  padding: 3%;
+  padding: 1%;
   border: none;
   cursor: pointer;
-  width: 20%;
-  height: 5%;
+  width: 10%;
+  height: 2%;
   border-radius: 25px;
   font-family: "Quicksand";
   text-align: center;
   display: inline-block;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 10px;
 
 }
 
