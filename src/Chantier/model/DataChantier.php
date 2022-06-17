@@ -65,7 +65,6 @@ $resultCard=mysqli_query($conn,$req_card);
 $values_card=mysqli_fetch_all($resultCard, MYSQLI_ASSOC);
 
 
-var_dump($values_temp);
 
 if(!empty($values_temp)){
 
