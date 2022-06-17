@@ -53,7 +53,6 @@ if (!$conn){
     echo 'Connection error: ' . mysqli_connect_error();
 }
 
-echo($id);
 //La connexion fonctionne
 $req_temp='SELECT DISTINCT Time,Valeur FROM `capteur_table` WHERE id_utilisateur="'.$id.'" AND type="temp"ORDER BY Time DESC LIMIT 20;';
 $result=mysqli_query($conn,$req_temp);
@@ -68,7 +67,6 @@ $values_card=mysqli_fetch_all($resultCard, MYSQLI_ASSOC);
 
 if(!empty($values_temp)){
 
-    echo("test");
 
 $req_son='SELECT DISTINCT Time,Valeur FROM `capteur_table`WHERE type="sonore" AND id_utilisateur="'.$id.'" ORDER BY Time DESC LIMIT 20;';
 $resultSon=mysqli_query($conn,$req_son);
@@ -98,13 +96,7 @@ $Xtemp=tableX($values_temp);
 $Xtemp=array_reverse($Xtemp);
 
 $Ytemp=tableY($values_temp);
- $Ytemp=array_reverse($Ytemp);
-
-var_dump($Xtemp);
-
-echo("x fini");
-
-var_dump($Ytemp);
+$Ytemp=array_reverse($Ytemp);
 
 $Xcard=tableX($values_card); $Ycard=tableY($values_card);
 $Xcard=array_reverse($Xcard); $Ycard=array_reverse($Ycard);
