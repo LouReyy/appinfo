@@ -94,8 +94,11 @@ function tableY($table){
     return $newTable;
 }
 
-$Xtemp=tableX($values_temp); $Ytemp=tableY($values_temp);
-$Xtemp=array_reverse($Xtemp); $Ytemp=array_reverse($Ytemp);
+$Xtemp=tableX($values_temp); 
+$Xtemp=array_reverse($Xtemp);
+
+$Ytemp=tableY($values_temp);
+ $Ytemp=array_reverse($Ytemp);
 
 var_dump($Xtemp);
 
