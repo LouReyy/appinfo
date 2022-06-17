@@ -52,14 +52,21 @@ $conn=mysqli_connect('herogu.garageisep.com','Pfr8GD5QBt_appg9c','zOp7YYeC5X9UUW
 if (!$conn){
     echo 'Connection error: ' . mysqli_connect_error();
 }
+
+echo($id);
 //La connexion fonctionne
 $req_temp='SELECT DISTINCT Time,Valeur FROM `capteur_table` WHERE id_utilisateur="'.$id.'" AND type="temp"ORDER BY Time DESC LIMIT 20;';
 $result=mysqli_query($conn,$req_temp);
 $values_temp=mysqli_fetch_all($result, MYSQLI_ASSOC);
 
+var_dump($values_temp);
+
 $req_card='SELECT DISTINCT Time,Valeur FROM capteur_table WHERE id_utilisateur="'.$id.'" AND type="cardiaque" ORDER BY Time DESC LIMIT 20;';
 $resultCard=mysqli_query($conn,$req_card);
 $values_card=mysqli_fetch_all($resultCard, MYSQLI_ASSOC);
+
+var_dump($values_card);
+
 
 if(!empty($values_card)){
 
