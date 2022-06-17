@@ -71,8 +71,8 @@ for ($i=5000;$i<10000;$i++){
             if (in_array($time[$i], $data2)) {
                 echo "Got Irix";
             }
-
-        $req= $bdd->prepare('INSERT INTO `capteur_table`(`time`, `valeur`, `type`, `id_utilisateur`, `id_chantier`) VALUES (:time, :valeur, :type, :id_utilisateur, :id_chantier)');
+            else{
+                $req= $bdd->prepare('INSERT INTO `capteur_table`(`time`, `valeur`, `type`, `id_utilisateur`, `id_chantier`) VALUES (:time, :valeur, :type, :id_utilisateur, :id_chantier)');
         $req->execute(array(
             'time' => $newdate,
             'valeur' => $val2,
@@ -82,6 +82,9 @@ for ($i=5000;$i<10000;$i++){
         
         ));//Ici mettre la bonne requête 
         //La connexion fonctionne
+            }
+
+        
 }
 
 
