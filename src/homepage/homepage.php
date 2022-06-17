@@ -49,14 +49,13 @@ for ($i=0;$i<count($Lines);$i++){
     elseif($type[$i] ==4){
         $type = "cardiaque";
     }
+    else{
+        $type ="nada";
+    }
 
-
-
+    echo($type);
 }
 
-var_dump($time);
-var_dump($val);
-var_dump($type);
 
 
     //On insère dans la base de donnée
