@@ -31,7 +31,7 @@ for ($i=5000;$i<10000;$i++){
 }
 //print_r($Lines);Ok ça marche
 
-count($Lines);
+echo($Lines);
 echo(count($Lines));
 
 
