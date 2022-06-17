@@ -24,11 +24,12 @@ for ($i=0;$i<10;$i++){
 }
 //print_r($Lines);Ok ça marche
 $val=array();
+$time=array();
 for ($i=0;$i<count($Lines);$i++){
     $val[$i]=substr($Lines[$i],9,4);
-    $time=substr($Lines[$i],9,4);
+    $time[$i]=substr($Lines[$i],21,14);
 }
-print_r($val);
+print_r($time);
 for ($i=0;$i<count($val);$i++){
     $ins=$val[$i];
     //On insère dans la base de donnée
