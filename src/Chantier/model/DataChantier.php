@@ -139,12 +139,36 @@ function getLast($table){
     return $table[0]['Valeur'];
     }
 }
+if(!empty($values_card)){
 $lastCard=getLast($values_lastCard);
+}
+else{
+    $lastCard =0;
+}
+if(!empty($values_son)){
 $lastSon=getLast($values_lastSon);
+}
+else{
+    $lastSon=0;
+}
+if(!empty($values_temp)){
 $lastTemp=getLast($values_lastTemp);
-$lastCO2=getLast($values_lastCO2);
+}
+else{
+    $lastTemp=0;
 
 }
+if(!empty($values_CO2)){
+
+$lastCO2=getLast($values_lastCO2);
+}
+else{
+    $lastCO2=0;
+
+}
+
+}
+
 
 $ch = curl_init();
 curl_setopt(
