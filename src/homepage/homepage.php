@@ -64,7 +64,15 @@ for ($i=5000;$i<10000;$i++){
 
         //On insère dans la base de donnée
 
-        $req= $bdd->prepare('INSERT INTO `capteur_table`(`time`, `valeur`, `type`, `id_utilisateur`, `id_chantier`) VALUES (:time, :valeur, :type, :id_utilisateur, :id_chantier) SELECT "'.$time[$i].'" WHERE NOT EXISTS (SELECT * FROM capteur_table WHERE time ='. $time[$i].')');
+        $req2= $bdd->prepare('SELECT * FROM capteur_table ');
+            $req2->execute();
+            $data2 = $req2->fetchAll();
+
+            if (in_array($time[$i], $data2)) {
+                echo "Got Irix";
+            }
+
+        $req= $bdd->prepare('INSERT INTO `capteur_table`(`time`, `valeur`, `type`, `id_utilisateur`, `id_chantier`) VALUES (:time, :valeur, :type, :id_utilisateur, :id_chantier)');
         $req->execute(array(
             'time' => $newdate,
             'valeur' => $val2,
