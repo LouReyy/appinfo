@@ -72,7 +72,7 @@ echo("::");
         //La connexion fonctionne
 }
 
-count($val);
+echo(count($val));
 
 
 
