@@ -67,7 +67,6 @@ $req_card='SELECT DISTINCT Time,Valeur FROM capteur_table WHERE id_utilisateur="
 $resultCard=mysqli_query($conn,$req_card);
 $values_card=mysqli_fetch_all($resultCard, MYSQLI_ASSOC);
 
-var_dump($values_card);
 
 
 if(!empty($values_card)){
@@ -98,6 +97,8 @@ function tableY($table){
 
 $Xtemp=tableX($values_temp); $Ytemp=tableY($values_temp);
 $Xtemp=array_reverse($Xtemp); $Ytemp=array_reverse($Ytemp);
+
+var_dump($Xtemp);
 
 $Xcard=tableX($values_card); $Ycard=tableY($values_card);
 $Xcard=array_reverse($Xcard); $Ycard=array_reverse($Ycard);

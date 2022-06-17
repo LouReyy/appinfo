@@ -61,7 +61,6 @@ for ($i=5000;$i<10000;$i++){
     $newdate = date ("Y-m-d H:i", $sec);  
     $newdate = $newdate . ":00"; 
 
-
         //On insère dans la base de donnée
 
         $req= $bdd->prepare('INSERT INTO `capteur_table`(`time`, `valeur`, `type`, `id_utilisateur`, `id_chantier`) VALUES (:time, :valeur, :type, :id_utilisateur, :id_chantier)');
