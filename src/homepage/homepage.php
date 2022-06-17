@@ -64,7 +64,7 @@ for ($i=5000;$i<10000;$i++){
 
         //On insère dans la base de donnée
 
-        $req2= $bdd->prepare('SELECT * FROM capteur_table ');
+        $req2= $bdd->prepare('SELECT time FROM capteur_table ');
             $req2->execute();
             $data2 = $req2->fetchAll();
 
