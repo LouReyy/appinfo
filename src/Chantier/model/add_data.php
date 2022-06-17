@@ -2,16 +2,8 @@
 
 require_once 'config.php'; 
 
-echo("allo");
+header('Location : PageChantier.php');die();
 
-
-
-
-//connexion à la base de donée
-$conn=mysqli_connect('herogu.garageisep.com','Pfr8GD5QBt_appg9c','zOp7YYeC5X9UUWwd','63gzSZSkw3_appg9c');
-if (!$conn){
-    echo 'Connection error: ' . mysqli_connect_error();
-}
 
 
 $data = file_get_contents("http://projets-tomcat.isep.fr:8080/appService?ACTION=GETLOG&TEAM=G9-C");//Ceci donne un string
@@ -78,7 +70,6 @@ for ($i=2000;$i<10000;$i++){
         //La connexion fonctionne
 }
 echo("allo");
-header('Location : PageChantier.php');die();
 
 
 
