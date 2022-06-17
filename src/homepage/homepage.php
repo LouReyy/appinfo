@@ -72,6 +72,8 @@ echo("::");
         //La connexion fonctionne
 }
 
+count($val);
+
 
 
 
