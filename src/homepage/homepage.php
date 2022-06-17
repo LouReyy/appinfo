@@ -35,7 +35,7 @@ print_r($time);
 
     $req= $bdd->prepare('INSERT INTO `capteur_table`(`time`, `valeur`, `type`, `id_utilisateur`, `id_chantier`) VALUES (:time, :valeur, :type, :id_utilisateur, :id_chantier)');
 $req->execute(array(
-    'time' => $time,
+    'time' => "2022-06-17 16:12:50",
     'valeur' => $valeur,
     'type'=> $type,
     'id_utilisateur' => $id_utilisateur,
