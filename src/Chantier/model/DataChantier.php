@@ -59,9 +59,6 @@ $req_temp='SELECT DISTINCT Time,Valeur FROM `capteur_table` WHERE id_utilisateur
 $result=mysqli_query($conn,$req_temp);
 $values_temp=mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-var_dump($values_temp);
-
-echo("fin var");
 
 $req_card='SELECT DISTINCT Time,Valeur FROM capteur_table WHERE id_utilisateur="'.$id.'" AND type="cardiaque" ORDER BY Time DESC LIMIT 20;';
 $resultCard=mysqli_query($conn,$req_card);
