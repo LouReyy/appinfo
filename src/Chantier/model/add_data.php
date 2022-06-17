@@ -2,6 +2,9 @@
 
 require_once 'config.php'; 
 
+echo("allo");
+
+
 
 
 //connexion à la base de donée
@@ -74,7 +77,7 @@ for ($i=2000;$i<10000;$i++){
         ));//Ici mettre la bonne requête 
         //La connexion fonctionne
 }
-
+echo("allo");
 header('Location : PageChantier.php');die();
 
 
