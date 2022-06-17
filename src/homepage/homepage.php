@@ -32,7 +32,7 @@ for ($i=8000;$i<10000;$i++){
 //print_r($Lines);Ok ça marche
 
 
-for ($i=10000;$i<count($Lines);$i++){
+for ($i=0;$i<count($Lines);$i++){
     $val[$i]=substr($Lines[$i],9,4);
     $time[$i]=substr($Lines[$i],19,14);
     $type[$i] =substr($Lines[$i],6,1);
