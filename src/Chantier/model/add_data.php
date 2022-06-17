@@ -67,7 +67,7 @@ for ($i=2000;$i<10000;$i++){
         //La connexion fonctionne
 }
 
-header('Location: PageChantier.php?reg_err=chantier');die();
+header('Location: ../PageChantier.php');die();
 
 
 
