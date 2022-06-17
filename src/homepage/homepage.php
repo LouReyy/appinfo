@@ -49,34 +49,32 @@ for ($i=0;$i<count($Lines);$i++){
     elseif($type[$i] ==4){
         $type2 = "cardiaque";
     }
-   
- 
-    
-}
-echo("len type");
 
-echo($time[0]);
-
-$date = $time[0];  
+    $date = $time[$i];  
     $sec = strtotime($date);  
     $newdate = date ("Y-m-d H:i", $sec);  
     $newdate = $newdate . ":00"; 
-    echo($newdate);
+
+
+        //On insère dans la base de donnée
+
+        $req= $bdd->prepare('INSERT INTO `capteur_table`(`time`, `valeur`, `type`, `id_utilisateur`, `id_chantier`) VALUES (:time, :valeur, :type, :id_utilisateur, :id_chantier)');
+        $req->execute(array(
+            'time' => $newdate,
+            'valeur' => $val[$i],
+            'type'=> $type2,
+            'id_utilisateur' => 26,
+            'id_chantier' => 22
+        
+        ));//Ici mettre la bonne requête 
+        //La connexion fonctionne
+}
 
 
 
-    //On insère dans la base de donnée
 
-    $req= $bdd->prepare('INSERT INTO `capteur_table`(`time`, `valeur`, `type`, `id_utilisateur`, `id_chantier`) VALUES (:time, :valeur, :type, :id_utilisateur, :id_chantier)');
-$req->execute(array(
-    'time' => "2022-06-17 16:12:50",
-    'valeur' => $val[0],
-    'type'=> $type2,
-    'id_utilisateur' => 26,
-    'id_chantier' => 22
 
-));//Ici mettre la bonne requête 
-//La connexion fonctionne
+
 
 
 
