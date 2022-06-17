@@ -12,6 +12,8 @@ if (!$conn){
 
 echo("test7");
 $data = file_get_contents("http://projets-tomcat.isep.fr:8080/appService?ACTION=GETLOG&TEAM=G9-C");//Ceci donne un string
+
+
 $n=strlen($data);
 $j=intdiv($n,33);
 //$fLine=substr($data,0,33);
@@ -25,12 +27,15 @@ for ($i=0;$i<10;$i++){
 //print_r($Lines);Ok ça marche
 $val=array();
 $time=array();
+
+print_r($Lines);
+print_r($lines);
 for ($i=0;$i<count($Lines);$i++){
     $val[$i]=substr($Lines[$i],9,4);
     $time[$i]=substr($Lines[$i],19,14);
 }
-print_r($time);
-echo($val);
+var_dump($time);
+var_dump($val);
     //On insère dans la base de donnée
 
     $req= $bdd->prepare('INSERT INTO `capteur_table`(`time`, `valeur`, `type`, `id_utilisateur`, `id_chantier`) VALUES (:time, :valeur, :type, :id_utilisateur, :id_chantier)');
