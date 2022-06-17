@@ -37,7 +37,6 @@ $req->execute(array(
     'time' => "2022-06-17 16:12:50",
     'valeur' => 10,
     'type'=> "temp",
-    'id_utilisateur' => 15,
     'id_chantier' => 22
 
 ));//Ici mettre la bonne requête 
