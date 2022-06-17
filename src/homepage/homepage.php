@@ -43,7 +43,6 @@ $req->execute(array(
 ));//Ici mettre la bonne requête 
 //La connexion fonctionne
 
-   $result=mysqli_query($conn,$req);
 
 
     
