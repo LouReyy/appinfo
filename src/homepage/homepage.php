@@ -57,6 +57,11 @@ echo("len type");
 
 echo($time[0]);
 
+$date = $time[0];  
+    $sec = strtotime($date);  
+    $newdate = date ("Y-d-m H:i", $sec);  
+    echo($newdate);
+
 
 
     //On insère dans la base de donnée
