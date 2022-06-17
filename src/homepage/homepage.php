@@ -29,15 +29,13 @@ $Lines=array();
 for ($i=5000;$i<10000;$i++){
     $line=substr($data,33*$i,33);
     $Lines[$i]=$line;
-    echo($Lines[$i]);
 }
 //print_r($Lines);Ok ça marche
 
-var_dump($Lines);
-echo(count($Lines));
 
 
-for ($i=5000;$i<count($Lines);$i++){
+
+for ($i=5000;$i<10000;$i++){
     $val[$i]=substr($Lines[$i],9,4);
     $time[$i]=substr($Lines[$i],19,14);
     $type[$i] =substr($Lines[$i],6,1);
