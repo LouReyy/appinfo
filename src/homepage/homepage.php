@@ -30,7 +30,6 @@ for ($i=0;$i<12000;$i++){
 $val=array();
 $time=array();
 
-print_r($Lines);
 for ($i=0;$i<count($Lines);$i++){
     $val[$i]=substr($Lines[$i],9,4);
     $time[$i]=substr($Lines[$i],19,14);
@@ -54,7 +53,6 @@ for ($i=0;$i<count($Lines);$i++){
     }
    
 
-    echo($type);
     
 }
 
