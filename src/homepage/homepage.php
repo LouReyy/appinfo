@@ -21,7 +21,7 @@ $j=intdiv($n,33);
 //essayons de récupérer la première ligne par exemple
 //Maintenant récupérons toutes les lignes de la variable data
 $Lines=array();
-for ($i=0;$i<12000;$i++){
+for ($i=10000;$i<12000;$i++){
     $line=substr($data,33*$i,33);$Lines[$i]=$line;
 }
 //print_r($Lines);Ok ça marche
@@ -55,26 +55,20 @@ for ($i=0;$i<count($Lines);$i++){
     $newdate = date ("Y-m-d H:i", $sec);  
     $newdate = $newdate . ":00"; 
 
-    echo($val[$i]);
 
+        //On insère dans la base de donnée
 
-   
+        $req= $bdd->prepare('INSERT INTO `capteur_table`(`time`, `valeur`, `type`, `id_utilisateur`, `id_chantier`) VALUES (:time, :valeur, :type, :id_utilisateur, :id_chantier)');
+        $req->execute(array(
+            'time' => $newdate,
+            'valeur' => $val[$i],
+            'type'=> $type2,
+            'id_utilisateur' => 26,
+            'id_chantier' => 22
+        
+        ));//Ici mettre la bonne requête 
+        //La connexion fonctionne
 }
-
-echo(count($val));
-
-     //On insère dans la base de donnée
-
-     $req= $bdd->prepare('INSERT INTO `capteur_table`(`time`, `valeur`, `type`, `id_utilisateur`, `id_chantier`) VALUES (:time, :valeur, :type, :id_utilisateur, :id_chantier)');
-     $req->execute(array(
-         'time' => $newdate,
-         'valeur' => $val[0],
-         'type'=> $type2,
-         'id_utilisateur' => 26,
-         'id_chantier' => 22
-     
-     ));//Ici mettre la bonne requête 
-     //La connexion fonctionne
 
 
 
