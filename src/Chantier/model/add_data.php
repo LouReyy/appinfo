@@ -52,6 +52,8 @@ for ($i=2000;$i<$n;$i++){
     $newdate = date ("Y-m-d H:i", $sec);  
     $newdate = $newdate . ":00"; 
 
+    echo($val2);
+
         //On insère dans la base de donnée
 
         $req= $bdd->prepare('INSERT INTO `capteur_table`(`time`, `valeur`, `type`, `id_utilisateur`, `id_chantier`) VALUES (:time, :valeur, :type, :id_utilisateur, :id_chantier)');
@@ -66,7 +68,6 @@ for ($i=2000;$i<$n;$i++){
         //La connexion fonctionne
 }
 
-var_dump($val);
 
 header('Location: ../PageChantier.php');die();
 
