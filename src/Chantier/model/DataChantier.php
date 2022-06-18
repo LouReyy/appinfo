@@ -54,12 +54,12 @@ if (!$conn){
 }
 
 //La connexion fonctionne
-$req_temp='SELECT DISTINCT Time,Valeur FROM `capteur_table` WHERE id_utilisateur="'.$id.'" AND type="temp"ORDER BY Time DESC LIMIT 500;';
+$req_temp='SELECT DISTINCT Time,Valeur FROM `capteur_table` WHERE id_utilisateur="'.$id.'" AND type="temp"ORDER BY Time DESC LIMIT 100;';
 $result=mysqli_query($conn,$req_temp);
 $values_temp=mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 
-$req_card='SELECT DISTINCT Time,Valeur FROM capteur_table WHERE id_utilisateur="'.$id.'" AND type="cardiaque" ORDER BY Time DESC LIMIT 500;';
+$req_card='SELECT DISTINCT Time,Valeur FROM capteur_table WHERE id_utilisateur="'.$id.'" AND type="cardiaque" ORDER BY Time DESC LIMIT 100;';
 $resultCard=mysqli_query($conn,$req_card);
 $values_card=mysqli_fetch_all($resultCard, MYSQLI_ASSOC);
 
@@ -68,15 +68,15 @@ $values_card=mysqli_fetch_all($resultCard, MYSQLI_ASSOC);
 if(!empty($values_temp)){
 
 
-$req_son='SELECT DISTINCT Time,Valeur FROM `capteur_table`WHERE type="sonore" AND id_utilisateur="'.$id.'" ORDER BY Time DESC LIMIT 500;';
+$req_son='SELECT DISTINCT Time,Valeur FROM `capteur_table`WHERE type="sonore" AND id_utilisateur="'.$id.'" ORDER BY Time DESC LIMIT 100;';
 $resultSon=mysqli_query($conn,$req_son);
 $values_son=mysqli_fetch_all($resultSon, MYSQLI_ASSOC);
 
-$req_hum='SELECT DISTINCT Time,Valeur FROM `capteur_table`WHERE type="hum" AND id_utilisateur="'.$id.'" ORDER BY Time DESC LIMIT 500;';
+$req_hum='SELECT DISTINCT Time,Valeur FROM `capteur_table`WHERE type="hum" AND id_utilisateur="'.$id.'" ORDER BY Time DESC LIMIT 100;';
 $resulthum=mysqli_query($conn,$req_hum);
 $values_hum=mysqli_fetch_all($resulthum, MYSQLI_ASSOC);
 
-$req_CO2='SELECT DISTINCT Time,Valeur FROM `capteur_table`WHERE type="CO2" AND id_utilisateur="'.$id.'" ORDER BY Time DESC LIMIT 500;';
+$req_CO2='SELECT DISTINCT Time,Valeur FROM `capteur_table`WHERE type="CO2" AND id_utilisateur="'.$id.'" ORDER BY Time DESC LIMIT 100;';
 $resultCO2=mysqli_query($conn,$req_CO2);
 $values_CO2=mysqli_fetch_all($resultCO2, MYSQLI_ASSOC);
 
