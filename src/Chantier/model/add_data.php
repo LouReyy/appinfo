@@ -75,6 +75,13 @@ for ($i=4000;$i<$j;$i++){
 }
 
 
-header('Location: ../PageChantier.php');die();
+$sql = "SELECT * FROM capteur_table WHERE type = "."card";
+$stp = $bdd->prepare($sql);
+$stp->execute();
+
+var_dump($stp);
+
+
+// header('Location: ../PageChantier.php');die();
 
 ?>
