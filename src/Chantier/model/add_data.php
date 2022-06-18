@@ -36,6 +36,17 @@ for ($i=$j-1000;$i<$j;$i++){
     $time[$i]=substr($Lines[$i],19,14);
     $type[$i] =substr($Lines[$i],6,1);
 
+    $a =substr($val[$i], 0, 2);
+    $b = substr($val[$i], 2, 4);
+
+    echo $a;
+    echo $b;
+
+
+    echo( $a ."." . $b);
+
+
+
 
 
     $val2 =$val[$i];
