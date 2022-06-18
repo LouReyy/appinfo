@@ -78,14 +78,6 @@ for ($i=$j-100;$i<$j;$i++){
         //La connexion fonctionne
 }
 
-
-$sql = "SELECT * FROM capteur_table WHERE type = "."cardiaque";
-$stp = $bdd->prepare($sql);
-$stp->execute();
-
-
-
-
  header('Location: ../PageChantier.php');die();
 
 ?>
