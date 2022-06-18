@@ -39,8 +39,17 @@ for ($i=$j-1000;$i<$j;$i++){
     $a =substr($val[$i], 0, 2);
     $b = substr($val[$i], 2, 4);
 
+    echo($val[$i]);
+    echo("mtn a :         ")
+
+
+
     echo $a;
+
+    echo("mtn b :         ")
     echo $b;
+    echo("mtn res:         ")
+
 
 
     echo( $a ."." . $b);
