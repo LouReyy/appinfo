@@ -39,10 +39,6 @@ for ($i=$j-1000;$i<$j;$i++){
     
 
 
-
-
-
-    $val2 =$val[$i];
     if($type[$i] ==1){
         $type2 = "sonore";
     }
@@ -70,6 +66,9 @@ for ($i=$j-1000;$i<$j;$i++){
     else{
         $type2 ="nada";
     }
+
+    $val2 =$val[$i];
+
 
 
 
