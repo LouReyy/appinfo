@@ -72,7 +72,7 @@
                     </div> <!--idem-->
                     <div class="onglets" data-anim="4">
                         <div class="ongletInactif bis">
-                            <h1>Taux d'humidité</h1><p><br><br>Dernière valeur : <?php if(isset($lasthum)){echo $lasthum;} ?> ppm</p>
+                            <h1>Taux d'humidité</h1><p><br><br>Dernière valeur : <?php if(isset($lasthum)){echo $lasthum;} ?> %</p>
                         </div> 
                     </div>
                     <div class="onglets" data-anim="5">
