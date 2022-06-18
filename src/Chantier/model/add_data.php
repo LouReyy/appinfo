@@ -36,7 +36,21 @@ for ($i=$j-1000;$i<$j;$i++){
     $time[$i]=substr($Lines[$i],19,14);
     $type[$i] =substr($Lines[$i],6,1);
 
-    $a =substr($val[$i], 0, 2);
+    
+
+
+
+
+
+    $val2 =$val[$i];
+    if($type[$i] ==1){
+        $type2 = "sonore";
+    }
+    
+    elseif($type[$i] ==2){
+        $type2 = "temp";
+
+        $a =substr($val[$i], 0, 2);
     $b = substr($val[$i], 2, 4);
 
     echo($val[$i]);
@@ -54,20 +68,28 @@ for ($i=$j-1000;$i<$j;$i++){
 
     echo( $a ."." . $b);
 
-
-
-
-
-    $val2 =$val[$i];
-    if($type[$i] ==1){
-        $type2 = "sonore";
-    }
-    
-    elseif($type[$i] ==2){
-        $type2 = "temp";
     }
     elseif($type[$i] ==3){
         $type2 = "hum";
+
+        $a =substr($val[$i], 0, 2);
+    $b = substr($val[$i], 2, 4);
+
+    echo($val[$i]);
+    echo("mtn a :         ");
+
+
+
+    echo $a;
+
+    echo("mtn b :         ");
+    echo $b;
+    echo("mtn res:         ");
+
+
+
+    echo( $a ."." . $b);
+    
     }
     elseif($type[$i] ==4){
         $type2 = "cardiaque";
