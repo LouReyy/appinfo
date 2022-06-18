@@ -72,6 +72,11 @@
                     </div> <!--idem-->
                     <div class="onglets" data-anim="4">
                         <div class="ongletInactif bis">
+                            <h1>Taux d'humidité</h1><p><br><br>Dernière valeur : <?php if(isset($lasthum)){echo $lasthum;} ?> ppm</p>
+                        </div> 
+                    </div>
+                    <div class="onglets" data-anim="5">
+                        <div class="ongletInactif bis">
                             <h1>CO2</h1><p><br><br>Dernière valeur : <?php if(isset($lastC02)){echo $lastCO2;} ?> ppm</p>
                         </div> 
                     </div> <!--idem-->
@@ -223,6 +228,50 @@
                 </div>   
             </div>
             <div class="contenu" data-anim="4">
+                <h3>Votre exposition au CO2</h3>
+                <hr>
+                <div id="graph3">
+                    <canvas id="hum"></canvas>
+                        <script>
+                        //CHANGE
+                            var XCO2= <?php echo json_encode($Xhum);?>;    //CHANGE
+                            var YCO2= <?php echo json_encode($Yhum);?>; //CHANGE
+                            const label2 =XCO2;                         //CHANGE labels aussi 
+
+                            const dataCO2 = {  //CHANGE
+                                labels: label2, //CHANGE
+                                datasets: [{
+                                    label: "taux d'humidité en %", //CHANGE
+                                    backgroundColor: 'rgb(0,204,255)',
+                                    borderColor: 'rgb(0,204,255)',
+                                    data: Yhum, //CHANGE
+                                    fill: true,
+                                }]
+                            };
+
+                            const config3 = {  //CHANGE
+                                type: 'line',
+                                data: datahum, //CHANGE
+                                options: {
+                                    tension: 0.4,
+                                    scales: {
+                                        y: {
+                                            beginAtZero: true
+                                        }
+                                    }
+                                }
+                            };
+                        </script>
+                        <script>
+                            const myChart3 = new Chart( //CHANGE
+                            document.getElementById('CO2'), //CHANGE
+                            config3  //CHANGE
+                            );
+                        </script>
+                </div>   
+            </div>
+
+            <div class="contenu" data-anim="5">
                 <h3>Votre exposition au CO2</h3>
                 <hr>
                 <div id="graph3">

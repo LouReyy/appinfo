@@ -72,6 +72,10 @@ $req_son='SELECT DISTINCT Time,Valeur FROM `capteur_table`WHERE type="sonore" AN
 $resultSon=mysqli_query($conn,$req_son);
 $values_son=mysqli_fetch_all($resultSon, MYSQLI_ASSOC);
 
+$req_hum='SELECT DISTINCT Time,Valeur FROM `capteur_table`WHERE type="hum" AND id_utilisateur="'.$id.'" ORDER BY Time DESC LIMIT 20;';
+$resulthum=mysqli_query($conn,$req_hum);
+$values_hum=mysqli_fetch_all($resulthum, MYSQLI_ASSOC);
+
 $req_CO2='SELECT DISTINCT Time,Valeur FROM `capteur_table`WHERE type="CO2" AND id_utilisateur="'.$id.'" ORDER BY Time DESC LIMIT 20;';
 $resultCO2=mysqli_query($conn,$req_CO2);
 $values_CO2=mysqli_fetch_all($resultCO2, MYSQLI_ASSOC);
@@ -105,6 +109,9 @@ $Xcard=array_reverse($Xcard); $Ycard=array_reverse($Ycard);
 $Xson=tableX($values_son); $Yson=tableY($values_son);
 $Xson=array_reverse($Xson); $Yson=array_reverse($Yson); 
 
+$Xhum=tableX($values_hum); $Yhum=tableY($values_hum);
+$Xhum=array_reverse($Xhum); $Yhum=array_reverse($Yhum); 
+
 $XCO2=tableX($values_CO2); $YCO2=tableY($values_CO2);
 $XCO2=array_reverse($XCO2); $YCO2=array_reverse($YCO2);
 
@@ -121,6 +128,10 @@ $values_lastSon=mysqli_fetch_all($resultLastSon, MYSQLI_ASSOC);
 $req_lastTemp='SELECT Valeur FROM `capteur_table` WHERE type="temp" AND Time=(SELECT MAX(Time) FROM `capteur_table` WHERE type="temp" AND id_utilisateur="'.$id.'");';
 $resultLastTemp=mysqli_query($conn,$req_lastTemp);
 $values_lastTemp=mysqli_fetch_all($resultLastTemp, MYSQLI_ASSOC);
+
+$req_lasthum='SELECT Valeur FROM `capteur_table` WHERE type="hum" AND Time=(SELECT MAX(Time) FROM `capteur_table` WHERE type="hum" AND id_utilisateur="'.$id.'");';
+$resultLasthum=mysqli_query($conn,$req_lasthum);
+$values_lasthum=mysqli_fetch_all($resultLasthum, MYSQLI_ASSOC);
 
 $req_lastCO2='SELECT Valeur FROM `capteur_table` WHERE type="CO2" AND Time=(SELECT MAX(Time) FROM `capteur_table` WHERE type="CO2" AND id_utilisateur="'.$id.'");';
 $resultLastCO2=mysqli_query($conn,$req_lastCO2);
@@ -150,13 +161,17 @@ else{
     $lastTemp=0;
 
 }
+if(!empty($values_hum)){
+    $lasthum=getLast($values_lasthum);
+    }
+    else{
+        $lasthum=0;
+    }
 if(!empty($values_CO2)){
-
 $lastCO2=getLast($values_lastCO2);
 }
 else{
     $lastCO2=0;
-
 }
 
 }
