@@ -9,6 +9,7 @@ $n=strlen($data);
 $j=intdiv($n,33);
 
 echo($n);
+echo("mtn val                 ");
 
 $val=array();
 $time=array();
