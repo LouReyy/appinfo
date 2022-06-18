@@ -40,7 +40,7 @@ for ($i=$j-1000;$i<$j;$i++){
     $b = substr($val[$i], 2, 4);
 
     echo($val[$i]);
-    echo("mtn a :         ")
+    echo("mtn a :         ");
 
 
 
