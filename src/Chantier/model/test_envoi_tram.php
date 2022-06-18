@@ -1,7 +1,7 @@
 <?php
 
 
-header('Location : http://projets-tomcat.isep.fr/');
+header('Location : http://google.fr');
 
 
 
