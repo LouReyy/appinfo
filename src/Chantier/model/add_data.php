@@ -46,6 +46,9 @@ for ($i=12000;$i<$n;$i++){
     elseif($type[$i] ==4){
         $type2 = "cardiaque";
     }
+    else{
+        $type2 ="nada";
+    }
 
     $date = $time[$i];  
     $sec = strtotime($date);  
