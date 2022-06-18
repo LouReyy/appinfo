@@ -8,6 +8,8 @@ $data = file_get_contents("http://projets-tomcat.isep.fr:8080/appService?ACTION=
 $n=strlen($data);
 $j=intdiv($n,33);
 
+echo($n);
+
 $val=array();
 $time=array();
 
