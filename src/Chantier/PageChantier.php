@@ -293,7 +293,7 @@
                                 }]
                             };
 
-                            const config3 = {  //CHANGE
+                            const config4 = {  //CHANGE
                                 type: 'line',
                                 data: dataCO2, //CHANGE
                                 options: {
@@ -307,7 +307,7 @@
                             };
                         </script>
                         <script>
-                            const myChart3 = new Chart( //CHANGE
+                            const myChart4 = new Chart( //CHANGE
                             document.getElementById('CO2'), //CHANGE
                             config4  //CHANGE
                             );
