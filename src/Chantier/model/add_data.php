@@ -46,9 +46,9 @@ for ($i=$j-1000;$i<$j;$i++){
 
     echo $a;
 
-    echo("mtn b :         ")
+    echo("mtn b :         ");
     echo $b;
-    echo("mtn res:         ")
+    echo("mtn res:         ");
 
 
 
