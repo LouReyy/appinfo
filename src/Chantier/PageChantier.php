@@ -228,17 +228,17 @@
                 </div>   
             </div>
             <div class="contenu" data-anim="4">
-                <h3>Votre exposition au CO2</h3>
+                <h3>Votre exposition a l'huidité</h3>
                 <hr>
-                <div id="graph3">
+                <div id="graph4">
                     <canvas id="hum"></canvas>
                         <script>
                         //CHANGE
-                            var XCO2= <?php echo json_encode($Xhum);?>;    //CHANGE
-                            var YCO2= <?php echo json_encode($Yhum);?>; //CHANGE
-                            const label2 =XCO2;                         //CHANGE labels aussi 
+                            var Xhum= <?php echo json_encode($Xhum);?>;    //CHANGE
+                            var Yhum= <?php echo json_encode($Yhum);?>; //CHANGE
+                            const label2 =Xhum;                         //CHANGE labels aussi 
 
-                            const dataCO2 = {  //CHANGE
+                            const datahum = {  //CHANGE
                                 labels: label2, //CHANGE
                                 datasets: [{
                                     label: "taux d'humidité en %", //CHANGE
@@ -264,7 +264,7 @@
                         </script>
                         <script>
                             const myChart3 = new Chart( //CHANGE
-                            document.getElementById('CO2'), //CHANGE
+                            document.getElementById('hum'), //CHANGE
                             config3  //CHANGE
                             );
                         </script>
@@ -274,7 +274,7 @@
             <div class="contenu" data-anim="5">
                 <h3>Votre exposition au CO2</h3>
                 <hr>
-                <div id="graph3">
+                <div id="graph5">
                     <canvas id="CO2"></canvas>
                         <script>
                         //CHANGE
