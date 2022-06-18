@@ -66,6 +66,8 @@ for ($i=2000;$i<$n;$i++){
         //La connexion fonctionne
 }
 
+var_dump($val);
+
 header('Location: ../PageChantier.php');die();
 
 
