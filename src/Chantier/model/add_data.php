@@ -2,6 +2,9 @@
 
 require_once 'config.php'; 
 
+$req= $bdd->prepare('DELETE * FROM capteur_table');
+$req->execute();
+
 $data = file_get_contents("http://projets-tomcat.isep.fr:8080/appService?ACTION=GETLOG&TEAM=G9-C");//Ceci donne un string
 
 
