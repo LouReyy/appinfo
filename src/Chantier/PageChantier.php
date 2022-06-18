@@ -280,10 +280,10 @@
                         //CHANGE
                             var XCO2= <?php echo json_encode($XCO2);?>;    //CHANGE
                             var YCO2= <?php echo json_encode($YCO2);?>; //CHANGE
-                            const label2 =XCO2;                         //CHANGE labels aussi 
+                            const label3 =XCO2;                         //CHANGE labels aussi 
 
                             const dataCO2 = {  //CHANGE
-                                labels: label2, //CHANGE
+                                labels: label3, //CHANGE
                                 datasets: [{
                                     label: 'taux de CO2 en ppm', //CHANGE
                                     backgroundColor: 'rgb(0,204,255)',
@@ -309,7 +309,7 @@
                         <script>
                             const myChart3 = new Chart( //CHANGE
                             document.getElementById('CO2'), //CHANGE
-                            config3  //CHANGE
+                            config4  //CHANGE
                             );
                         </script>
                 </div>   
