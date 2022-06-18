@@ -102,9 +102,6 @@ $Xtemp=array_reverse($Xtemp);
 $Ytemp=tableY($values_temp);
 $Ytemp=array_reverse($Ytemp);
 
-var_dump($Xtemp);
-var_dump($Ytemp);
-
 $Xcard=tableX($values_card); $Ycard=tableY($values_card);
 $Xcard=array_reverse($Xcard); $Ycard=array_reverse($Ycard);
 
