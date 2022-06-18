@@ -75,7 +75,7 @@ for ($i=4000;$i<$j;$i++){
 }
 
 
-$sql = "SELECT * FROM capteur_table WHERE type = "."card";
+$sql = "SELECT * FROM capteur_table WHERE type = "."cardiaque";
 $stp = $bdd->prepare($sql);
 $stp->execute();
 
