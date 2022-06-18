@@ -8,11 +8,6 @@ $data = file_get_contents("http://projets-tomcat.isep.fr:8080/appService?ACTION=
 $n=strlen($data);
 $j=intdiv($n,33);
 
-echo($n);
-echo("mtn val                 ");
-echo($j);
-echo("mtn val                 ");
-
 
 $val=array();
 $time=array();
@@ -30,7 +25,6 @@ for ($i=5000;$i<$j;$i++){
 //print_r($Lines);Ok ça marche
 
 
-echo(count($Lines));
 
 
 for ($i=5000;$i<$j;$i++){
@@ -61,7 +55,6 @@ for ($i=5000;$i<$j;$i++){
     $newdate = date ("Y-m-d H:i", $sec);  
     $newdate = $newdate . ":00"; 
 
-    echo($val2);
 
         //On insère dans la base de donnée
 
@@ -79,14 +72,5 @@ for ($i=5000;$i<$j;$i++){
 
 
 header('Location: ../PageChantier.php');die();
-
-
-
-
-
-
-
-
-
 
 ?>
