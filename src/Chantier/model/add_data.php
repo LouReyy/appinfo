@@ -36,6 +36,10 @@ for ($i=4000;$i<$j;$i++){
     $time[$i]=substr($Lines[$i],19,14);
     $type[$i] =substr($Lines[$i],6,1);
 
+
+    echo($type[$i]);
+
+
     $val2 =$val[$i];
     if($type[$i] ==1){
         $type2 = "sonore";
@@ -55,7 +59,6 @@ for ($i=4000;$i<$j;$i++){
     }
 
 
-    echo($type2);
 
     $date = $time[$i];  
     $sec = strtotime($date);  
