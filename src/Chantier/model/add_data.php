@@ -51,45 +51,18 @@ for ($i=$j-1000;$i<$j;$i++){
         $type2 = "temp";
 
         $a =substr($val[$i], 0, 2);
-    $b = substr($val[$i], 2, 4);
-
-    echo($val[$i]);
-    echo("mtn a :         ");
-
-
-
-    echo $a;
-
-    echo("mtn b :         ");
-    echo $b;
-    echo("mtn res:         ");
-
-
-
-    echo( $a ."." . $b);
-
+        $b = substr($val[$i], 2, 4);
+    
+        $val[$i] = $a ."." . $b;
     }
     elseif($type[$i] ==3){
         $type2 = "hum";
 
-        $a =substr($val[$i], 0, 2);
+    $a =substr($val[$i], 0, 2);
     $b = substr($val[$i], 2, 4);
 
-    echo($val[$i]);
-    echo("mtn a :         ");
+    $val[$i] = $a ."." . $b;
 
-
-
-    echo $a;
-
-    echo("mtn b :         ");
-    echo $b;
-    echo("mtn res:         ");
-
-
-
-    echo( $a ."." . $b);
-    
     }
     elseif($type[$i] ==4){
         $type2 = "cardiaque";
