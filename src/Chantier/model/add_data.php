@@ -10,6 +10,9 @@ $j=intdiv($n,33);
 
 echo($n);
 echo("mtn val                 ");
+echo($j);
+echo("mtn val                 ");
+
 
 $val=array();
 $time=array();
