@@ -93,6 +93,6 @@ for ($i=$j-1000;$i<$j;$i++){
         //La connexion fonctionne
 }
 
- //header('Location: ../PageChantier.php');die();
+ header('Location: ../PageChantier.php');die();
 
 ?>
