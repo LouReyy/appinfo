@@ -37,8 +37,6 @@ for ($i=4000;$i<$j;$i++){
     $type[$i] =substr($Lines[$i],6,1);
 
 
-    echo($type[$i]);
-
 
     $val2 =$val[$i];
     if($type[$i] ==1){
@@ -85,9 +83,9 @@ $sql = "SELECT * FROM capteur_table WHERE type = "."cardiaque";
 $stp = $bdd->prepare($sql);
 $stp->execute();
 
-var_dump($stp);
 
 
-// header('Location: ../PageChantier.php');die();
+
+ header('Location: ../PageChantier.php');die();
 
 ?>
