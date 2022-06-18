@@ -54,6 +54,9 @@ for ($i=4000;$i<$j;$i++){
         $type2 ="nada";
     }
 
+
+    echo($type2);
+
     $date = $time[$i];  
     $sec = strtotime($date);  
     $newdate = date ("Y-m-d H:i", $sec);  
