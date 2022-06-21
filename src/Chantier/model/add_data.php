@@ -2,7 +2,7 @@
 
 require_once 'config.php'; 
 
-$sql = "DELETE FROM capteur_table WHERE type = "cardiaque" OR  type = "temp" OR  type = "hum" OR  type = "sonore" ";
+$sql = "DELETE FROM capteur_table WHERE type = 'cardiaque' OR  type = 'temp' OR  type = 'hum' OR  type = 'sonore' ";
 $sth = $bdd->prepare($sql);
 $sth->execute();
 
