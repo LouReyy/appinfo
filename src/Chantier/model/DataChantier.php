@@ -137,7 +137,6 @@ $req_lastCO2='SELECT Valeur FROM `capteur_table` WHERE type="CO2" AND Time=(SELE
 $resultLastCO2=mysqli_query($conn,$req_lastCO2);
 $values_lastCO2=mysqli_fetch_all($resultLastCO2, MYSQLI_ASSOC);
 
-var_dump($values_lastCO2);
 
 function getLast($table){
     if(isset($table)){
@@ -171,6 +170,7 @@ if(!empty($values_hum)){
     }
 if(!empty($values_CO2)){
 $lastCO2=getLast($values_lastCO2);
+echo($lastC02);
 }
 else{
     $lastCO2=0;
