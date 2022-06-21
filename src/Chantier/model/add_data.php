@@ -80,13 +80,12 @@ for ($i=$j-1000;$i<$j;$i++){
 
         //On insère dans la base de donnée
 
-        $req= $bdd->prepare('INSERT INTO `capteur_table`(`time`, `valeur`, `type`, `id_utilisateur`, `id_chantier`) VALUES (:time, :valeur, :type, :id_utilisateur, :id_chantier)');
+        $req= $bdd->prepare('INSERT INTO `capteur_table`(`time`, `valeur`, `type`, `id_utilisateur`) VALUES (:time, :valeur, :type, :id_utilisateur)');
         $req->execute(array(
             'time' => $newdate,
             'valeur' => $val2,
             'type'=> $type2,
-            'id_utilisateur' => 80,
-            'id_chantier' => 199
+            'id_utilisateur' => 80
         
         ));//Ici mettre la bonne requête 
         //La connexion fonctionne

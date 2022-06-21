@@ -175,7 +175,6 @@ else{
     $lastCO2=0;
 }
 
-echo($lastCO2);
 
 
 }
