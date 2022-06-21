@@ -77,7 +77,7 @@
                     </div>
                     <div class="onglets" data-anim="5">
                         <div class="ongletInactif bis">
-                            <h1>CO2</h1><p><br><br>Dernière valeur : <?php if(isset($lastC02)){echo $lastCO2;} ?> ppm</p>
+                            <h1>CO2</h1><p><br><br>Dernière valeur : <?php if(isset($lastCO2)){echo $lastCO2;} ?> ppm</p>
                         </div> 
                     </div> <!--idem-->
             </div>

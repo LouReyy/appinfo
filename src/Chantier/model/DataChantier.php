@@ -170,11 +170,13 @@ if(!empty($values_hum)){
     }
 if(!empty($values_lastCO2)){
 $lastCO2=getLast($values_lastCO2);
-echo($lastC02);
 }
 else{
     $lastCO2=0;
 }
+
+echo($lastCO2);
+
 
 }
 
