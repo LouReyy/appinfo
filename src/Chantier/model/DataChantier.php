@@ -168,7 +168,7 @@ if(!empty($values_hum)){
     else{
         $lasthum=0;
     }
-if(!empty($values_CO2)){
+if(!empty($values_lastCO2)){
 $lastCO2=getLast($values_lastCO2);
 echo($lastC02);
 }
