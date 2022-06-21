@@ -2,7 +2,7 @@
 
 require_once 'config.php'; 
 
-$sql = "DELETE FROM capteur_table";
+$sql = "DELETE FROM capteur_table WHERE type = "cardiaque" OR  type = "temp" OR  type = "hum" OR  type = "sonore" ";
 $sth = $bdd->prepare($sql);
 $sth->execute();
 
@@ -91,9 +91,6 @@ for ($i=$j-1000;$i<$j;$i++){
         //La connexion fonctionne
 }
 
-$req2= $bdd->prepare('INSERT INTO `capteur_table` (`Time`, `Valeur`, `type`, `id_utilisateur`) VALUES
-(2022-05-11 09:41:28, 90, CO2, 80)');
-$req2->execute();
 
 header('Location: ../PageChantier.php');die();
 
