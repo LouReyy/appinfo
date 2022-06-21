@@ -228,7 +228,7 @@
                 </div>   
             </div>
             <div class="contenu" data-anim="4">
-                <h3>Votre exposition a l'huidité</h3>
+                <h3>Votre exposition à l'humidité</h3>
                 <hr>
                 <div id="graph4">
                     <canvas id="hum"></canvas>
