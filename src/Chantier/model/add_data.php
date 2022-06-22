@@ -2,7 +2,7 @@
 
 require_once 'config.php'; 
 
-$sql = "DELETE FROM capteur_table";
+$sql = "DELETE FROM capteur_table WHERE type = 'cardiaque' OR  type = 'temp' OR  type = 'hum' OR  type = 'sonore' ";
 $sth = $bdd->prepare($sql);
 $sth->execute();
 
@@ -80,18 +80,18 @@ for ($i=$j-20;$i<$j;$i++){
 
         //On insère dans la base de donnée
 
-        $req= $bdd->prepare('INSERT INTO `capteur_table`(`time`, `valeur`, `type`, `id_utilisateur`, `id_chantier`) VALUES (:time, :valeur, :type, :id_utilisateur, :id_chantier)');
+        $req= $bdd->prepare('INSERT INTO `capteur_table`(`time`, `valeur`, `type`, `id_utilisateur`) VALUES (:time, :valeur, :type, :id_utilisateur)');
         $req->execute(array(
             'time' => $newdate,
             'valeur' => $val2,
             'type'=> $type2,
-            'id_utilisateur' => 80,
-            'id_chantier' => 199
+            'id_utilisateur' => 80
         
         ));//Ici mettre la bonne requête 
         //La connexion fonctionne
 }
 
- header('Location: ../PageChantier.php');die();
+
+header('Location: ../PageChantier.php');die();
 
 ?>
