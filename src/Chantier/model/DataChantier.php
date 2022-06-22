@@ -59,7 +59,7 @@ $result=mysqli_query($conn,$req_temp);
 $values_temp=mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 
-$req_card='SELECT DISTINCT Time,Valeur FROM capteur_table WHERE id_utilisateur="'.$id.'" AND type="cardiaque" ORDER BY Time DESC LIMIT 100;';
+$req_card='SELECT DISTINCT Time,Valeur FROM capteur_table WHERE id_utilisateur="'.$id.'" AND type="cardiaque" ORDER BY Time DESC LIMIT 20;';
 $resultCard=mysqli_query($conn,$req_card);
 $values_card=mysqli_fetch_all($resultCard, MYSQLI_ASSOC);
 
