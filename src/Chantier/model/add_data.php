@@ -2,7 +2,7 @@
 
 require_once 'config.php'; 
 
-$sql = "DELETE FROM capteur_table WHERE type = 'cardiaque' OR  type = 'temp' OR  type = 'hum' OR  type = 'sonore' ";
+$sql = "DELETE FROM capteur_table";
 $sth = $bdd->prepare($sql);
 $sth->execute();
 
@@ -22,7 +22,7 @@ $time=array();
 //essayons de récupérer la première ligne par exemple
 //Maintenant récupérons toutes les lignes de la variable data
 $Lines=array();
-for ($i=$j-100;$i<$j;$i++){
+for ($i=$j-1000;$i<$j;$i++){
     $line=substr($data,33*$i,33);
     $Lines[$i]=$line;
 }
@@ -31,7 +31,7 @@ for ($i=$j-100;$i<$j;$i++){
 
 
 
-for ($i=$j-100;$i<$j;$i++){
+for ($i=$j-1000;$i<$j;$i++){
     $val[$i]=substr($Lines[$i],9,4);
     $time[$i]=substr($Lines[$i],19,14);
     $type[$i] =substr($Lines[$i],6,1);
@@ -80,18 +80,18 @@ for ($i=$j-100;$i<$j;$i++){
 
         //On insère dans la base de donnée
 
-        $req= $bdd->prepare('INSERT INTO `capteur_table`(`time`, `valeur`, `type`, `id_utilisateur`) VALUES (:time, :valeur, :type, :id_utilisateur)');
+        $req= $bdd->prepare('INSERT INTO `capteur_table`(`time`, `valeur`, `type`, `id_utilisateur`, `id_chantier`) VALUES (:time, :valeur, :type, :id_utilisateur, :id_chantier)');
         $req->execute(array(
             'time' => $newdate,
             'valeur' => $val2,
             'type'=> $type2,
-            'id_utilisateur' => 80
+            'id_utilisateur' => 80,
+            'id_chantier' => 199
         
         ));//Ici mettre la bonne requête 
         //La connexion fonctionne
 }
 
-
-header('Location: ../PageChantier.php');die();
+ header('Location: ../PageChantier.php');die();
 
 ?>
