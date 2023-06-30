@@ -1,6 +1,6 @@
 
 <?php
-session_start(); 
+session_start(); //essai de modif
 
 if(isset($_SESSION['user'])){
     $editprofil ="views/landing.php";
